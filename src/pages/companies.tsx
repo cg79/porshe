@@ -3,11 +3,12 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import useSWR from 'swr';
+// import useSWR from 'swr';
 
 export default function Companies() {
   const router = useRouter();
   console.log(router.query);
+  console.log(process.env)
 
   const [companies, setCompanies] = useState([])
 

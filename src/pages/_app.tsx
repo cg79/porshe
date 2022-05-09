@@ -12,7 +12,7 @@ function MyApp({
 }) {
   return (
     <RootStoreProvider hydrationData={pageProps.hydrationData}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </RootStoreProvider>
   );
 }

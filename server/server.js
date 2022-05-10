@@ -27,10 +27,6 @@ app.use(
 );
 
 koaRouter.use(companyRoutes.routes());
-
-koaRouter.get('/', async (ctx) => {
-  ctx.body = [{id:1, name:'company1'},{id:2, name:'company2'}]
-});
 app.use(koaRouter.routes()).use(koaRouter.allowedMethods());
 
 const SERVER_PORT = process.env.SERVER_PORT || 3004;
@@ -42,7 +38,6 @@ server = app.listen(SERVER_PORT).on('error', (err) => {
 MongoConnection.connect('mongodb://localhost:27017', 'porche')
 .then(dbConnection => {
   server.stop = function () {
-    console.log('CLOSING');
     MongoConnection.close();
     server.close();
   };

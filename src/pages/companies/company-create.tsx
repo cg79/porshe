@@ -1,17 +1,24 @@
-// create a new company form
 
+import { observer } from "mobx-react-lite";
+import Router from "next/router";
 import { useCallback, useState } from "react";
-export const NewTodoForm = (props:any) => {
+import Button from "../../components/button/button";
+import { ROUTES } from "../../constants/constants";
+import store from './store/CompaniesStore';
+// import { CompaniesProps } from "./data-types/data-types";
 
-  const { actions, handlers } = props;
-  const [name, setName] = useState('');
+const CreateCompany = observer(() => {
+  const [name, setName] = useState("");
 
-  const onAddCompany = useCallback(() => {
+  const onAddCompany = () => {
     const newCompany = {
-      name
+      name,
     };
-    handlers.onNewCompany(newCompany);
-  },[])
+    store.saveNewCompany(newCompany).then((val: any) => {
+      Router.push(ROUTES.COMPANIES);
+    });
+  };
+
 
   return (
     <div>
@@ -20,10 +27,12 @@ export const NewTodoForm = (props:any) => {
         onChange={(e) => setName(e.target.value)}
         type="text"
       />
-
-      <button onClick={() => onAddCompany()}>
-          SAVE
-      </button>
+      <button className="button" onClick={onAddCompany}>
+      SAVE
+    </button>
+      {/* <Button text={'SAVE1'} onClick={onAddCompany}></Button> */}
     </div>
   );
-};
+});
+
+export default CreateCompany;

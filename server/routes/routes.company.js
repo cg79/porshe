@@ -1,15 +1,20 @@
 const router = require('koa-router')();
 const { publicMiddleware } = require('../middleware/middleware');
-const companyModule = require('../modules/company');
+const companyService = require('../modules/company');
 
 router
   .prefix('/api/company')
   .use(publicMiddleware)
 
-  .post('/', async (ctx) => {
+  .get('/', async (ctx) => {
     debugger;
+    //const defaults = [{id:1, name:'company1'},{id:2, name:'company2'}]
+    const response = await companyService.list();
+    return response;
+  })
+  .post('/', async (ctx) => {
     const { body } = ctx.request;
-    const response = await companyModule.create(body);
+    const response = await companyService.create(body);
     return response;
   })
 

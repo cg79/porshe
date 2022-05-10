@@ -1,9 +1,13 @@
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
-import { CompaniesProps } from "./data-types/data-types";
+import Router from "next/router";
+import { ROUTES } from "../../constants/constants";
+import store from "./store/CompaniesStore";
+import Button from "../../components/button/button";
 
-const CompanyList: React.FC<CompaniesProps> = observer(({ store }) => {
+// import { CompaniesProps } from "./data-types/data-types";
 
+const CompanyList = observer(() => {
   useEffect(() => {
     store.load();
   }, []);
@@ -11,9 +15,14 @@ const CompanyList: React.FC<CompaniesProps> = observer(({ store }) => {
   return (
     <div>
       HI from Companies
-      <div></div>
-      {store.list.map((comp:any) => {
-        return <div key={comp["id"]}>{comp["name"]}</div>;
+      <Button
+        text={"Create New Company"}
+        onClick={() => {
+          Router.push(ROUTES.COMPANY_CREATE);
+        }}
+      ></Button>
+      {store.list.map((comp: any) => {
+        return <div key={comp["_id"]}>{comp["name"]}</div>;
       })}
     </div>
   );

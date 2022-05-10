@@ -1,11 +1,10 @@
-import React, { useCallback } from "react";
 import { ButtonProps } from "../data-types/data-types";
 
-const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
+const Button = (props: ButtonProps) => {
   const { onClick, text } = props;
-  const btnClick = useCallback(() => {
+  const btnClick = ()=> {
     onClick && onClick();
-  }, []);
+  };
 
   return (
     <button className="button" onClick={btnClick}>

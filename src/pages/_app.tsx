@@ -1,6 +1,5 @@
 import "../../styles/globals.css";
 import "../../styles/page.css";
-import { RootStoreProvider } from "../providers/RootStoreProvider";
 import { NextPage } from "next";
 
 function MyApp({
@@ -11,9 +10,7 @@ function MyApp({
   pageProps: any;
 }) {
   return (
-    <RootStoreProvider hydrationData={pageProps.hydrationData}>
       <Component {...pageProps} />
-    </RootStoreProvider>
   );
 }
 

@@ -1,23 +1,9 @@
 // import { GetServerSideProps } from "next";
 import React from "react";
-import { Page } from "../Page";
 import Link from "next/link"
-
-// export default function Index() {
-//   return (
-//     <>
-//       <Page title="Server render" />
-//     </>
-//   );
-// }
-
-
 
 
 export default function Index(){
-    //return <div>hi</div>
-
-    console.log(process.env.REACT_APP_API_URL)
     return <Link href='/companies' prefetch={false}>Companies</Link>
 }
 

@@ -22,7 +22,12 @@ export default function Index() {
       </Link>
     </Navbar>
   );
-}
+import Link from "next/link"
+
+
+// export default function Index(){
+//     return <Link href='/companies' prefetch={false}>Companies</Link>
+// }
 
 // export const getServerSideProps: GetServerSideProps = async function getServerSideProps(
 //   ctx

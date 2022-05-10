@@ -11,6 +11,7 @@ const CompanyList: React.FC<CompaniesProps> = observer(({ store }) => {
   return (
     <div>
       HI from Companies
+      <div></div>
       {store.list.map((comp:any) => {
         return <div key={comp["id"]}>{comp["name"]}</div>;
       })}

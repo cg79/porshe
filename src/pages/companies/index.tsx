@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import axios from 'axios';
+import httpService from "../../actions/http-service";
 // import useSWR from 'swr';
 
 export default function Companies() {
@@ -12,12 +12,8 @@ export default function Companies() {
   const [companies, setCompanies] = useState([])
 
   const fetchCompanies = async () => {
-    // const response = await fetch('http://localhost:3004/')
-    // const data = await response.json()
-
-    const response = await axios.get(process.env.SERVER_URL || '')
-    const {data} = response;
-    setCompanies(data)
+    const response = await httpService.get('');
+    setCompanies(response)
   }
 
 //   const address = `https://randomuser.me/api/?results=6`;

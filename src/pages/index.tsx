@@ -1,8 +1,7 @@
 // import { GetServerSideProps } from "next";
-import React from "react";
-import { Page } from "../Page";
-import Link from "next/link";
-import Navbar from "../components/Navbar";
+import React from 'react'
+import Link from 'next/link'
+import Navbar from '../components/Navbar'
 // export default function Index() {
 //   return (
 //     <>
@@ -12,18 +11,17 @@ import Navbar from "../components/Navbar";
 // }
 
 export default function Index() {
-  //return <div>hi</div>
+    //return <div>hi</div>
 
-  console.log(process.env.REACT_APP_API_URL);
-  return (
-    <Navbar>
-      <Link href="/companies" prefetch={false}>
-        Companies
-      </Link>
-    </Navbar>
-  );
-import Link from "next/link"
-
+    console.log(process.env.REACT_APP_API_URL)
+    return (
+        <Navbar>
+            <Link href="/companies" prefetch={false}>
+                Companies
+            </Link>
+        </Navbar>
+    )
+}
 
 // export default function Index(){
 //     return <Link href='/companies' prefetch={false}>Companies</Link>

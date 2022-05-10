@@ -8,7 +8,6 @@ import axios from 'axios';
 export default function Companies() {
   const router = useRouter();
   console.log(router.query);
-  console.log(process.env)
 
   const [companies, setCompanies] = useState([])
 
@@ -16,7 +15,7 @@ export default function Companies() {
     // const response = await fetch('http://localhost:3004/')
     // const data = await response.json()
 
-    const response = await axios.get('http://localhost:3004/')
+    const response = await axios.get(process.env.SERVER_URL || '')
     const {data} = response;
     setCompanies(data)
   }

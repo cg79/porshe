@@ -26,13 +26,12 @@ app.use(
 
 
 koaRouter.get('/', async (ctx) => {
-  console.log('INTRA');
   ctx.body = [{id:1, name:'company1'},{id:2, name:'company2'}]
 });
 
 app.use(koaRouter.routes()).use(koaRouter.allowedMethods());
 
-const SERVER_PORT = 3004;
+const SERVER_PORT = process.env.SERVER_PORT || 3004;
 
 server = app.listen(SERVER_PORT).on('error', (err) => {
   console.log('error on listen server', err);

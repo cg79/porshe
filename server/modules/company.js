@@ -13,6 +13,10 @@ class CompanyService {
 
     const collection = MongoConnection.collection(COLLECTION.COMPANY);
     const response = await collection.find({}).toArray();
+
+    if(!response || !response.length){
+      return [{_id: 1, name : 'Default company'}]
+    }
     return response;
   }
 

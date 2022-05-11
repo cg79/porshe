@@ -1,6 +1,6 @@
 // import { useEffect } from "react";
 
-const CompanyGrid = () => {
+const CompanyPresentation = () => {
     // useEffect(() => {
     // }, []);
   
@@ -11,4 +11,4 @@ const CompanyGrid = () => {
     );
   }
   
-  export default CompanyGrid;
+  export default CompanyPresentation;

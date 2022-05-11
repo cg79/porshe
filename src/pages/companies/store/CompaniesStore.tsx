@@ -1,6 +1,7 @@
 import { observable, computed, action, autorun, makeObservable } from "mobx";
 import httpService from "../../../actions/http-service";
 import { Company } from "./Company";
+let company_list = require('../../../data/companies.json');
 
 const COMPANY_ROUTE = "/api/company";
 
@@ -19,8 +20,10 @@ class CompaniesStore {
   }
 
   async load() {
-    const response = await httpService.get(COMPANY_ROUTE);
-    this.list = response.data;
+    this.list=company_list;
+
+    // const response = await httpService.get(COMPANY_ROUTE);
+    // this.list = response.data;
   }
 
   async saveNewCompany(companyData: any) {

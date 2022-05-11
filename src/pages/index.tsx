@@ -1,11 +1,31 @@
 // import { GetServerSideProps } from "next";
-import React from "react";
-import Link from "next/link"
+import React from 'react'
+import Link from 'next/link'
+import Navbar from '../components/Navbar'
+// export default function Index() {
+//   return (
+//     <>
+//       <Page title="Server render" />
+//     </>
+//   );
+// }
 
+export default function Index() {
+    //return <div>hi</div>
 
-export default function Index(){
-    return <Link href='/companies' prefetch={false}>Companies</Link>
+    console.log(process.env.REACT_APP_API_URL)
+    return (
+        <Navbar>
+            <Link href="/companies" prefetch={false}>
+                Companies
+            </Link>
+        </Navbar>
+    )
 }
+
+// export default function Index(){
+//     return <Link href='/companies' prefetch={false}>Companies</Link>
+// }
 
 // export const getServerSideProps: GetServerSideProps = async function getServerSideProps(
 //   ctx

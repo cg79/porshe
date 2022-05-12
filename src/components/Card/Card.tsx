@@ -7,7 +7,7 @@ type CardProps = {
 }
 
 const Card: React.FC<CardProps> = (props) => {
-    return <div className={styles.card}>test</div>
+    return <div className={styles.card}>{props.title}</div>
 }
 
 export default Card

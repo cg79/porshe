@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
+import Card from '../components/Card'
 // export default function Index() {
 //   return (
 //     <>
@@ -19,6 +20,7 @@ export default function Index() {
             <Link href="/companies" prefetch={false}>
                 Companies
             </Link>
+            <Card title="da" description="nu" headline="headline" />
         </Navbar>
     )
 }

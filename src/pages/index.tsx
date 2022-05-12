@@ -20,7 +20,7 @@ export default function Index() {
             <Link href="/companies" prefetch={false}>
                 Companies
             </Link>
-            <Card title="da" description="nu" headline="headline" />
+            {/* <Card title="da" description="nu" headline="headline" /> */}
         </Navbar>
     )
 }

@@ -1,51 +1,53 @@
-import Link from 'next/link'
-import { NextRouter, useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 
 import Logo from './Logo'
 import styles from './NavBar.module.css'
+import NavBarButtons from './NavBarButtons'
+import { ROUTES } from './NavBarButtons'
+import MobileMenu from '../BurgerMenu/MobileMenu'
+import { useState, useEffect, useMemo } from 'react'
+import useWindowDimensions from '../../hooks/WindowDimension'
 
-type ROUTE__INFO = {
+export type ROUTE__INFO = {
     url: string
     name: string
-}
-
-const renderNavBarButtons = (buttons: ROUTE__INFO[], router: NextRouter) => {
-    return buttons.map((button) => {
-        return (
-            <li
-                className={
-                    router.pathname == button.url ? styles.items__active : ''
-                }
-            >
-                <Link href={button.url}>{button.name}</Link>
-            </li>
-        )
-    })
 }
 
 const NavBar = (props: any) => {
     const router = useRouter()
 
-    const ROUTES: ROUTE__INFO[] = [
-        { url: '/overview', name: 'Overview' },
-        { url: '/companies', name: 'Companies' },
-        { url: '/support', name: 'Support' },
-        { url: '/profile', name: 'Profile' },
-    ]
+    const [width, setWidth] = useState<number>(1080)
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth)
+    }
+    useEffect(() => {
+        setWidth(window.innerWidth)
+
+        window.addEventListener('resize', handleWindowSizeChange)
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange)
+        }
+    }, [])
 
     return (
         <>
-            <section className={styles.container}>
-                <nav className={styles.navbar}>
-                    <div className={styles.logo}>
-                        <Logo />
-                    </div>
-                    <ul className={styles.items}>
-                        {renderNavBarButtons(ROUTES, router)}
-                    </ul>
-                </nav>
-                <span>&nbsp;</span>
-            </section>
+            {width <= 768 ? (
+                <MobileMenu />
+            ) : (
+                <section className={styles.container}>
+                    <nav className={styles.navbar}>
+                        <div className={styles.logo}>
+                            <Logo />
+                        </div>
+                        <ul className={styles.items}>
+                            {NavBarButtons(ROUTES, router)}
+                        </ul>
+                    </nav>
+                    <span>&nbsp;</span>
+                </section>
+            )}
+
             {props.children}
         </>
     )

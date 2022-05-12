@@ -5,30 +5,26 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 
 
 export default function Index(){
-    const {data, status}= useSession(); 
+    const { data: session, status } = useSession()
 
-    debugger;
     if(status==='loading'){
         return null;
     }
 
-   
-
-    if(data){
+    if(session){
         return (
             <>
-              signed in as {JSON.stringify(data)}
-              <button onClick={()=>signIn()}>Sign Out</button>
+              signed in as {JSON.stringify(session)}
+              <button onClick={()=>signOut()}>Sign Out</button>
 
               <Link href='/companies' prefetch={false}>Companies</Link>
             </>
         )
     }
+
     return (
         <>
-          signed in as {JSON.stringify(data)}
-          <button onClick={()=>signOut()}>Sign In</button>
-
+        <button onClick={() => signIn()}>Sign In</button>
           <Link href='/companies' prefetch={false}>Companies</Link>
         </>
     )

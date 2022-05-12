@@ -12,7 +12,7 @@ function MyApp({
   pageProps: any;
 }) {
   return (
-      <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>  
+      <SessionProvider session={pageProps.session} refetchInterval={5 * 60} children={undefined}>  
         <Component {...pageProps} />
       </SessionProvider>
   );

@@ -5,8 +5,8 @@ import styles from './NavBar.module.css'
 import NavBarButtons from './NavBarButtons'
 import { ROUTES } from './NavBarButtons'
 import MobileMenu from '../BurgerMenu/MobileMenu'
-import { useState, useEffect, useMemo } from 'react'
-import useWindowDimensions from '../../hooks/WindowDimension'
+import { useState, useEffect } from 'react'
+// import useWindowDimensions from '../../hooks/WindowDimension'
 
 export type ROUTE__INFO = {
     url: string

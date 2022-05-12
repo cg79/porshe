@@ -17,5 +17,8 @@ export default NextAuth({
     providers:[
         CognitoProvider(createCognitoData())
     ],
+    pages:{
+        signIn: '/signin'
+    },
     debug: true,
 })

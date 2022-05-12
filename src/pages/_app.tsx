@@ -2,6 +2,8 @@ import "../../styles/globals.css";
 import "../../styles/page.css";
 import { NextPage } from "next";
 
+import { SessionProvider } from "next-auth/react"
+
 function MyApp({
   Component,
   pageProps,
@@ -10,7 +12,9 @@ function MyApp({
   pageProps: any;
 }) {
   return (
-      <Component {...pageProps} />
+      <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>  
+        <Component {...pageProps} />
+      </SessionProvider>
   );
 }
 

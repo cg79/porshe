@@ -4,7 +4,7 @@ import styles from './NavBar.module.css'
 
 import { ROUTE__INFO } from './NavBar'
 
-export const ROUTES: ROUTE__INFO[] = [
+export const NAVIGATION_ROUTES: ROUTE__INFO[] = [
     { url: '/overview', name: 'Overview' },
     { url: '/companies', name: 'Companies' },
     { url: '/support', name: 'Support' },

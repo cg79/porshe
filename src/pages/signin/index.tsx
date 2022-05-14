@@ -9,8 +9,6 @@ import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
 
 export default function SignIn(props: any) {
-  console.log("singin data", props);
-
   if(props && props.porsche_user ){
     IdentityStore.setLoggedUser(JSON.parse(props.porsche_user))
   }
@@ -168,38 +166,7 @@ export default function SignIn(props: any) {
   );
 }
 
-// SignIn.getInitialProps = async ({ req, res }) => {
-//   debugger;
-
-//   res.setHeader("set-cookie", `yourParameter=aaa2; path=/; samesite=lax; httponly;`)
-//   // res.redirect('/');
-
-//   console.log('DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD');
-//   const data = parseCookies(req)
-
-//   console.log(data)
-
-//   const cookies = new Cookies(req, res)
-//   // Get a cookie
-//   const cookieValue = cookies.get('porsche_user');
-//   console.log('cookieValue',cookieValue);
-//   // Set a cookie
-//   cookies.set('porsche_user', 'some-value', {
-//       httpOnly: true // true by default
-//   })
-//   // Delete a cookie
-//   // cookies.set('porsche_user',null)
-
-//   return {
-//     data
-//   }
-// }
-
 export async function getServerSideProps({ req, res }) {
-  console.log(
-    "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ",
-    req.cookies
-  );
   const response = { props: { porsche_user: req.cookies.porsche_user || "" } };
 
   return response;

@@ -1,7 +1,17 @@
 [{
     "id":1,
-    "name": "Company 1 from json file"
+    "name": "Company 1 from json file",
+    "img":"https://preview.forward31.com/wp-content/uploads/2021/09/bigstock-Planet-Earth-From-Space-Beaut-298703191-e1560939905471-300x169.jpg"
+
 },{
     "id":2,
-    "name": "Company 2"
-}]
+    "name": "NEW SPACE: STELLAR",
+    "img":"https://preview.forward31.com/wp-content/uploads/2021/09/bigstock-Planet-Earth-From-Space-Beaut-298703191-e1560939905471-300x169.jpg"
+},
+{
+    "id":3,
+    "name": "SUSTAINABILITY: AWARE_ ",
+    "img":"https://preview.forward31.com/wp-content/uploads/2021/09/D643074C-AFB0-43D5-8366-1F1464C671C3-300x150.jpeg"
+}
+
+]

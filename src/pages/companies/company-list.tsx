@@ -22,7 +22,14 @@ const CompanyList = observer(() => {
         }}
       ></Button>
       {store.list.map((comp: any) => {
-        return <div key={comp["_id"]}>{comp["name"]}</div>;
+        return (
+          <div className="company" key={comp["_id"]}>
+            <img className="image" src={comp["img"]}></img>
+            <div className="title">
+              <div>{comp["name"]}</div>
+            </div>
+          </div>
+        );
       })}
     </div>
   );

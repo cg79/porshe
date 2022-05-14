@@ -47,6 +47,17 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.company{
+  position: relative;
+}
+
+.company .title{
+  position: absolute;
+  top:40%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.company .image:hover{
+  border: 1px solid green;
 }

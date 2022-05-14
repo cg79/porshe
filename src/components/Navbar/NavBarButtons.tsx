@@ -12,9 +12,9 @@ export const NAVIGATION_ROUTES: ROUTE__INFO[] = [
 ]
 
 const NavBarButtons = (buttons: ROUTE__INFO[], router: NextRouter) => {
-    return buttons.map((button) => {
+    return buttons.map((button,index) => {
         return (
-            <li
+            <li key={index}
                 className={
                     router.pathname == button.url ? styles.items__active : ''
                 }

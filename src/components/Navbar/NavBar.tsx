@@ -8,11 +8,13 @@ import { NAVIGATION_ROUTES } from "./NavBarButtons";
 import { ROUTES } from "../../constants/constants";
 import MobileMenu from "../BurgerMenu/MobileMenu";
 import { useState, useEffect } from "react";
-import { useSession, signOut } from "next-auth/react";
-import IdentityStore from '../../store/identity-store';
+// import { useSession, signOut,signIn } from "next-auth/react";
+import IdentityStore from "../../store/identity-store";
+import { parseCookies } from "../../helpers";
 
 import Amplify from "aws-amplify";
 import awsconfig from "../../aws-exports";
+import { NextPage } from "next";
 Amplify.configure(awsconfig);
 
 // import useWindowDimensions from '../../hooks/WindowDimension'
@@ -22,13 +24,17 @@ export type ROUTE__INFO = {
   name: string;
 };
 
-const NavBar = (props: any) => {
+const NavBar: NextPage = (props: any) => {
   const [width, setWidth] = useState<number>(1080);
-  const { data: session, status } = useSession();
+  // const x= useSession();
+  // debugger;
+  // console.log(x);
+  // const { data: session, status } = useSession();
+  // const [cookie, setCookie] = useCookies(["user"])
 
-//   if (status === "loading") {
-//     return null;
-//   }
+  //   if (status === "loading") {
+  //     return null;
+  //   }
 
   const router = useRouter();
 
@@ -44,13 +50,24 @@ const NavBar = (props: any) => {
     };
   }, []);
 
-  const navigateToSignInPage = () =>{
-    Router.push(ROUTES.SIGN_IN)
-  }
+  const navigateToSignInPage = () => {
+    Router.push(ROUTES.SIGN_IN);
+  };
 
-  const onSignOut = () =>{
-    signOut();
-  }
+  const onSignOut = () => {
+    IdentityStore.logout();
+
+    fetch("/api/logout", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({}),
+    }).finally(() => {
+      IdentityStore.logout();
+      Router.push(ROUTES.OVERVIEW);
+    });
+  };
 
   return (
     <>
@@ -62,17 +79,29 @@ const NavBar = (props: any) => {
             <div className={styles.logo}>
               <Logo />
             </div>
-            <ul className={styles.items}> 
+            <ul className={styles.items}>
               {NavBarButtons(NAVIGATION_ROUTES, router)}
-              {!IdentityStore.loggedUser && <div>
-                <li onClick={()=> navigateToSignInPage()}>Sign In</li>
-              </div>}
+              {!IdentityStore.loggedUser && (
+                <div>
+                  <li 
+                  className={
+                    router.pathname == '/signin' ? styles.items__active : ''
+                  }
+                  onClick={() => navigateToSignInPage()}>Sign In</li>
+                </div>
+              )}
 
-              
-              {IdentityStore.loggedUser && <div>
-                <pre>{JSON.stringify(IdentityStore.loggedUser, null, 2)}</pre>
-                <li onClick={()=> onSignOut()}>Sign Out</li>
-                </div>}
+              {IdentityStore.loggedUser && (
+                <li 
+                className={
+                  router.pathname == '/signout' ? styles.items__active : ''
+                }
+                onClick={() => onSignOut()}>Sign Out</li>
+              )}
+
+              {IdentityStore.loggedUser && IdentityStore.loggedUser.info()}
+              {/* <li onClick={() => navigateToSignInPage()}>Sign In</li> */}
+              {/* <li onClick={() => onSignOut()}>Sign Out</li> */}
             </ul>
           </nav>
           <span>&nbsp;</span>
@@ -83,4 +112,47 @@ const NavBar = (props: any) => {
     </>
   );
 };
+
+export async function getServerSideProps() {
+  console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
+  return {
+    props: { x: 1 }, // will be passed to the page component as props
+  };
+}
+
+// NavBar.getServerSideProps=()=> {
+//   console.log('DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD')
+//   return {
+//     props: {x:1}, // will be passed to the page component as props
+//   }
+// }
+
+NavBar.getInitialProps = async ({ req, res }) => {
+  debugger;
+  console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
+  const data = parseCookies(req);
+
+  console.log(data);
+
+  if (res) {
+    if (Object.keys(data).length === 0 && data.constructor === Object) {
+      res.writeHead(301, { Location: "/" });
+      res.end();
+    }
+  }
+
+  return {
+    data: data && data,
+  };
+};
+
+// export async function getStaticProps(context: any) {
+//   console.log('cccccccccccccccccccccccccc');
+//   return {
+//     props: {
+//      a:7
+//     },
+//   };
+// }
+
 export default NavBar;

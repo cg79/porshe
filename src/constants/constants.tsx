@@ -6,6 +6,7 @@ const ROUTES = {
     OVERVIEW:'/overview',
     SUPPORT:'/support',
     PROFILE:'/profile',
+    CHANGE_PASSWORD:'/changepassword',
 
 }
 

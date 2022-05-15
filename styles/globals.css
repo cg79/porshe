@@ -61,3 +61,7 @@ a {
 .company .image:hover{
   border: 1px solid green;
 }
+
+.pointer{
+  cursor: pointer;
+}

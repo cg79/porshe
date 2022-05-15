@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { signIn, getSession } from "next-auth/react";
 import { LOADING_SVG } from "../../constants/constants";
 import Navbar from "../../components/Navbar";
 import ErrorMessage from "../../components/error/error";

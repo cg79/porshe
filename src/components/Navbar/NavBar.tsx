@@ -69,6 +69,10 @@ const NavBar: NextPage = (props: any) => {
     });
   };
 
+  const onGoToChangePassword=()=>{
+    Router.push(ROUTES.CHANGE_PASSWORD);
+  }
+
   return (
     <>
       {width <= 768 ? (
@@ -82,21 +86,41 @@ const NavBar: NextPage = (props: any) => {
             <ul className={styles.items}>
               {NavBarButtons(NAVIGATION_ROUTES, router)}
               {!IdentityStore.loggedUser && (
-                <div>
-                  <li 
+                <li
                   className={
-                    router.pathname == '/signin' ? styles.items__active : ''
+                    router.pathname == "/signin" ? styles.items__active : ""
                   }
-                  onClick={() => navigateToSignInPage()}>Sign In</li>
-                </div>
+                >
+                  <a href="/signin">Sign In</a>
+                </li>
               )}
 
               {IdentityStore.loggedUser && (
-                <li 
-                className={
-                  router.pathname == '/signout' ? styles.items__active : ''
-                }
-                onClick={() => onSignOut()}>Sign Out</li>
+                <li>
+                  <ul>
+                    <li
+                      className={
+                        router.pathname == "/signout"
+                          ? `${styles.items__active} pointer`
+                          : "pointer"
+                      }
+                      onClick={() => onSignOut()}
+                    >
+                      Sign Out
+                    </li>
+
+                    <li
+                      className={
+                        router.pathname == "/changepassword"
+                          ? `${styles.items__active} pointer`
+                          : "pointer"
+                      }
+                      onClick={() => onGoToChangePassword()}
+                    >
+                      Change Password
+                    </li>
+                  </ul>
+                </li>
               )}
 
               {IdentityStore.loggedUser && IdentityStore.loggedUser.info()}
@@ -113,26 +137,8 @@ const NavBar: NextPage = (props: any) => {
   );
 };
 
-export async function getServerSideProps() {
-  console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
-  return {
-    props: { x: 1 }, // will be passed to the page component as props
-  };
-}
-
-// NavBar.getServerSideProps=()=> {
-//   console.log('DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD')
-//   return {
-//     props: {x:1}, // will be passed to the page component as props
-//   }
-// }
-
 NavBar.getInitialProps = async ({ req, res }) => {
-  debugger;
-  console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
   const data = parseCookies(req);
-
-  console.log(data);
 
   if (res) {
     if (Object.keys(data).length === 0 && data.constructor === Object) {
@@ -146,13 +152,5 @@ NavBar.getInitialProps = async ({ req, res }) => {
   };
 };
 
-// export async function getStaticProps(context: any) {
-//   console.log('cccccccccccccccccccccccccc');
-//   return {
-//     props: {
-//      a:7
-//     },
-//   };
-// }
 
 export default NavBar;

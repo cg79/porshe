@@ -8,8 +8,8 @@ import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
 
 export default function SignIn(props: any) {
-  if(props && props.porsche_user ){
-    IdentityStore.setLoggedUser(JSON.parse(props.porsche_user))
+  if (props && props.porsche_user) {
+    IdentityStore.setLoggedUser(JSON.parse(props.porsche_user));
   }
 
   // const [cookie, setCookie] = useCookies(["user"])
@@ -44,12 +44,28 @@ export default function SignIn(props: any) {
 
     Auth.signIn(email, password)
       .then((data) => {
+        debugger;
+
+        if (
+          data.challengeName === 'SMS_MFA' ||
+          data.challengeName === 'SOFTWARE_TOKEN_MFA'
+        ) {
+          // const code = getCodeFromUserInput();
+          // const loggedUser = await Auth.confirmSignIn(
+          //   data, // Return object from Auth.signIn()
+          //   code, // Confirmation code
+          //   mfaType // MFA Type e.g. SMS_MFA, SOFTWARE_TOKEN_MFA
+          // );
+
+          return;
+        }
+
         const awsJsonUserAttributes = data.attributes;
         IdentityStore.setLoggedUser(awsJsonUserAttributes);
 
         const reqBody = {
-          porsche_user: JSON.stringify(awsJsonUserAttributes)
-        }
+          porsche_user: JSON.stringify(awsJsonUserAttributes),
+        };
 
         fetch("/api/login", {
           method: "post",
@@ -64,7 +80,7 @@ export default function SignIn(props: any) {
         // getRefreshToken();
       })
       .catch((err) => {
-        // debugger;
+        debugger;
         console.log(err.message);
         setErrorMessage(err.message);
       })
@@ -78,6 +94,10 @@ export default function SignIn(props: any) {
     Auth.signUp({
       username: email,
       password,
+      attributes: {
+        email, 
+        phone_number: "+40742917773", 
+      },
     })
       .then((val) => {
         console.log(val);
@@ -153,6 +173,11 @@ export default function SignIn(props: any) {
             </Button>
 
             {loading && <img src={LOADING_SVG} />}
+          </div>
+
+          <div>
+            {/* <a href="/resetpassword">reset password</a> */}
+            <Button href="/forgotpassword">forgot password</Button>
           </div>
 
           <div className="flex flex-center mt10">

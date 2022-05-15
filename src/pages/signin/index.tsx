@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { LOADING_SVG } from "../../constants/constants";
+import { LOADING_SVG, ROUTES } from "../../constants/constants";
 import Navbar from "../../components/Navbar";
 import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
 import { Button, TextField } from "@mui/material";
 import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
+import Router from "next/router";
 
 export default function SignIn(props: any) {
   if (props && props.porsche_user) {
@@ -50,6 +51,10 @@ export default function SignIn(props: any) {
           data.challengeName === 'SMS_MFA' ||
           data.challengeName === 'SOFTWARE_TOKEN_MFA'
         ) {
+
+          IdentityStore.tempUser= data;
+          Router.push(ROUTES.LOGIN_VERIFICATION);
+
           // const code = getCodeFromUserInput();
           // const loggedUser = await Auth.confirmSignIn(
           //   data, // Return object from Auth.signIn()

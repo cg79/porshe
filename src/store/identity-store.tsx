@@ -3,6 +3,7 @@ import { User } from "./user-identity";
 
 class IdentityStore {
   loggedUser: User | null = null;
+  tempUser:any|null= null;
 
   constructor(){
     makeObservable(this, {

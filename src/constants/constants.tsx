@@ -7,6 +7,7 @@ const ROUTES = {
     SUPPORT:'/support',
     PROFILE:'/profile',
     CHANGE_PASSWORD:'/changepassword',
+    LOGIN_VERIFICATION:'/loginverification',
 
 }
 

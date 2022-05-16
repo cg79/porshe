@@ -96,7 +96,7 @@ export default function ForgotPassword(props: any) {
   );
 }
 
-export async function getServerSideProps({ req, res }) {
+export async function getServerSideProps({ req }:{req:any}) {
   const response = { props: { porsche_user: req.cookies.porsche_user || "" } };
 
   return response;

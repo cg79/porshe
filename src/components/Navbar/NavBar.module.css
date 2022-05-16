@@ -45,6 +45,10 @@
     color: #fff;
     padding-right: 60px;
 }
+.profile {
+    position: relative;
+    z-index: 1301;
+}
 .items__active {
     font-weight: 800;
 }

@@ -5,7 +5,6 @@ import styles from './NavBar.module.css'
 import NavBarButtons from './NavBarButtons'
 import Router from 'next/router'
 import { NAVIGATION_ROUTES } from './NavBarButtons'
-import { ROUTES } from '../../constants/constants'
 import MobileMenu from '../MobileMenu'
 import { useState, useEffect } from 'react'
 // import { useSession, signOut,signIn } from "next-auth/react";
@@ -29,11 +28,6 @@ import PersonAdd from '@mui/icons-material/PersonAdd'
 import Settings from '@mui/icons-material/Settings'
 import Logout from '@mui/icons-material/Logout'
 import Tooltip from '@mui/material/Tooltip'
-
-export type ROUTE__INFO = {
-    url: string
-    name: string
-}
 
 // const NavBar: NextPage = (props: any) => {
 //     const [width, setWidth] = useState<number>(1080)
@@ -278,7 +272,7 @@ const NavBar = (props: any) => {
                             <Logo />
                         </div>
                         <ul className={styles.items}>
-                            {NavBarButtons(ROUTES, router)}
+                            {NavBarButtons(NAVIGATION_ROUTES, router)}
                             <ProfileButton />
                         </ul>
                     </nav>

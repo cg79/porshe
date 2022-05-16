@@ -2,7 +2,10 @@ import Link from 'next/link'
 import { NextRouter } from 'next/router'
 import styles from './NavBar.module.css'
 
-import { ROUTE__INFO } from './NavBar'
+export type ROUTE__INFO = {
+    url: string
+    name: string
+}
 
 export const NAVIGATION_ROUTES: ROUTE__INFO[] = [
     { url: '/overview', name: 'Overview' },
@@ -11,9 +14,10 @@ export const NAVIGATION_ROUTES: ROUTE__INFO[] = [
 ]
 
 const NavBarButtons = (buttons: ROUTE__INFO[], router: NextRouter) => {
-    return buttons.map((button,index) => {
+    return buttons.map((button, index) => {
         return (
-            <li key={index}
+            <li
+                key={index}
                 className={
                     router.pathname == button.url ? styles.items__active : ''
                 }

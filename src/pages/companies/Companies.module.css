@@ -1,0 +1,9 @@
+.cardGrid {
+    margin-top: 50px;
+    display: grid;
+    grid-auto-columns: minmax(380px, auto);
+    grid-template-rows: auto;
+    gap: 50px 50px;
+    grid-template-areas: '. . . .';
+    place-content: center;
+}

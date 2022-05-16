@@ -15,8 +15,9 @@ export default function SignIn(props: any) {
 
   // const [cookie, setCookie] = useCookies(["user"])
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("claudiu9379@yahoo.com");
+  const [phone, setPhone] = useState("+40742917773");
+  const [password, setPassword] = useState("1111111a");
   const [errorMessage, setErrorMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -24,6 +25,13 @@ export default function SignIn(props: any) {
   const onEmailChange = (event: any) => {
     const newValue = event.target.value;
     setEmail(newValue);
+    setSubmitted(false);
+    setErrorMessage("");
+  };
+
+  const onPhoneChange = (event: any) => {
+    const newValue = event.target.value;
+    setPhone(newValue);
     setSubmitted(false);
     setErrorMessage("");
   };
@@ -48,11 +56,10 @@ export default function SignIn(props: any) {
         debugger;
 
         if (
-          data.challengeName === 'SMS_MFA' ||
-          data.challengeName === 'SOFTWARE_TOKEN_MFA'
+          data.challengeName === "SMS_MFA" ||
+          data.challengeName === "SOFTWARE_TOKEN_MFA"
         ) {
-
-          IdentityStore.tempUser= data;
+          IdentityStore.tempUser = data;
           Router.push(ROUTES.LOGIN_VERIFICATION);
 
           // const code = getCodeFromUserInput();
@@ -100,8 +107,8 @@ export default function SignIn(props: any) {
       username: email,
       password,
       attributes: {
-        email, 
-        phone_number: "+40742917773", 
+        email,
+        phone_number: phone,
       },
     })
       .then((val) => {
@@ -125,6 +132,8 @@ export default function SignIn(props: any) {
       <Navbar>
         <div className="flex flex-column flex-center-y">
           {/* <form name="form" onSubmit={triggerSignIn}> */}
+
+
           <div className="flex">
             <Label htmlFor="username" text="Email" />
             <TextField
@@ -139,6 +148,23 @@ export default function SignIn(props: any) {
 
             {submitted && !email && (
               <div className="warning">Email is required</div>
+            )}
+          </div>
+
+          <div className="flex">
+            <Label htmlFor="username" text="Phone" />
+            <TextField
+              id="standard-basic"
+              label="Phone"
+              variant="standard"
+              name="phone"
+              value={phone}
+              disabled={loading}
+              onChange={onPhoneChange}
+            />
+
+            {submitted && !phone && (
+              <div className="warning">Phone is required</div>
             )}
           </div>
 

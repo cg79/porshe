@@ -102,31 +102,6 @@ export default function SignIn(props: any) {
       });
   };
 
-  const triggerSignUp = () => {
-    Auth.signUp({
-      username: email,
-      password,
-      attributes: {
-        email,
-        phone_number: phone,
-      },
-    })
-      .then((val) => {
-        console.log(val);
-        setErrorMessage("User succesfully created");
-        debugger;
-      })
-      .catch((err) => {
-        debugger;
-        console.log(err.message);
-        setErrorMessage(err.message);
-      })
-      .finally(() => {
-        setLoading(false);
-        setSubmitted(true);
-      });
-  };
-
   return (
     <>
       <Navbar>
@@ -197,10 +172,6 @@ export default function SignIn(props: any) {
             {/* <label className="lbl">&nbsp;</label> */}
             <Button variant="contained" onClick={triggerSignIn}>
               Login
-            </Button>
-
-            <Button variant="contained" onClick={triggerSignUp}>
-              Create
             </Button>
 
             {loading && <img src={LOADING_SVG} />}

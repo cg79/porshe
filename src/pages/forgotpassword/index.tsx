@@ -6,8 +6,10 @@ import { Auth } from "aws-amplify";
 import { Button, TextField } from "@mui/material";
 import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
+import Router from "next/router";
+import { ROUTES } from "../../constants/constants";
 
-export default function ChangePassword(props: any) {
+export default function ForgotPassword(props: any) {
   if (props && props.porsche_user) {
     IdentityStore.setLoggedUser(JSON.parse(props.porsche_user));
   }
@@ -26,7 +28,7 @@ export default function ChangePassword(props: any) {
 
 
 
-  const triggerResetPassword = async (event: any) => {
+  const triggerForgotPassword = async (event: any) => {
     event.preventDefault();
     if (loading) {
       return;
@@ -35,12 +37,15 @@ export default function ChangePassword(props: any) {
     setLoading(true);
 
     Auth.forgotPassword(email)
-      .then((user) => {
-        debugger;
-      })
       .then((data) => {
+
+        IdentityStore.tempUser = {
+          usename: email
+        }
         console.log(data);
+        debugger;
         setErrorMessage("confirmation code sent");
+        Router.push(`${ROUTES.RESET_PASSWORD}?username=${email}`);
       })
       .catch((err) => setErrorMessage(err.message))
       .finally(() => {
@@ -74,8 +79,8 @@ export default function ChangePassword(props: any) {
           
           <div className="mt10">
             {/* <label className="lbl">&nbsp;</label> */}
-            <Button variant="contained" onClick={triggerResetPassword}>
-              Reset Password
+            <Button variant="contained" onClick={triggerForgotPassword}>
+              Forgot Password
             </Button>
 
             {loading && <img src={LOADING_SVG} />}

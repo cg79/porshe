@@ -8,6 +8,7 @@ const ROUTES = {
     PROFILE:'/profile',
     CHANGE_PASSWORD:'/changepassword',
     LOGIN_VERIFICATION:'/loginverification',
+    RESET_PASSWORD:'/resetpassword',
 
 }
 

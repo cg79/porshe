@@ -8,7 +8,6 @@ export const ROUTES: ROUTE__INFO[] = [
     { url: '/overview', name: 'Overview' },
     { url: '/companies', name: 'Companies' },
     { url: '/support', name: 'Support' },
-    { url: '/profile', name: 'Profile' },
 ]
 
 const NavBarButtons = (buttons: ROUTE__INFO[], router: NextRouter) => {

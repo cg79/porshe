@@ -10,14 +10,18 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import InboxIcon from '@mui/icons-material/MoveToInbox'
 import MailIcon from '@mui/icons-material/Mail'
-import styles from './BurgerMenu.module.css'
 import Avatar from '@mui/material/Avatar'
 import MenuIcon from '@mui/icons-material/Menu'
 import Typography from '@mui/material/Typography'
 import CloseIcon from '@mui/icons-material/Close'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import styles from './MobileMenu.module.css'
 
 export default function MobileMenu() {
     const [open, setOpen] = React.useState(false)
+
+    const router = useRouter()
 
     const list = () => (
         <Box
@@ -56,14 +60,21 @@ export default function MobileMenu() {
             />
             <List>
                 {['Overview', 'Companies', 'Support'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton disableGutters>
-                            {/* <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon> */}
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
+                    <Link href={`/${text.toLowerCase()}`}>
+                        <ListItem
+                            key={text}
+                            disablePadding
+                            className={
+                                router.pathname == `/${text.toLowerCase()}`
+                                    ? styles.active
+                                    : ''
+                            }
+                        >
+                            <ListItemButton disableGutters>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
                 ))}
             </List>
             <Box

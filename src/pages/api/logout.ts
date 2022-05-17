@@ -1,6 +1,6 @@
 import cookie from "cookie";
 
-export default (req, res) => {
+export default (req: any, res:any) => {
   res.setHeader(
     "Set-Cookie",
     cookie.serialize("porsche_user", "", {

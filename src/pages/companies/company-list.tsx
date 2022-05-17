@@ -2,7 +2,7 @@ import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import Router from "next/router";
 import { ROUTES } from "../../constants/constants";
-import store from "./store/CompaniesStore";
+import store from "../../store/company/CompaniesStore";
 import Button from "../../components/button/button";
 
 // import { CompaniesProps } from "./data-types/data-types";

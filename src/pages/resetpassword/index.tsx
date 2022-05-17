@@ -6,14 +6,20 @@ import { Auth } from "aws-amplify";
 import { Button, TextField } from "@mui/material";
 import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
+import { useRouter } from "next/router";
 
-export default function ChangePassword(props: any) {
+
+export default function ResetPassword(props: any) {
   if (props && props.porsche_user) {
     IdentityStore.setLoggedUser(JSON.parse(props.porsche_user));
   }
 
+  const { query } = useRouter();
+
+  const [code, setCode] = useState("code");
   const [password, setPassword] = useState("");
   const [newpassword, setNewPassword] = useState("");
+ 
   
   const [errorMessage, setErrorMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -33,19 +39,31 @@ export default function ChangePassword(props: any) {
     setErrorMessage("");
   };
 
-  const triggerChangePassword = async (event: any) => {
+  const onCodeChange = (event: any) => {
+    const newValue = event.target.value;
+    setCode(newValue);
+    setSubmitted(false);
+    setErrorMessage("");
+  };
+
+  const triggerResetPassword = async (event: any) => {
     event.preventDefault();
     if (loading) {
       return;
     }
 
+    debugger;
+    // const tempUser = IdentityStore.tempUser;
+    debugger;
+    const username = (query.username || '') as string;
+
+    if(!username){
+      setErrorMessage('please go again to forgot password flow');
+    }
+
     setLoading(true);
 
-    Auth.currentAuthenticatedUser()
-      .then((user) => {
-        debugger;
-        return Auth.changePassword(user, password, newpassword);
-      })
+    Auth.forgotPasswordSubmit(username,code, password)
       .then((data) => {
         console.log(data);
         setErrorMessage("password succesfully changed");
@@ -58,8 +76,28 @@ export default function ChangePassword(props: any) {
   };
 
   return (
+    <>
       <Navbar>
         <div className="flex flex-column flex-center-y">
+          {/* <form name="form" onSubmit={triggerSignIn}> */}
+          
+          <div className="flex">
+            <Label htmlFor="username" text="Code" />
+            <TextField
+              id="standard-basic"
+              label="Code"
+              variant="standard"
+              name="code"
+              value={code}
+              disabled={loading}
+              onChange={onCodeChange}
+            />
+
+            {submitted && !code && (
+              <div className="warning">Code is required</div>
+            )}
+          </div>
+
           <div className="flex mt10">
             <Label htmlFor="oldpassword" text="Password" />
             <TextField
@@ -96,8 +134,8 @@ export default function ChangePassword(props: any) {
           </div>
           <div className="mt10">
             {/* <label className="lbl">&nbsp;</label> */}
-            <Button variant="contained" onClick={triggerChangePassword}>
-              Change Password
+            <Button variant="contained" onClick={triggerResetPassword}>
+              Set Password
             </Button>
 
             {loading && <img src={LOADING_SVG} />}
@@ -109,6 +147,7 @@ export default function ChangePassword(props: any) {
           {/* </form> */}
         </div>
       </Navbar>
+    </>
   );
 }
 

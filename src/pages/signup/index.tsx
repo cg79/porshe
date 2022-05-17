@@ -43,53 +43,47 @@ export default function SignIn(props: any) {
     setErrorMessage("");
   };
 
-  const triggerSignIn = async (event: any) => {
-    event.preventDefault();
-    if (loading) {
-      return;
-    }
+  const [code, setCode] = useState("");
+  const onCodeChange = (event: any) => {
+    const newValue = event.target.value;
+    setCode(newValue);
+    setSubmitted(false);
+    setErrorMessage("");
+  };
 
-    setLoading(true);
+  
 
-    Auth.signIn(email, password)
-      .then((data) => {
+  const triggerSignUp = () => {
+    Auth.signUp({
+      username: email,
+      password,
+      attributes: {
+        email,
+        phone_number: phone,
+      },
+    })
+      .then((val) => {
+        console.log(val);
+        setErrorMessage("User succesfully created");
         debugger;
+      })
+      .catch((err) => {
+        debugger;
+        console.log(err.message);
+        setErrorMessage(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
+        setSubmitted(true);
+      });
+  };
 
-        if (
-          data.challengeName === "SMS_MFA" ||
-          data.challengeName === "SOFTWARE_TOKEN_MFA"
-        ) {
-          IdentityStore.tempUser = data;
-          Router.push(ROUTES.LOGIN_VERIFICATION);
-
-          // const code = getCodeFromUserInput();
-          // const loggedUser = await Auth.confirmSignIn(
-          //   data, // Return object from Auth.signIn()
-          //   code, // Confirmation code
-          //   mfaType // MFA Type e.g. SMS_MFA, SOFTWARE_TOKEN_MFA
-          // );
-
-          return;
-        }
-
-        const awsJsonUserAttributes = data.attributes;
-        IdentityStore.setLoggedUser(awsJsonUserAttributes);
-
-        const reqBody = {
-          porsche_user: JSON.stringify(awsJsonUserAttributes),
-        };
-
-        fetch("/api/login", {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(reqBody),
-        }).finally(() => {
-          // IdentityStore.setLoggedUser(awsJsonUserAttributes);
-        });
-
-        // getRefreshToken();
+  const triggerConfirmEmail = () => {
+    Auth.confirmSignUp(email, code)
+      .then((val) => {
+        console.log(val);
+        setErrorMessage("User confirmed");
+        debugger;
       })
       .catch((err) => {
         debugger;
@@ -170,22 +164,39 @@ export default function SignIn(props: any) {
 
           <div className="mt10">
             {/* <label className="lbl">&nbsp;</label> */}
-            <Button variant="contained" onClick={triggerSignIn}>
-              Login
+            <Button variant="contained" onClick={triggerSignUp}>
+              Create
             </Button>
 
             {loading && <img src={LOADING_SVG} />}
           </div>
 
-          <div>
-            {/* <a href="/resetpassword">reset password</a> */}
-            <Button href="/forgotpassword">forgot password</Button>
+
+          <div className="flex">
+            <Label htmlFor="username" text="Code" />
+            <TextField
+              id="standard-basic"
+              label="Code"
+              variant="standard"
+              name="username"
+              value={code}
+              disabled={loading}
+              onChange={onCodeChange}
+            />
+            
           </div>
+
+          <Button variant="contained" onClick={triggerConfirmEmail}>
+              COnfirmemail
+            </Button>
+         
 
           <div className="flex flex-center mt10">
             <ErrorMessage message={errorMessage}></ErrorMessage>
           </div>
           {/* </form> */}
+
+
         </div>
       </Navbar>
     </>

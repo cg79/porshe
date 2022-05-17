@@ -5,6 +5,7 @@ import styles from './NavBar.module.css'
 import NavBarButtons from './NavBarButtons'
 import Router from 'next/router'
 import { NAVIGATION_ROUTES } from './NavBarButtons'
+import { ROUTES } from '../../constants/constants'
 import MobileMenu from '../MobileMenu'
 import { useState, useEffect } from 'react'
 // import { useSession, signOut,signIn } from "next-auth/react";
@@ -28,6 +29,7 @@ import PersonAdd from '@mui/icons-material/PersonAdd'
 import Settings from '@mui/icons-material/Settings'
 import Logout from '@mui/icons-material/Logout'
 import Tooltip from '@mui/material/Tooltip'
+import Link from 'next/link'
 
 // const NavBar: NextPage = (props: any) => {
 //     const [width, setWidth] = useState<number>(1080)
@@ -166,6 +168,32 @@ import Tooltip from '@mui/material/Tooltip'
 const NavBar = (props: any) => {
     const router = useRouter()
 
+    // const { data: session, status } = useSession()
+    // const [cookie, setCookie] = useCookies(['user'])
+
+    const navigateToSignInPage = () => {
+        Router.push(ROUTES.SIGN_IN)
+    }
+
+    const onSignOut = () => {
+        IdentityStore.logout()
+
+        fetch('/api/logout', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({}),
+        }).finally(() => {
+            IdentityStore.logout()
+            Router.push(ROUTES.OVERVIEW)
+        })
+    }
+
+    // if (status === 'loading') {
+    //     return null
+    // }
+
     const [width, setWidth] = useState<number>(1080)
 
     function handleWindowSizeChange() {
@@ -187,6 +215,53 @@ const NavBar = (props: any) => {
     }
     const handleClose = () => {
         setAnchorEl(null)
+    }
+
+    const ProfileButtons = () => {
+        const isLogged = IdentityStore.loggedUser
+
+        return (
+            <>
+                {isLogged ? (
+                    <>
+                        <MenuItem>
+                            <Avatar /> Profile
+                        </MenuItem>
+                        <Divider />
+                        <MenuItem>
+                            <ListItemIcon>
+                                <Settings fontSize="small" />
+                            </ListItemIcon>
+                            <Link href={ROUTES.PROFILE}>My account</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <ListItemIcon>
+                                <Logout fontSize="small" />
+                            </ListItemIcon>
+                            <Link
+                                href={ROUTES.OVERVIEW}
+                                onClick={() => onSignOut()}
+                            >
+                                Sign Out
+                            </Link>
+                        </MenuItem>
+                    </>
+                ) : (
+                    <>
+                        <MenuItem>
+                            <Avatar /> Profile
+                        </MenuItem>
+                        <Divider />
+                        <MenuItem>
+                            <ListItemIcon>
+                                <Settings fontSize="small" />
+                            </ListItemIcon>
+                            <Link href={ROUTES.CHANGE_PASSWORD}>Register</Link>
+                        </MenuItem>
+                    </>
+                )}
+            </>
+        )
     }
 
     const ProfileButton = () => {
@@ -240,22 +315,7 @@ const NavBar = (props: any) => {
                     transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                     anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                 >
-                    <MenuItem>
-                        <Avatar /> Profile
-                    </MenuItem>
-                    <Divider />
-                    <MenuItem>
-                        <ListItemIcon>
-                            <Settings fontSize="small" />
-                        </ListItemIcon>
-                        Settings
-                    </MenuItem>
-                    <MenuItem>
-                        <ListItemIcon>
-                            <Logout fontSize="small" />
-                        </ListItemIcon>
-                        Logout
-                    </MenuItem>
+                    <ProfileButtons />
                 </Menu>
             </li>
         )
@@ -283,6 +343,21 @@ const NavBar = (props: any) => {
             {props.children}
         </>
     )
+}
+
+NavBar.getInitialProps = async ({ req, res }) => {
+    const data = parseCookies(req)
+
+    if (res) {
+        if (Object.keys(data).length === 0 && data.constructor === Object) {
+            res.writeHead(301, { Location: '/' })
+            res.end()
+        }
+    }
+
+    return {
+        data: data && data,
+    }
 }
 
 export default NavBar

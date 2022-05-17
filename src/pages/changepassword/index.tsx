@@ -58,12 +58,8 @@ export default function ChangePassword(props: any) {
   };
 
   return (
-    <>
       <Navbar>
         <div className="flex flex-column flex-center-y">
-          {/* <form name="form" onSubmit={triggerSignIn}> */}
-          
-
           <div className="flex mt10">
             <Label htmlFor="oldpassword" text="Password" />
             <TextField
@@ -113,7 +109,6 @@ export default function ChangePassword(props: any) {
           {/* </form> */}
         </div>
       </Navbar>
-    </>
   );
 }
 

@@ -3,7 +3,7 @@ import Router from "next/router";
 import { useState } from "react";
 import Button from "../../components/button/button";
 import { ROUTES } from "../../constants/constants";
-import store from "./store/CompaniesStore";
+import store from "../../store/company/CompaniesStore";
 
 const CreateCompany = observer(() => {
   const [name, setName] = useState("");

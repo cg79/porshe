@@ -64,11 +64,11 @@ export default function MobileMenu() {
                         <ListItem
                             key={text}
                             disablePadding
-                            className={
+                            className={`${
                                 router.pathname == `/${text.toLowerCase()}`
                                     ? styles.active
                                     : ''
-                            }
+                            }${styles.menu__link}`}
                         >
                             <ListItemButton disableGutters>
                                 <ListItemText primary={text} />
@@ -84,7 +84,11 @@ export default function MobileMenu() {
             />
             <List>
                 {['My Account', 'Sign Out'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
+                    <ListItem
+                        key={text}
+                        disablePadding
+                        className={styles.menu_link}
+                    >
                         <ListItemButton disableGutters>
                             <ListItemText primary={text} />
                         </ListItemButton>
@@ -103,7 +107,7 @@ export default function MobileMenu() {
                     <MenuIcon sx={{ color: '#fff', fontSize: 40 }} />
                 )}
             </Button>
-            <Drawer open={open} onClose={() => setOpen(!open)}>
+            <Drawer open={open} onClose={() => setOpen(!open)} anchor="left">
                 {list()}
             </Drawer>
         </nav>

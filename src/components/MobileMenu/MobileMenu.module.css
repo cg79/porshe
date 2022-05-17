@@ -1,6 +1,6 @@
-/* .mobileMenu {
+.mobileMenu {
     display: none;
-} */
+}
 
 @media (max-width: 768px) {
     .mobileMenu {
@@ -8,6 +8,10 @@
         width: 100vw;
         justify-content: flex-end;
     }
+}
+.mobileMenu button {
+    z-index: 1001;
+    position: relative;
 }
 
 .menu__section {
@@ -68,5 +72,13 @@
     }
 }
 .active {
-    font-weight: 800;
+    font-family: 'Porsche Next';
+    font-weight: 900;
+    font-size: 14px;
+}
+.menu__link span,
+.menu__profile span {
+    font-family: 'Porsche Next';
+    font-weight: 100;
+    font-size: 14px;
 }

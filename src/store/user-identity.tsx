@@ -1,13 +1,13 @@
 export class User {
-  logo = "";
+  picture = "";
   name = "";
   email = '';
 
   constructor(data: any) {
-    const { logo, name, email } = data;
+    const { picture, name, email } = data;
     this.email=email;
-    this.logo =
-      logo ||
+    this.picture =
+    picture ||
       "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214.jpg";
     this.name = name;
   }

@@ -34,7 +34,8 @@
     ],
     "userpoolClientReadAttributes": [
       "email",
-      "phone_number"
+      "phone_number",
+      "picture"
     ],
     "userpoolClientLambdaRole": "porschd8ac059d_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": true,
@@ -53,6 +54,25 @@
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true
+    "useEnabledMfas": true,
+    "authRoleArn": {
+      "Fn::GetAtt": [
+        "AuthRole",
+        "Arn"
+      ]
+    },
+    "unauthRoleArn": {
+      "Fn::GetAtt": [
+        "UnauthRole",
+        "Arn"
+      ]
+    },
+    "breakCircularDependency": true,
+    "dependsOn": [],
+    "authProviders": [],
+    "parentStack": {
+      "Ref": "AWS::StackId"
+    },
+    "permissions": []
   }
 }

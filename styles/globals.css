@@ -9,12 +9,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.lbl{
+.lbl {
   width: 100px;
   display: inline-flex;
 }
 
-.mt10{
+.mt10 {
   margin-top: 10px;
 }
 
@@ -26,19 +26,19 @@ body {
   flex-direction: column;
 }
 
-.flex-center-x{
+.flex-center-x {
   justify-content: center;
 }
 
-.flex-center-y{
+.flex-center-y {
   align-items: center;
 }
 
-.error{
+.error {
   color: red;
 }
 
-.warning{
+.warning {
   color: aqua;
 }
 
@@ -47,21 +47,41 @@ a {
   text-decoration: none;
 }
 
-.company{
+.company {
   position: relative;
 }
 
-.company .title{
+.company .title {
   position: absolute;
-  top:40%;
+  top: 40%;
   transform: translateY(-50%);
   color: white;
 }
 
-.company .image:hover{
+.company .image:hover {
   border: 1px solid green;
 }
 
-.pointer{
+.pointer {
+  cursor: pointer;
+}
+
+.avatar-container {
+  position: fixed;
+  /* top: 50%; */
+  /* left: 50%; */
+  width: 510px;
+  height: 51px;
+  transform: translate(-50px, -50px);
+}
+.avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid 1px rgba(0, 150, 136, 0.3);
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  z-index: 2;
+  position: absolute;
   cursor: pointer;
 }

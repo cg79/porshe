@@ -17,10 +17,19 @@ export default function SignIn(props: any) {
 
   const [email, setEmail] = useState("claudiu9379@yahoo.com");
   const [phone, setPhone] = useState("+40742917773");
+  const [avatar, setAvatar] = useState("https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=620&quality=85&auto=format&fit=max&s=21718fb1379918410ea10054db89f665");
+
   const [password, setPassword] = useState("1111111a");
   const [errorMessage, setErrorMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const onAvatarChange = (event: any) => {
+    const newValue = event.target.value;
+    setAvatar(newValue);
+    setSubmitted(false);
+    setErrorMessage("");
+  };
 
   const onEmailChange = (event: any) => {
     const newValue = event.target.value;
@@ -60,6 +69,7 @@ export default function SignIn(props: any) {
       attributes: {
         email,
         phone_number: phone,
+        picture: avatar,
       },
     })
       .then((val) => {
@@ -162,6 +172,20 @@ export default function SignIn(props: any) {
             )}
           </div>
 
+          <div className="flex mp10">
+            <Label htmlFor="avatar" text="Avatar" />
+            <TextField
+              id="standard-basic"
+              label="Code"
+              variant="standard"
+              name="username"
+              value={avatar}
+              disabled={loading}
+              onChange={onAvatarChange}
+            />
+            
+          </div>
+
           <div className="mt10">
             {/* <label className="lbl">&nbsp;</label> */}
             <Button variant="contained" onClick={triggerSignUp}>
@@ -186,8 +210,10 @@ export default function SignIn(props: any) {
             
           </div>
 
+          
+
           <Button variant="contained" onClick={triggerConfirmEmail}>
-              COnfirmemail
+              Confirmemail
             </Button>
          
 

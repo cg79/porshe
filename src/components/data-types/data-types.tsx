@@ -13,3 +13,7 @@ export type LabelProps = {
   text: string;
   htmlFor: string;
 };
+
+export type AvatarProps = {
+  picture: string;
+};

@@ -15,6 +15,7 @@ import { parseCookies } from "../../helpers";
 import Amplify from "aws-amplify";
 import awsconfig from "../../aws-exports";
 import { NextPage } from "next";
+import Avatar from "../avatar/avatar";
 Amplify.configure(awsconfig);
 
 // import useWindowDimensions from '../../hooks/WindowDimension'
@@ -119,13 +120,16 @@ const NavBar: NextPage = (props: any) => {
                     >
                       Change Password
                     </li>
+
+                    <li>
+                      <Avatar picture={IdentityStore.loggedUser.picture}></Avatar>
+                    </li>
                   </ul>
                 </li>
               )}
 
               {IdentityStore.loggedUser && IdentityStore.loggedUser.info()}
-              {/* <li onClick={() => navigateToSignInPage()}>Sign In</li> */}
-              {/* <li onClick={() => onSignOut()}>Sign Out</li> */}
+
             </ul>
           </nav>
           <span>&nbsp;</span>

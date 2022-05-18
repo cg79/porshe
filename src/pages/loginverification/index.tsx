@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LOADING_SVG } from "../../constants/constants";
+import { LOADING_SVG, ROUTES } from "../../constants/constants";
 import Navbar from "../../components/Navbar";
 import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
@@ -94,8 +94,7 @@ export default function ChangePassword(props: any) {
             },
             body: JSON.stringify(reqBody),
           }).finally(() => {
-            // IdentityStore.setLoggedUser(awsJsonUserAttributes);
-            Router.push(ROUTES.LOGIN_VERIFICATION);
+            Router.push(ROUTES.OVERVIEW);
           });
         })
         

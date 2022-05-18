@@ -1,0 +1,33 @@
+{
+  "auth": {
+    "porsche3d8ac059dd8ac059d": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "signupAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "ON",
+        "mfaTypes": [
+          "SMS",
+          "TOTP"
+        ],
+        "verificationMechanisms": [
+          "PHONE_NUMBER"
+        ]
+      }
+    }
+  }
+}

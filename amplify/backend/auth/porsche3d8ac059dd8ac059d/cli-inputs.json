@@ -1,0 +1,58 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "fullsdidentitypool3",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "porschd8ac059d",
+    "userPoolName": "fullsdpool3",
+    "autoVerifiedAttributes": [
+      "phone_number"
+    ],
+    "mfaConfiguration": "ON",
+    "mfaTypes": [
+      "SMS Text Message",
+      "TOTP"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+      "email",
+      "phone_number"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+      "picture",
+      "email",
+      "phone_number"
+    ],
+    "userpoolClientReadAttributes": [
+      "email",
+      "phone_number"
+    ],
+    "userpoolClientLambdaRole": "porschd8ac059d_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": true,
+    "sharedId": "d8ac059d",
+    "resourceName": "porsche3d8ac059dd8ac059d",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "manual",
+    "thirdPartyAuth": false,
+    "usernameAttributes": [
+      "email, phone_number"
+    ],
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": {},
+    "hostedUI": false,
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
+}

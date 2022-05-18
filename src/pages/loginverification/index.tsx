@@ -6,6 +6,7 @@ import { Auth } from "aws-amplify";
 import { Button, TextField } from "@mui/material";
 import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
+import Router from "next/router";
 
 export default function ChangePassword(props: any) {
   if (props && props.porsche_user) {
@@ -42,8 +43,9 @@ export default function ChangePassword(props: any) {
         debugger;
       })
       .then((data) => {
+        debugger;
         console.log(data);
-        setErrorMessage("user logged in");
+        setErrorMessage("resend sign up");
       })
       .catch((err) => setErrorMessage(err.message))
       .finally(() => {
@@ -75,6 +77,28 @@ export default function ChangePassword(props: any) {
       .then((data) => {
         console.log(data);
         setErrorMessage("user logged in");
+
+        Auth.currentUserInfo().then(userInfo =>{
+          debugger;
+          const awsJsonUserAttributes = userInfo.attributes;
+          IdentityStore.setLoggedUser(awsJsonUserAttributes);
+  
+          const reqBody = {
+            porsche_user: JSON.stringify(awsJsonUserAttributes),
+          };
+  
+          fetch("/api/login", {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(reqBody),
+          }).finally(() => {
+            // IdentityStore.setLoggedUser(awsJsonUserAttributes);
+            Router.push(ROUTES.LOGIN_VERIFICATION);
+          });
+        })
+        
       })
       .catch((err) => setErrorMessage(err.message))
       .finally(() => {

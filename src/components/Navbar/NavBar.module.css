@@ -8,11 +8,12 @@
 }
 
 .container span {
-    width: calc(100vw-120px);
     height: 1px;
     margin-left: 60px;
     margin-right: 60px;
     background: #ffffff20;
+    display: inline-flex;
+    margin-top: 5px;
 }
 
 .navbar {

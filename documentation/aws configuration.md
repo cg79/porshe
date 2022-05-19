@@ -5,6 +5,10 @@ delete amplify folder from application
 
 delete src\aws-exports.js
 
+login to aws account
+
+choose region (the used region from create-auth-challenge-lambda file is us-east-1)
+
 amplify configure
 
 amplify init

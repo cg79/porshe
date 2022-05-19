@@ -1,6 +1,5 @@
 
 import CompanyList from "./company-list";
-// import { CompaniesStore } from "./store/CompaniesStore";
 
 export default function RootCompanies() {
 
@@ -8,9 +7,7 @@ export default function RootCompanies() {
 
   return (
     <div>
-      {/* <CompanyList store={store}></CompanyList> */}
       <CompanyList></CompanyList>
-      {/* <CompanyGrid></CompanyGrid> */}
     </div>
   );
 }

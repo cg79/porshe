@@ -1,10 +1,9 @@
 import "../../styles/globals.css";
 import "../../styles/page.css";
 import { NextPage } from "next";
-import React from 'react';
+import React from "react";
 
 import { CookiesProvider } from "react-cookie";
-
 
 import {
   Chart as ChartJS,
@@ -14,7 +13,7 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
+} from "chart.js";
 
 ChartJS.register(
   CategoryScale,
@@ -34,7 +33,11 @@ function MyApp({
 }) {
   return (
     <CookiesProvider>
-      <Component {...pageProps} />
+      <div className="main">
+        <div id="container1"></div>
+        <div id="container2"></div>
+        <Component {...pageProps} />
+      </div>
     </CookiesProvider>
   );
 }

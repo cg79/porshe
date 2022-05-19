@@ -103,7 +103,7 @@ export default function SignIn(props: any) {
   };
 
   return (
-    <>
+    <div className="page-content">
       <Navbar>
         <div className="flex flex-column flex-center-y">
           {/* <form name="form" onSubmit={triggerSignIn}> */}
@@ -188,7 +188,7 @@ export default function SignIn(props: any) {
           {/* </form> */}
         </div>
       </Navbar>
-    </>
+    </div>
   );
 }
 

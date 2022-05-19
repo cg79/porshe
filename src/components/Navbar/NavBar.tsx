@@ -66,7 +66,7 @@ const NavBar: NextPage = (props: any) => {
       body: JSON.stringify({}),
     }).finally(() => {
       IdentityStore.logout();
-      Router.push(ROUTES.OVERVIEW);
+      Router.push(ROUTES.SIGN_IN);
     });
   };
 

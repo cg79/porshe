@@ -9,12 +9,33 @@ import ListItemText from "@mui/material/ListItemText";
 import styles from "./BurgerMenu.module.css";
 import Avatar from "@mui/material/Avatar";
 import MenuIcon from "@mui/icons-material/Menu";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import Logo from "../Navbar/Logo";
+import IdentityStore from "../../store/identity-store";
+import Router from "next/router";
+import { ROUTES } from "../../constants/constants";
 
 export default function MobileMenu() {
   const [open, setOpen] = React.useState(false);
+  const avatarUrl = IdentityStore.loggedUser
+    ? IdentityStore.loggedUser.picture
+    : "";
+
+    const onSignOut = () => {
+        IdentityStore.logout();
+    
+        fetch("/api/logout", {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({}),
+        }).finally(() => {
+          IdentityStore.logout();
+          Router.push(ROUTES.SIGN_IN);
+        });
+      };
 
   const list = () => (
     <Box
@@ -33,49 +54,45 @@ export default function MobileMenu() {
       onClick={() => setOpen(!open)}
       onKeyDown={() => setOpen(!open)}
     >
-      <Avatar
-        alt="Remy Sharp"
-        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-        sx={{ width: 80, height: 80 }}
-      />
-      <Typography
+
+      {avatarUrl && <Avatar src={avatarUrl} sx={{ width: 80, height: 80 }} />}
+
+      {/* <Typography
         variant="h6"
         gutterBottom
         component="div"
         sx={{ paddingTop: "15px" }}
       >
         Denis Smith
-      </Typography>
+      </Typography> */}
       <Box
         sx={{
-          height: 60,
+          height: 20,
         }}
       />
       <List>
         {["Overview", "Companies", "Support"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton disableGutters>
+          <ListItem key={text} disablePadding  button component="a" href={'/'+text.toLowerCase()}>
+            {/* <ListItemButton disableGutters> */}
               {/* <ListItemIcon>
                                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                             </ListItemIcon> */}
               <ListItemText primary={text} />
-            </ListItemButton>
+            {/* </ListItemButton> */}
           </ListItem>
         ))}
       </List>
-      <Box
+      {/* <Box
         sx={{
           height: 40,
         }}
-      />
+      /> */}
       <List>
-        {["My Account", "Sign Out"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton disableGutters>
-              <ListItemText primary={text} />
+          <ListItem key='so' disablePadding>
+            <ListItemButton onClick={onSignOut} disableGutters>
+              <ListItemText primary='Sign Out' />
             </ListItemButton>
           </ListItem>
-        ))}
       </List>
     </Box>
   );

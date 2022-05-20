@@ -23,20 +23,20 @@ export default function MobileMenu() {
     ? IdentityStore.loggedUser.picture
     : "";
 
-    const onSignOut = () => {
-        IdentityStore.logout();
-    
-        fetch("/api/logout", {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({}),
-        }).finally(() => {
-          IdentityStore.logout();
-          Router.push(ROUTES.SIGN_IN);
-        });
-      };
+  const onSignOut = () => {
+    IdentityStore.logout();
+
+    fetch("/api/logout", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({}),
+    }).finally(() => {
+      IdentityStore.logout();
+      Router.push(ROUTES.SIGN_IN);
+    });
+  };
 
   const list = () => (
     <Box
@@ -55,7 +55,6 @@ export default function MobileMenu() {
       onClick={() => setOpen(!open)}
       onKeyDown={() => setOpen(!open)}
     >
-
       {avatarUrl && <Avatar src={avatarUrl} sx={{ width: 80, height: 80 }} />}
 
       <Typography
@@ -73,12 +72,18 @@ export default function MobileMenu() {
       />
       <List>
         {["Overview", "Companies", "Support"].map((text, index) => (
-          <ListItem key={text} disablePadding  button component="a" href={'/'+text.toLowerCase()}>
+          <ListItem
+            key={text}
+            disablePadding
+            button
+            component="a"
+            href={"/" + text.toLowerCase()}
+          >
             {/* <ListItemButton disableGutters> */}
-              {/* <ListItemIcon>
+            {/* <ListItemIcon>
                                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                             </ListItemIcon> */}
-              <ListItemText primary={text} />
+            <ListItemText primary={text} />
             {/* </ListItemButton> */}
           </ListItem>
         ))}
@@ -89,11 +94,21 @@ export default function MobileMenu() {
         }}
       /> */}
       <List>
-          <ListItem key='so' disablePadding>
-            <ListItemButton onClick={onSignOut} disableGutters>
-              <ListItemText primary='Sign Out' />
-            </ListItemButton>
-          </ListItem>
+        <ListItem
+          key="changepassword"
+          disablePadding
+          button
+          component="a"
+          href="/changepassword"
+        >
+          <ListItemText primary="Change Password" />
+        </ListItem>
+
+        <ListItem key="so" disablePadding>
+          <ListItemButton onClick={onSignOut} disableGutters>
+            <ListItemText primary="Sign Out" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );

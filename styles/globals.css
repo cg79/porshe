@@ -59,6 +59,10 @@ body {
   margin-top: 10px;
 }
 
+.ml5 {
+  margin-left: 5px;
+}
+
 .flex {
   display: flex;
 }

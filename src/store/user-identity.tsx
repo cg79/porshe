@@ -13,6 +13,16 @@ export class User {
   }
 
   info(){
-    return this.email? this.email:'no email';
+    const {name, email} = this;
+
+    if(name){
+      return name;
+    }
+
+    if(email){
+      return email.substring(0, email.indexOf('@'));
+    }
+
+    return '';
   }
 }

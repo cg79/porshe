@@ -24,6 +24,8 @@ class IdentityStore {
     // this.loggedUser = new User({email:'geo'});
   }
 
+
+
   stringToJson(str: string) {
     try {
       return JSON.parse(str);

@@ -15,7 +15,8 @@ import { parseCookies } from "../../helpers";
 import Amplify from "aws-amplify";
 import awsconfig from "../../aws-exports";
 import { NextPage } from "next";
-import Avatar from "../avatar/avatar";
+import { Avatar } from "@mui/material";
+// import Avatar from "../avatar/avatar";
 Amplify.configure(awsconfig);
 
 // import useWindowDimensions from '../../hooks/WindowDimension'
@@ -29,15 +30,13 @@ const NavBar: NextPage = (props: any) => {
   const [width, setWidth] = useState<number>(1080);
   const [isDropDownOpen, setDropDownOpen] = useState(false);
   const ddContainerRef = useRef<HTMLDivElement>(null);
-  
+
   const router = useRouter();
   const toggleDropDown = () => {
     setDropDownOpen(!isDropDownOpen);
   };
 
-  
-
-  const handleClickOutside = (event:any) => {
+  const handleClickOutside = (event: any) => {
     if (
       ddContainerRef.current &&
       !ddContainerRef.current.contains(event.target)
@@ -107,45 +106,46 @@ const NavBar: NextPage = (props: any) => {
 
               {IdentityStore.loggedUser && (
                 <li>
-                  <ul>
-                    <li
-                      className={
-                        router.pathname == "/signout"
-                          ? `${styles.items__active} pointer`
-                          : "pointer"
-                      }
-                      onClick={() => onSignOut()}
-                    >
-                      Sign Out
-                    </li>
-
-                    <li
-                      className={
-                        router.pathname == "/changepassword"
-                          ? `${styles.items__active} pointer`
-                          : "pointer"
-                      }
-                      onClick={() => onGoToChangePassword()}
-                    >
-                      Change Password
+                  <ul className={styles.sameline}>
+                    <li>
+                      <Avatar src={IdentityStore.loggedUser.picture}></Avatar>
                     </li>
 
                     <li>
-                      <Avatar
-                        picture={IdentityStore.loggedUser.picture}
-                      ></Avatar>
+                      <div
+                        className={styles.dropdowncontainer}
+                        ref={ddContainerRef}
+                      >
+                        {IdentityStore.loggedUser && (
+                          <div className="pointer" onClick={toggleDropDown}>
+                            {IdentityStore.loggedUser.info()}
 
-                      <div className={styles.dropdowncontainer} ref={ddContainerRef}>
-                        <button type="button" className="button" onClick={toggleDropDown}>
-                          ☰
-                        </button>
+                            <span className="button1 pointer ml5">&#8595;</span>
+                          </div>
+                        )}
                         {isDropDownOpen && (
                           <div className={styles.dropdown}>
                             <ul>
-                              <li>Option 1</li>
-                              <li>Option 2</li>
-                              <li>Option 3</li>
-                              <li>Option 4</li>
+                              <li
+                                className={
+                                  router.pathname == "/changepassword"
+                                    ? `${styles.items__active} pointer mt10`
+                                    : "pointer mt10"
+                                }
+                                onClick={() => onGoToChangePassword()}
+                              >
+                                Change Password
+                              </li>
+                              <li
+                                className={
+                                  router.pathname == "/signout"
+                                    ? `${styles.items__active} pointer mt10`
+                                    : "pointer mt10"
+                                }
+                                onClick={() => onSignOut()}
+                              >
+                                Sign Out
+                              </li>
                             </ul>
                           </div>
                         )}
@@ -154,11 +154,9 @@ const NavBar: NextPage = (props: any) => {
                   </ul>
                 </li>
               )}
-
-              {IdentityStore.loggedUser && IdentityStore.loggedUser.info()}
             </ul>
           </nav>
-          <span>&nbsp;</span>
+          <span className={styles.bottomline}>&nbsp;</span>
         </section>
       )}
 

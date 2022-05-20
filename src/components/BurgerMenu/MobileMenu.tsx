@@ -15,6 +15,7 @@ import Logo from "../Navbar/Logo";
 import IdentityStore from "../../store/identity-store";
 import Router from "next/router";
 import { ROUTES } from "../../constants/constants";
+import { Typography } from "@mui/material";
 
 export default function MobileMenu() {
   const [open, setOpen] = React.useState(false);
@@ -57,14 +58,14 @@ export default function MobileMenu() {
 
       {avatarUrl && <Avatar src={avatarUrl} sx={{ width: 80, height: 80 }} />}
 
-      {/* <Typography
+      <Typography
         variant="h6"
         gutterBottom
         component="div"
         sx={{ paddingTop: "15px" }}
       >
-        Denis Smith
-      </Typography> */}
+        {IdentityStore.loggedUser && IdentityStore.loggedUser.info()}
+      </Typography>
       <Box
         sx={{
           height: 20,

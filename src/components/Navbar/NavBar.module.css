@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-.container span {
+.container .bottomline {
   height: 1px;
   margin-left: 60px;
   margin-right: 60px;
@@ -58,6 +58,26 @@
   padding-right: 60px;
 }
 .items__active {
+  font-weight: 800;
+}
+
+.sameline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.sameline li {
+  list-style: none;
+  color: #fff;
+  padding-right: 20px;
+}
+.sameline__active {
   font-weight: 800;
 }
 

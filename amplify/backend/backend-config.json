@@ -1,6 +1,6 @@
 {
   "auth": {
-    "porsche3d8ac059dd8ac059d": {
+    "project457700b1957700b19": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -13,7 +13,8 @@
         ],
         "signupAttributes": [
           "EMAIL",
-          "PHONE_NUMBER"
+          "NAME",
+          "PICTURE"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,

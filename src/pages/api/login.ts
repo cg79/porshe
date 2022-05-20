@@ -6,7 +6,7 @@ export default (req: any, res: any) => {
     cookie.serialize("porsche_user", req.body.porsche_user, {
       httpOnly: true,
       secure: process.env.NODE_ENV !== "development",
-      maxAge: 60 * 60,
+      maxAge: 30*24*60*60*1000,
       sameSite: "strict",
       path: "/",
     })

@@ -7,7 +7,7 @@ import Router from "next/router";
 import { NAVIGATION_ROUTES } from "./NavBarButtons";
 import { ROUTES } from "../../constants/constants";
 import MobileMenu from "../BurgerMenu/MobileMenu";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 // import { useSession, signOut,signIn } from "next-auth/react";
 import IdentityStore from "../../store/identity-store";
 import { parseCookies } from "../../helpers";
@@ -27,23 +27,32 @@ export type ROUTE__INFO = {
 
 const NavBar: NextPage = (props: any) => {
   const [width, setWidth] = useState<number>(1080);
-  // const x= useSession();
-  // debugger;
-  // console.log(x);
-  // const { data: session, status } = useSession();
-  // const [cookie, setCookie] = useCookies(["user"])
-
-  //   if (status === "loading") {
-  //     return null;
-  //   }
-
+  const [isDropDownOpen, setDropDownOpen] = useState(false);
+  const ddContainerRef = useRef<HTMLDivElement>(null);
+  
   const router = useRouter();
+  const toggleDropDown = () => {
+    setDropDownOpen(!isDropDownOpen);
+  };
+
+  
+
+  const handleClickOutside = (event:any) => {
+    if (
+      ddContainerRef.current &&
+      !ddContainerRef.current.contains(event.target)
+    ) {
+      setDropDownOpen(false);
+    }
+  };
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
   useEffect(() => {
     setWidth(window.innerWidth);
+
+    document.addEventListener("mousedown", handleClickOutside);
 
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
@@ -70,9 +79,9 @@ const NavBar: NextPage = (props: any) => {
     });
   };
 
-  const onGoToChangePassword=()=>{
+  const onGoToChangePassword = () => {
     Router.push(ROUTES.CHANGE_PASSWORD);
-  }
+  };
 
   return (
     <>
@@ -122,14 +131,31 @@ const NavBar: NextPage = (props: any) => {
                     </li>
 
                     <li>
-                      <Avatar picture={IdentityStore.loggedUser.picture}></Avatar>
+                      <Avatar
+                        picture={IdentityStore.loggedUser.picture}
+                      ></Avatar>
+
+                      <div className={styles.dropdowncontainer} ref={ddContainerRef}>
+                        <button type="button" className="button" onClick={toggleDropDown}>
+                          ☰
+                        </button>
+                        {isDropDownOpen && (
+                          <div className={styles.dropdown}>
+                            <ul>
+                              <li>Option 1</li>
+                              <li>Option 2</li>
+                              <li>Option 3</li>
+                              <li>Option 4</li>
+                            </ul>
+                          </div>
+                        )}
+                      </div>
                     </li>
                   </ul>
                 </li>
               )}
 
               {IdentityStore.loggedUser && IdentityStore.loggedUser.info()}
-
             </ul>
           </nav>
           <span>&nbsp;</span>
@@ -155,6 +181,5 @@ NavBar.getInitialProps = async ({ req, res }) => {
     data: data && data,
   };
 };
-
 
 export default NavBar;

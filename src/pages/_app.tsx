@@ -33,9 +33,14 @@ function MyApp({
 }) {
   return (
     <CookiesProvider>
-      <div className="main">
-        <div id="container1"></div>
-        <div id="container2"></div>
+      {/* <div id="container1"></div>
+        <div id="container2"></div> */}
+
+      <div className="bg-element-1"></div>
+      <div className="bg-element-2"></div>
+      <div className="bg-element-3"></div>
+
+      <div className="demo-container">
         <Component {...pageProps} />
       </div>
     </CookiesProvider>

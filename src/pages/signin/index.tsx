@@ -51,11 +51,12 @@ export default function SignIn(props: any) {
 
     setLoading(true);
 
-    Auth.signIn(email, password)
+    Auth.signIn(email)
       .then((data) => {
         debugger;
 
         if (
+          data.challengeName === "CUSTOM_CHALLENGE" ||
           data.challengeName === "SMS_MFA" ||
           data.challengeName === "SOFTWARE_TOKEN_MFA"
         ) {

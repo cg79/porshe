@@ -25,34 +25,34 @@ export default function ChangePassword(props: any) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const resendVerificationCode = ()=>{
+  // const resendVerificationCode = ()=>{
     
 
-    setLoading(true);
-    // const code = getCodeFromUserInput();
-    // const loggedUser = await Auth.confirmSignIn(
-    //   data, // Return object from Auth.signIn()
-    //   code, // Confirmation code
-    //   mfaType // MFA Type e.g. SMS_MFA, SOFTWARE_TOKEN_MFA
-    // );
+  //   setLoading(true);
+  //   // const code = getCodeFromUserInput();
+  //   // const loggedUser = await Auth.confirmSignIn(
+  //   //   data, // Return object from Auth.signIn()
+  //   //   code, // Confirmation code
+  //   //   mfaType // MFA Type e.g. SMS_MFA, SOFTWARE_TOKEN_MFA
+  //   // );
 
-    const userFromSignIn = IdentityStore.tempUser;
-    Auth.resendSignUp('claudiu9379@yahoo.com')
-      .then((user) => {
-        console.log(user);
-        debugger;
-      })
-      .then((data) => {
-        debugger;
-        console.log(data);
-        setErrorMessage("resend sign up");
-      })
-      .catch((err) => setErrorMessage(err.message))
-      .finally(() => {
-        setLoading(false);
-        setSubmitted(true);
-      });
-  }
+  //   const userFromSignIn = IdentityStore.tempUser;
+  //   Auth.resendConfirmationCode('claudiu9379@yahoo.com')
+  //     .then((user) => {
+  //       console.log(user);
+  //       debugger;
+  //     })
+  //     .then((data) => {
+  //       debugger;
+  //       console.log(data);
+  //       setErrorMessage("resend sign up");
+  //     })
+  //     .catch((err) => setErrorMessage(err.message))
+  //     .finally(() => {
+  //       setLoading(false);
+  //       setSubmitted(true);
+  //     });
+  // }
 
   const completeLoginWithCodeFlow = async (event: any) => {
     event.preventDefault();
@@ -70,6 +70,7 @@ export default function ChangePassword(props: any) {
 
     const userFromSignIn = IdentityStore.tempUser;
     Auth.confirmSignIn(userFromSignIn, code, 'SMS_MFA')
+    // Auth.confirmSignIn(userFromSignIn, code, 'CUSTOM_CHALLENGE')
       .then((user) => {
         console.log(user);
         debugger;
@@ -138,9 +139,9 @@ export default function ChangePassword(props: any) {
             {loading && <img src={LOADING_SVG} />}
           </div>
 
-          <Button variant="contained" onClick={resendVerificationCode}>
+          {/* <Button variant="contained" onClick={resendVerificationCode}>
               Resend Verification code
-            </Button>
+            </Button> */}
 
           <div className="flex flex-center mt10">
             <ErrorMessage message={errorMessage}></ErrorMessage>

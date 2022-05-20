@@ -43,6 +43,26 @@ export default function SignIn(props: any) {
     setErrorMessage("");
   };
 
+  const userHasBeenLogged = (jsonAttributes: any) => {
+    IdentityStore.setLoggedUser(jsonAttributes);
+
+    const reqBody = {
+      porsche_user: JSON.stringify(jsonAttributes),
+    };
+
+    fetch("/api/login", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(reqBody),
+    }).finally(() => {
+      // IdentityStore.setLoggedUser(awsJsonUserAttributes);
+
+      Router.push(ROUTES.OVERVIEW);
+    });
+  };
+
   const triggerSignIn = async (event: any) => {
     event.preventDefault();
     if (loading) {
@@ -51,9 +71,15 @@ export default function SignIn(props: any) {
 
     setLoading(true);
 
-    Auth.signIn(email)
+    Auth.signIn(email, password)
       .then((data) => {
         debugger;
+
+        userHasBeenLogged({
+          name:'Remove_this_code',
+          email: 'claudiu9379@yahoo.com'
+        });
+        return;
 
         if (
           data.challengeName === "CUSTOM_CHALLENGE" ||
@@ -74,21 +100,7 @@ export default function SignIn(props: any) {
         }
 
         const awsJsonUserAttributes = data.attributes;
-        IdentityStore.setLoggedUser(awsJsonUserAttributes);
-
-        const reqBody = {
-          porsche_user: JSON.stringify(awsJsonUserAttributes),
-        };
-
-        fetch("/api/login", {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(reqBody),
-        }).finally(() => {
-          // IdentityStore.setLoggedUser(awsJsonUserAttributes);
-        });
+        userHasBeenLogged(awsJsonUserAttributes);
 
         // getRefreshToken();
       })
@@ -108,7 +120,6 @@ export default function SignIn(props: any) {
       <Navbar>
         <div className="flex flex-column flex-center-y">
           {/* <form name="form" onSubmit={triggerSignIn}> */}
-
 
           <div className="flex">
             <Label htmlFor="username" text="Email" />
@@ -193,7 +204,7 @@ export default function SignIn(props: any) {
   );
 }
 
-export async function getServerSideProps({ req }:{req:any}) {
+export async function getServerSideProps({ req }: { req: any }) {
   const response = { props: { porsche_user: req.cookies.porsche_user || "" } };
 
   return response;

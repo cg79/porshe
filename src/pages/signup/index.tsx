@@ -68,6 +68,7 @@ export default function SignIn(props: any) {
       password,
       attributes: {
         email,
+        name:'john',
         phone_number: phone,
         picture: avatar,
       },

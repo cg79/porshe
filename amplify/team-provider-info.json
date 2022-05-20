@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-porsche3-dev-145303-authRole",
-      "UnauthRoleArn": "arn:aws:iam::296921138936:role/amplify-porsche3-dev-145303-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::296921138936:role/amplify-porsche3-dev-145303-authRole",
+      "AuthRoleName": "amplify-project4-dev-91408-authRole",
+      "UnauthRoleArn": "arn:aws:iam::296921138936:role/amplify-project4-dev-91408-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::296921138936:role/amplify-project4-dev-91408-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-porsche3-dev-145303-deployment",
-      "UnauthRoleName": "amplify-porsche3-dev-145303-unauthRole",
-      "StackName": "amplify-porsche3-dev-145303",
-      "StackId": "arn:aws:cloudformation:us-east-2:296921138936:stack/amplify-porsche3-dev-145303/14e0d380-d6a1-11ec-86f2-028a53c58cfe",
-      "AmplifyAppId": "d2c4rzy7es3g9i"
+      "DeploymentBucketName": "amplify-project4-dev-91408-deployment",
+      "UnauthRoleName": "amplify-project4-dev-91408-unauthRole",
+      "StackName": "amplify-project4-dev-91408",
+      "StackId": "arn:aws:cloudformation:us-east-2:296921138936:stack/amplify-project4-dev-91408/112578e0-d804-11ec-a719-02e30488a96e",
+      "AmplifyAppId": "d27gkyeh4leymg"
     },
     "categories": {
       "auth": {
-        "porsche3d8ac059dd8ac059d": {}
+        "project457700b1957700b19": {}
       }
     }
   }

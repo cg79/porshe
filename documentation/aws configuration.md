@@ -17,7 +17,10 @@ amplify add auth
 
 note: in case you need to update the existing settings: amplify update auth 
 
-see the settings from image
+see the settings from image (amplify_add_or_update_auth.png)
+
+execute:amplify push
+
 
 
 add the lambda functions from ./lambda-functions directory

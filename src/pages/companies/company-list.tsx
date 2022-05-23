@@ -1,20 +1,18 @@
 import { observer } from "mobx-react-lite";
+import store from "../../store/company/CompaniesStore";
 import { useEffect } from "react";
 import Router from "next/router";
 import { ROUTES } from "../../constants/constants";
-import store from "../../store/company/CompaniesStore";
-import Button from "../../components/button/button";
+
 
 // import { CompaniesProps } from "./data-types/data-types";
 
 const CompanyList = observer(() => {
-  useEffect(() => {
-    store.load();
-  }, []);
+  
 
   return (
     <div>
-      HI from Companies
+      HI from Companies list
       {/* <Button
         text={"Create New Company"}
         onClick={() => {

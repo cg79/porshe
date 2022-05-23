@@ -1,4 +1,4 @@
-import { observable, computed, action, autorun, makeObservable } from "mobx";
+import { observable, action, makeObservable } from "mobx";
 import httpService from "../../actions/http-service";
 import { Company } from "./Company";
 let company_list = require('../../data/companies.json');
@@ -13,6 +13,7 @@ class CompaniesStore {
       list: observable,
       add: action,
     });
+    this.list=company_list;
   }
 
   add(item: Company) {
@@ -20,8 +21,8 @@ class CompaniesStore {
   }
 
   async load() {
+    debugger;
     this.list=company_list;
-
     // const response = await httpService.get(COMPANY_ROUTE);
     // this.list = response.data;
   }

@@ -139,6 +139,10 @@ body {
   margin-left: 5px;
 }
 
+.ml10 {
+  margin-left: 10px;
+}
+
 .flex {
   display: flex;
 }
@@ -155,8 +159,18 @@ body {
   align-items: center;
 }
 
+.flex-end {
+  align-content:flex-end;
+  margin-left: auto;
+}
+
 .flex-space-between {
   justify-content: space-between;
+}
+
+.presentation{
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .error {
@@ -191,6 +205,10 @@ a {
   cursor: pointer;
 }
 
+.bold{
+  font-weight: bold;
+}
+
 .avatar-container {
   position: fixed;
   /* top: 50%; */
@@ -209,4 +227,56 @@ a {
   z-index: 2;
   position: absolute;
   cursor: pointer;
+}
+
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid silver;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.nowrap  { 
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.wrap    { 
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}  
+
+.wrap-reverse         { 
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}  
+.wrap-reverse li {
+  background: deepskyblue;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  /* width: 100px; */
+  /* height: 100px; */
+  margin: 10px;
+  
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item .title{
+  padding-left: 5px;
+  padding-right: 5px;
 }

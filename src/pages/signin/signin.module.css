@@ -1,0 +1,10 @@
+.da {
+  display: flex;
+  width: 100vw;
+  min-height: 500px;
+  max-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
+}

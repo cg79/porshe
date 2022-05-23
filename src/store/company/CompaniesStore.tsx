@@ -7,6 +7,7 @@ const COMPANY_ROUTE = "/api/company";
 
 class CompaniesStore {
   list = [];
+  showAsGrid=true;
 
   constructor() {
     makeObservable(this, {
@@ -21,7 +22,7 @@ class CompaniesStore {
   }
 
   async load() {
-    debugger;
+    // debugger;
     this.list=company_list;
     // const response = await httpService.get(COMPANY_ROUTE);
     // this.list = response.data;

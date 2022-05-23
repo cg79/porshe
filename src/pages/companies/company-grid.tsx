@@ -1,35 +1,49 @@
-// import { useEffect } from "react";
 import store from "../../store/company/CompaniesStore";
+import Router from "next/router";
+import { ROUTES } from "../../constants/constants";
 
 const CompanyGrid = () => {
-    debugger;
+  const redirectToCompanyDetails = (companyId: number) => {
+    const route = `${ROUTES.KPI}?companId=${companyId}`;
+    Router.push(route);
+  };
 
-    // useEffect(() => {
-    //     store.load();
-    //   }, []);
-      
   return (
-    <ul className="flex-container wrap">
+    <div className="company-container wrap">
       {store.list.map((comp: any) => {
         return (
-          <li className="flex-item company" key={comp["id"]}>
+          <div className="flex-item company" key={comp["id"]}>
             <img className="image" src={comp["img"]}></img>
-            <div className="title">
-              <div>{comp["name"]}</div>
+            <div
+              className="title pointer"
+              onClick={() => redirectToCompanyDetails(comp.id)}
+            >
+              <div className="flex flex-center-x">{comp["name"]}</div>
+              <div className="flex flex-center-x">{comp["location"]}</div>
             </div>
-          </li>
+
+            <div className="revenue">
+              <div className="static">
+              <div className="flex flex-space-between">
+                <div className="">
+                  <div className="kpi-title">Revenue</div>
+                  <div className="flex flex-center-x">{comp["revenue"]} &euro;</div>
+                </div>
+                <div className="ml5">
+                  <div className="kpi-title">Employee</div>
+                  <div className="flex flex-center-x">{comp["employee"]}</div>
+                </div>
+                <div className="ml5">
+                  <div className="kpi-title">Liquidity</div>
+                  <div className="flex flex-center-x">{comp["liquidity"]}</div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
         );
       })}
-
-      {/* <li className="flex-item">1</li>
-      <li className="flex-item">2</li>
-      <li className="flex-item">3</li>
-      <li className="flex-item">4</li>
-      <li className="flex-item">5</li>
-      <li className="flex-item">6</li>
-      <li className="flex-item">7</li>
-      <li className="flex-item">8</li> */}
-    </ul>
+    </div>
   );
 };
 

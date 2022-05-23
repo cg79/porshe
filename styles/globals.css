@@ -78,7 +78,6 @@ body {
   z-index: 1;
 }
 
-
 @media screen and (max-width: 1024px) {
   .demo-container {
     width: 90%;
@@ -139,6 +138,14 @@ body {
   margin-left: 5px;
 }
 
+.kpi-title{
+  font-family: 'Porsche Next';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 22px;
+}
+
 .ml10 {
   margin-left: 10px;
 }
@@ -160,7 +167,7 @@ body {
 }
 
 .flex-end {
-  align-content:flex-end;
+  align-content: flex-end;
   margin-left: auto;
 }
 
@@ -168,7 +175,11 @@ body {
   justify-content: space-between;
 }
 
-.presentation{
+.text-center{
+  text-align: center;
+}
+
+.presentation {
   margin-left: 60px;
   margin-right: 60px;
 }
@@ -188,35 +199,38 @@ a {
 
 .company {
   position: relative;
+  border: 1px solid grey;
+}
+.company:hover {
+  border: 1px solid black;
 }
 
 .company .title {
   position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  color: white;
-}
-
-.company .image:hover {
-  border: 1px solid green;
+  top:5px;
+  font-family: "Porsche Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
 }
 
 .pointer {
   cursor: pointer;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
 .avatar-container {
   position: fixed;
-  /* top: 50%; */
-  /* left: 50%; */
   width: 510px;
   height: 51px;
   transform: translate(-50px, -50px);
 }
+
 .avatar {
   overflow: hidden;
   border-radius: 50%;
@@ -229,8 +243,7 @@ a {
   cursor: pointer;
 }
 
-
-.flex-container {
+.company-container {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -242,41 +255,55 @@ a {
   display: -moz-flex;
   display: -webkit-flex;
   display: flex;
+  justify-content: center;
 }
 
-.nowrap  { 
+.flex-item {
+  /* padding: 5px; */
+  margin: 10px;
+}
+
+.flex-item .title {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nowrap {
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
-.wrap    { 
+.wrap {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-}  
-
-.wrap-reverse         { 
-  -webkit-flex-wrap: wrap-reverse;
-  flex-wrap: wrap-reverse;
-}  
-.wrap-reverse li {
-  background: deepskyblue;
 }
 
-.flex-item {
-  background: tomato;
-  padding: 5px;
-  /* width: 100px; */
-  /* height: 100px; */
-  margin: 10px;
-  
-  line-height: 100px;
-  color: white;
+.revenue{
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.static{
+  position: static;
+}
+
+.eSTlnH{
+  background-color: transparent!important;
+}
+
+.jVeafb{
+  background-color: transparent!important;
+  color: #fff;
+}
+
+.gZWIKX {
+  background-color: transparent!important;
+  color: #fff;
   font-weight: bold;
-  font-size: 2em;
-  text-align: center;
 }
 
-.flex-item .title{
-  padding-left: 5px;
-  padding-right: 5px;
-}
+
+
+

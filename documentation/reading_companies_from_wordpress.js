@@ -33,6 +33,9 @@ for (let slide of slides) {
             entrepreneurs: entries[0].querySelector('.text').innerText,
             img: imageWrapperImg.src,
             srcset:imageWrapperImg.srcset,
+            revenue: '2M',
+            employee: 51,
+            liquidity: '500k',
             //name: entries[1].querySelector('.text').innerText,
             //location: entries[2].querySelector('.text').innerText,
             //url: companyAhref.href

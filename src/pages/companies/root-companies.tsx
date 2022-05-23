@@ -4,13 +4,14 @@ import CompanyList from "./company-list";
 import store from "../../store/company/CompaniesStore";
 
 export default function RootCompanies() {
-
-  const [showGrid, setShowGrid] = useState(true);
+  const [showGrid, setShowGrid] = useState(store.showAsGrid);
   const viewAsGrid = () => {
+    store.showAsGrid=true;
     setShowGrid(true);
   };
 
   const viewAsList = () => {
+    store.showAsGrid=false;
     setShowGrid(false);
   };
 
@@ -18,8 +19,8 @@ export default function RootCompanies() {
     store.load();
   }, []);
 
-  const css1=showGrid?'pointer bold':'pointer';
-  const css2=showGrid?'pointer ml10':'pointer ml10 bold';
+  const css1 = showGrid ? "pointer bold" : "pointer";
+  const css2 = showGrid ? "pointer ml10" : "pointer ml10 bold";
 
   return (
     <>

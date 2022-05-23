@@ -77,11 +77,11 @@ export default function SignIn(props: any) {
         debugger;
         console.log("date", data);
 
-        userHasBeenLogged({
-          name: "Remove_this_code",
-          email: "claudiu9379@yahoo.com",
-        });
-        return;
+        // userHasBeenLogged({
+        //   name:'Remove_this_code',
+        //   email: 'claudiu9379@yahoo.com'
+        // });
+        // return;
 
         if (
           data.challengeName === "CUSTOM_CHALLENGE" ||

@@ -1,17 +1,16 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "project457700b19_identitypool_57700b19",
+    "identityPoolName": "f31dashboardpool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "projec57700b19",
-    "userPoolName": "pool4",
+    "resourceNameTruncated": "f31das614a454a",
+    "userPoolName": "f31dashboarduserpool",
     "autoVerifiedAttributes": [
       "phone_number"
     ],
     "mfaConfiguration": "ON",
     "mfaTypes": [
-      "SMS Text Message",
-      "TOTP"
+      "SMS Text Message"
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
@@ -23,15 +22,16 @@
     "requiredAttributes": [
       "email",
       "name",
+      "phone_number",
       "picture"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
-      "phone_number",
       "email",
       "name",
+      "phone_number",
       "picture"
     ],
     "userpoolClientReadAttributes": [
@@ -40,15 +40,15 @@
       "phone_number",
       "picture"
     ],
-    "userpoolClientLambdaRole": "projec57700b19_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "f31das614a454a_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": true,
-    "sharedId": "57700b19",
-    "resourceName": "project457700b1957700b19",
+    "sharedId": "614a454a",
+    "resourceName": "f31dashboardauth",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
     "thirdPartyAuth": false,
     "usernameAttributes": [
-      "email, phone_number"
+      "email"
     ],
     "userPoolGroups": false,
     "adminQueries": false,
@@ -57,25 +57,6 @@
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true,
-    "authRoleArn": {
-      "Fn::GetAtt": [
-        "AuthRole",
-        "Arn"
-      ]
-    },
-    "unauthRoleArn": {
-      "Fn::GetAtt": [
-        "UnauthRole",
-        "Arn"
-      ]
-    },
-    "breakCircularDependency": true,
-    "dependsOn": [],
-    "authProviders": [],
-    "parentStack": {
-      "Ref": "AWS::StackId"
-    },
-    "permissions": []
+    "useEnabledMfas": true
   }
 }

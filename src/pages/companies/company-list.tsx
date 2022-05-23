@@ -15,12 +15,12 @@ const CompanyList = observer(() => {
   return (
     <div>
       HI from Companies
-      <Button
+      {/* <Button
         text={"Create New Company"}
         onClick={() => {
           Router.push(ROUTES.COMPANY_CREATE);
         }}
-      ></Button>
+      ></Button> */}
       {store.list.map((comp: any) => {
         return (
           <div className="company" key={comp["_id"]}>

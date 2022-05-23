@@ -1,6 +1,6 @@
 {
   "auth": {
-    "project457700b1957700b19": {
+    "f31dashboardauth": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -8,12 +8,12 @@
       "frontendAuthConfig": {
         "socialProviders": [],
         "usernameAttributes": [
-          "EMAIL",
-          "PHONE_NUMBER"
+          "EMAIL"
         ],
         "signupAttributes": [
           "EMAIL",
           "NAME",
+          "PHONE_NUMBER",
           "PICTURE"
         ],
         "passwordProtectionSettings": {
@@ -22,8 +22,7 @@
         },
         "mfaConfiguration": "ON",
         "mfaTypes": [
-          "SMS",
-          "TOTP"
+          "SMS"
         ],
         "verificationMechanisms": [
           "PHONE_NUMBER"

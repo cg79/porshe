@@ -3,14 +3,16 @@ import { LOADING_SVG, ROUTES } from "../../constants/constants";
 import Navbar from "../../components/Navbar";
 import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
-import { Button, TextField, Box } from "@mui/material";
+import { Button, TextField, Box, Typography } from "@mui/material";
 import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
 import Router from "next/router";
 
+import { alpha, styled } from "@mui/material/styles";
 import styles from "./signin.module.css";
 import Logo from "../../components/Navbar/Logo";
 import { style } from "@mui/system";
+import Link from "next/link";
 
 export default function SignIn(props: any) {
   if (props && props.porsche_user) {
@@ -27,13 +29,35 @@ export default function SignIn(props: any) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const InputField = styled(TextField)({
+    "& label.Mui-focused": {
+      color: "#D3D3D3",
+    },
+    "& .MuiInputBase-input": {
+      color: "#fff",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "#D3D3D3",
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "#D3D3D3",
+      },
+      "&:hover fieldset": {
+        borderColor: "#D3D3D3",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "#D3D3D3",
+      },
+    },
+  });
+
   const onEmailChange = (event: any) => {
     const newValue = event.target.value;
     setEmail(newValue);
     setSubmitted(false);
     setErrorMessage("");
     const isProper = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(newValue);
-    console.log(newValue.length, "debug");
     setProperEmail(isProper);
   };
 
@@ -75,7 +99,6 @@ export default function SignIn(props: any) {
     Auth.signIn(email, password)
       .then((data) => {
         debugger;
-        console.log("date", data);
 
         // userHasBeenLogged({
         //   name:'Remove_this_code',
@@ -119,69 +142,172 @@ export default function SignIn(props: any) {
 
   return (
     <div className="page-content">
-      <Navbar>
-        <div className={styles.da}>
-          <Logo />
-          <Box
-            sx={{
-              height: 50,
-            }}
-          />
-          {/* <Label htmlFor="login" text="Login" /> */}
+      <div className={styles.da}>
+        <Logo />
 
-          <TextField
-            error={false}
-            helperText={
-              properEmail === false && email.length > 10
-                ? "enter a valid email adress"
-                : ""
-            }
-            label="Email"
-            variant="standard"
-            name="username"
-            value={email}
-            disabled={loading}
-            onChange={onEmailChange}
-            size={"small"}
+        <Box
+          sx={{
+            height: 50,
+          }}
+        />
+        {/* <Label htmlFor="login" text="Login" /> */}
+
+        <TextField
+          error={false}
+          // helperText={
+          //   properEmail === false && email.length > 10
+          //     ? "enter a valid email adress"
+          //     : ""
+          // }
+          label="Email"
+          variant="standard"
+          name="username"
+          value={email}
+          disabled={loading}
+          onChange={onEmailChange}
+          size={"small"}
+          sx={{
+            width: "20rem",
+            minWidth: "300px",
+            "& label.Mui-focused": {
+              color: "#D3D3D3",
+            },
+            "& .MuiInputBase-input": {
+              color: "#d3d3d3",
+            },
+            "& .MuiInput-underline:after": {
+              borderBottomColor: "#fff",
+            },
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "#D3D3D3",
+              },
+              "&:hover fieldset": {
+                borderColor: "#D3D3D3",
+              },
+              "& .Mui-focused fieldset": {
+                borderColor: "#D3D3D3",
+              },
+            },
+            "& .MuiInputLabel-root": {
+              color: "#d3d3d3",
+              fontSize: "14px",
+            },
+          }}
+        />
+        <Box
+          sx={{
+            height: 50,
+          }}
+        />
+        <TextField
+          error={false}
+          helperText={""}
+          label="Password"
+          variant="standard"
+          name="password"
+          type={"password"}
+          value={password}
+          disabled={loading}
+          onChange={onPasswordChange}
+          sx={{
+            width: "20rem",
+            minWidth: "300px",
+            "& label.Mui-focused": {
+              color: "#D3D3D3",
+            },
+            "& .MuiInputBase-input": {
+              color: "#d3d3d3",
+            },
+            "& .MuiInput-underline:after": {
+              borderBottomColor: "#fff",
+            },
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "#D3D3D3",
+              },
+              "&:hover fieldset": {
+                borderColor: "#D3D3D3",
+              },
+              "& .Mui-focused fieldset": {
+                borderColor: "#D3D3D3",
+              },
+            },
+            "& .MuiInputLabel-root": {
+              color: "#d3d3d3",
+              fontSize: "14px",
+              // fontFamily: "Porsche Next"
+            },
+            // "& .MuiInput-root": {
+            //   "&:before": {
+            //     borderBottom: "1px solid #fff",
+            //   },
+            // },
+          }}
+        />
+        <Link href={ROUTES.RESET_PASSWORD}>
+          <Typography
+            variant="caption"
+            gutterBottom
+            component="div"
             sx={{
+              display: "flex",
+              justifyContent: "flex-end",
               width: "16rem",
-              minWidth: "200px",
+              minWidth: "300px",
+              marginTop: "10px",
+              "&:hover": {
+                color: " #b5163e",
+                cursor: "pointer",
+              },
             }}
-          />
-          <Box
-            sx={{
-              height: 50,
-            }}
-          />
-          <TextField
-            error={false}
-            helperText={""}
-            label="Password"
-            variant="standard"
-            name="password"
-            type={"password"}
-            value={password}
-            disabled={loading}
-            onChange={onPasswordChange}
-            sx={{
-              width: "16rem",
-              minWidth: "200px",
-            }}
-          />
-          <Box
-            sx={{
-              height: 50,
-            }}
-          />
-          <Button
-            variant="contained"
-            onClick={triggerSignIn}
-            disabled={!(email && password)}
           >
-            Login
-          </Button>
-        </div>
-      </Navbar>
+            Forgot password?
+          </Typography>
+        </Link>
+        <Typography
+          variant="caption"
+          gutterBottom
+          component="div"
+          sx={{
+            display: "flex",
+            justifyContent: "flex-start",
+            width: "16rem",
+            minWidth: "320px",
+            marginTop: "10px",
+            color: "#FF8FAA",
+          }}
+        >
+          {errorMessage}
+        </Typography>
+        <Box
+          sx={{
+            height: 50,
+          }}
+        />
+        <Button
+          variant="contained"
+          onClick={triggerSignIn}
+          disabled={!(properEmail && password.length > 7)}
+          sx={{
+            color: "#fff",
+            backgroundColor: "#3B5160",
+            borderRadius: "75px",
+            width: "250px",
+            height: "45px",
+            "&:hover": {
+              backgroundColor: "#346180",
+            },
+            ":disabled": {
+              color: "#999999",
+              background: "#e6e6e6",
+              border: "solid 2px transparent",
+            },
+          }}
+        >
+          Login
+        </Button>
+      </div>
     </div>
   );
 }

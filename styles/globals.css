@@ -286,10 +286,17 @@ a {
 .jVeafb {
   background-color: transparent !important;
   color: #fff !important;
+  margin-top: 5px!important;
+  background: linear-gradient(218.17deg, rgba(59, 81, 96, 0.5) 0.82%, rgba(59, 81, 96, 0.245) 95.35%);
 }
 
 .gZWIKX {
   background-color: transparent !important;
   color: #fff !important;
   font-weight: bold;
+}
+
+.linebk{
+  margin-top: 50px!important;
+  background: linear-gradient(218.17deg, rgba(59, 81, 96, 0.5) 0.82%, rgba(59, 81, 96, 0.245) 95.35%);
 }

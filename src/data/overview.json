@@ -1,34 +1,73 @@
 [
     {
         "id": 1,
-        "m1": "Tim Leberecht & Till Grusche",
-        "m2": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
-        "m3": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
-        "m4": "2M",
-        "m5": 51
+        "m1": "Company Count",
+        "m2": 13,
+        "m3": "(+4, +13)",
+        "m4": "10",
+        "m4_text": "live",
+        "m5": 51,
+        "m5_text":"Spinning Off"
     },
     {
-        "id": 1,
-        "m1": "Tim Leberecht & Till Grusche",
-        "m2": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
-        "m3": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
-        "m4": "2M",
-        "m5": 51
+        "id": 2,
+        "m1": "Company Count",
+        "m2": 13,
+        "m3": "(+4, +13)",
+        "m4": "10",
+        "m4_text": "live",
+        "m5": 51,
+        "m5_text":"Spinning Off"
     },
     {
-        "id": 1,
-        "m1": "Tim Leberecht & Till Grusche",
-        "m2": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
-        "m3": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
-        "m4": "2M",
-        "m5": 51
+        "id": 3,
+        "m1": "Company Count",
+        "m2": 13,
+        "m3": "(+4, +13)",
+        "m4": "10",
+        "m4_text": "live",
+        "m5": 51,
+        "m5_text":"Spinning Off"
     },
     {
-        "id": 1,
-        "m1": "Tim Leberecht & Till Grusche",
-        "m2": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
-        "m3": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
-        "m4": "2M",
-        "m5": 51
+        "id": 4,
+        "m1": "Company Count",
+        "m2": 13,
+        "m3": "(+4, +13)",
+        "m4": "10",
+        "m4_text": "live",
+        "m5": 51,
+        "m5_text":"Spinning Off"
+    },
+    {
+        "id": 4,
+        "m1": "Company Count",
+        "m2": 13,
+        "m3": "(+4, +13)",
+        "m4": "10",
+        "m4_text": "live",
+        "m5": 51,
+        "m5_text":"Spinning Off"
+    },
+    {
+        "id": 4,
+        "m1": "Company Count",
+        "m2": 13,
+        "m3": "(+4, +13)",
+        "m4": "10",
+        "m4_text": "live",
+        "m5": 51,
+        "m5_text":"Spinning Off"
+    },
+    {
+        "id": 4,
+        "m1": "Company Count",
+        "m2": 13,
+        "m3": "(+4, +13)",
+        "m4": "10",
+        "m4_text": "live",
+        "m5": 51,
+        "m5_text":"Spinning Off"
     }
+    
 ]

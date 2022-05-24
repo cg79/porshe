@@ -3,7 +3,6 @@ import store from "../../store/company/CompaniesStore";
 import { useEffect, useState } from "react";
 import Router from "next/router";
 import { ROUTES } from "../../constants/constants";
-// import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
 import DataTable from "react-data-table-component";
 
 const CompanyList = observer(() => {
@@ -15,6 +14,20 @@ const CompanyList = observer(() => {
   }, []);
 
   const columns = [
+    {
+      name: "Logo",
+      // selector: (row: any) => row.name,
+      // sortable: true,
+      cell:(row:any)=>{
+        return (
+          <div>
+            <img 
+            style={{ maxWidth: "150px" }}
+            src={row.logo || 'https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png'} />
+          </div>
+        )
+      }
+    },
     {
       name: "Name",
       selector: (row: any) => row.name,
@@ -35,6 +48,16 @@ const CompanyList = observer(() => {
       name: "Revenue",
       selector: (row: any) => row.revenue,
       sortable: true,
+      cell:(row:any)=>{
+        return (
+          <div>
+           <div style={{fontWeight: "bold"}}
+        >{row.revenue}</div>
+
+           <div style={{fontSize: "8px"}}>{row.revenue_1 || 'no data'}</div>
+          </div>
+        )
+      }
     },
     {
       name: "Liquidity",

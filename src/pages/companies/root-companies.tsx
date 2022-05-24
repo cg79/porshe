@@ -6,12 +6,12 @@ import store from "../../store/company/CompaniesStore";
 export default function RootCompanies() {
   const [showGrid, setShowGrid] = useState(store.showAsGrid);
   const viewAsGrid = () => {
-    store.showAsGrid=true;
+    store.showAsGrid = true;
     setShowGrid(true);
   };
 
   const viewAsList = () => {
-    store.showAsGrid=false;
+    store.showAsGrid = false;
     setShowGrid(false);
   };
 
@@ -24,10 +24,11 @@ export default function RootCompanies() {
 
   return (
     <>
-      <div className="presentation">
+      <div className="margins">
         <div className="flex">
-          <div>
-            <b>Overview portofolio</b>{" "}
+          <div className="mt10">
+            <b className="page-description">Overview portofolio</b> Live
+            companies ({store.list.length})
           </div>
           <div className="flex flex-end">
             <div className={css1} onClick={viewAsGrid}>

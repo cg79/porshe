@@ -78,47 +78,32 @@ body {
   z-index: 1;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .demo-container {
     width: 90%;
   }
-}
+} */
 
 /* .main {
   position: relative;
   z-index: 1;
 } */
 
-#container1 {
-  content: "";
-  position: absolute;
-  left: 44%;
-  width: 20px;
-  height: 233%;
-  /* background-color: rgb(255, 255, 255); */
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  top: -800px;
-  transform: rotate(-54deg);
-  -webkit-transform: rotate(-54deg);
-  -moz-transform: rotate(-54deg);
-  background: rgba(110, 130, 143, 0.1);
-  filter: blur(100px);
+.porsche-font{
+  font-family: "Porsche Next";
+  font-style: normal;
 }
 
-#container2 {
-  content: "";
-  position: absolute;
-  left: 70%;
-  width: 20px;
-  height: 200%;
-  /* background-color: rgb(255, 255, 255); */
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  top: -800px;
-  transform: rotate(-54deg);
-  -webkit-transform: rotate(-54deg);
-  -moz-transform: rotate(-54deg);
-  background: #6e828f;
-  filter: blur(19px);
+.white{
+  color: #ffffff;
+}
+
+.page-description {
+  font-family: "Porsche Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 56px;
 }
 
 .page-content {
@@ -138,12 +123,12 @@ body {
   margin-left: 5px;
 }
 
-.kpi-title{
-  font-family: 'Porsche Next';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 22px;
+.kpi-title {
+  font-family: "Porsche Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .ml10 {
@@ -175,13 +160,18 @@ line-height: 22px;
   justify-content: space-between;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
 .presentation {
   margin-left: 60px;
-  margin-right: 60px;
+  /* margin-right: 60px; */
+}
+
+.margins {
+  margin-left: 60px;
+  margin-right: 40px;
 }
 
 .error {
@@ -207,7 +197,7 @@ a {
 
 .company .title {
   position: absolute;
-  top:5px;
+  top: 5px;
   font-family: "Porsche Next";
   font-style: normal;
   font-weight: 600;
@@ -278,32 +268,28 @@ a {
   flex-wrap: wrap;
 }
 
-.revenue{
+.revenue {
   position: absolute;
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.static{
+.static {
   position: static;
 }
 
-.eSTlnH{
-  background-color: transparent!important;
+.eSTlnH {
+  background-color: transparent !important;
 }
 
-.jVeafb{
-  background-color: transparent!important;
-  color: #fff;
+.jVeafb {
+  background-color: transparent !important;
+  color: #fff !important;
 }
 
 .gZWIKX {
-  background-color: transparent!important;
-  color: #fff;
+  background-color: transparent !important;
+  color: #fff !important;
   font-weight: bold;
 }
-
-
-
-

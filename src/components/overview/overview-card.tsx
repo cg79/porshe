@@ -1,7 +1,6 @@
 import { OverviewProps } from "../data-types/data-types";
 
 const OverviewCard = (props: any) => {
-  debugger;
 
   const { m1, m2, m3, m4, m4_text = "", m5, m5_text='', onClick } = props.props;
 
@@ -15,8 +14,8 @@ const OverviewCard = (props: any) => {
   }
 
   return (
-    <div className="linebk mt10" style={{ width: "20%", marginRight: "2px" }} onClick={executeClick}>
-      <div className="one">{m1}</div>
+    <div className="linebk mt10" style={{ width: "20%", marginRight: "25px" }} onClick={executeClick}>
+      <div className="one porsche-font">{m1}</div>
       <div
         className="mt10"
         style={{

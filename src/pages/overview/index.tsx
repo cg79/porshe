@@ -18,11 +18,11 @@ export default function Overview(props: any) {
     Router.push(ROUTES.COMPANIES);
   };
 
-  const [metrics,setMetrics]= useState<any[]>([]);
+  const [metrics, setMetrics] = useState<any[]>([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     setMetrics(overview_list);
-  },[])
+  }, []);
 
   return (
     <Navbar>
@@ -35,11 +35,13 @@ export default function Overview(props: any) {
           they have the unfair advantage.{" "}
         </div>
 
-        <div className="mt10 company-container wrap flex-space-between">
-          {metrics.map((el:any) => {
-            el.onClick = redirectToCompanies;
-            return (<OverviewCard props={el}></OverviewCard>)
-          })}
+        <div className="mt10">
+          <div className="mt10 company-container wrap flex-space-between">
+            {metrics.map((el: any) => {
+              el.onClick = redirectToCompanies;
+              return <OverviewCard props={el}></OverviewCard>;
+            })}
+          </div>
         </div>
       </div>
     </Navbar>

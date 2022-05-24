@@ -1,18 +1,3 @@
-* html,
-body {
-  background: linear-gradient(211.86deg, #303e48 8.01%, #000000 80.84%);
-  padding: 0;
-  width: 100vw;
-  height: 100%;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-} */
-
-/*------------------------------------------------------------------
-[Main Stylesheet]
--------------------------------------------------------------------*/
-
 
 @font-face {
   font-family: 'PorscheNext';
@@ -254,7 +239,6 @@ a {
 }
 
 .flex-item {
-  /* padding: 5px; */
   margin: 10px;
 }
 

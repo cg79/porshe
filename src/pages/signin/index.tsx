@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import { LOADING_SVG, ROUTES } from "../../constants/constants";
-import Navbar from "../../components/Navbar";
-import ErrorMessage from "../../components/error/error";
+import {  ROUTES } from "../../constants/constants";
+// import Navbar from "../../components/Navbar";
+// import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
 import { Button, TextField, Box, Typography } from "@mui/material";
-import Label from "../../components/label/label";
+// import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
 import Router from "next/router";
 
-import { alpha, styled } from "@mui/material/styles";
+// import { styled } from "@mui/material/styles";
 import styles from "./signin.module.css";
 import Logo from "../../components/Navbar/Logo";
-import { style } from "@mui/system";
 import Link from "next/link";
 
 export default function SignIn(props: any) {
@@ -19,52 +18,26 @@ export default function SignIn(props: any) {
     IdentityStore.setLoggedUser(JSON.parse(props.porsche_user));
   }
 
-  // const [cookie, setCookie] = useCookies(["user"])
-
   const [email, setEmail] = useState("");
-  const [properEmail, setProperEmail] = useState(false);
-  const [phone, setPhone] = useState("");
+  // const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  const InputField = styled(TextField)({
-    "& label.Mui-focused": {
-      color: "#D3D3D3",
-    },
-    "& .MuiInputBase-input": {
-      color: "#fff",
-    },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: "#D3D3D3",
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "#D3D3D3",
-      },
-      "&:hover fieldset": {
-        borderColor: "#D3D3D3",
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "#D3D3D3",
-      },
-    },
-  });
 
   const onEmailChange = (event: any) => {
     const newValue = event.target.value;
     setEmail(newValue);
-    setSubmitted(false);
+    // setSubmitted(false);
     setErrorMessage("");
-    const isProper = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(newValue);
-    setProperEmail(isProper);
+    // const isProper = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(newValue);
+    // setProperEmail(isProper);
   };
 
   let onPasswordChange = (event: any) => {
     const newValue = event.target.value;
     setPassword(newValue);
-    setSubmitted(false);
+    // setSubmitted(false);
     setErrorMessage("");
   };
 
@@ -136,7 +109,7 @@ export default function SignIn(props: any) {
       })
       .finally(() => {
         setLoading(false);
-        setSubmitted(true);
+        // setSubmitted(true);
       });
   };
 
@@ -154,11 +127,6 @@ export default function SignIn(props: any) {
 
         <TextField
           error={false}
-          // helperText={
-          //   properEmail === false && email.length > 10
-          //     ? "enter a valid email adress"
-          //     : ""
-          // }
           label="Email"
           variant="standard"
           name="username"
@@ -288,7 +256,7 @@ export default function SignIn(props: any) {
         <Button
           variant="contained"
           onClick={triggerSignIn}
-          disabled={!(properEmail && password.length > 7)}
+          disabled={!(password.length > 3)}
           sx={{
             color: "#fff",
             backgroundColor: "#3B5160",

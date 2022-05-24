@@ -1,8 +1,9 @@
 import React from "react";
+import { OverviewProps } from "../../components/data-types/data-types";
 import Navbar from "../../components/Navbar";
 import OverviewCard from "../../components/overview/overview-card";
 import IdentityStore from "../../store/identity-store";
-let company_list = require('../../data/companies.json');
+let overview_list = require("../../data/overview.json");
 
 export default function Overview(props: any) {
   if (props && props.porsche_user) {
@@ -21,7 +22,9 @@ export default function Overview(props: any) {
         </div>
 
         {/* <div className="mt10">
-          <OverviewCard></OverviewCard>
+          {overview_list.map((el:OverviewProps) => {
+            <OverviewCard values={el}></OverviewCard>;
+          })}
         </div> */}
       </div>
     </Navbar>

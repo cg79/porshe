@@ -1,7 +1,7 @@
 import { OverviewProps } from "../data-types/data-types";
 
-const OverviewCard = (props: OverviewProps) => {
-  const { m1, m2, m3, m4, m5 } = props.props;
+const OverviewCard = (values: OverviewProps) => {
+  const { m1, m2, m3, m4, m5 } = values.props;
 
   return (
     <div>

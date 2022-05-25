@@ -164,6 +164,11 @@ body {
   margin-right: 40px;
 }
 
+.margins1 {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
 .error {
   color: red;
 }
@@ -227,7 +232,7 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
-  border: 1px solid silver;
+  /* border: 1px solid silver; */
   -ms-box-orient: horizontal;
   display: -webkit-box;
   display: -moz-box;
@@ -294,6 +299,14 @@ a {
   color: #ffffff !important;
   margin-top: 10px!important;
   background: linear-gradient(218.17deg, rgba(59, 81, 96, 0.5) 0.82%, rgba(59, 81, 96, 0.245) 95.35%);
+}
+
+.relative{
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
 }
 
 /* .rdt_TableHeader{

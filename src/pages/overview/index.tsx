@@ -26,8 +26,8 @@ export default function Overview(props: any) {
 
   return (
     <Navbar>
-      <div className="presentation">
-        <div className="porsche-font white">
+      <div className="margins1">
+        <div className="porsche-font white mt10" style={{ fontSize: "24px" }}>
           What forward31 is about, and some info on what the dashboard presents
           below. We address opportunities that are hidden in plain sight. We
           challenge the status-quo and dare to dream big. We don’t incubate or
@@ -41,6 +41,10 @@ export default function Overview(props: any) {
               el.onClick = redirectToCompanies;
               return <OverviewCard props={el}></OverviewCard>;
             })}
+          </div>
+
+          <div className="mt10">
+            &nbsp;
           </div>
         </div>
       </div>

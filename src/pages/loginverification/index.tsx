@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import { LOADING_SVG, ROUTES } from "../../constants/constants";
-import Navbar from "../../components/Navbar";
+import {
+  BUTTON_STYLE,
+  LOADING_SVG,
+  ROUTES,
+  VERTICAL_DISTANCE,
+} from "../../constants/constants";
+// import Navbar from "../../components/Navbar";
 import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
 import { Button, TextField } from "@mui/material";
-import Label from "../../components/label/label";
+// import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
 import Router from "next/router";
+import Logo from "../../components/Navbar/Logo";
 
 export default function ChangePassword(props: any) {
   if (props && props.porsche_user) {
@@ -26,7 +32,6 @@ export default function ChangePassword(props: any) {
   const [loading, setLoading] = useState(false);
 
   // const resendVerificationCode = ()=>{
-    
 
   //   setLoading(true);
   //   // const code = getCodeFromUserInput();
@@ -69,8 +74,8 @@ export default function ChangePassword(props: any) {
     // );
 
     const userFromSignIn = IdentityStore.tempUser;
-    Auth.confirmSignIn(userFromSignIn, code, 'SMS_MFA')
-    // Auth.confirmSignIn(userFromSignIn, code, 'CUSTOM_CHALLENGE')
+    Auth.confirmSignIn(userFromSignIn, code, "SMS_MFA")
+      // Auth.confirmSignIn(userFromSignIn, code, 'CUSTOM_CHALLENGE')
       .then((user) => {
         console.log(user);
         debugger;
@@ -79,15 +84,15 @@ export default function ChangePassword(props: any) {
         console.log(data);
         setErrorMessage("user logged in");
 
-        Auth.currentUserInfo().then(userInfo =>{
+        Auth.currentUserInfo().then((userInfo) => {
           debugger;
           const awsJsonUserAttributes = userInfo.attributes;
           IdentityStore.setLoggedUser(awsJsonUserAttributes);
-  
+
           const reqBody = {
             porsche_user: JSON.stringify(awsJsonUserAttributes),
           };
-  
+
           fetch("/api/login", {
             method: "post",
             headers: {
@@ -97,8 +102,7 @@ export default function ChangePassword(props: any) {
           }).finally(() => {
             Router.push(ROUTES.OVERVIEW);
           });
-        })
-        
+        });
       })
       .catch((err) => setErrorMessage(err.message))
       .finally(() => {
@@ -108,52 +112,71 @@ export default function ChangePassword(props: any) {
   };
 
   return (
-    <>
-      <Navbar>
-        <div className="flex flex-column flex-center-y">
-          {/* <form name="form" onSubmit={triggerSignIn}> */}
+    <div className="page-content">
+      <div
+        className="flex flex-column flex-center-y"
+        style={{ marginTop: "17vh" }}
+      >
+        <div>
+          <Logo />
+        </div>
 
-          <div className="flex">
-            <Label htmlFor="username" text="Code" />
-            <TextField
-              id="standard-basic"
-              label="Code"
-              variant="standard"
-              name="username"
-              value={code}
-              disabled={loading}
-              onChange={onCodeChange}
-            />
+        <div className="bold" style={{ marginTop: "30px" }}>
+          Enter the code received on your mobile
+        </div>
+      </div>
 
-            {submitted && !code && (
-              <div className="warning">Code is required</div>
-            )}
-          </div>
+      <div className="flex flex-column flex-center-y">
+        {/* <form name="form" onSubmit={triggerSignIn}> */}
 
-          <div className="mt10">
-            {/* <label className="lbl">&nbsp;</label> */}
-            <Button variant="contained" onClick={completeLoginWithCodeFlow}>
-              Verify code
-            </Button>
+        <div className="flex">
+          {/* <Label htmlFor="username" text="Code" /> */}
+          <TextField
+            style={VERTICAL_DISTANCE}
+            id="standard-basic"
+            label="Code"
+            variant="standard"
+            name="username"
+            value={code}
+            disabled={loading}
+            onChange={onCodeChange}
+          />
 
-            {loading && <img src={LOADING_SVG} />}
-          </div>
+          {submitted && !code && (
+            <div className="warning">Code is required</div>
+          )}
+        </div>
 
-          {/* <Button variant="contained" onClick={resendVerificationCode}>
-              Resend Verification code
-            </Button> */}
+        <div className="mt10">
+          {/* <label className="lbl">&nbsp;</label> */}
 
           <div className="flex flex-center mt10">
             <ErrorMessage message={errorMessage}></ErrorMessage>
           </div>
-          {/* </form> */}
+
+          <Button 
+            style={VERTICAL_DISTANCE}
+            variant="contained" 
+            onClick={completeLoginWithCodeFlow}
+            sx={BUTTON_STYLE}
+          >
+            Verify code
+          </Button>
+
+          {loading && <img src={LOADING_SVG} />}
         </div>
-      </Navbar>
-    </>
+
+        {/* <Button variant="contained" onClick={resendVerificationCode}>
+              Resend Verification code
+            </Button> */}
+
+        {/* </form> */}
+      </div>
+    </div>
   );
 }
 
-export async function getServerSideProps({ req }:{req:any}) {
+export async function getServerSideProps({ req }: { req: any }) {
   const response = { props: { porsche_user: req.cookies.porsche_user || "" } };
 
   return response;

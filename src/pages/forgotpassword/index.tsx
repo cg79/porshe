@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { LOADING_SVG } from "../../constants/constants";
+import { LOADING_SVG, TEXT_STYLE, BUTTON_STYLE, VERTICAL_DISTANCE } from "../../constants/constants";
 import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
 import { Button, TextField } from "@mui/material";
-import Label from "../../components/label/label";
+// import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
 import Router from "next/router";
 import { ROUTES } from "../../constants/constants";
@@ -89,7 +89,7 @@ export default function ForgotPassword(props: any) {
           /> */}
 
             <TextField
-              style={{ marginTop: "15px" }}
+              style={VERTICAL_DISTANCE}
               error={false}
               label="Email"
               variant="standard"
@@ -98,34 +98,7 @@ export default function ForgotPassword(props: any) {
               disabled={loading}
               onChange={onEmailChange}
               size={"small"}
-              sx={{
-                width: "20rem",
-                minWidth: "300px",
-                "& label.Mui-focused": {
-                  color: "#D3D3D3",
-                },
-                "& .MuiInputBase-input": {
-                  color: "#d3d3d3",
-                },
-                "& .MuiInput-underline:after": {
-                  borderBottomColor: "#fff",
-                },
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": {
-                    borderColor: "#D3D3D3",
-                  },
-                  "&:hover fieldset": {
-                    borderColor: "#D3D3D3",
-                  },
-                  "& .Mui-focused fieldset": {
-                    borderColor: "#D3D3D3",
-                  },
-                },
-                "& .MuiInputLabel-root": {
-                  color: "#d3d3d3",
-                  fontSize: "14px",
-                },
-              }}
+              sx={TEXT_STYLE}
             />
 
             {submitted && !email && (
@@ -144,25 +117,11 @@ export default function ForgotPassword(props: any) {
             </div>
 
             <Button
-              style={{ marginTop: "15px" }}
+              style={VERTICAL_DISTANCE}
               variant="contained"
               onClick={triggerForgotPassword}
               disabled={!(email.length > 3)}
-              sx={{
-                color: "#fff",
-                backgroundColor: "#3B5160",
-                borderRadius: "75px",
-                width: "250px",
-                height: "45px",
-                "&:hover": {
-                  backgroundColor: "#346180",
-                },
-                ":disabled": {
-                  color: "#999999",
-                  background: "#e6e6e6",
-                  border: "solid 2px transparent",
-                },
-              }}
+              sx={BUTTON_STYLE}
             >
               Forgot Password
             </Button>

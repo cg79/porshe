@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { LOADING_SVG } from "../../constants/constants";
+import {
+  LOADING_SVG,
+  TEXT_STYLE,
+  BUTTON_STYLE,
+} from "../../constants/constants";
 import Navbar from "../../components/Navbar";
 import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
 import { Button, TextField } from "@mui/material";
-import Label from "../../components/label/label";
+// import Label from "../../components/label/label";
 import IdentityStore from "../../store/identity-store";
+// import Logo from "../../components/Navbar/Logo";
 
 export default function ChangePassword(props: any) {
   if (props && props.porsche_user) {
@@ -14,7 +19,7 @@ export default function ChangePassword(props: any) {
 
   const [password, setPassword] = useState("");
   const [newpassword, setNewPassword] = useState("");
-  
+
   const [errorMessage, setErrorMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -48,7 +53,7 @@ export default function ChangePassword(props: any) {
       })
       .then((data) => {
         console.log(data);
-        setErrorMessage("password succesfully changed");
+        setErrorMessage("Password succesfully changed");
       })
       .catch((err) => setErrorMessage(err.message))
       .finally(() => {
@@ -58,10 +63,22 @@ export default function ChangePassword(props: any) {
   };
 
   return (
-      <Navbar>
-        <div className="flex flex-column flex-center-y">
+    <Navbar>
+      <div className="page-content">
+        {/* <div
+        className="flex flex-column flex-center-y"
+        style={{ marginTop: "17vh" }}>
+        <div>
+          <Logo />
+        </div>
+      </div> */}
+
+        <div
+          className="flex flex-column flex-center-y"
+          style={{ marginTop: "65px" }}
+        >
           <div className="flex mt10">
-            <Label htmlFor="oldpassword" text="Password" />
+            {/* <Label htmlFor="oldpassword" text="Password" /> */}
             <TextField
               id="oldpassword-basic"
               label="Password"
@@ -71,15 +88,15 @@ export default function ChangePassword(props: any) {
               value={password}
               disabled={loading}
               onChange={onPasswordChange}
+              sx={TEXT_STYLE}
             />
             {submitted && !password && (
               <div className="warning">Password is required</div>
             )}
           </div>
 
-
-          <div className="flex mt10">
-            <Label htmlFor="newpassword" text="New Password" />
+          <div className="flex mt10" style={{ marginTop: "20px" }}>
+            {/* <Label htmlFor="newpassword" text="New Password" /> */}
             <TextField
               id="standard-basic"
               label="New Password"
@@ -89,6 +106,7 @@ export default function ChangePassword(props: any) {
               value={newpassword}
               disabled={loading}
               onChange={onNewPasswordChange}
+              sx={TEXT_STYLE}
             />
             {submitted && !newpassword && (
               <div className="warning">New Password is required</div>
@@ -96,23 +114,35 @@ export default function ChangePassword(props: any) {
           </div>
           <div className="mt10">
             {/* <label className="lbl">&nbsp;</label> */}
-            <Button variant="contained" onClick={triggerChangePassword}>
+            {/* <Button variant="contained" onClick={triggerChangePassword}>
+              Change Password
+            </Button> */}
+
+            <div className="flex flex-center mt10">
+              <ErrorMessage message={errorMessage}></ErrorMessage>
+            </div>
+
+            <Button
+              style={{ marginTop: "15px" }}
+              variant="contained"
+              onClick={triggerChangePassword}
+              disabled={!password || !newpassword}
+              sx={BUTTON_STYLE}
+            >
               Change Password
             </Button>
 
             {loading && <img src={LOADING_SVG} />}
           </div>
 
-          <div className="flex flex-center mt10">
-            <ErrorMessage message={errorMessage}></ErrorMessage>
-          </div>
           {/* </form> */}
         </div>
-      </Navbar>
+      </div>
+    </Navbar>
   );
 }
 
-export async function getServerSideProps({ req }:{req:any}) {
+export async function getServerSideProps({ req }: { req: any }) {
   const response = { props: { porsche_user: req.cookies.porsche_user || "" } };
 
   return response;

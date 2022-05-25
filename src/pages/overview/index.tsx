@@ -27,7 +27,13 @@ export default function Overview(props: any) {
   return (
     <Navbar>
       <div className="margins1">
-        <div className="porsche-font white mt10" style={{ fontSize: "24px" }}>
+        <div className="mt10">
+          <div className="flex">
+            <div className="bold" style={{fontSize:"36px"}}>Welcome</div>
+            <div>{IdentityStore.loggedUser?.info()}</div>
+          </div>
+        </div>
+        <div className="porsche-font white mt10" style={{ fontSize: "19px" }}>
           What forward31 is about, and some info on what the dashboard presents
           below. We address opportunities that are hidden in plain sight. We
           challenge the status-quo and dare to dream big. We don’t incubate or
@@ -43,9 +49,7 @@ export default function Overview(props: any) {
             })}
           </div>
 
-          <div className="mt10">
-            &nbsp;
-          </div>
+          <div className="mt10">&nbsp;</div>
         </div>
       </div>
     </Navbar>

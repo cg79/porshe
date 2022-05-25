@@ -213,7 +213,11 @@ export default function SignIn(props: any) {
             // },
           }}
         />
-        <Link href={ROUTES.RESET_PASSWORD}>
+        <div>
+            {/* <a href="/resetpassword">reset password</a> */}
+            {/* <Button href="/forgotpassword">forgot password</Button> */}
+          </div>
+        <Link href={ROUTES.FORGOT_PASSWORD}>
           <Typography
             variant="caption"
             gutterBottom
@@ -225,7 +229,6 @@ export default function SignIn(props: any) {
               minWidth: "300px",
               marginTop: "10px",
               "&:hover": {
-                color: " #b5163e",
                 cursor: "pointer",
               },
             }}

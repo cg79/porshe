@@ -9,6 +9,7 @@ const ROUTES = {
     CHANGE_PASSWORD:'/changepassword',
     LOGIN_VERIFICATION:'/loginverification',
     RESET_PASSWORD:'/resetpassword',
+    FORGOT_PASSWORD:'/forgotpassword',
     KPI:'/kpi',
 
 }

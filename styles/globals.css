@@ -1,8 +1,7 @@
 
 @font-face {
-  font-family: 'PorscheNext';
-  /* src:  url('/styles/PorscheNext-Regular.woff2') format('woff2') */
-  src:  url('/styles/PorscheNext-Thin.woff2') format('woff2') */
+  font-family: 'Porsche Next';
+  src:  url('/styles/PorscheNext-Thin.woff2') format('woff2')
 }
 html,
 body {
@@ -265,7 +264,7 @@ a {
 
 .revenue {
   position: absolute;
-  bottom: 5px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
 }

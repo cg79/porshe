@@ -1,300 +1,221 @@
 [
     {
         "id": 1,
-        "entrepreneurs": "Tim Leberecht & Till Grusche",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
-        "revenue": "2M",
-        "revenue_1":"example",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "The House of Beautiful Business",
-        "location": "Berlin (GER) & Lisbon (POR)",
-        "url": "https://houseofbeautifulbusiness.com/"
+        "name": "The Embassies",
+        "shortname": "embassies",
+        "fullname": "The Embassies of Good Living AG",
+        "location": "Zurich, CH",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQFTpYveomkmIA/company-logo_200_200/0/1594807853343?e=1661385600&v=beta&t=qLNRqJwOJJcqmmlVKDYYg70xBrhvR4hathm1YR3WiNQ",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg",
+        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg",
+        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125.jpg 1350w",
+        
+        "founders": [
+            { "name": "Henning Weiss", "story": "" },
+            { "name": "Jan Garde", "story": "" },
+            { "name": "James B. Graves", "story": "" }
+        ],
+        "video": "",
+        "introduction": "",
+        "status": "live",
+        "linkedin": "https://www.linkedin.com/company/theembassies/",
+        "website": "https://www.embassies.com/",
+        "kpis": {
+            "fte": { "title": "FTE", "data": { "2022-01": 5, "2022-02": 5, "2022-03": 5, "2022-04": 6, "2022-05": 6 } },
+            "revenue": { "title": "Revenue", "data": { "2022-01": 0, "2022-02": 0, "2022-03": 0, "2022-04": 0 } },
+            "liquidity": { "title": "Liquidity", "data": { "2022-01": 730221.6683855893, "2022-02": 632858.7792675107, "2022-03": 535495.8901494322, "2022-04": 438133.0010313536 } }
+        }
     },
     {
         "id": 2,
-        "entrepreneurs": "Lena Schrum & Kim Fischer",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Aware The Platform",
-        "location": "Berlin (GER)",
-        "url": "https://aware-theplatform.com/"
+        "name": "Fanzone",
+        "shortname": "fanzone",
+        "fullname": "Fanzone Media GmbH",
+        "location": "Berlin, DE",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQGCShb21JRrMw/company-logo_200_200/0/1649399217653?e=1661385600&v=beta&t=lmNpSOWDlrR42qfYrIg_YPzu61hCJyuYgPkwa-kXEzM",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg",
+        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg",
+        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214.jpg 1350w",
+        "founders": [
+            { "name": "Claudio Weck" },
+            { "name": "Dirk Weyel" },
+            { "name": "Björn Hesse" }
+        ],
+        "linkedin": "https://www.linkedin.com/company/fanzone-media-gmbh/",
+        "website": "https://www.fanzone.io",
+        "kpis": {
+            "fte": { "title": "FTE", "data": { "2022-01": 18.8, "2022-02": 18.8, "2022-03": 16.8, "2022-04": 16.8, "2022-05": 16.8 } },
+            "revenue": { "title": "Revenue", "data": { "2022-01": 38630, "2022-02": 92450, "2022-03": 31003, "2022-04": 141984 } },
+            "liquidity": { "title": "Liquidity", "data": { "2022-01": 257357, "2022-02": 2579, "2022-03": 1772086, "2022-04": 1527017 } },
+            "ebdita": { "title": "EBITDA", "data": { "2022-01": -386486, "2022-02": -230635, "2022-03": -275406, "2022-04": -240763, "2022-05": -256799 }}
+        }
     },
     {
         "id": 3,
-        "entrepreneurs": "Henning Weiss, Jan Garde & James Graves",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "The Embassies of Good Living",
-        "location": "Zurich (CH)",
-        "url": "https://embassies.com/de/"
+        "name": "House of Beautiful Business",
+        "shortname": "hobb",
+        "fullname": "The Business Romantic Society Verwaltungs GmbH",
+        "location": "Berlin, DE",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQF5pBN81ReTsg/company-logo_200_200/0/1643204686674?e=1661385600&v=beta&t=VwXu0BI1iB4V7F_bEXHGiAaEypCC3RbXcXMQo6tvHts",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
+        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg",
+        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
+        "founders": [
+            { "name": "Tim Leberecht" },
+            { "name": "Till Grusche" }
+        ],
+        "linkedin": "https://www.linkedin.com/company/house-of-beautiful-business/",
+        "website": "https://houseofbeautifulbusiness.com/",
+        "kpis": {
+        }
     },
     {
         "id": 4,
-        "entrepreneurs": "RJ",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Zync Inc.",
-        "location": "Los Angeles (US)"
+        "name": "RYDES",
+        "shortname": "rydes",
+        "fullname": "RYDES GmbH",
+        "location": "Berlin, DE",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQGpbwRBsjc1CQ/company-logo_200_200/0/1612942852744?e=1661385600&v=beta&t=Q5zhgGF2XpncmSp1aBCAXhNO-TKVEyG8aPpzQKkcLpo",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-06-Rydes-0260-225x300.jpg",
+        "founders": [
+            { "name": "René Braun" },
+            { "name": "Martin Miodownik" }
+        ],
+        "linkedin": "https://www.linkedin.com/company/rydes-app/",
+        "website": "https://www.rydes.com/",
+        "kpis": {
+        }
     },
     {
         "id": 5,
-        "entrepreneurs": "Damien Garot",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Stellar",
-        "location": "Paris (FR)"
+        "name": "Zync",
+        "shortname": "zync",
+        "fullname": "Zync Inc.",
+        "location": "San Francisco, USA",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQGEPkuSw7MMGw/company-logo_200_200/0/1613206496161?e=1661385600&v=beta&t=qD1Vh9b7rgFR84v6-Wwo_XEnlzdppQcqR6eAD82kfBU",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg",
+        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg",
+        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417.jpg 1350w",
+        "founder": [
+            { "name": "RJ" }
+        ],
+        "linkedin": "https://www.linkedin.com/company/zyncinc/",
+        "website": "https://www.zync.com/",
+        "kpis": {
+        }
+    },
+    {
+        "id": 5,
+        "name": "aware",
+        "shortname": "aware",
+        "fullname": "aware THE PLATFORM GmbH",
+        "location": "Berlin, DE",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQHxZ4F_OBvKoQ/company-logo_200_200/0/1648737533784?e=1661385600&v=beta&t=9jG0IajM4wFMvUgwqBYg_kuxQZNDPqEi5_0xiDYpuDE",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg",
+        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg",
+        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144.jpg 1350w",
+        "founders": [
+            { "name": "Lena Schrum" },
+            { "name": "Kim N. Fischer" }
+        ],
+        "linkedin": "https://www.linkedin.com/company/tobeaware/",
+        "website": "https://aware-theplatform.com/",
+        "kpis": {
+        }
     },
     {
         "id": 6,
-        "entrepreneurs": "Claudio Weck, Dirk Weyel, Björn Hesse",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Fanzone",
-        "location": "Berlin (GER)"
+        "name": "My Inner Health Club",
+        "shortname": "mihc",
+        "fullname": "My INNER HEALTH Club GmbH",
+        "location": "Berlin, DE",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQGhbvR-9Uv3xQ/company-logo_200_200/0/1617620405822?e=1661385600&v=beta&t=ZvOLc3Jv9s_eDXrJ9WPz4qqD7KJo90W2kZ0S7XZ5dkU",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg",
+        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg",
+        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517.jpg 1350w",
+        "founders": [
+            { "name": "Yasmin Poloczek" },
+            { "name": "Ann-Kathrin Grebner" }
+        ],
+        "linkedin": "https://www.linkedin.com/company/my-inner-health-club/",
+        "website": "https://myinnerhealthclub.com/",
+        "kpis": {
+        }
+    },
+    {
+        "id": 7,
+        "name": "Achievers Circle",
+        "shortname": "ac",
+        "fullname": "Beijing Achievers Management Consulting Co., Ltd",
+        "location": "Beijing, CHN",
+        "logo": "XXX",
+        "img": "XXX",
+        "founders": [
+            { "name": "Melody Li" },
+            { "name": "Claire Du" }
+        ],
+        "linkedin": "XXX",
+        "website": "XXX",
+        "kpis": {
+        }
     },
     {
         "id": 8,
-        "entrepreneurs": "Lorem Ipsum",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Lorem"
+        "name": "Dreamvest",
+        "shortname": "dreamvest",
+        "fullname": "Dream Machine Innovations, Inc.",
+        "location": "US",
+        "logo": "",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg",
+        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467.jpg 1350w",
+        "founder": [
+            { "name": "Vincent Ma" }
+        ],
+        "linkedin": "",
+        "website": "",
+        "kpis": {
+        }
     },
     {
         "id": 9,
-        "entrepreneurs": "Lorem Ipsum",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k"
+        "name": "Denizen",
+        "shortname": "denizen",
+        "fullname": "Simplify Places GmbH",
+        "location": "Berlin, DE",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQGNvqxjAQChng/company-logo_200_200/0/1621526275884?e=1661385600&v=beta&t=IdLQOQJCbBertgIjkO_QtdqAK5ATTu0yHw0ykhV4LBY",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg",
+        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg",
+        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447.jpg 1350w",
+        "CEO": [
+            { "name": "David Turnbull" }
+        ],
+        "Co-Founding Team": [
+            { "name": "Michael End" },
+            { "name": "David Gregor" },
+            { "name": "Darja Gogunova" }
+        ],
+        "linkedin": "https://www.linkedin.com/company/thisisdenizen/",
+        "website": "https://www.thisisdenizen.com/",
+        "kpis": {
+        }
     },
     {
         "id": 10,
-        "entrepreneurs": "Yasmin Poloczek & Ann-Kathrin Grebner",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "My Inner Health Club",
-        "location": "Berlin (GER)"
-    },
-    {
-        "id": 11,
-        "entrepreneurs": "Tim Leberecht & Till Grusche",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "The House of Beautiful Business",
-        "location": "Berlin (GER) & Lisbon (POR)",
-        "url": "https://houseofbeautifulbusiness.com/"
-    },
-    {
-        "id": 12,
-        "entrepreneurs": "Lena Schrum & Kim Fischer",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Aware The Platform",
-        "location": "Berlin (GER)",
-        "url": "https://aware-theplatform.com/"
-    },
-    {
-        "id": 13,
-        "entrepreneurs": "Henning Weiss, Jan Garde & James Graves",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "The Embassies of Good Living",
-        "location": "Zurich (CH)",
-        "url": "https://embassies.com/de/"
-    },
-    {
-        "id": 14,
-        "entrepreneurs": "RJ",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Zync Inc.",
-        "location": "Los Angeles (US)"
-    },
-    {
-        "id": 15,
-        "entrepreneurs": "Damien Garot",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
         "name": "Stellar",
-        "location": "Paris (FR)"
-    },
-    {
-        "id": 16,
-        "entrepreneurs": "Claudio Weck, Dirk Weyel, Björn Hesse",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Fanzone",
-        "location": "Berlin (GER)"
-    },
-    {
-        "id": 18,
-        "entrepreneurs": "Lorem Ipsum",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Lorem"
-    },
-    {
-        "id": 19,
-        "entrepreneurs": "Lorem Ipsum",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k"
-    },
-    {
-        "id": 20,
-        "entrepreneurs": "Yasmin Poloczek & Ann-Kathrin Grebner",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "My Inner Health Club",
-        "location": "Berlin (GER)"
-    },
-    {
-        "id": 21,
-        "entrepreneurs": "Tim Leberecht & Till Grusche",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "The House of Beautiful Business",
-        "location": "Berlin (GER) & Lisbon (POR)",
-        "url": "https://houseofbeautifulbusiness.com/"
-    },
-    {
-        "id": 22,
-        "entrepreneurs": "Lena Schrum & Kim Fischer",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Aware The Platform",
-        "location": "Berlin (GER)",
-        "url": "https://aware-theplatform.com/"
-    },
-    {
-        "id": 23,
-        "entrepreneurs": "Henning Weiss, Jan Garde & James Graves",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "The Embassies of Good Living",
-        "location": "Zurich (CH)",
-        "url": "https://embassies.com/de/"
-    },
-    {
-        "id": 24,
-        "entrepreneurs": "RJ",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Zync Inc.",
-        "location": "Los Angeles (US)"
-    },
-    {
-        "id": 25,
-        "entrepreneurs": "Damien Garot",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+        "shortname": "stellar",
+        "fullname": "Stellar Telecommunications SAS",
+        "location": "Meudon, FRA",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQG31qf9T_nYjw/company-logo_200_200/0/1643041645125?e=1661385600&v=beta&t=2AYP_yvDyrQdSOX86ziSijMrpw10WmbB42CUQNIZWMw",
+        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Stellar",
-        "location": "Paris (FR)"
-    },
-    {
-        "id": 26,
-        "entrepreneurs": "Claudio Weck, Dirk Weyel, Björn Hesse",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Fanzone",
-        "location": "Berlin (GER)"
-    },
-    {
-        "id": 28,
-        "entrepreneurs": "Lorem Ipsum",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "Lorem"
-    },
-    {
-        "id": 29,
-        "entrepreneurs": "Lorem Ipsum",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k"
-    },
-    {
-        "id": 30,
-        "entrepreneurs": "Yasmin Poloczek & Ann-Kathrin Grebner",
-        "img": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517.jpg 1350w",
-        "revenue": "2M",
-        "employee": 51,
-        "liquidity": "500k",
-        "name": "My Inner Health Club",
-        "location": "Berlin (GER)"
+        "founder": [
+            { "name": "Damien Garot" }
+        ],
+        "linkedin": "https://www.linkedin.com/company/stellartc/",
+        "website": "https://stellar.tc/",
+        "kpis": {
+        }
     }
 ]

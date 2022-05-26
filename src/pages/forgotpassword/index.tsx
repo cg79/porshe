@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { LOADING_SVG, TEXT_STYLE, BUTTON_STYLE, VERTICAL_DISTANCE } from "../../constants/constants";
+import {
+  LOADING_SVG,
+  TEXT_STYLE,
+  BUTTON_STYLE,
+  VERTICAL_DISTANCE,
+} from "../../constants/constants";
 import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
 import { Button, TextField } from "@mui/material";
@@ -8,6 +13,7 @@ import IdentityStore from "../../store/identity-store";
 import Router from "next/router";
 import { ROUTES } from "../../constants/constants";
 import Logo from "../../components/Navbar/Logo";
+import BackButton from "../../components/back/back-button";
 
 export default function ForgotPassword(props: any) {
   if (props && props.porsche_user) {
@@ -57,7 +63,8 @@ export default function ForgotPassword(props: any) {
     <div className="page-content">
       <div
         className="flex flex-column flex-center-y"
-        style={{ marginTop: "17vh" }}>
+        style={{ marginTop: "17vh" }}
+      >
         <div>
           <Logo />
         </div>
@@ -129,6 +136,10 @@ export default function ForgotPassword(props: any) {
             </Button>
 
             {loading && <img src={LOADING_SVG} />}
+          </div>
+
+          <div className=" flex flex-center-x" style={{marginTop:"50px"}}>
+            <BackButton></BackButton>
           </div>
         </div>
         {/* </form> */}

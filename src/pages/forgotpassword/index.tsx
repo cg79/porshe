@@ -34,6 +34,8 @@ export default function ForgotPassword(props: any) {
 
     setLoading(true);
 
+    IdentityStore.initAmplify();
+
     Auth.forgotPassword(email)
       .then((data) => {
         IdentityStore.tempUser = {

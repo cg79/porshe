@@ -73,6 +73,8 @@ export default function ChangePassword(props: any) {
     //   mfaType // MFA Type e.g. SMS_MFA, SOFTWARE_TOKEN_MFA
     // );
 
+    IdentityStore.initAmplify();
+
     const userFromSignIn = IdentityStore.tempUser;
     Auth.confirmSignIn(userFromSignIn, code, "SMS_MFA")
       // Auth.confirmSignIn(userFromSignIn, code, 'CUSTOM_CHALLENGE')

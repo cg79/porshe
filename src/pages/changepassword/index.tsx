@@ -45,6 +45,7 @@ export default function ChangePassword(props: any) {
     }
 
     setLoading(true);
+    IdentityStore.initAmplify();
 
     Auth.currentAuthenticatedUser()
       .then((user) => {

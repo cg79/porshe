@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  ROUTES } from "../../constants/constants";
+import {  ROUTES, TEXT_STYLE } from "../../constants/constants";
 // import Navbar from "../../components/Navbar";
 // import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
@@ -69,6 +69,7 @@ export default function SignIn(props: any) {
 
     setLoading(true);
 
+    IdentityStore.initAmplify();
     Auth.signIn(email, password)
       .then((data) => {
         debugger;
@@ -134,34 +135,7 @@ export default function SignIn(props: any) {
           disabled={loading}
           onChange={onEmailChange}
           size={"small"}
-          sx={{
-            width: "20rem",
-            minWidth: "300px",
-            "& label.Mui-focused": {
-              color: "#D3D3D3",
-            },
-            "& .MuiInputBase-input": {
-              color: "#d3d3d3",
-            },
-            "& .MuiInput-underline:after": {
-              borderBottomColor: "#fff",
-            },
-            "& .MuiOutlinedInput-root": {
-              "& fieldset": {
-                borderColor: "#D3D3D3",
-              },
-              "&:hover fieldset": {
-                borderColor: "#D3D3D3",
-              },
-              "& .Mui-focused fieldset": {
-                borderColor: "#D3D3D3",
-              },
-            },
-            "& .MuiInputLabel-root": {
-              color: "#d3d3d3",
-              fontSize: "14px",
-            },
-          }}
+          sx={TEXT_STYLE}
         />
         <Box
           sx={{
@@ -178,40 +152,7 @@ export default function SignIn(props: any) {
           value={password}
           disabled={loading}
           onChange={onPasswordChange}
-          sx={{
-            width: "20rem",
-            minWidth: "300px",
-            "& label.Mui-focused": {
-              color: "#D3D3D3",
-            },
-            "& .MuiInputBase-input": {
-              color: "#d3d3d3",
-            },
-            "& .MuiInput-underline:after": {
-              borderBottomColor: "#fff",
-            },
-            "& .MuiOutlinedInput-root": {
-              "& fieldset": {
-                borderColor: "#D3D3D3",
-              },
-              "&:hover fieldset": {
-                borderColor: "#D3D3D3",
-              },
-              "& .Mui-focused fieldset": {
-                borderColor: "#D3D3D3",
-              },
-            },
-            "& .MuiInputLabel-root": {
-              color: "#d3d3d3",
-              fontSize: "14px",
-              // fontFamily: "Porsche Next"
-            },
-            // "& .MuiInput-root": {
-            //   "&:before": {
-            //     borderBottom: "1px solid #fff",
-            //   },
-            // },
-          }}
+          sx={TEXT_STYLE}
         />
         <div>
             {/* <a href="/resetpassword">reset password</a> */}

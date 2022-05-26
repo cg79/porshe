@@ -125,8 +125,7 @@ const NavBar: NextPage = (props: any) => {
                         )}
                         {isDropDownOpen && (
                           <div className={styles.dropdown}>
-                            <ul>
-                              <li
+                              <div
                                 className={
                                   router.pathname == "/changepassword"
                                     ? `${styles.items__active} pointer mt10`
@@ -135,8 +134,8 @@ const NavBar: NextPage = (props: any) => {
                                 onClick={() => onGoToChangePassword()}
                               >
                                 Change Password
-                              </li>
-                              <li
+                              </div>
+                              <div
                                 className={
                                   router.pathname == "/signout"
                                     ? `${styles.items__active} pointer mt10`
@@ -145,8 +144,7 @@ const NavBar: NextPage = (props: any) => {
                                 onClick={() => onSignOut()}
                               >
                                 Sign Out
-                              </li>
-                            </ul>
+                              </div>
                           </div>
                         )}
                       </div>

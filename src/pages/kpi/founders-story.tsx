@@ -6,13 +6,13 @@ import { Box, Container, Typography } from "@mui/material";
 // import { FounderData, FounderTestimonial } from '../../entities/founders'
 import FounderCard from "../../components/FounderCard/FounderCard";
 import { CompanyProps } from "../../components/data-types/data-types";
-export default function FoundersStory(props: CompanyProps) {
+const FoundersStory = (props: CompanyProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
   debugger;
 
-  const company = props.data.company || null;
+  const company = props?.data?.company || null;
 
   const handlePlayButton = () => {
     setIsPlaying(true);
@@ -78,4 +78,6 @@ export default function FoundersStory(props: CompanyProps) {
       </article>
     </section>
   ) : null;
-}
+};
+
+export default FoundersStory;

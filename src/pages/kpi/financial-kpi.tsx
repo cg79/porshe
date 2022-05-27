@@ -4,8 +4,8 @@ import { BarChartProps } from "../../components/data-types/data-types";
 const company_list = require("../../data/companies.json");
 import KpiCard from "../../components/kpiCard";
 
-export default function FinancialKpi(props: any) {
-  const company = props.data.company || null;
+const FinancialKpi=(props: any)=> {
+  const company = props?.data?.company || null;
   // change the 0 to the selected company
   const metricsChosen = company?.kpis;
 
@@ -78,3 +78,6 @@ const mapDataset = (metrics: any, index: number) => {
   };
   return chartData;
 };
+
+
+export default FinancialKpi;

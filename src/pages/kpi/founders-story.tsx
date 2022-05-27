@@ -22,16 +22,19 @@ export default function FoundersStory(props: any) {
             <section className={styles.container}>
                 <div className={styles.video}>
                     <div className={styles.playIconContainer}>
-                        <Image
-                            src="/svg/play-icon.svg"
-                            className={styles.playIcon}
-                            height={isHovering ? 60 : 50}
-                            width={isHovering ? 60 : 50}
-                            onMouseEnter={() => setIsHovering(true)}
-                            onMouseLeave={() => setIsHovering(false)}
-                            onClick={() => [handlePlayButton()]}
-                        />
+                        {!isPlaying && (
+                            <Image
+                                src="/svg/play-icon.svg"
+                                className={styles.playIcon}
+                                height={isHovering ? 60 : 50}
+                                width={isHovering ? 60 : 50}
+                                onMouseEnter={() => setIsHovering(true)}
+                                onMouseLeave={() => setIsHovering(false)}
+                                onClick={() => [handlePlayButton()]}
+                            />
+                        )}
                     </div>
+
                     <ReactPlayer
                         url="/founders/video2.mp4"
                         playing={isPlaying}

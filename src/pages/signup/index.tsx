@@ -63,6 +63,7 @@ export default function SignIn(props: any) {
   
 
   const triggerSignUp = () => {
+    IdentityStore.initAmplify();
     Auth.signUp({
       username: email,
       password,
@@ -90,6 +91,7 @@ export default function SignIn(props: any) {
   };
 
   const triggerConfirmEmail = () => {
+    IdentityStore.initAmplify();
     Auth.confirmSignUp(email, code)
       .then((val) => {
         console.log(val);

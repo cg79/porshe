@@ -1,14 +1,25 @@
+import Amplify from "aws-amplify";
+import awsconfig from "../aws-exports";
 import { makeObservable, observable } from "mobx";
 import { User } from "./user-identity";
 
 class IdentityStore {
   loggedUser: User | null = null;
+  initialized=false;
   tempUser:any|null= null;
 
   constructor(){
     makeObservable(this, {
       loggedUser: observable,
     });
+  }
+
+  initAmplify(){
+    if(this.initialized){
+      return;
+    }
+    Amplify.configure(awsconfig);
+    this.initialized=true;
   }
 
   setLoggedUser(jsonUser: any) {

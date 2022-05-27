@@ -30,7 +30,7 @@ export default function Overview(props: any) {
         <div className="mt10">
           <div className="flex">
             <div className="bold" style={{fontSize:"36px"}}>Welcome</div>
-            <div>{IdentityStore.loggedUser?.info()}</div>
+            <span style={{marginLeft:"10px", marginTop:"20px"}}>{IdentityStore.loggedUser?.info()}</span>
           </div>
         </div>
         <div className="porsche-font white mt10" style={{ fontSize: "19px" }}>

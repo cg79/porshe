@@ -14,30 +14,51 @@ const CompanyList = observer(() => {
   }, []);
 
   const columns = [
+    // {
+    //   name: "Logo",
+    //   // selector: (row: any) => row.name,
+    //   // sortable: true,
+    //   cell: (row: any) => {
+    //     return (
+    //       <div>
+    //         <img
+    //           style={{ maxWidth: "50px" }}
+    //           src={
+    //             row.logo ||
+    //             "https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png"
+    //           }
+    //         />
+    //       </div>
+    //     );
+    //   },
+    // },
     {
-      name: "Logo",
-      // selector: (row: any) => row.name,
-      // sortable: true,
-      cell:(row:any)=>{
-        return (
-          <div>
-            <img 
-            style={{ maxWidth: "150px" }}
-            src={row.logo || 'https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png'} />
-          </div>
-        )
-      }
-    },
-    {
-      name: "Name",
+      name: "Company",
       selector: (row: any) => row.name,
       sortable: true,
+      cell: (row: any) => {
+        return (
+          <div className="flex pointer" onClick={onRowClicked}>
+            <div>
+              <img
+                style={{ maxWidth: "50px" }}
+                src={
+                  row.logo ||
+                  "https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png"
+                }
+              />
+            </div>
+            <div className="ml5">{row.name}</div>
+            <div className="ml5">{row.introduction || ""}</div>
+          </div>
+        );
+      },
     },
-    {
-      name: "Entrepreneurs",
-      selector: (row: any) => row.entrepreneurs,
-      sortable: true,
-    },
+    // {
+    //   name: "Entrepreneurs",
+    //   selector: (row: any) => row.entrepreneurs,
+    //   sortable: true,
+    // },
     {
       name: "Headquarters",
       selector: (row: any) => row.location,
@@ -45,24 +66,64 @@ const CompanyList = observer(() => {
     },
 
     {
+      name: "FTE",
+      selector: (row: any) => row.kpis?.fte?.value,
+      sortable: true,
+      cell: (row: any) => {
+        if (row.kpis?.fte?.value) {
+          return <div>{row.kpis?.fte?.value || "N/A"} &euro;</div>;
+        }
+
+        return null;
+      },
+    },
+    {
       name: "Revenue",
       selector: (row: any) => row.revenue,
       sortable: true,
-      cell:(row:any)=>{
-        return (
-          <div>
-           <div style={{fontWeight: "bold"}}
-        >{row.revenue}</div>
+      cell: (row: any) => {
+        if (row.kpis?.revenue?.value) {
+          return (
+            <div>
+              <div style={{ fontWeight: "bold" }}>
+                {row.kpis?.revenue?.value} &euro;
+              </div>
 
-           <div style={{fontSize: "8px"}}>{row.revenue_1 || 'no data'}</div>
-          </div>
-        )
-      }
+              {row.revenue_1 && (
+                <div style={{ fontSize: "8px" }}>
+                  {row.revenue_1 || "no data"}
+                </div>
+              )}
+            </div>
+          );
+        }
+
+        return null;
+      },
     },
     {
       name: "Liquidity",
-      selector: (row: any) => row.liquidity,
+      selector: (row: any) => row.kpis?.liquidity?.value,
       sortable: true,
+      cell: (row: any) => {
+        if (row.kpis?.liquidity?.value) {
+          return (
+            <div>
+              <div style={{ fontWeight: "bold" }}>
+                {row.kpis?.liquidity?.value} &euro;
+              </div>
+
+              {row.liquidity_1 && (
+                <div style={{ fontSize: "8px" }}>
+                  {row.liquidity_1 || "no data"}
+                </div>
+              )}
+            </div>
+          );
+        }
+
+        return null;
+      },
     },
     {
       name: "Employee",
@@ -76,16 +137,18 @@ const CompanyList = observer(() => {
     Router.push(route);
   };
 
-  const onRowClicked = (row:any)=>{
+  const onRowClicked = (row: any) => {
     debugger;
     redirectToCompanyDetails(row.id);
-  }
+  };
 
   return (
     <div>
-      <DataTable columns={columns} data={rows} 
-        fixedHeader 
-        onRowClicked={onRowClicked}
+      <DataTable
+        columns={columns}
+        data={rows}
+        fixedHeader
+        // onRowClicked={onRowClicked}
       />
       {/* {store.list.map((comp: any) => {
         return (

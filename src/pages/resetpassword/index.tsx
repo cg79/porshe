@@ -67,6 +67,7 @@ export default function ResetPassword(props: any) {
 
     setLoading(true);
 
+    IdentityStore.initAmplify();
     Auth.forgotPasswordSubmit(username, code, password)
       .then((data) => {
         console.log(data);

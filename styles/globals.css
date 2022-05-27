@@ -1,9 +1,13 @@
+@font-face {
+  font-family: "Porsche Next";
+  src: url("/styles/PorscheNext-Thin.woff2") format("woff2");
+}
 
 @font-face {
-  font-family: 'PorscheNext';
-  /* src:  url('/styles/PorscheNext-Regular.woff2') format('woff2') */
-  src:  url('/styles/PorscheNext-Thin.woff2') format('woff2') */
+  font-family: "Porsche Regular";
+  src: url("/styles/PorscheNext-Regular.woff2") format("woff2");
 }
+
 html,
 body {
   width: 100%;
@@ -32,7 +36,7 @@ body {
   margin: auto;
   padding: 80px 0; */
   position: relative;
-  z-index: 888;
+  z-index: 2;
 }
 
 .bg-element-1 {
@@ -80,12 +84,16 @@ body {
   z-index: 1;
 } */
 
-.porsche-font{
+.porsche-font {
   font-family: "Porsche Next";
   font-style: normal;
 }
 
-.white{
+.font-regular {
+  font-family: "Porsche Regular";
+}
+
+.white {
   color: #ffffff;
 }
 
@@ -97,9 +105,9 @@ body {
   line-height: 56px;
 }
 
-.page-content {
+/* .page-content {
   z-index: 3;
-}
+} */
 
 .lbl {
   width: 100px;
@@ -115,7 +123,7 @@ body {
 }
 
 .kpi-title {
-  font-family: "Porsche Next";
+  /* font-family: "Porsche Next"; */
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -162,7 +170,7 @@ body {
 
 .margins {
   margin-left: 60px;
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 .margins1 {
@@ -265,9 +273,14 @@ a {
 
 .revenue {
   position: absolute;
-  bottom: 5px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  width: 86%;
+}
+
+.uppercase{
+  text-transform: uppercase;
 }
 
 .static {
@@ -281,8 +294,12 @@ a {
 .jVeafb {
   background-color: transparent !important;
   color: #fff !important;
-  margin-top: 5px!important;
-  background: linear-gradient(218.17deg, rgba(59, 81, 96, 0.5) 0.82%, rgba(59, 81, 96, 0.245) 95.35%);
+  margin-top: 5px !important;
+  background: linear-gradient(
+    218.17deg,
+    rgba(59, 81, 96, 0.5) 0.82%,
+    rgba(59, 81, 96, 0.245) 95.35%
+  );
 }
 
 .gZWIKX {
@@ -291,23 +308,36 @@ a {
   font-weight: bold;
 }
 
-.linebk{
-  margin-top: 50px!important;
-  background: linear-gradient(218.17deg, rgba(59, 81, 96, 0.5) 0.82%, rgba(59, 81, 96, 0.245) 95.35%);
+.linebk {
+  margin-top: 50px !important;
+  background: linear-gradient(
+    218.17deg,
+    rgba(59, 81, 96, 0.5) 0.82%,
+    rgba(59, 81, 96, 0.245) 95.35%
+  );
 }
 
-.rdt_TableRow{
+.rdt_TableRow {
   color: #ffffff !important;
-  margin-top: 10px!important;
-  background: linear-gradient(218.17deg, rgba(59, 81, 96, 0.5) 0.82%, rgba(59, 81, 96, 0.245) 95.35%);
+  margin-top: 10px !important;
+  background: linear-gradient(
+    218.17deg,
+    rgba(59, 81, 96, 0.5) 0.82%,
+    rgba(59, 81, 96, 0.245) 95.35%
+  );
 }
 
-.relative{
+.relative {
   position: relative;
 }
 
-.absolute{
+.absolute {
   position: absolute;
+}
+
+.metric{
+  font-size: 22px;
+  font-weight: 600;
 }
 
 /* .rdt_TableHeader{

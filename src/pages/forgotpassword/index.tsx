@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { LOADING_SVG, TEXT_STYLE, BUTTON_STYLE, VERTICAL_DISTANCE } from "../../constants/constants";
+import {
+  LOADING_SVG,
+  TEXT_STYLE,
+  BUTTON_STYLE,
+  VERTICAL_DISTANCE,
+} from "../../constants/constants";
 import ErrorMessage from "../../components/error/error";
 import { Auth } from "aws-amplify";
 import { Button, TextField } from "@mui/material";
@@ -8,6 +13,7 @@ import IdentityStore from "../../store/identity-store";
 import Router from "next/router";
 import { ROUTES } from "../../constants/constants";
 import Logo from "../../components/Navbar/Logo";
+import BackButton from "../../components/back/back-button";
 
 export default function ForgotPassword(props: any) {
   if (props && props.porsche_user) {
@@ -34,6 +40,8 @@ export default function ForgotPassword(props: any) {
 
     setLoading(true);
 
+    IdentityStore.initAmplify();
+
     Auth.forgotPassword(email)
       .then((data) => {
         IdentityStore.tempUser = {
@@ -55,7 +63,8 @@ export default function ForgotPassword(props: any) {
     <div className="page-content">
       <div
         className="flex flex-column flex-center-y"
-        style={{ marginTop: "17vh" }}>
+        style={{ marginTop: "17vh" }}
+      >
         <div>
           <Logo />
         </div>
@@ -68,12 +77,12 @@ export default function ForgotPassword(props: any) {
           {/* <form name="form" onSubmit={triggerSignIn}> */}
 
           <div
-            className="porsche_font flex bold mt10"
+            className="porsche-font flex bold mt10"
             style={{ fontSize: "22px" }}
           >
             Forgot your password?
           </div>
-          <div className="porsche_font flex" style={{ fontSize: "16px" }}>
+          <div className="porsche-font flex" style={{ fontSize: "16px" }}>
             We'll send you a recovery code
           </div>
           <div className="flex mt10">
@@ -127,6 +136,10 @@ export default function ForgotPassword(props: any) {
             </Button>
 
             {loading && <img src={LOADING_SVG} />}
+          </div>
+
+          <div className=" flex flex-center-x" style={{marginTop:"50px"}}>
+            <BackButton></BackButton>
           </div>
         </div>
         {/* </form> */}

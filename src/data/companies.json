@@ -11,12 +11,17 @@
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125.jpg 1350w",
 
         "founders": [
-            { "name": "Henning Weiss", "story": "" },
-            { "name": "Jan Garde", "story": "" },
-            { "name": "James B. Graves", "story": "" }
-        ],
-        "video": "",
+            {
+              "name": "Henning Weiss",
+              "story": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences.",
+              "image": "/founders/video1.png"
+            },
+            { "name": "Jan Garde", "story": "", "image": "" },
+            { "name": "James B. Graves", "story": "", "image": "" }
+          ],
+          "video": "/founders/video2.mp4",
         "introduction": "",
+        "description": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.",
         "status": "live",
         "linkedin": "https://www.linkedin.com/company/theembassies/",
         "website": "https://www.embassies.com/",

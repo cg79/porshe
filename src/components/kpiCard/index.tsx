@@ -13,7 +13,7 @@ type KpiCardProps = {
 const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value }) => {
     return (
         <div className={styles.card}>
-            <BarChart props={chartData.props}></BarChart>
+            <BarChart props={chartData.props} title={title}></BarChart>
         </div>
     )
 }

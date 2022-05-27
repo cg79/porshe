@@ -42,3 +42,9 @@ export interface OverviewProps {
     m5: string;
   };
 }
+
+export interface CompanyProps {
+  data: {
+    company: any
+  };
+}

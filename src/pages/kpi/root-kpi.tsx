@@ -1,10 +1,10 @@
 import { Box, Tabs, Tab } from "@mui/material";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import TabPanel from "../../components/tab/tab-panel";
 import FinancialKpi from "./financial-kpi";
 import FoundersStory from "./founders-story";
-
-
+import store from "../../store/company/CompaniesStore";
 
 function a11yProps(index: number) {
   return {
@@ -20,6 +20,15 @@ export default function RootKPI() {
     setValue(newValue);
   };
 
+  useEffect(() => {
+    store.load();
+  }, []);
+
+  const { query } = useRouter();
+  // debugger;
+  const companyId = (query.companId || "") as string;
+  const company = store.list.find((el:any) => el.id == companyId);
+
   return (
     <>
       <Box sx={{ width: "100%" }}>
@@ -34,10 +43,18 @@ export default function RootKPI() {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <FinancialKpi></FinancialKpi>
+          <FinancialKpi
+            data={{
+              company,
+            }}
+          ></FinancialKpi>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <FoundersStory></FoundersStory>
+          <FoundersStory
+            data={{
+              company,
+            }}
+          ></FoundersStory>
         </TabPanel>
       </Box>
     </>

@@ -1,8 +1,13 @@
 import React from "react";
 import BarChart from "../../components/chart/bar-chart";
-import { BarChartProps } from "../../components/data-types/data-types";
+import { BarChartProps, CompanyProps } from "../../components/data-types/data-types";
 
-export default function FinancialKpi(props: any) {
+
+
+export default function FinancialKpi(props: CompanyProps) {
+
+  const company = props.data.company || {};
+  
   const defaultBarChartData: BarChartProps = {
     props: {
       labels: ["January", "February", "March", "April", "May", "June", "July"],

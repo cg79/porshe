@@ -7,9 +7,9 @@
         "location": "Zurich, CH",
         "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQFTpYveomkmIA/company-logo_200_200/0/1594807853343?e=1661385600&v=beta&t=qLNRqJwOJJcqmmlVKDYYg70xBrhvR4hathm1YR3WiNQ",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg",
-        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg",
+        "img1": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125.jpg 1350w",
-        
+
         "founders": [
             { "name": "Henning Weiss", "story": "" },
             { "name": "Jan Garde", "story": "" },
@@ -20,12 +20,39 @@
         "status": "live",
         "linkedin": "https://www.linkedin.com/company/theembassies/",
         "website": "https://www.embassies.com/",
-        "employee":89,
+        "employee": 89,
         "kpis": {
-            "fte": { "title": "FTE", "data": { "2022-01": 5, "2022-02": 5, "2022-03": 5, "2022-04": 6, "2022-05": 6 }, "value":4 },
-            "revenue": { "title": "Revenue", "data": { "2022-01": 0, "2022-02": 0, "2022-03": 0, "2022-04": 0 }, "value":5 },
-            "liquidity": { "title": "Liquidity", "data": { "2022-01": 730221.6683855893, "2022-02": 632858.7792675107, "2022-03": 535495.8901494322, "2022-04": 438133.0010313536 }, "value":6 }
-
+            "fte": {
+                "title": "FTE",
+                "data": {
+                    "2022-01": 5,
+                    "2022-02": 5,
+                    "2022-03": 5,
+                    "2022-04": 6,
+                    "2022-05": 6
+                },
+                "value": 4
+            },
+            "revenue": {
+                "title": "Revenue",
+                "data": {
+                    "2022-01": 1,
+                    "2022-02": 3,
+                    "2022-03": 2,
+                    "2022-04": 64
+                },
+                "value": 5
+            },
+            "liquidity": {
+                "title": "Liquidity",
+                "data": {
+                    "2022-01": 730221.6683855893,
+                    "2022-02": 632858.7792675107,
+                    "2022-03": 535495.8901494322,
+                    "2022-04": 438133.0010313536
+                },
+                "value": 6
+            }
         }
     },
     {
@@ -36,7 +63,7 @@
         "location": "Berlin, DE",
         "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQGCShb21JRrMw/company-logo_200_200/0/1649399217653?e=1661385600&v=beta&t=lmNpSOWDlrR42qfYrIg_YPzu61hCJyuYgPkwa-kXEzM",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg",
-        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg",
+        "img1": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214.jpg 1350w",
         "founders": [
             { "name": "Claudio Weck" },
@@ -46,10 +73,44 @@
         "linkedin": "https://www.linkedin.com/company/fanzone-media-gmbh/",
         "website": "https://www.fanzone.io",
         "kpis": {
-            "fte": { "title": "FTE", "data": { "2022-01": 18.8, "2022-02": 18.8, "2022-03": 16.8, "2022-04": 16.8, "2022-05": 16.8 } },
-            "revenue": { "title": "Revenue", "data": { "2022-01": 38630, "2022-02": 92450, "2022-03": 31003, "2022-04": 141984 } },
-            "liquidity": { "title": "Liquidity", "data": { "2022-01": 257357, "2022-02": 2579, "2022-03": 1772086, "2022-04": 1527017 } },
-            "ebdita": { "title": "EBITDA", "data": { "2022-01": -386486, "2022-02": -230635, "2022-03": -275406, "2022-04": -240763, "2022-05": -256799 }}
+            "fte": {
+                "title": "FTE",
+                "data": {
+                    "2022-01": 18.8,
+                    "2022-02": 18.8,
+                    "2022-03": 16.8,
+                    "2022-04": 16.8,
+                    "2022-05": 16.8
+                }
+            },
+            "revenue": {
+                "title": "Revenue",
+                "data": {
+                    "2022-01": 38630,
+                    "2022-02": 92450,
+                    "2022-03": 31003,
+                    "2022-04": 141984
+                }
+            },
+            "liquidity": {
+                "title": "Liquidity",
+                "data": {
+                    "2022-01": 257357,
+                    "2022-02": 2579,
+                    "2022-03": 1772086,
+                    "2022-04": 1527017
+                }
+            },
+            "ebdita": {
+                "title": "EBITDA",
+                "data": {
+                    "2022-01": -386486,
+                    "2022-02": -230635,
+                    "2022-03": -275406,
+                    "2022-04": -240763,
+                    "2022-05": -256799
+                }
+            }
         }
     },
     {
@@ -60,16 +121,12 @@
         "location": "Berlin, DE",
         "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQF5pBN81ReTsg/company-logo_200_200/0/1643204686674?e=1661385600&v=beta&t=VwXu0BI1iB4V7F_bEXHGiAaEypCC3RbXcXMQo6tvHts",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
-        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg",
+        "img1": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
-        "founders": [
-            { "name": "Tim Leberecht" },
-            { "name": "Till Grusche" }
-        ],
+        "founders": [{ "name": "Tim Leberecht" }, { "name": "Till Grusche" }],
         "linkedin": "https://www.linkedin.com/company/house-of-beautiful-business/",
         "website": "https://houseofbeautifulbusiness.com/",
-        "kpis": {
-        }
+        "kpis": {}
     },
     {
         "id": 4,
@@ -79,14 +136,10 @@
         "location": "Berlin, DE",
         "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQGpbwRBsjc1CQ/company-logo_200_200/0/1612942852744?e=1661385600&v=beta&t=Q5zhgGF2XpncmSp1aBCAXhNO-TKVEyG8aPpzQKkcLpo",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-06-Rydes-0260-225x300.jpg",
-        "founders": [
-            { "name": "René Braun" },
-            { "name": "Martin Miodownik" }
-        ],
+        "founders": [{ "name": "René Braun" }, { "name": "Martin Miodownik" }],
         "linkedin": "https://www.linkedin.com/company/rydes-app/",
         "website": "https://www.rydes.com/",
-        "kpis": {
-        }
+        "kpis": {}
     },
     {
         "id": 5,
@@ -96,15 +149,12 @@
         "location": "San Francisco, USA",
         "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQGEPkuSw7MMGw/company-logo_200_200/0/1613206496161?e=1661385600&v=beta&t=qD1Vh9b7rgFR84v6-Wwo_XEnlzdppQcqR6eAD82kfBU",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg",
-        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg",
+        "img1": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417.jpg 1350w",
-        "founder": [
-            { "name": "RJ" }
-        ],
+        "founder": [{ "name": "RJ" }],
         "linkedin": "https://www.linkedin.com/company/zyncinc/",
         "website": "https://www.zync.com/",
-        "kpis": {
-        }
+        "kpis": {}
     },
     {
         "id": 5,
@@ -114,16 +164,12 @@
         "location": "Berlin, DE",
         "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQHxZ4F_OBvKoQ/company-logo_200_200/0/1648737533784?e=1661385600&v=beta&t=9jG0IajM4wFMvUgwqBYg_kuxQZNDPqEi5_0xiDYpuDE",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg",
-        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg",
+        "img1": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144.jpg 1350w",
-        "founders": [
-            { "name": "Lena Schrum" },
-            { "name": "Kim N. Fischer" }
-        ],
+        "founders": [{ "name": "Lena Schrum" }, { "name": "Kim N. Fischer" }],
         "linkedin": "https://www.linkedin.com/company/tobeaware/",
         "website": "https://aware-theplatform.com/",
-        "kpis": {
-        }
+        "kpis": {}
     },
     {
         "id": 6,
@@ -133,7 +179,7 @@
         "location": "Berlin, DE",
         "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQGhbvR-9Uv3xQ/company-logo_200_200/0/1617620405822?e=1661385600&v=beta&t=ZvOLc3Jv9s_eDXrJ9WPz4qqD7KJo90W2kZ0S7XZ5dkU",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg",
-        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg",
+        "img1": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517.jpg 1350w",
         "founders": [
             { "name": "Yasmin Poloczek" },
@@ -141,8 +187,7 @@
         ],
         "linkedin": "https://www.linkedin.com/company/my-inner-health-club/",
         "website": "https://myinnerhealthclub.com/",
-        "kpis": {
-        }
+        "kpis": {}
     },
     {
         "id": 7,
@@ -152,14 +197,10 @@
         "location": "Beijing, CHN",
         "logo": "XXX",
         "img": "XXX",
-        "founders": [
-            { "name": "Melody Li" },
-            { "name": "Claire Du" }
-        ],
+        "founders": [{ "name": "Melody Li" }, { "name": "Claire Du" }],
         "linkedin": "XXX",
         "website": "XXX",
-        "kpis": {
-        }
+        "kpis": {}
     },
     {
         "id": 8,
@@ -169,15 +210,12 @@
         "location": "US",
         "logo": "",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
-        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg",
+        "img1": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467.jpg 1350w",
-        "founder": [
-            { "name": "Vincent Ma" }
-        ],
+        "founder": [{ "name": "Vincent Ma" }],
         "linkedin": "",
         "website": "",
-        "kpis": {
-        }
+        "kpis": {}
     },
     {
         "id": 9,
@@ -187,11 +225,9 @@
         "location": "Berlin, DE",
         "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQGNvqxjAQChng/company-logo_200_200/0/1621526275884?e=1661385600&v=beta&t=IdLQOQJCbBertgIjkO_QtdqAK5ATTu0yHw0ykhV4LBY",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg",
-        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg",
+        "img1": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447.jpg 1350w",
-        "CEO": [
-            { "name": "David Turnbull" }
-        ],
+        "CEO": [{ "name": "David Turnbull" }],
         "Co-Founding Team": [
             { "name": "Michael End" },
             { "name": "David Gregor" },
@@ -199,8 +235,7 @@
         ],
         "linkedin": "https://www.linkedin.com/company/thisisdenizen/",
         "website": "https://www.thisisdenizen.com/",
-        "kpis": {
-        }
+        "kpis": {}
     },
     {
         "id": 10,
@@ -210,14 +245,11 @@
         "location": "Meudon, FRA",
         "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQG31qf9T_nYjw/company-logo_200_200/0/1643041645125?e=1661385600&v=beta&t=2AYP_yvDyrQdSOX86ziSijMrpw10WmbB42CUQNIZWMw",
         "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
-        "img1":"https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg",
+        "img1": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg",
         "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
-        "founder": [
-            { "name": "Damien Garot" }
-        ],
+        "founder": [{ "name": "Damien Garot" }],
         "linkedin": "https://www.linkedin.com/company/stellartc/",
         "website": "https://stellar.tc/",
-        "kpis": {
-        }
+        "kpis": {}
     }
 ]

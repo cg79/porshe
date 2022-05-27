@@ -30,14 +30,14 @@ export default function FoundersStory(props: any) {
                             onMouseEnter={() => setIsHovering(true)}
                             onMouseLeave={() => setIsHovering(false)}
                             onClick={() => [handlePlayButton()]}
-                            onEnded={() => setIsPlaying(false)}
-                            onPlay={() => setIsPlaying(true)}
                         />
                     </div>
                     <ReactPlayer
                         url="/founders/video2.mp4"
                         playing={isPlaying}
                         width={'800px'}
+                        onEnded={() => setIsPlaying(false)}
+                        onPlay={() => setIsPlaying(true)}
                     />
                 </div>
                 <Box sx={{ height: 50 }} />

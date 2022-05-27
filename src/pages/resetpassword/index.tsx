@@ -13,6 +13,7 @@ import { Button, TextField } from "@mui/material";
 import IdentityStore from "../../store/identity-store";
 import Logo from "../../components/Navbar/Logo";
 import { useRouter } from "next/router";
+import BackButton from "../../components/back/back-button";
 
 export default function ResetPassword(props: any) {
   if (props && props.porsche_user) {
@@ -171,6 +172,10 @@ export default function ResetPassword(props: any) {
         </div>
 
         {/* </form> */}
+      </div>
+
+      <div className=" flex flex-center-x" style={{ marginTop: "50px" }}>
+        <BackButton></BackButton>
       </div>
     </div>
   );

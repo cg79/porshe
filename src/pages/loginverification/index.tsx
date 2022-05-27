@@ -13,6 +13,7 @@ import { Button, TextField } from "@mui/material";
 import IdentityStore from "../../store/identity-store";
 import Router from "next/router";
 import Logo from "../../components/Navbar/Logo";
+import BackButton from "../../components/back/back-button";
 
 export default function ChangePassword(props: any) {
   if (props && props.porsche_user) {
@@ -156,9 +157,9 @@ export default function ChangePassword(props: any) {
             <ErrorMessage message={errorMessage}></ErrorMessage>
           </div>
 
-          <Button 
+          <Button
             style={VERTICAL_DISTANCE}
-            variant="contained" 
+            variant="contained"
             onClick={completeLoginWithCodeFlow}
             sx={BUTTON_STYLE}
           >
@@ -173,6 +174,10 @@ export default function ChangePassword(props: any) {
             </Button> */}
 
         {/* </form> */}
+      </div>
+
+      <div className=" flex flex-center-x" style={{ marginTop: "50px" }}>
+        <BackButton></BackButton>
       </div>
     </div>
   );

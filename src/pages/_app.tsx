@@ -14,6 +14,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { RouteGuard } from "../components/guard/route-guard";
 
 ChartJS.register(
   CategoryScale,
@@ -41,7 +42,9 @@ function MyApp({
       <div className="bg-element-3"></div>
 
       <div className="demo-container">
-        <Component {...pageProps} />
+        <RouteGuard>
+          <Component {...pageProps} />
+        </RouteGuard>
       </div>
     </CookiesProvider>
   );

@@ -1,10 +1,15 @@
 import { Box, Tabs, Tab } from "@mui/material";
+// import { makeStyles } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import TabPanel from "../../components/tab/tab-panel";
 import FinancialKpi from "./financial-kpi";
 import FoundersStory from "./founders-story";
+import Router from "next/router";
 import store from "../../store/company/CompaniesStore";
+import styles from "./kpi.module.css";
+import { ROUTES } from "../../constants/constants";
+
 
 function a11yProps(index: number) {
   return {
@@ -17,7 +22,7 @@ export default function RootKPI() {
   const { query } = useRouter();
 
   const [value, setValue] = useState(0);
-  const [company, setCompany] = useState(null);
+  const [company, setCompany] = useState<any>(null);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -27,40 +32,66 @@ export default function RootKPI() {
     store.load();
 
     const companyId = (query.companyId || "") as string;
-    const companyValue = store.list.find((el:any) => el.id == companyId);
+    const companyValue = store.list.find((el: any) => el.id == companyId);
 
     setCompany(companyValue || null);
-
   }, []);
 
-  
   // debugger;
-  
-  return (
-    <>
-      <Box sx={{ width: "100%" }}>
 
-{/* {
-  company && (  <div className="flex pointer" onClick={()=>onRowClicked(row)}>
-  <div>
-    <img
-      style={{ maxWidth: "50px" }}
-      src={
-        row.logo ||
-        "https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png"
-      }
-    />
-  </div>
-  <div className="ml5">{row.name}</div>
-  <div className="ml5">{row.introduction || ""}</div>
-</div>)
-} */}
-     
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+  // const useStyles = makeStyles(() => ({
+  //   customOne: {
+  //      padding: '3rem 15rem',
+  //      flexGrow: 1,
+  //      backgroundColor: 'red',
+  //      fontFamily: 'Open Sans',
+  //   },
+  //   customTwo: {
+  //      padding: '0rem',
+  //      color: '#484848',
+  //      backgroundColor: 'white',
+  //      fontFamily: 'Open Sans',
+  //      fontSize: '1rem',
+  //  },
+  // }));
+
+  // const classes = useStyles;
+
+  const navigateToCompanies = ()=>{
+    Router.push(ROUTES.COMPANIES);
+  }
+
+  return (
+    <div className="margins" style={{marginTop:"20px"}}>
+
+      <div onClick={navigateToCompanies} style={{marginTop:"20px"}}>
+        BACK TO ALL COMPANIES
+      </div>
+      <Box sx={{ width: "100%" }} style={{marginTop:"20px"}}>
+        {company && (
+          <div >
+            <div className="flex pointer">
+              <img
+                style={{ maxWidth: "50px" }}
+                src={
+                  company.logo ||
+                  "https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png"
+                }
+              />
+              <div className="ml5" style={{marginLeft:"10px"}}>{company.name}</div>
+            </div>
+            
+            <div className="ml5 mt10" style={{marginTop:"20px"}}>{company.description || ""}</div>
+          </div>
+        )}
+
+        <Box sx={{ borderBottom: 1, borderColor: "divider", marginTop:"20px" }}>
           <Tabs
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+            className={styles.porscheTab}
+            TabIndicatorProps={{style: {backgroundColor: "white", color:"red",fontFamily: 'Open Sans'}}}
           >
             <Tab label="Financial KPI’s" {...a11yProps(0)} />
             <Tab label="Founders Story" {...a11yProps(1)} />
@@ -81,6 +112,7 @@ export default function RootKPI() {
           ></FoundersStory>
         </TabPanel>
       </Box>
-    </>
+    </div>
   );
 }
+

@@ -27,8 +27,9 @@ export default function RootCompanies() {
       <div className="margins">
         <div className="flex">
           <div className="mt10">
-            <b className="page-description">Overview portofolio</b> Live
-            companies ({store.list.length})
+            <b className="page-description">Overview portofolio,</b> 
+            <span className="ml5">Live companies ({store.list.length})</span>
+            
           </div>
           <div className="flex flex-end">
             <div className={css1} onClick={viewAsGrid}>

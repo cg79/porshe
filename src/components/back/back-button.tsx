@@ -9,7 +9,7 @@ const BackButton = () => {
 
   return (
     <div onClick={btnClick} style={{width:"25px",color:"green", cursor:"pointer"}}>
-      <img src="back-arrow.svg"></img>
+      <img src="/static/back-arrow.svg"></img>
     </div>
   );
 };

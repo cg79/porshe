@@ -10,7 +10,6 @@ const FoundersStory = (props: CompanyProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
-  debugger;
 
   const company = props?.data?.company || null;
 

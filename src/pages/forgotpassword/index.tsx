@@ -132,7 +132,7 @@ export default function ForgotPassword(props: any) {
               disabled={!(email.length > 3)}
               sx={BUTTON_STYLE}
             >
-              Forgot Password
+              SEND
             </Button>
 
             {loading && <img src={LOADING_SVG} />}

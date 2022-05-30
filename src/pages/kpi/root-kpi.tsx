@@ -26,7 +26,7 @@ export default function RootKPI() {
   useEffect(() => {
     store.load();
 
-    const companyId = (query.companId || "") as string;
+    const companyId = (query.companyId || "") as string;
     const companyValue = store.list.find((el:any) => el.id == companyId);
 
     setCompany(companyValue || null);
@@ -39,6 +39,23 @@ export default function RootKPI() {
   return (
     <>
       <Box sx={{ width: "100%" }}>
+
+{/* {
+  company && (  <div className="flex pointer" onClick={()=>onRowClicked(row)}>
+  <div>
+    <img
+      style={{ maxWidth: "50px" }}
+      src={
+        row.logo ||
+        "https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png"
+      }
+    />
+  </div>
+  <div className="ml5">{row.name}</div>
+  <div className="ml5">{row.introduction || ""}</div>
+</div>)
+} */}
+     
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             value={value}

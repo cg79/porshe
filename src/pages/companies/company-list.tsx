@@ -38,7 +38,7 @@ const CompanyList = observer(() => {
       sortable: true,
       cell: (row: any) => {
         return (
-          <div className="flex pointer" onClick={onRowClicked}>
+          <div className="flex pointer" onClick={()=>onRowClicked(row)}>
             <div>
               <img
                 style={{ maxWidth: "50px" }}
@@ -133,7 +133,8 @@ const CompanyList = observer(() => {
   ];
 
   const redirectToCompanyDetails = (companyId: number) => {
-    const route = `${ROUTES.KPI}?companId=${companyId}`;
+    debugger;
+    const route = `${ROUTES.KPI}?companyId=${companyId}`;
     Router.push(route);
   };
 

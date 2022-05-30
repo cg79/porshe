@@ -32,7 +32,7 @@ function RouteGuard({ children }: any) {
     setAuthorized(true);
     return;
     // redirect to login page if accessing a private page and not logged in
-    const publicPaths = ["/signin",'/forgotpassword','/resetpassword','/loginverification'];
+    const publicPaths = ["/signin",'/forgotpassword','/resetpassword','/loginverification','/signup'];
     const path = url.split("?")[0];
     debugger;
     if (!IdentityStore.loggedUser && !publicPaths.includes(path)) {

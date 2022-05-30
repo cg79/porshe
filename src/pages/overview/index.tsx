@@ -13,7 +13,7 @@ export default function Overview(props: any) {
   }
 
   const redirectToCompanies = () => {
-    // const route = `${ROUTES.COMPANIES}?companId=${companyId}`;
+    // const route = `${ROUTES.COMPANIES}?companyId=${companyId}`;
     debugger;
     Router.push(ROUTES.COMPANIES);
   };

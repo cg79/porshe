@@ -163,7 +163,7 @@ export default function ChangePassword(props: any) {
             onClick={completeLoginWithCodeFlow}
             sx={BUTTON_STYLE}
           >
-            Verify code
+            NEXT
           </Button>
 
           {loading && <img src={LOADING_SVG} />}

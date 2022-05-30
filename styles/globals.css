@@ -195,9 +195,7 @@ a {
   position: relative;
   border: 1px solid grey;
 }
-.company:hover {
-  border: 1px solid black;
-}
+
 
 .company .title {
   position: absolute;

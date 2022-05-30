@@ -4,7 +4,7 @@ import { ROUTES } from "../../constants/constants";
 
 const CompanyGrid = () => {
   const redirectToCompanyDetails = (companyId: number) => {
-    const route = `${ROUTES.KPI}?companId=${companyId}`;
+    const route = `${ROUTES.KPI}?companyId=${companyId}`;
     Router.push(route);
   };
 

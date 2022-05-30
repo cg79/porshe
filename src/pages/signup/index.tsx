@@ -15,11 +15,12 @@ export default function SignIn(props: any) {
 
   // const [cookie, setCookie] = useCookies(["user"])
 
-  const [email, setEmail] = useState("claudiu9379@yahoo.com");
-  const [phone, setPhone] = useState("+40742917773");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [avatar, setAvatar] = useState("https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=620&quality=85&auto=format&fit=max&s=21718fb1379918410ea10054db89f665");
 
-  const [password, setPassword] = useState("1111111a");
+  //1111111a
+  const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);

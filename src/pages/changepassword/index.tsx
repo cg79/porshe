@@ -130,7 +130,7 @@ export default function ChangePassword(props: any) {
               disabled={!password || !newpassword}
               sx={BUTTON_STYLE}
             >
-              Change Password
+              SAVE
             </Button>
 
             {loading && <img src={LOADING_SVG} />}

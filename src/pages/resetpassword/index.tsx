@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   BUTTON_STYLE,
   LOADING_SVG,
+  ROUTES,
   TEXT_STYLE,
   VERTICAL_DISTANCE,
 } from "../../constants/constants";
@@ -13,6 +14,7 @@ import { Button, TextField } from "@mui/material";
 import IdentityStore from "../../store/identity-store";
 import Logo from "../../components/Navbar/Logo";
 import { useRouter } from "next/router";
+import Router from "next/router";
 import BackButton from "../../components/back/back-button";
 
 export default function ResetPassword(props: any) {
@@ -57,9 +59,6 @@ export default function ResetPassword(props: any) {
       return;
     }
 
-    debugger;
-    // const tempUser = IdentityStore.tempUser;
-    debugger;
     const username = (query.username || "") as string;
 
     if (!username) {
@@ -73,6 +72,8 @@ export default function ResetPassword(props: any) {
       .then((data) => {
         console.log(data);
         setErrorMessage("password succesfully changed");
+
+        Router.push(ROUTES.SIGN_IN);
       })
       .catch((err) => setErrorMessage(err.message))
       .finally(() => {
@@ -165,7 +166,7 @@ export default function ResetPassword(props: any) {
             disabled={!(password.length > 3)}
             sx={BUTTON_STYLE}
           >
-            Set Password
+            SAVE
           </Button>
 
           {loading && <img src={LOADING_SVG} />}

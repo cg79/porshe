@@ -27,7 +27,7 @@ const FoundersStory = (props: CompanyProps) => {
         <div className={styles.playIconContainer}>
           {!isPlaying && (
             <Image
-              src="/svg/play-icon.svg"
+              src="/static/play-icon.svg"
               className={styles.playIcon}
               height={isHovering ? 60 : 50}
               width={isHovering ? 60 : 50}

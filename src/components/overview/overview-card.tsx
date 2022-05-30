@@ -28,7 +28,7 @@ const OverviewCard = (props: any) => {
       onClick={executeClick}
     >
       <div style={{ marginLeft: "20px", marginTop: "20px" }} className="relative">
-        <div className="one porsche-font">{m1}</div>
+        <div className="one font-porsche">{m1}</div>
         <div
           className=""
           style={{

@@ -97,6 +97,12 @@ export default function ResetPassword(props: any) {
         {/* <form name="form" onSubmit={triggerSignIn}> */}
 
         <div className="flex" style={VERTICAL_DISTANCE}>
+          <div className="flex flex-center-x">
+            <div className="flex flex-start bold font-porsche" style={{marginLeft:"-170px", fontSize:"1.5rem"}}>Reset password</div>
+          </div>
+        </div>
+
+        <div className="flex" style={VERTICAL_DISTANCE}>
           {/* <Label htmlFor="username" text="Code" /> */}
           <TextField
             id="standard-basic"
@@ -118,7 +124,7 @@ export default function ResetPassword(props: any) {
           {/* <Label htmlFor="oldpassword" text="Password" /> */}
           <TextField
             id="oldpassword-basic"
-            label="Password"
+            label="New Password"
             variant="standard"
             name="oldpassword"
             type={"password"}
@@ -136,7 +142,7 @@ export default function ResetPassword(props: any) {
           {/* <Label htmlFor="newpassword" text="New Password" /> */}
           <TextField
             id="standard-basic"
-            label="New Password"
+            label="Retype New Password"
             variant="standard"
             name="password"
             type={"password"}

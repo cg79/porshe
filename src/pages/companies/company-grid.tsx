@@ -27,7 +27,7 @@ const CompanyGrid = () => {
                 ></img>
 
                 <div
-                  className="flex flex-center-x porsche-font uppercase"
+                  className="flex flex-center-x font-porsche uppercase"
                   style={{ marginLeft: "15px", fontSize: "14px" }}
                 >
                   {comp["name"]}

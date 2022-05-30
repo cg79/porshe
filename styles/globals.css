@@ -31,6 +31,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.logo{
+  width: 240px;
+  margin-top: 15px;
+}
+
 .demo-container {
   /* width: 1024px;
   margin: auto;
@@ -84,13 +89,15 @@ body {
   z-index: 1;
 } */
 
-.porsche-font {
+.font-porsche {
   font-family: "Porsche Next";
   font-style: normal;
+  font-weight: initial;
 }
 
 .font-regular {
   font-family: "Porsche Regular";
+  font-weight: initial;
 }
 
 .white {
@@ -148,6 +155,11 @@ body {
 
 .flex-center-y {
   align-items: center;
+}
+
+.flex-start {
+  align-content: flex-start;
+  margin-left: auto;
 }
 
 .flex-end {
@@ -346,6 +358,10 @@ a {
 .Mui-selected {
   color: black!important;
   background: white!important;
+}
+
+.b1{
+  border:1px solid red;
 }
 
 

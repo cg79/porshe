@@ -77,12 +77,12 @@ export default function ForgotPassword(props: any) {
           {/* <form name="form" onSubmit={triggerSignIn}> */}
 
           <div
-            className="porsche-font flex bold mt10"
+            className="font-porsche flex bold mt10"
             style={{ fontSize: "22px" }}
           >
             Forgot your password?
           </div>
-          <div className="porsche-font flex" style={{ fontSize: "16px" }}>
+          <div className="font-porsche flex" style={{ fontSize: "16px" }}>
             We'll send you a recovery code
           </div>
           <div className="flex mt10">

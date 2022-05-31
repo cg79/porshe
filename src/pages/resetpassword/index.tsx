@@ -98,7 +98,7 @@ export default function ResetPassword(props: any) {
 
         <div className="flex" style={VERTICAL_DISTANCE}>
           <div className="flex flex-center-x">
-            <div className="flex flex-start bold font-porsche" style={{marginLeft:"-170px", fontSize:"1.5rem"}}>Reset password</div>
+            <div className="flex flex-start font-porsche" style={{marginLeft:"-170px", fontSize:"1.5rem"}}>Reset password</div>
           </div>
         </div>
 

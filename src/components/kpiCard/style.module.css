@@ -4,6 +4,7 @@
     margin: 40px;
     display: flex;
     align-content: center;
+    flex-direction: column;
     justify-content: center;
     /* border: 1px solid rgb(223, 223, 223); */
     background: linear-gradient(

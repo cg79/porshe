@@ -1,6 +1,6 @@
+import Link from 'next/link'
 import styles from './Card.module.css'
-import Image from 'next/image'
-import CompanyLogo from '../../../public/img/logo__fanzone.png'
+import { ROUTES } from '../../constants/constants'
 
 type CardProps = {
     company: string
@@ -13,6 +13,7 @@ type CardProps = {
 
     imageSrc: string
     logoSrc: string
+    id: string | number
 }
 
 type CardInfoProps = {
@@ -39,30 +40,33 @@ const Card: React.FC<CardProps> = (props) => {
         liquidity,
         imageSrc,
         logoSrc,
+        id,
     } = props
 
     console.log('image', imageSrc, 'logo', logoSrc)
     return (
-        <div
-            className={styles.card}
-            style={{
-                backgroundImage: `url(${imageSrc})`,
-            }}
-        >
-            <div className={styles.card__header}>
-                {/* <p>{company}</p> */}
-                <img src={logoSrc}></img>
-                <p>{location}</p>
+        <Link href={`${ROUTES.KPI}?companyId=${id}`}>
+            <div
+                className={styles.card}
+                style={{
+                    backgroundImage: `url(${imageSrc})`,
+                }}
+            >
+                <div className={styles.card__header}>
+                    {/* <p>{company}</p> */}
+                    <img src={logoSrc}></img>
+                    <p>{location}</p>
+                </div>
+                <div className={styles.card__headline}>
+                    <p>{headline}</p>
+                </div>
+                <div className={styles.card__stats}>
+                    <CardInfo title="Revenue" value={revenue} />
+                    <CardInfo title="Employee" value={employee} />
+                    <CardInfo title="Liquidity" value={liquidity} />
+                </div>
             </div>
-            <div className={styles.card__headline}>
-                <p>{headline}</p>
-            </div>
-            <div className={styles.card__stats}>
-                <CardInfo title="Revenue" value={revenue} />
-                <CardInfo title="Employee" value={employee} />
-                <CardInfo title="Liquidity" value={liquidity} />
-            </div>
-        </div>
+        </Link>
     )
 }
 

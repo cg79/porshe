@@ -90,6 +90,7 @@ const CompanyGrid = () => {
                     // </div>
                     <Link href={`${ROUTES.KPI}?companyId=${comp.id}`}>
                         <Card
+                            id={comp.id}
                             company={comp.name}
                             location={comp.location}
                             headline="The fan engagement platform"

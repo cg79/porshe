@@ -38,11 +38,20 @@ const Card: React.FC<CardProps> = (props) => {
         employee,
         liquidity,
         imageSrc,
+        logoSrc,
     } = props
+
+    console.log('image', imageSrc, 'logo', logoSrc)
     return (
-        <div className={styles.card}>
+        <div
+            className={styles.card}
+            style={{
+                backgroundImage: `url(${imageSrc})`,
+            }}
+        >
             <div className={styles.card__header}>
-                <p>{company}</p>
+                {/* <p>{company}</p> */}
+                <img src={logoSrc}></img>
                 <p>{location}</p>
             </div>
             <div className={styles.card__headline}>

@@ -88,17 +88,6 @@ export default function ForgotPassword(props: any) {
                         We'll send you a recovery code
                     </div>
                     <div className="flex mt10">
-                        {/* <Label htmlFor="username" text="Email" /> */}
-                        {/* <TextField
-            id="standard-basic"
-            label="Email"
-            variant="standard"
-            name="username"
-            value={email}
-            disabled={loading}
-            onChange={onEmailChange}
-          /> */}
-
                         <TextField
                             style={VERTICAL_DISTANCE}
                             error={false}

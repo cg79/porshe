@@ -1,190 +1,222 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import {
-  BUTTON_STYLE,
-  LOADING_SVG,
-  ROUTES,
-  VERTICAL_DISTANCE,
-} from "../../constants/constants";
+    BUTTON_STYLE,
+    LOADING_SVG,
+    ROUTES,
+    VERTICAL_DISTANCE,
+} from '../../constants/constants'
 // import Navbar from "../../components/Navbar";
-import ErrorMessage from "../../components/error/error";
-import { Auth } from "aws-amplify";
-import { Button, TextField } from "@mui/material";
+import ErrorMessage from '../../components/error/error'
+import { Auth } from 'aws-amplify'
+import { Button, TextField } from '@mui/material'
 // import Label from "../../components/label/label";
-import IdentityStore from "../../store/identity-store";
-import Router from "next/router";
-import Logo from "../../components/Navbar/Logo";
-import BackButton from "../../components/back/back-button";
+import IdentityStore from '../../store/identity-store'
+import Router from 'next/router'
+import Logo from '../../components/Navbar/Logo'
+import BackButton from '../../components/back/back-button'
+import BoxSpacing from '../../components/BoxSpacing'
 
 export default function ChangePassword(props: any) {
-  if (props && props.porsche_user) {
-    IdentityStore.setLoggedUser(JSON.parse(props.porsche_user));
-  }
-
-  const [code, setCode] = useState("");
-  const onCodeChange = (event: any) => {
-    const newValue = event.target.value;
-    setCode(newValue);
-    setSubmitted(false);
-    setErrorMessage("");
-  };
-
-  const [errorMessage, setErrorMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  // const resendVerificationCode = ()=>{
-
-  //   setLoading(true);
-  //   // const code = getCodeFromUserInput();
-  //   // const loggedUser = await Auth.confirmSignIn(
-  //   //   data, // Return object from Auth.signIn()
-  //   //   code, // Confirmation code
-  //   //   mfaType // MFA Type e.g. SMS_MFA, SOFTWARE_TOKEN_MFA
-  //   // );
-
-  //   const userFromSignIn = IdentityStore.tempUser;
-  //   Auth.resendConfirmationCode('claudiu9379@yahoo.com')
-  //     .then((user) => {
-  //       console.log(user);
-  //       debugger;
-  //     })
-  //     .then((data) => {
-  //       debugger;
-  //       console.log(data);
-  //       setErrorMessage("resend sign up");
-  //     })
-  //     .catch((err) => setErrorMessage(err.message))
-  //     .finally(() => {
-  //       setLoading(false);
-  //       setSubmitted(true);
-  //     });
-  // }
-
-  const completeLoginWithCodeFlow = async (event: any) => {
-    event.preventDefault();
-    if (loading) {
-      return;
+    if (props && props.porsche_user) {
+        IdentityStore.setLoggedUser(JSON.parse(props.porsche_user))
     }
 
-    setLoading(true);
-    // const code = getCodeFromUserInput();
-    // const loggedUser = await Auth.confirmSignIn(
-    //   data, // Return object from Auth.signIn()
-    //   code, // Confirmation code
-    //   mfaType // MFA Type e.g. SMS_MFA, SOFTWARE_TOKEN_MFA
-    // );
+    const [code, setCode] = useState('')
+    const onCodeChange = (event: any) => {
+        const newValue = event.target.value
+        setCode(newValue)
+        setSubmitted(false)
+        setErrorMessage('')
+    }
 
-    IdentityStore.initAmplify();
+    const [errorMessage, setErrorMessage] = useState('')
+    const [submitted, setSubmitted] = useState(false)
+    const [loading, setLoading] = useState(false)
 
-    const userFromSignIn = IdentityStore.tempUser;
-    Auth.confirmSignIn(userFromSignIn, code, "SMS_MFA")
-      // Auth.confirmSignIn(userFromSignIn, code, 'CUSTOM_CHALLENGE')
-      .then((user) => {
-        console.log(user);
-        debugger;
-      })
-      .then((data) => {
-        console.log(data);
-        setErrorMessage("user logged in");
+    // const resendVerificationCode = ()=>{
 
-        Auth.currentUserInfo().then((userInfo) => {
-          debugger;
-          const awsJsonUserAttributes = userInfo.attributes;
-          IdentityStore.setLoggedUser(awsJsonUserAttributes);
+    //   setLoading(true);
+    //   // const code = getCodeFromUserInput();
+    //   // const loggedUser = await Auth.confirmSignIn(
+    //   //   data, // Return object from Auth.signIn()
+    //   //   code, // Confirmation code
+    //   //   mfaType // MFA Type e.g. SMS_MFA, SOFTWARE_TOKEN_MFA
+    //   // );
 
-          const reqBody = {
-            porsche_user: JSON.stringify(awsJsonUserAttributes),
-          };
+    //   const userFromSignIn = IdentityStore.tempUser;
+    //   Auth.resendConfirmationCode('claudiu9379@yahoo.com')
+    //     .then((user) => {
+    //       console.log(user);
+    //       debugger;
+    //     })
+    //     .then((data) => {
+    //       debugger;
+    //       console.log(data);
+    //       setErrorMessage("resend sign up");
+    //     })
+    //     .catch((err) => setErrorMessage(err.message))
+    //     .finally(() => {
+    //       setLoading(false);
+    //       setSubmitted(true);
+    //     });
+    // }
 
-          fetch("/api/login", {
-            method: "post",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(reqBody),
-          }).finally(() => {
-            Router.push(ROUTES.OVERVIEW);
-          });
-        });
-      })
-      .catch((err) => setErrorMessage(err.message))
-      .finally(() => {
-        setLoading(false);
-        setSubmitted(true);
-      });
-  };
+    const completeLoginWithCodeFlow = async (event: any) => {
+        event.preventDefault()
+        if (loading) {
+            return
+        }
 
-  return (
-    <div className="page-content">
-      <div
-        className="flex flex-column flex-center-y"
-        style={{ marginTop: "17vh" }}
-      >
-        <div>
-          <Logo />
-        </div>
+        setLoading(true)
+        // const code = getCodeFromUserInput();
+        // const loggedUser = await Auth.confirmSignIn(
+        //   data, // Return object from Auth.signIn()
+        //   code, // Confirmation code
+        //   mfaType // MFA Type e.g. SMS_MFA, SOFTWARE_TOKEN_MFA
+        // );
 
-        <div className="bold" style={{ marginTop: "30px" }}>
-          Enter the code received on your mobile
-        </div>
-      </div>
+        IdentityStore.initAmplify()
 
-      <div className="flex flex-column flex-center-y">
-        {/* <form name="form" onSubmit={triggerSignIn}> */}
+        const userFromSignIn = IdentityStore.tempUser
+        Auth.confirmSignIn(userFromSignIn, code, 'SMS_MFA')
+            // Auth.confirmSignIn(userFromSignIn, code, 'CUSTOM_CHALLENGE')
+            .then((user) => {
+                console.log(user)
+                debugger
+            })
+            .then((data) => {
+                console.log(data)
+                setErrorMessage('user logged in')
 
-        <div className="flex">
-          {/* <Label htmlFor="username" text="Code" /> */}
-          <TextField
-            style={VERTICAL_DISTANCE}
-            id="standard-basic"
-            label="Code"
-            variant="standard"
-            name="username"
-            value={code}
-            disabled={loading}
-            onChange={onCodeChange}
-          />
+                Auth.currentUserInfo().then((userInfo) => {
+                    debugger
+                    const awsJsonUserAttributes = userInfo.attributes
+                    IdentityStore.setLoggedUser(awsJsonUserAttributes)
 
-          {submitted && !code && (
-            <div className="warning">Code is required</div>
-          )}
-        </div>
+                    const reqBody = {
+                        porsche_user: JSON.stringify(awsJsonUserAttributes),
+                    }
 
-        <div className="mt10">
-          {/* <label className="lbl">&nbsp;</label> */}
+                    fetch('/api/login', {
+                        method: 'post',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(reqBody),
+                    }).finally(() => {
+                        Router.push(ROUTES.OVERVIEW)
+                    })
+                })
+            })
+            .catch((err) => setErrorMessage(err.message))
+            .finally(() => {
+                setLoading(false)
+                setSubmitted(true)
+            })
+    }
 
-          <div className="flex flex-center mt10">
-            <ErrorMessage message={errorMessage}></ErrorMessage>
-          </div>
+    return (
+        <div
+            className="page-content"
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '90vh',
+            }}
+        >
+            <div
+                className="flex flex-column flex-center-y font-porsche"
+                style={{ marginTop: '17vh' }}
+            >
+                <Logo />
+                <BoxSpacing />
 
-          <Button
-            style={VERTICAL_DISTANCE}
-            variant="contained"
-            onClick={completeLoginWithCodeFlow}
-            sx={BUTTON_STYLE}
-          >
-            NEXT
-          </Button>
+                <div
+                    className="bold"
+                    style={{
+                        marginTop: '30px',
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        width: '20rem',
+                    }}
+                >
+                    Enter the 4 digits code received on your mobile
+                </div>
+                <BoxSpacing />
+            </div>
 
-          {loading && <img src={LOADING_SVG} />}
-        </div>
+            <div className="flex flex-column flex-center-y">
+                {/* <form name="form" onSubmit={triggerSignIn}> */}
 
-        {/* <Button variant="contained" onClick={resendVerificationCode}>
+                <div className="flex">
+                    {/* <Label htmlFor="username" text="Code" /> */}
+                    <TextField
+                        style={VERTICAL_DISTANCE}
+                        id="standard-basic"
+                        label="Code"
+                        variant="standard"
+                        name="username"
+                        value={code}
+                        disabled={loading}
+                        onChange={onCodeChange}
+                    />
+
+                    {submitted && !code && (
+                        <div className="warning">Code is required</div>
+                    )}
+                </div>
+
+                <div className="mt10">
+                    {/* <label className="lbl">&nbsp;</label> */}
+
+                    <div className="flex flex-center mt10">
+                        <ErrorMessage message={errorMessage}></ErrorMessage>
+                    </div>
+                    <BoxSpacing />
+                    <Button
+                        variant="contained"
+                        onClick={completeLoginWithCodeFlow}
+                        disabled={!(code.length == 4)}
+                        sx={{
+                            color: '#fff',
+                            backgroundColor: '#3B5160',
+                            borderRadius: '75px',
+                            width: '250px',
+                            height: '45px',
+                            '&:hover': {
+                                backgroundColor: '#346180',
+                            },
+                            ':disabled': {
+                                color: '#999999',
+                                background: '#e6e6e6',
+                                border: 'solid 2px transparent',
+                            },
+                        }}
+                    >
+                        NEXT
+                    </Button>
+
+                    {loading && <img src={LOADING_SVG} />}
+                </div>
+
+                {/* <Button variant="contained" onClick={resendVerificationCode}>
               Resend Verification code
             </Button> */}
 
-        {/* </form> */}
-      </div>
+                {/* </form> */}
+            </div>
 
-      <div className=" flex flex-center-x" style={{ marginTop: "50px" }}>
-        <BackButton></BackButton>
-      </div>
-    </div>
-  );
+            <div className=" flex flex-center-x" style={{ marginTop: '50px' }}>
+                <BackButton></BackButton>
+            </div>
+        </div>
+    )
 }
 
 export async function getServerSideProps({ req }: { req: any }) {
-  const response = { props: { porsche_user: req.cookies.porsche_user || "" } };
+    const response = { props: { porsche_user: req.cookies.porsche_user || '' } }
 
-  return response;
+    return response
 }

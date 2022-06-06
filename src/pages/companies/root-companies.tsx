@@ -29,7 +29,7 @@ export default function RootCompanies() {
     <>
       <div className="margins">
         <div className="flex">
-          <div className="mt10">
+          <div style={{marginTop:"20px"}}>
             <b className="page-description">Overview portofolio,</b>
             <span className="font-regular" style={{fontSize:'1.3rem', marginLeft:'10px'}}>Live companies ({store.list.length})</span>
           </div>

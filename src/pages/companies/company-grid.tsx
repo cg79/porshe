@@ -9,7 +9,7 @@ const CompanyGrid = () => {
   };
 
   return (
-    <div className="company-container wrap">
+    <div className="company-container wrap" style={{marginTop:"20px"}}>
       {store.list.map((comp: any) => {
         return (
           <div className="flex-item company" key={comp["id"]}>

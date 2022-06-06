@@ -13,6 +13,7 @@ const CompanyList = observer(() => {
     setRows([...store.list]);
   }, []);
 
+
   const columns = [
     // {
     //   name: "Logo",
@@ -144,12 +145,12 @@ const CompanyList = observer(() => {
   };
 
   return (
-    <div>
+    <div style={{marginTop:"20px"}}>
       <DataTable
         columns={columns}
         data={rows}
         fixedHeader
-        // onRowClicked={onRowClicked}
+        
       />
       {/* {store.list.map((comp: any) => {
         return (

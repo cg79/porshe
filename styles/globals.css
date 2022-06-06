@@ -301,11 +301,9 @@ a {
   position: static;
 }
 
-.eSTlnH {
-  background-color: transparent !important;
-}
 
-.jVeafb {
+
+/* .jVeafb {
   background-color: transparent !important;
   color: #fff !important;
   margin-top: 5px !important;
@@ -314,15 +312,31 @@ a {
     rgba(59, 81, 96, 0.5) 0.82%,
     rgba(59, 81, 96, 0.245) 95.35%
   );
-}
+} */
 
-.gZWIKX {
+/* .gZWIKX {
   background-color: transparent !important;
   color: #fff !important;
   font-weight: bold;
+} */
+
+
+.rdt_Table {
+  background-color: transparent !important;
 }
 
+/* .rdt_TableHead{
+  background-color: transparent !important;
+  color: #fff !important;
+  font-weight: bold;
+} */
 
+.rdt_TableHeadRow{
+  background-color: transparent !important;
+  color: #fff !important;
+  font-weight: bold;
+  font-family: "Porsche Next";
+}
 
 .rdt_TableRow {
   color: #ffffff !important;
@@ -332,6 +346,8 @@ a {
     rgba(59, 81, 96, 0.5) 0.82%,
     rgba(59, 81, 96, 0.245) 95.35%
   );
+  background-color: transparent !important;
+  margin-top: 10px !important;
 }
 
 .relative {

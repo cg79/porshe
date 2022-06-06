@@ -195,19 +195,6 @@
         "kpis": {}
     },
     {
-        "id": 7,
-        "name": "Achievers Circle",
-        "shortname": "ac",
-        "fullname": "Beijing Achievers Management Consulting Co., Ltd",
-        "location": "Beijing, CHN",
-        "logo": "XXX",
-        "img": "XXX",
-        "founders": [{ "name": "Melody Li" }, { "name": "Claire Du" }],
-        "linkedin": "XXX",
-        "website": "XXX",
-        "kpis": {}
-    },
-    {
         "id": 8,
         "name": "Dreamvest",
         "shortname": "dreamvest",

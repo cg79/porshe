@@ -178,7 +178,7 @@ export default function ChangePassword(props: any) {
                     <Button
                         variant="contained"
                         onClick={completeLoginWithCodeFlow}
-                        disabled={!(code.length == 4)}
+                        disabled={!(code.length == 6)}
                         sx={{
                             color: '#fff',
                             backgroundColor: '#3B5160',

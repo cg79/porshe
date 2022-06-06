@@ -13,7 +13,19 @@ type KpiCardProps = {
 const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value }) => {
     return (
         <div className={styles.card}>
-            <BarChart props={chartData.props} title={''}></BarChart>
+            <section className={styles.header}>
+                <div className={styles.header__left}>
+                    <div className={styles.left__metric}>{title}</div>
+                    <div className={styles.left__date}>IAN - JUNE 2022</div>
+                </div>
+                <div className={styles.header__right}>
+                    <div className={styles.right__value}>
+                        {chartData.props.datasets[0].data[0]}
+                    </div>
+                    <div className={styles.right__date}> / {`JUNE 2022`}</div>
+                </div>
+            </section>
+            <BarChart props={chartData.props} title={title}></BarChart>
         </div>
     )
 }

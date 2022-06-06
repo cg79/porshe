@@ -1,50 +1,50 @@
 export type ButtonProps = {
-  onClick: Function;
-  text: string;
-};
+    onClick: Function
+    text: string
+}
 
 export type ErrorProps = {
-  message: string;
-};
+    message: string
+}
 
 export type LabelProps = {
-  text: string;
-  htmlFor: string;
-};
+    text: string
+    htmlFor: string
+}
 
 export type AvatarProps = {
-  picture: string;
-};
+    picture: string
+}
 
 export interface TabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
+    children?: React.ReactNode
+    index: number
+    value: number
 }
 
 export interface BarChartProps {
-  props: {
-    labels: string[];
-    datasets: {
-      label: string;
-      data: number[];
-      backgroundColor: string;
-    }[];
-  };
+    props: {
+        labels: string[]
+        datasets: {
+            label: string
+            data: number[]
+            backgroundColor: string[] | string
+        }[]
+    }
 }
 
 export interface OverviewProps {
-  props: {
-    m1: string;
-    m2: string;
-    m3: string;
-    m4: string;
-    m5: string;
-  };
+    props: {
+        m1: string
+        m2: string
+        m3: string
+        m4: string
+        m5: string
+    }
 }
 
 export interface CompanyProps {
-  data: {
-    company: any
-  };
+    data: {
+        company: any
+    }
 }

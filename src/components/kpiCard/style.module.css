@@ -58,6 +58,7 @@
     color: #98eef4;
 }
 .right__date {
+    min-width: 80px;
     margin-top: 22px;
     font-size: 13px;
     display: grid;

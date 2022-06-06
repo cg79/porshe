@@ -28,9 +28,9 @@ export default function Overview(props: any) {
     <Navbar>
       <div className="margins1">
         <div className="mt10">
-          <div className="flex">
+          <div className="flex font-porsche">
             <div className="bold" style={{fontSize:"36px"}}>Welcome</div>
-            <span style={{marginLeft:"10px", marginTop:"20px"}}>{IdentityStore.loggedUser?.info()}</span>
+            <span style={{marginLeft:"10px", marginTop:"10px", fontSize:"28px"}}>{IdentityStore.loggedUser?.info()}</span>
           </div>
         </div>
         <div className="font-porsche white mt10" style={{ fontSize: "19px" }}>

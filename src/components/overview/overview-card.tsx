@@ -1,4 +1,5 @@
 import { OverviewProps } from "../data-types/data-types";
+import styles from './overview-card.module.css';
 
 const OverviewCard = (props: any) => {
   const {
@@ -23,11 +24,10 @@ const OverviewCard = (props: any) => {
 
   return (
     <div
-      className="linebk mt10"
-      style={{ width: "20%", marginRight: "25px", minWidth:"200px" }}
+      className={styles.linebk}
       onClick={executeClick}
     >
-      <div style={{ marginLeft: "20px", marginTop: "20px" }} className="relative">
+      <div style={{ marginLeft: "15%", marginTop: "20px" }} className="relative">
         <div className="one font-porsche">{m1}</div>
         <div
           className=""

@@ -56,7 +56,9 @@
   list-style: none;
   color: #fff;
   padding-right: 60px;
+  font-family: 'Porsche Next';
 }
+
 .items__active {
   font-weight: 800;
 }

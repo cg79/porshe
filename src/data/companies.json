@@ -21,7 +21,13 @@
         ],
         "video": "/founders/video2.mp4",
         "introduction": "",
+        "shortDescription": "The platform for next-level fan experiences. Engage with your favourite athletes like never before, by owning them as your personal NFTs.",
         "description": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.",
+        "tags": {
+            "0": "nft",
+            "1": "marketplace",
+            "2": "collectibles"
+        },
         "status": "live",
         "linkedin": "https://www.linkedin.com/company/theembassies/",
         "website": "https://www.embassies.com/",

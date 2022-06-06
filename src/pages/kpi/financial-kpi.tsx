@@ -58,8 +58,9 @@ const mapDataset = (metrics: any, index: number) => {
     const labels = []
     const datasets: any[] = []
     for (const [key, value] of Object.entries(metrics[titles[index]].data)) {
+        const newValue: any = value
         labels.push(key)
-        datasets.push(value.toFixed(0))
+        datasets.push(newValue.toFixed(0))
     }
 
     let bgColors: string[] = []

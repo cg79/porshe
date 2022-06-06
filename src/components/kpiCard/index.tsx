@@ -20,7 +20,7 @@ const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value }) => {
                 </div>
                 <div className={styles.header__right}>
                     <div className={styles.right__value}>
-                        {chartData.props.datasets[0].data[0]}
+                        {chartData.props.datasets[0].data.slice(-1).pop()}
                     </div>
                     <div className={styles.right__date}> / {`JUNE 2022`}</div>
                 </div>

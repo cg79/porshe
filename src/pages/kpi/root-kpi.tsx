@@ -25,6 +25,7 @@ export default function RootKPI() {
 
     const [value, setValue] = useState(0)
     const [company, setCompany] = useState<any>(null)
+    const [tags, setTags] = useState<any[]>([null])
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue)
@@ -34,7 +35,17 @@ export default function RootKPI() {
         store.load()
 
         const companyId = (query.companyId || '') as string
-        const companyValue = store.list.find((el: any) => el.id == companyId)
+        const companyValue: any = store.list.find(
+            (el: any) => el.id == companyId
+        )
+
+        console.log('tags', companyValue.tag)
+        const listOfTags = []
+        if (companyValue.tags)
+            for (const [key, value] of Object.entries(companyValue?.tags)) {
+                listOfTags.push(value)
+            }
+        setTags(listOfTags)
 
         setCompany(companyValue || null)
     }, [])
@@ -125,11 +136,7 @@ export default function RootKPI() {
                                     alignItems: 'flex-end',
                                 }}
                             >
-                                {renderTags([
-                                    'nft',
-                                    'marketplace',
-                                    'collectibles',
-                                ])}
+                                {renderTags(tags)}
                             </div>
                         </section>
                         <div

@@ -58,13 +58,13 @@
     padding-right: 60px;
 }
 
-.menuitem:hover {
-    transform: scale(1.05);
-    transition: 0.05s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
 .items__active {
     font-weight: 800;
+}
+
+.items__inactive:hover {
+    transform: scale(1.05);
+    transition: 0.05s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .sameline {

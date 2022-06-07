@@ -100,7 +100,7 @@ const NavBar: NextPage = (props: any) => {
                                     className={
                                         router.pathname == '/signin'
                                             ? styles.items__active
-                                            : ''
+                                            : styles.items__inactive
                                     }
                                 >
                                     <a href="/signin">Sign In</a>

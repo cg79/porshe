@@ -10,6 +10,8 @@ import store from '../../store/company/CompaniesStore'
 import styles from './kpi.module.css'
 import { ROUTES } from '../../constants/constants'
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft'
+import Tag from '../../components/tag'
+import { setHttpAgentOptions } from 'next/dist/server/config'
 
 function a11yProps(index: number) {
     return {
@@ -23,6 +25,7 @@ export default function RootKPI() {
 
     const [value, setValue] = useState(0)
     const [company, setCompany] = useState<any>(null)
+    const [tags, setTags] = useState<any[]>([null])
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue)
@@ -32,33 +35,29 @@ export default function RootKPI() {
         store.load()
 
         const companyId = (query.companyId || '') as string
-        const companyValue = store.list.find((el: any) => el.id == companyId)
+        const companyValue: any = store.list.find(
+            (el: any) => el.id == companyId
+        )
+
+        console.log('tags', companyValue.tag)
+        const listOfTags = []
+        if (companyValue.tags)
+            for (const [key, value] of Object.entries(companyValue?.tags)) {
+                listOfTags.push(value)
+            }
+        setTags(listOfTags)
 
         setCompany(companyValue || null)
     }, [])
 
-    // debugger;
-
-    // const useStyles = makeStyles(() => ({
-    //   customOne: {
-    //      padding: '3rem 15rem',
-    //      flexGrow: 1,
-    //      backgroundColor: 'red',
-    //      fontFamily: 'Open Sans',
-    //   },
-    //   customTwo: {
-    //      padding: '0rem',
-    //      color: '#484848',
-    //      backgroundColor: 'white',
-    //      fontFamily: 'Open Sans',
-    //      fontSize: '1rem',
-    //  },
-    // }));
-
-    // const classes = useStyles;
-
     const navigateToCompanies = () => {
         Router.push(ROUTES.COMPANIES)
+    }
+
+    const renderTags = (tags: string[]) => {
+        return tags.map((tag) => {
+            return <Tag name={tag} />
+        })
     }
 
     return (
@@ -81,24 +80,72 @@ export default function RootKPI() {
             </div>
             <Box sx={{ width: '100%' }} style={{ marginTop: '20px' }}>
                 {company && (
-                    <div>
-                        <div className="flex pointer">
-                            <img
-                                style={{ maxWidth: '50px' }}
-                                src={
-                                    company.logo ||
-                                    'https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png'
-                                }
-                            />
-                            <div className="ml5" style={{ marginLeft: '10px' }}>
-                                {company.name}
-                            </div>
-                        </div>
+                    <>
+                        <section
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                            }}
+                        >
+                            <div
+                                className="flex font-porsche"
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                }}
+                            >
+                                <img
+                                    style={{
+                                        maxWidth: '50px',
+                                        maxHeight: '50px',
+                                    }}
+                                    src={
+                                        company.logo ||
+                                        'https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png'
+                                    }
+                                />
+                                <div
+                                    className="ml5"
+                                    style={{
+                                        marginLeft: '15px',
+                                        fontSize: '25px',
+                                        display: 'flex',
+                                        alignItems: 'flex-end',
+                                        fontWeight: '500',
+                                        lineHeight: '100%',
+                                        height: '100%',
+                                        verticalAlign: 'middle',
+                                    }}
+                                >
+                                    {company.name}
 
-                        <div className="ml5 mt10" style={{ marginTop: '20px' }}>
-                            {company.description || ''}
+                                    <span
+                                        style={{
+                                            fontSize: '15px',
+                                            fontWeight: '300',
+                                            marginLeft: '15px',
+                                        }}
+                                    >
+                                        {company.location}
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'flex-end',
+                                }}
+                            >
+                                {renderTags(tags)}
+                            </div>
+                        </section>
+                        <div
+                            className="ml5 mt10 font-porsche"
+                            style={{ marginTop: '20px' }}
+                        >
+                            {company.shortDescription || ''}
                         </div>
-                    </div>
+                    </>
                 )}
 
                 <Box

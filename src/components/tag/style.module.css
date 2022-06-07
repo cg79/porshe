@@ -1,0 +1,16 @@
+.tag {
+    width: auto;
+    height: 27px;
+    background-color: #fff;
+    border: 1px solid #000;
+    font-family: 'Porsche Next';
+    color: #000;
+    border-radius: 25px;
+    padding: 0px 15px 0px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
+    vertical-align: middle;
+    margin-left: 20px;
+}

@@ -59,7 +59,8 @@
 }
 
 .menuitem:hover {
-    font-size: 18px;
+    transform: scale(1.05);
+    transition: 0.05s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .items__active {

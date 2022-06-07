@@ -76,7 +76,7 @@ export default function ChangePassword(props: any) {
 
         <div
           className="flex flex-column flex-center-y"
-          style={{ marginTop: "65px" }}
+          style={{ marginTop: "100px" }}
         >
           <div className="flex mt10">
             {/* <Label htmlFor="oldpassword" text="Password" /> */}

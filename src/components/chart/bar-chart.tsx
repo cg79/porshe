@@ -20,7 +20,8 @@ const createOptions = (title: string) => {
         responsive: true,
         plugins: {
             legend: {
-                position: 'top' as const,
+                // position: 'top' as const,
+                display: false,
             },
             title: {
                 display: true,
@@ -32,7 +33,7 @@ const createOptions = (title: string) => {
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
 
-const defaultData: BarChartProps = {
+const defaultData = {
     props: {
         labels,
         datasets: [

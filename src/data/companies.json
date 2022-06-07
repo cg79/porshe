@@ -12,14 +12,14 @@
 
         "founders": [
             {
-              "name": "Henning Weiss",
-              "story": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences.",
-              "image": "/founders/video1.png"
+                "name": "Henning Weiss",
+                "story": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences.",
+                "image": "/founders/video1.png"
             },
             { "name": "Jan Garde", "story": "", "image": "" },
             { "name": "James B. Graves", "story": "", "image": "" }
-          ],
-          "video": "/founders/video2.mp4",
+        ],
+        "video": "/founders/video2.mp4",
         "introduction": "",
         "description": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.",
         "status": "live",
@@ -28,7 +28,7 @@
         "employee": 89,
         "kpis": {
             "fte": {
-                "title": "FTE",
+                "title": "Full time employee (FTE)",
                 "data": {
                     "2022-01": 5,
                     "2022-02": 5,

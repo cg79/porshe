@@ -57,6 +57,11 @@
     color: #fff;
     padding-right: 60px;
 }
+
+.menuitem:hover {
+    font-size: 18px;
+}
+
 .items__active {
     font-weight: 800;
 }

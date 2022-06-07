@@ -11,27 +11,6 @@ const FinancialKpi = (props: any) => {
     // change the 0 to the selected company
     const metricsChosen = company?.kpis
 
-    const defaultBarChartData: BarChartProps = {
-        props: {
-            labels: [
-                'January',
-                'February',
-                'March',
-                'April',
-                'May',
-                'June',
-                'July',
-            ],
-            datasets: [
-                {
-                    label: 'Dataset 1',
-                    data: [1, 2, 3],
-                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                },
-            ],
-        },
-    }
-
     const renderCharts = () => {
         const barChartsData = Object.entries(metricsChosen).map(
             ([key, value], index) => {
@@ -52,7 +31,12 @@ const FinancialKpi = (props: any) => {
 
     return metricsChosen ? (
         <Layout>
-            <div className="company-container wrap">{renderCharts()}</div>
+            <div
+                className="company-container wrap"
+                style={{ display: 'flex', justifyContent: 'space-evenly' }}
+            >
+                {renderCharts()}
+            </div>
         </Layout>
     ) : null
 }
@@ -86,6 +70,7 @@ const mapDataset = (metrics: any, index: number) => {
             value: metrics[titles[index]].value,
             title: metrics[titles[index]].title,
         },
+        options: {},
     }
     return chartData
 }

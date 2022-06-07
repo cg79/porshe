@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
-import { ROUTES, TEXT_STYLE } from '../../constants/constants'
+import {
+    ROUTES,
+    TEXT_STYLE,
+    VERTICAL_DISTANCE,
+} from '../../constants/constants'
 // import Navbar from "../../components/Navbar";
 // import ErrorMessage from "../../components/error/error";
 import { Auth } from 'aws-amplify'
@@ -134,7 +138,7 @@ export default function SignIn(props: any) {
                         sx={{
                             display: 'flex',
                             justifyContent: 'flex-start',
-                            width: '25rem',
+                            width: '20rem',
                             minWidth: '320px',
                             marginTop: '10px',
                             '&:hover': {},
@@ -152,7 +156,7 @@ export default function SignIn(props: any) {
                         disabled={loading}
                         onChange={onEmailChange}
                         size={'small'}
-                        sx={TEXT_STYLE}
+                        sx={VERTICAL_DISTANCE}
                     />
                     <BoxSpacing />
                     <TextField
@@ -165,7 +169,7 @@ export default function SignIn(props: any) {
                         value={password}
                         disabled={loading}
                         onChange={onPasswordChange}
-                        sx={TEXT_STYLE}
+                        sx={VERTICAL_DISTANCE}
                     />
                     <div>
                         {/* <a href="/resetpassword">reset password</a> */}
@@ -179,7 +183,7 @@ export default function SignIn(props: any) {
                             sx={{
                                 display: 'flex',
                                 justifyContent: 'flex-end',
-                                width: '25rem',
+                                width: '20rem',
                                 minWidth: '300px',
                                 marginTop: '10px',
                                 '&:hover': {

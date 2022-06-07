@@ -69,6 +69,17 @@ export default function RootKPI() {
             onExitComplete={() => window.scrollTo(0, 0)}
         >
             <Layout type={1}>
+                <img
+                    src="https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg"
+                    style={{
+                        width: '100vw',
+                        height: 'auto',
+                        position: 'absolute',
+                        top: '0',
+                        left: '0',
+                        zIndex: '-2',
+                    }}
+                ></img>
                 <div className="margins" style={{ marginTop: '20px' }}>
                     <div
                         className={`font-porsche ${styles.backButton}`}
@@ -86,7 +97,12 @@ export default function RootKPI() {
                         <ArrowLeftIcon fontSize="large" />
                         <p>BACK TO ALL COMPANIES</p>
                     </div>
-                    <Box sx={{ width: '100%' }} style={{ marginTop: '20px' }}>
+                    <Box
+                        sx={{ width: '100%' }}
+                        style={{
+                            marginTop: '20px',
+                        }}
+                    >
                         {company && (
                             <>
                                 <section
@@ -171,7 +187,6 @@ export default function RootKPI() {
                                 TabIndicatorProps={{
                                     style: {
                                         backgroundColor: 'white',
-                                        color: 'red',
                                         fontFamily: 'Open Sans',
                                     },
                                 }}

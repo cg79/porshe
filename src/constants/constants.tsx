@@ -27,6 +27,9 @@ const TEXT_STYLE = {
     '& .MuiInput-underline:after': {
         borderBottomColor: '#fff',
     },
+    '& .MuiInput-underline:before': {
+        borderBottomColor: '#fff',
+    },
     '& .MuiOutlinedInput-root': {
         '& fieldset': {
             borderColor: '#D3D3D3',
@@ -70,6 +73,9 @@ const VERTICAL_DISTANCE = {
         color: '#d3d3d3',
     },
     '& .MuiInput-underline:after': {
+        borderBottomColor: '#fff',
+    },
+    '& .MuiInput-underline:before': {
         borderBottomColor: '#fff',
     },
     '& .MuiOutlinedInput-root': {

@@ -17,6 +17,7 @@ import { useRouter } from 'next/router'
 import Router from 'next/router'
 import BackButton from '../../components/back/back-button'
 import BoxSpacing from '../../components/BoxSpacing'
+import Layout from '../../components/layout'
 
 export default function ResetPassword(props: any) {
     if (props && props.porsche_user) {
@@ -84,126 +85,133 @@ export default function ResetPassword(props: any) {
     }
 
     return (
-        <div className="page-content">
-            <div
-                className="flex flex-column flex-center-y"
-                style={{ marginTop: '17vh' }}
-            >
-                <div>
-                    <Logo />
-                </div>
-            </div>
-
-            <div className="flex flex-column flex-center-y">
-                <BoxSpacing />
-
+        <Layout>
+            <div className="page-content">
                 <div
-                    className="font-porsche flex bold mt10"
-                    style={{
-                        fontSize: '20px',
-                        fontWeight: '800',
-                        display: 'flex',
-                        justifyContent: 'flex-start',
-                        width: '20rem',
-                    }}
+                    className="flex flex-column flex-center-y"
+                    style={{ marginTop: '17vh' }}
                 >
-                    Forgot your password?
-                </div>
-                <BoxSpacing />
-
-                <div className="flex" style={VERTICAL_DISTANCE}>
-                    {/* <Label htmlFor="username" text="Code" /> */}
-                    <TextField
-                        id="standard-basic"
-                        label="Code"
-                        variant="standard"
-                        name="code"
-                        value={code}
-                        disabled={loading}
-                        onChange={onCodeChange}
-                        sx={TEXT_STYLE}
-                    />
-                </div>
-                {submitted && !code && (
-                    <div
-                        className="warning"
-                        style={{ width: '20rem', textAlign: 'left' }}
-                    >
-                        Code is required
+                    <div>
+                        <Logo />
                     </div>
-                )}
-                <BoxSpacing height={30} />
-                <div className="flex mt10" style={VERTICAL_DISTANCE}>
-                    <TextField
-                        id="oldpassword-basic"
-                        label="New Password"
-                        variant="standard"
-                        name="oldpassword"
-                        type={'password'}
-                        value={password}
-                        disabled={loading}
-                        onChange={onPasswordChange}
-                        sx={TEXT_STYLE}
-                    />
-                    {submitted && !password && (
-                        <div className="warning">Password is required</div>
-                    )}
                 </div>
-                <BoxSpacing height={30} />
-                <div className="flex mt10" style={VERTICAL_DISTANCE}>
-                    {/* <Label htmlFor="newpassword" text="New Password" /> */}
 
-                    <TextField
-                        id="standard-basic"
-                        label="Retype New Password"
-                        variant="standard"
-                        name="password"
-                        type={'password'}
-                        value={newpassword}
-                        disabled={loading}
-                        onChange={onNewPasswordChange}
-                        sx={TEXT_STYLE}
-                    />
-                    {submitted && !newpassword && (
-                        <div className="warning">New Password is required</div>
-                    )}
-                </div>
-                <div className="mt10">
-                    <div className="flex flex-center mt10">
-                        <ErrorMessage message={errorMessage}></ErrorMessage>
-                        {!submitted && errorMessage && (
-                            <p
-                                style={{
-                                    color: '#8FFFE4',
-                                    fontSize: '12px',
-                                    fontWeight: '200',
-                                }}
-                                className="font-porsche"
-                            >
-                                Your new password was successfully saved!
-                            </p>
-                        )}
+                <div className="flex flex-column flex-center-y">
+                    <BoxSpacing />
+
+                    <div
+                        className="font-porsche flex bold mt10"
+                        style={{
+                            fontSize: '20px',
+                            fontWeight: '800',
+                            display: 'flex',
+                            justifyContent: 'flex-start',
+                            width: '20rem',
+                        }}
+                    >
+                        Forgot your password?
                     </div>
                     <BoxSpacing />
 
-                    <Button
-                        style={VERTICAL_DISTANCE}
-                        variant="contained"
-                        onClick={triggerResetPassword}
-                        disabled={!(password.length > 3)}
-                        sx={BUTTON_STYLE}
-                    >
-                        SAVE
-                    </Button>
+                    <div className="flex" style={VERTICAL_DISTANCE}>
+                        {/* <Label htmlFor="username" text="Code" /> */}
+                        <TextField
+                            id="standard-basic"
+                            label="Code"
+                            variant="standard"
+                            name="code"
+                            value={code}
+                            disabled={loading}
+                            onChange={onCodeChange}
+                            sx={TEXT_STYLE}
+                        />
+                    </div>
+                    {submitted && !code && (
+                        <div
+                            className="warning"
+                            style={{ width: '20rem', textAlign: 'left' }}
+                        >
+                            Code is required
+                        </div>
+                    )}
+                    <BoxSpacing height={30} />
+                    <div className="flex mt10" style={VERTICAL_DISTANCE}>
+                        <TextField
+                            id="oldpassword-basic"
+                            label="New Password"
+                            variant="standard"
+                            name="oldpassword"
+                            type={'password'}
+                            value={password}
+                            disabled={loading}
+                            onChange={onPasswordChange}
+                            sx={TEXT_STYLE}
+                        />
+                        {submitted && !password && (
+                            <div className="warning">Password is required</div>
+                        )}
+                    </div>
+                    <BoxSpacing height={30} />
+                    <div className="flex mt10" style={VERTICAL_DISTANCE}>
+                        {/* <Label htmlFor="newpassword" text="New Password" /> */}
 
-                    {loading && <img src={LOADING_SVG} />}
+                        <TextField
+                            id="standard-basic"
+                            label="Retype New Password"
+                            variant="standard"
+                            name="password"
+                            type={'password'}
+                            value={newpassword}
+                            disabled={loading}
+                            onChange={onNewPasswordChange}
+                            sx={TEXT_STYLE}
+                        />
+                        {submitted && !newpassword && (
+                            <div className="warning">
+                                New Password is required
+                            </div>
+                        )}
+                    </div>
+                    <div className="mt10">
+                        <div className="flex flex-center mt10">
+                            <ErrorMessage message={errorMessage}></ErrorMessage>
+                            {!submitted && errorMessage && (
+                                <p
+                                    style={{
+                                        color: '#8FFFE4',
+                                        fontSize: '12px',
+                                        fontWeight: '200',
+                                    }}
+                                    className="font-porsche"
+                                >
+                                    Your new password was successfully saved!
+                                </p>
+                            )}
+                        </div>
+                        <BoxSpacing />
+
+                        <Button
+                            style={VERTICAL_DISTANCE}
+                            variant="contained"
+                            onClick={triggerResetPassword}
+                            disabled={!(password.length > 3)}
+                            sx={BUTTON_STYLE}
+                        >
+                            SAVE
+                        </Button>
+
+                        {loading && <img src={LOADING_SVG} />}
+                    </div>
+                </div>
+
+                <div
+                    className=" flex flex-center-x"
+                    style={{ marginTop: '50px' }}
+                >
+                    <BackButton></BackButton>
                 </div>
             </div>
-
-            <div className=" flex flex-center-x" style={{ marginTop: '50px' }}>
-                <BackButton></BackButton>
-            </div>
-        </div>
+        </Layout>
     )
 }
 

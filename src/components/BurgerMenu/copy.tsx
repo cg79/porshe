@@ -53,7 +53,9 @@ export default function BurgerMenu() {
                                         : ''
                                 }
                             >
-                                <Link href={button.url}>{button.name}</Link>
+                                <Link href={button.url} scroll={false}>
+                                    {button.name}{' '}
+                                </Link>
                             </li>
                         )
                     })}

@@ -16,6 +16,7 @@ import Router from 'next/router'
 import Logo from '../../components/Navbar/Logo'
 import BackButton from '../../components/back/back-button'
 import BoxSpacing from '../../components/BoxSpacing'
+import Layout from '../../components/layout'
 
 export default function ChangePassword(props: any) {
     if (props && props.porsche_user) {
@@ -117,103 +118,108 @@ export default function ChangePassword(props: any) {
     }
 
     return (
-        <div
-            className="page-content"
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: '90vh',
-            }}
-        >
+        <Layout>
             <div
-                className="flex flex-column flex-center-y font-porsche"
-                style={{ marginTop: '17vh' }}
+                className="page-content"
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '90vh',
+                }}
             >
-                <Logo />
-                <BoxSpacing />
-
                 <div
-                    className="bold"
-                    style={{
-                        marginTop: '30px',
-                        display: 'flex',
-                        justifyContent: 'flex-start',
-                        width: '20rem',
-                    }}
+                    className="flex flex-column flex-center-y font-porsche"
+                    style={{ marginTop: '17vh' }}
                 >
-                    Enter the 4 digits code received on your mobile
-                </div>
-                <BoxSpacing />
-            </div>
-
-            <div className="flex flex-column flex-center-y">
-                {/* <form name="form" onSubmit={triggerSignIn}> */}
-
-                <div className="flex">
-                    {/* <Label htmlFor="username" text="Code" /> */}
-                    <TextField
-                        style={VERTICAL_DISTANCE}
-                        id="standard-basic"
-                        label="Code"
-                        variant="standard"
-                        name="username"
-                        value={code}
-                        disabled={loading}
-                        onChange={onCodeChange}
-                        sx={TEXT_STYLE}
-                    />
-
-                    {submitted && !code && (
-                        <div className="warning">Code is required</div>
-                    )}
-                </div>
-
-                <div className="mt10">
-                    {/* <label className="lbl">&nbsp;</label> */}
-
-                    <div className="flex flex-center mt10">
-                        <ErrorMessage message={errorMessage}></ErrorMessage>
-                    </div>
+                    <Logo />
                     <BoxSpacing />
-                    <Button
-                        variant="contained"
-                        onClick={completeLoginWithCodeFlow}
-                        disabled={!(code.length == 6)}
-                        sx={{
-                            color: '#fff',
-                            backgroundColor: '#3B5160',
-                            borderRadius: '75px',
-                            width: '250px',
-                            height: '45px',
-                            '&:hover': {
-                                backgroundColor: '#346180',
-                            },
-                            ':disabled': {
-                                color: '#999999',
-                                background: '#e6e6e6',
-                                border: 'solid 2px transparent',
-                            },
+
+                    <div
+                        className="bold"
+                        style={{
+                            marginTop: '30px',
+                            display: 'flex',
+                            justifyContent: 'flex-start',
+                            width: '20rem',
                         }}
                     >
-                        NEXT
-                    </Button>
-
-                    {loading && <img src={LOADING_SVG} />}
+                        Enter the 4 digits code received on your mobile
+                    </div>
+                    <BoxSpacing />
                 </div>
 
-                {/* <Button variant="contained" onClick={resendVerificationCode}>
+                <div className="flex flex-column flex-center-y">
+                    {/* <form name="form" onSubmit={triggerSignIn}> */}
+
+                    <div className="flex">
+                        {/* <Label htmlFor="username" text="Code" /> */}
+                        <TextField
+                            style={VERTICAL_DISTANCE}
+                            id="standard-basic"
+                            label="Code"
+                            variant="standard"
+                            name="username"
+                            value={code}
+                            disabled={loading}
+                            onChange={onCodeChange}
+                            sx={TEXT_STYLE}
+                        />
+
+                        {submitted && !code && (
+                            <div className="warning">Code is required</div>
+                        )}
+                    </div>
+
+                    <div className="mt10">
+                        {/* <label className="lbl">&nbsp;</label> */}
+
+                        <div className="flex flex-center mt10">
+                            <ErrorMessage message={errorMessage}></ErrorMessage>
+                        </div>
+                        <BoxSpacing />
+                        <Button
+                            variant="contained"
+                            onClick={completeLoginWithCodeFlow}
+                            disabled={!(code.length == 6)}
+                            sx={{
+                                color: '#fff',
+                                backgroundColor: '#3B5160',
+                                borderRadius: '75px',
+                                width: '250px',
+                                height: '45px',
+                                '&:hover': {
+                                    backgroundColor: '#346180',
+                                },
+                                ':disabled': {
+                                    color: '#999999',
+                                    background: '#e6e6e6',
+                                    border: 'solid 2px transparent',
+                                },
+                            }}
+                        >
+                            NEXT
+                        </Button>
+
+                        {loading && <img src={LOADING_SVG} />}
+                    </div>
+
+                    {/* <Button variant="contained" onClick={resendVerificationCode}>
               Resend Verification code
             </Button> */}
 
-                {/* </form> */}
-            </div>
+                    {/* </form> */}
+                </div>
 
-            <div className=" flex flex-center-x" style={{ marginTop: '50px' }}>
-                <BackButton></BackButton>
+                <div
+                    className=" flex flex-center-x"
+                    style={{ marginTop: '50px' }}
+                >
+                    <BackButton></BackButton>
+                </div>
             </div>
-        </div>
+        </Layout>
     )
 }
 

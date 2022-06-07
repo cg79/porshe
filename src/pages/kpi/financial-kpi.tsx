@@ -4,6 +4,8 @@ import { BarChartProps } from '../../components/data-types/data-types'
 const company_list = require('../../data/companies.json')
 import KpiCard from '../../components/kpiCard'
 
+import Layout from '../../components/layout'
+
 const FinancialKpi = (props: any) => {
     const company = props?.data?.company || null
     // change the 0 to the selected company
@@ -49,7 +51,9 @@ const FinancialKpi = (props: any) => {
     }
 
     return metricsChosen ? (
-        <div className="company-container wrap">{renderCharts()}</div>
+        <Layout>
+            <div className="company-container wrap">{renderCharts()}</div>
+        </Layout>
     ) : null
 }
 

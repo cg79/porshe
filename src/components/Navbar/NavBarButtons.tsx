@@ -18,7 +18,7 @@ const NavBarButtons = (buttons: ROUTE__INFO[], router: NextRouter) => {
         className={router.pathname == button.url ? styles.items__active : ""}
       >
         <div className={styles.menuitem}>
-          <Link href={button.url}>
+          <Link href={button.url} scroll={false}>
             {button.name}
           </Link>
         </div>

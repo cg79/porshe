@@ -14,6 +14,8 @@ import Logo from '../../components/Navbar/Logo'
 import Link from 'next/link'
 import BoxSpacing from '../../components/BoxSpacing'
 
+import Layout from '../../components/layout'
+
 export default function SignIn(props: any) {
     if (props && props.porsche_user) {
         IdentityStore.setLoggedUser(JSON.parse(props.porsche_user))
@@ -118,115 +120,117 @@ export default function SignIn(props: any) {
     const INPUT__WIDTH = '300px'
 
     return (
-        <div className="page-content">
-            <div className={styles.da}>
-                <Logo />
+        <Layout>
+            <div className="page-content">
+                <div className={styles.da}>
+                    <Logo />
 
-                <BoxSpacing />
-                {/* <Label htmlFor="login" text="Login" /> */}
-                <Typography
-                    variant="h6"
-                    gutterBottom
-                    component="div"
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'flex-start',
-                        width: '25rem',
-                        minWidth: '320px',
-                        marginTop: '10px',
-                        '&:hover': {},
-                    }}
-                >
-                    Login
-                </Typography>
-                <BoxSpacing />
-                <TextField
-                    error={false}
-                    label="Email"
-                    variant="standard"
-                    name="username"
-                    value={email}
-                    disabled={loading}
-                    onChange={onEmailChange}
-                    size={'small'}
-                    sx={TEXT_STYLE}
-                />
-                <BoxSpacing />
-                <TextField
-                    error={false}
-                    helperText={''}
-                    label="Password"
-                    variant="standard"
-                    name="password"
-                    type={'password'}
-                    value={password}
-                    disabled={loading}
-                    onChange={onPasswordChange}
-                    sx={TEXT_STYLE}
-                />
-                <div>
-                    {/* <a href="/resetpassword">reset password</a> */}
-                    {/* <Button href="/forgotpassword">forgot password</Button> */}
-                </div>
-                <Link href={ROUTES.FORGOT_PASSWORD}>
+                    <BoxSpacing />
+                    {/* <Label htmlFor="login" text="Login" /> */}
+                    <Typography
+                        variant="h6"
+                        gutterBottom
+                        component="div"
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'flex-start',
+                            width: '25rem',
+                            minWidth: '320px',
+                            marginTop: '10px',
+                            '&:hover': {},
+                        }}
+                    >
+                        Login
+                    </Typography>
+                    <BoxSpacing />
+                    <TextField
+                        error={false}
+                        label="Email"
+                        variant="standard"
+                        name="username"
+                        value={email}
+                        disabled={loading}
+                        onChange={onEmailChange}
+                        size={'small'}
+                        sx={TEXT_STYLE}
+                    />
+                    <BoxSpacing />
+                    <TextField
+                        error={false}
+                        helperText={''}
+                        label="Password"
+                        variant="standard"
+                        name="password"
+                        type={'password'}
+                        value={password}
+                        disabled={loading}
+                        onChange={onPasswordChange}
+                        sx={TEXT_STYLE}
+                    />
+                    <div>
+                        {/* <a href="/resetpassword">reset password</a> */}
+                        {/* <Button href="/forgotpassword">forgot password</Button> */}
+                    </div>
+                    <Link href={ROUTES.FORGOT_PASSWORD} scroll={false}>
+                        <Typography
+                            variant="caption"
+                            gutterBottom
+                            component="div"
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'flex-end',
+                                width: '25rem',
+                                minWidth: '300px',
+                                marginTop: '10px',
+                                '&:hover': {
+                                    cursor: 'pointer',
+                                },
+                            }}
+                        >
+                            Forgot password?
+                        </Typography>
+                    </Link>
                     <Typography
                         variant="caption"
                         gutterBottom
                         component="div"
                         sx={{
                             display: 'flex',
-                            justifyContent: 'flex-end',
+                            justifyContent: 'flex-start',
                             width: '25rem',
-                            minWidth: '300px',
+                            minWidth: '320px',
                             marginTop: '10px',
+                            color: '#FF8FAA',
+                        }}
+                    >
+                        {errorMessage}
+                    </Typography>
+                    <BoxSpacing />
+                    <Button
+                        variant="contained"
+                        onClick={triggerSignIn}
+                        disabled={!(password.length > 3)}
+                        sx={{
+                            color: '#fff',
+                            backgroundColor: '#3B5160',
+                            borderRadius: '75px',
+                            width: '300px',
+                            height: '45px',
                             '&:hover': {
-                                cursor: 'pointer',
+                                backgroundColor: '#346180',
+                            },
+                            ':disabled': {
+                                color: '#999999',
+                                background: '#e6e6e6',
+                                border: 'solid 2px transparent',
                             },
                         }}
                     >
-                        Forgot password?
-                    </Typography>
-                </Link>
-                <Typography
-                    variant="caption"
-                    gutterBottom
-                    component="div"
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'flex-start',
-                        width: '25rem',
-                        minWidth: '320px',
-                        marginTop: '10px',
-                        color: '#FF8FAA',
-                    }}
-                >
-                    {errorMessage}
-                </Typography>
-                <BoxSpacing />
-                <Button
-                    variant="contained"
-                    onClick={triggerSignIn}
-                    disabled={!(password.length > 3)}
-                    sx={{
-                        color: '#fff',
-                        backgroundColor: '#3B5160',
-                        borderRadius: '75px',
-                        width: '300px',
-                        height: '45px',
-                        '&:hover': {
-                            backgroundColor: '#346180',
-                        },
-                        ':disabled': {
-                            color: '#999999',
-                            background: '#e6e6e6',
-                            border: 'solid 2px transparent',
-                        },
-                    }}
-                >
-                    Login
-                </Button>
+                        Login
+                    </Button>
+                </div>
             </div>
-        </div>
+        </Layout>
     )
 }
 

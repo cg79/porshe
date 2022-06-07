@@ -12,7 +12,7 @@ const ProfileButton: React.FC<ProileButtonProps> = ({ onSignOut }) => {
     const router = useRouter()
     return (
         <div className={`font-porsche ${styles.dropdown}`}>
-            <Link href={ROUTES.CHANGE_PASSWORD}>
+            <Link href={ROUTES.CHANGE_PASSWORD} scroll={false}>
                 <div>Change Password</div>
             </Link>
             <div onClick={() => onSignOut()}>Sign Out</div>

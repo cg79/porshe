@@ -1,11 +1,15 @@
 @font-face {
   font-family: "Porsche Next";
-  src: url("/styles/PorscheNext-Thin.woff2") format("woff2");
+  /* src: url("/styles/PorscheNext-Thin.woff2") format("woff2"); */
+  src: url("/styles/PorscheNext-Regular.otf") format("opentype"); 
+  
 }
 
 @font-face {
   font-family: "Porsche Regular";
-  src: url("/styles/PorscheNext-Regular.woff2") format("woff2");
+  /* src: url("/styles/PorscheNext-Regular.woff2") format("woff2"); */
+  src: url("/styles/PorscheNext-Thin.otf") format("opentype"); 
+  
 }
 
 html,

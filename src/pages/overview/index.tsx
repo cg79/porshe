@@ -31,7 +31,7 @@ export default function Overview(props: any) {
                 <div className="margins1">
                     <div style={{marginTop:"40px"}}>
                         <div className="flex font-porsche">
-                            <div className="bold" style={{ fontSize: '36px' }}>
+                            <div className="bold" style={{ fontSize: '2rem' }}>
                                 Welcome
                             </div>
                             <span

@@ -22,9 +22,24 @@ const FoundersStory = (props: CompanyProps) => {
         setIsPlaying(false)
     }
 
+    debugger;
+    //style={{backgroundImage:`url('${company.img1}')`}}
+
     return company ? (
         <Layout>
-            <section className={styles.container}>
+            <img
+                    src={company.img1}
+                    style={{
+                        width: '100vw',
+                        // height: 'auto',
+                        position: 'absolute',
+                        top: '360px',
+                        left: '0',
+                        zIndex: '-2',
+                    }}
+                ></img>
+            <section className={styles.container} 
+            >
                 <div className={styles.video}>
                     <div className={styles.playIconContainer}>
                         {!isPlaying && (

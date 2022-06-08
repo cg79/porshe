@@ -32,7 +32,7 @@ body {
 }
 
 .logo{
-  width: 240px;
+  width: 190px;
   margin-top: 15px;
 }
 
@@ -89,6 +89,10 @@ body {
   z-index: 1;
 } */
 
+.capitalize{
+  text-transform: uppercase;
+}
+
 .font-porsche {
   font-family: "Porsche Next";
   font-style: normal;
@@ -108,7 +112,7 @@ body {
   font-family: "Porsche Next";
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 1.3rem;
   line-height: 56px;
 }
 

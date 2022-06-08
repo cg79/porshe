@@ -11,7 +11,6 @@ import styles from './kpi.module.css'
 import { ROUTES } from '../../constants/constants'
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft'
 import Tag from '../../components/tag'
-import { setHttpAgentOptions } from 'next/dist/server/config'
 import Layout from '../../components/layout'
 import { AnimatePresence } from 'framer-motion'
 
@@ -69,7 +68,7 @@ export default function RootKPI() {
             onExitComplete={() => window.scrollTo(0, 0)}
         >
             <Layout type={1}>
-                <img
+                {/* <img
                     src="https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg"
                     style={{
                         width: '100vw',
@@ -79,7 +78,7 @@ export default function RootKPI() {
                         left: '0',
                         zIndex: '-2',
                     }}
-                ></img>
+                ></img> */}
                 <div className="margins" style={{ marginTop: '20px' }}>
                     <div
                         className={`font-porsche ${styles.backButton}`}

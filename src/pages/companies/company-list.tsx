@@ -49,7 +49,7 @@ const CompanyList = observer(() => {
                 }
               />
             </div>
-            <div className="ml5">{row.name}</div>
+            <div className="ml5 capitalize flex flex-column  flex-center-x">{row.name}</div>
             <div className="ml5">{row.introduction || ""}</div>
           </div>
         );

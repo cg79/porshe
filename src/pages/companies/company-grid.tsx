@@ -1,6 +1,7 @@
 import store from "../../store/company/CompaniesStore";
 import Router from "next/router";
 import { ROUTES } from "../../constants/constants";
+import styles from './company-grid.module.css';
 
 const CompanyGrid = () => {
   const redirectToCompanyDetails = (companyId: number) => {
@@ -13,7 +14,7 @@ const CompanyGrid = () => {
       {store.list.map((comp: any) => {
         return (
           <div className="flex-item company" key={comp["id"]}>
-            <img className="image" src={comp["img1"] || comp["img"]} style={{width:"350px"}}></img>
+            <img className={styles.image} src={comp["img1"] || comp["img"]}></img>
 
             <div
               className="title pointer"

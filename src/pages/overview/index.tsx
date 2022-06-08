@@ -29,7 +29,7 @@ export default function Overview(props: any) {
         <Layout>
             <Navbar>
                 <div className="margins1">
-                    <div className="mt10">
+                    <div style={{marginTop:"40px"}}>
                         <div className="flex font-porsche">
                             <div className="bold" style={{ fontSize: '36px' }}>
                                 Welcome

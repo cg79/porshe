@@ -31,6 +31,17 @@ const FinancialKpi = (props: any) => {
 
     return metricsChosen ? (
         <Layout>
+            <img
+                    src={company.img1}
+                    style={{
+                        width: '100vw',
+                        // height: 'auto',
+                        position: 'absolute',
+                        top: '360px',
+                        left: '0',
+                        zIndex: '-2',
+                    }}
+                ></img>
             <div
                 className="company-container wrap"
                 style={{ display: 'flex', justifyContent: 'space-evenly' }}

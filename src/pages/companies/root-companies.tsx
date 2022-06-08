@@ -45,7 +45,7 @@ export default function RootCompanies() {
                                 Live companies ({store.list.length})
                             </span>
                         </div>
-                        <div className="flex flex-end">
+                        <div className={['flex flex-end', styles.hideonphone].join(' ')}>
                             <div
                                 className={styles.icon}
                                 style={{ marginTop: '15px' }}

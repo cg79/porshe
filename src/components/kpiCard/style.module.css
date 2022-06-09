@@ -33,7 +33,7 @@
 
 .left__metric,
 .left__date {
-    padding-left: 40px;
+    padding-left: 30px;
 }
 .left__metric {
     font-size: 20px;
@@ -63,3 +63,13 @@
     display: grid;
     place-content: center;
 }
+/* .chartContainer {
+    display: flex;
+} */
+
+/* .padder {
+    height: 100%;
+    background-color: red;
+    color: 'none';
+    width: 40px;
+} */

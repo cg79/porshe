@@ -18,6 +18,7 @@ import { BarChartProps } from '../data-types/data-types'
 const createOptions = (title: string) => {
     return {
         responsive: true,
+        maintainAspectRatio: true,
         plugins: {
             legend: {
                 // position: 'top' as const,
@@ -28,34 +29,28 @@ const createOptions = (title: string) => {
                 text: title,
                 color: '#fff',
             },
-            datalabels: {
-                anchor: 'end',
-                align: 'top',
-                formatter: Math.round,
-                font: {
-                    weight: 'bold',
-                },
+        },
+        layout: {
+            padding: {
+                left: 30,
             },
         },
-        // scales: {
-        //     x: {
-        //         ticks: {
-        //             color: '#fff',
-        //         },
-        //     },
-        //     y: {
-        //         ticks: {
-        //             color: '#fff',
-        //         },
-        //     },
-        // },
         scales: {
+            x: {
+                ticks: {
+                    color: '#9FF9FF',
+                },
+            },
             y: {
                 ticks: {
-                    // Include a dollar sign in the ticks
+                    color: '#9FF9FF',
                     callback: function (value: any, index: any, ticks: any) {
                         return value
                     },
+
+                    // padding: 50,
+
+                    // backdropPadding: 50,
                 },
             },
         },
@@ -65,7 +60,17 @@ const createOptions = (title: string) => {
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
 
 const BarChart = (data: any) => {
-    return <Line options={createOptions(data.title)} data={data.props} />
+    const type = data.type
+
+    return (
+        <>
+            {type == 'line' ? (
+                <Line options={createOptions(data.title)} data={data.props} />
+            ) : (
+                <Bar options={createOptions(data.title)} data={data.props} />
+            )}
+        </>
+    )
 }
 
 export default BarChart

@@ -8,9 +8,10 @@ type KpiCardProps = {
     title: string
     chartData: BarChartProps
     value: number
+    type: string
 }
 
-const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value }) => {
+const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value, type }) => {
     return (
         <div className={styles.card}>
             <section className={styles.header}>
@@ -25,7 +26,14 @@ const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value }) => {
                     <div className={styles.right__date}> / {`JUNE 2022`}</div>
                 </div>
             </section>
-            <BarChart props={chartData.props} title={title}></BarChart>
+            {/* <div className={styles.chartContainer}> */}
+            {/* <div className={styles.padder}></div> */}
+            <BarChart
+                props={chartData.props}
+                title={title}
+                type={type}
+            ></BarChart>
+            {/* </div> */}
         </div>
     )
 }

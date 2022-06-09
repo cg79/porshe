@@ -1,58 +1,70 @@
 @media only screen and (max-width: 800px),
-  only screen and (max-device-width: 800px) {
-  .hideonphone {
-    display: none;
-  }
+    only screen and (max-device-width: 800px) {
+    .hideonphone {
+        display: none;
+    }
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 .header {
-  margin: 10px;
-  font-family: "Porsche Next";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 28px;
-  margin-top: 30px;
+    margin: 10px;
+    font-family: 'Porsche Next';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    margin-top: 30px;
 }
 .header span:last-child {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .icon {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  /* margin-right: 160px; */
-  /* margin-top: 20px; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* margin-right: 160px; */
+    /* margin-top: 20px; */
 }
 
 .icon svg:hover {
-  display: flex;
-  cursor: pointer;
-  transform: scale(1.2);
-  transition: 0.2s cubic-bezier(1, 0, 0, 1);
+    display: flex;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.2s cubic-bezier(1, 0, 0, 1);
 }
 
 /* company list  */
 
 .company__name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin-left: 20px;
-  font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 20px;
+    font-size: 16px;
 }
 .company__location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  font-size: 18px;
-  font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.table__cell {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Porsche Next';
+    font-weight: 700;
+    font-size: 17px;
+}
+.table__cell span:last-child {
+    font-size: 13px;
+    font-weight: 400;
 }

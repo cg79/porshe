@@ -20,12 +20,18 @@ const FinancialKpi = (props: any) => {
 
         return barChartsData.map((chart): any => {
             return (
-                <KpiCard
-                    title={chart.props.title}
-                    value={chart.props.value}
-                    chartData={chart}
-                    type={chart.type}
-                />
+                <>
+                    <div className="gridcolumn">
+                        <div className="gridcard">
+                            <KpiCard
+                                title={chart.props.title}
+                                value={chart.props.value}
+                                chartData={chart}
+                                type={chart.type}
+                            />
+                        </div>
+                    </div>
+                </>
             )
         })
     }
@@ -36,7 +42,9 @@ const FinancialKpi = (props: any) => {
                 className="company-container wrap"
                 style={{ display: 'flex', justifyContent: 'space-evenly' }}
             >
-                {renderCharts()}
+                <div className="gridcontainer">
+                    <div className="gridrow">{renderCharts()}</div>
+                </div>
             </div>
         </Layout>
     ) : null

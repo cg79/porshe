@@ -1,5 +1,5 @@
 import React from 'react'
-import { Bar } from 'react-chartjs-2'
+import { Bar, Line } from 'react-chartjs-2'
 import { BarChartProps } from '../data-types/data-types'
 
 // export const options = (title:string) = {
@@ -28,16 +28,34 @@ const createOptions = (title: string) => {
                 text: title,
                 color: '#fff',
             },
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: '#fff',
+            datalabels: {
+                anchor: 'end',
+                align: 'top',
+                formatter: Math.round,
+                font: {
+                    weight: 'bold',
                 },
             },
+        },
+        // scales: {
+        //     x: {
+        //         ticks: {
+        //             color: '#fff',
+        //         },
+        //     },
+        //     y: {
+        //         ticks: {
+        //             color: '#fff',
+        //         },
+        //     },
+        // },
+        scales: {
             y: {
                 ticks: {
-                    color: '#fff',
+                    // Include a dollar sign in the ticks
+                    callback: function (value: any, index: any, ticks: any) {
+                        return value
+                    },
                 },
             },
         },
@@ -47,7 +65,7 @@ const createOptions = (title: string) => {
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
 
 const BarChart = (data: any) => {
-    return <Bar options={createOptions(data.title)} data={data.props} />
+    return <Line options={createOptions(data.title)} data={data.props} />
 }
 
 export default BarChart

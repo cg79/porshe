@@ -20,9 +20,8 @@ const FinancialKpi = (props: any) => {
 
         return barChartsData.map((chart): any => {
             return (
-                <>
-                    <div className="gridcolumn">
-                        <div className="gridcard">
+                    <div className="chartcolumn">
+                        <div className="gridchart">
                             <KpiCard
                                 title={chart.props.title}
                                 value={chart.props.value}
@@ -31,7 +30,6 @@ const FinancialKpi = (props: any) => {
                             />
                         </div>
                     </div>
-                </>
             )
         })
     }

@@ -406,13 +406,6 @@ a {
     box-sizing: border-box;
 }
 
-.gridcolumn {
-    float: left;
-    /* width: 25%; */
-    padding: 0 10px;
-    margin-top: 20px;
-}
-
 /* Remove extra left and right margins, due to padding */
 .gridrow {
     margin: 0 -5px;
@@ -435,6 +428,13 @@ a {
     min-height: 350px;
     min-width: 350px;
     border: 1px solid red;
+}
+
+.gridcolumn {
+    float: left;
+    /* width: 25%; */
+    padding: 0 10px;
+    margin-top: 20px;
 }
 
 /* Responsive columns */

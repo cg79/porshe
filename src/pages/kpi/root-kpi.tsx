@@ -61,7 +61,7 @@ export default function RootKPI() {
                 <div className="gridrow">
                     {tags.map((tag) => {
                         return (
-                            <div className="gridcolumn">
+                            <div className="chartcolumn">
                                 <div className="gridcard">
                                     <Tag name={tag} />
                                 </div>

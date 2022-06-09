@@ -415,6 +415,13 @@ a {
     margin-top: 20px;
 }
 
+.chartcolumn {
+    float: left;
+    /* width: 25%; */
+    padding: 0 10px;
+    margin-top: 20px;
+}
+
 /* Remove extra left and right margins, due to padding */
 .gridrow {
     margin: 0 -5px;
@@ -437,6 +444,12 @@ a {
     min-width: 350px;
 }
 
+
+/* .gridchart {
+    min-width: 550px;
+    border: 1px solid red;
+} */
+
 /* Responsive columns */
 @media screen and (min-width: 1500px) {
     .gridcolumn {
@@ -444,6 +457,27 @@ a {
         display: block;
         margin-bottom: 20px;
         width: 25%;
+    }
+    .chartcolumn {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gridcolumn {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        width: 95%;
+    }
+    .chartcolumn {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        width: 95%;
     }
 }
 

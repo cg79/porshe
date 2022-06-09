@@ -2,7 +2,7 @@ import styles from './style.module.css'
 import { BarChartProps } from '../../components/data-types/data-types'
 import BarChart from '../../components/chart/bar-chart'
 
-import { Container } from '@mui/material'
+// import { Container } from '@mui/material'
 
 type KpiCardProps = {
     title: string
@@ -13,7 +13,7 @@ type KpiCardProps = {
 
 const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value, type }) => {
     return (
-        <div className={styles.card}>
+        <div className={styles.linebk}>
             <section className={styles.header}>
                 <div className={styles.header__left}>
                     <div className={styles.left__metric}>{title}</div>

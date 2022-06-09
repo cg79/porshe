@@ -20,7 +20,6 @@
             { "name": "James B. Graves", "story": "", "image": "" }
         ],
         "video": "/founders/video2.mp4",
-        "introduction": "",
         "shortDescription": "The platform for next-level fan experiences. Engage with your favourite athletes like never before, by owning them as your personal NFTs.",
         "description": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.",
         "tags": {
@@ -32,6 +31,7 @@
         "linkedin": "https://www.linkedin.com/company/theembassies/",
         "website": "https://www.embassies.com/",
         "employee": 89,
+        "introduction": "The in-car entertainment solution",
         "kpis": {
             "fte": {
                 "title": "Full time employee (FTE)",
@@ -42,7 +42,8 @@
                     "2022-04": 6,
                     "2022-05": 6
                 },
-                "value": 42
+                "value": 42,
+                "growth": "(+4, +13% QoQ)"
             },
             "revenue": {
                 "title": "Revenue",
@@ -52,7 +53,8 @@
                     "2022-03": 2,
                     "2022-04": 64
                 },
-                "value": 51
+                "value": "51M",
+                "growth": "(+4, +13% QoQ)"
             },
             "liquidity": {
                 "title": "Liquidity",
@@ -62,7 +64,30 @@
                     "2022-03": 535495.8901494322,
                     "2022-04": 438133.0010313536
                 },
-                "value": 63
+                "value": "830K",
+                "growth": "(+4, +13% QoQ)"
+            },
+            "profitloss": {
+                "title": "Profit/Loss",
+                "data": {
+                    "2022-01": 730221.6683855893,
+                    "2022-02": 632858.7792675107,
+                    "2022-03": 535495.8901494322,
+                    "2022-04": 438133.0010313536
+                },
+                "value": "300K",
+                "growth": "(+4, +13% QoQ)"
+            },
+            "grosscash": {
+                "title": "Gross Cash Burn",
+                "data": {
+                    "2022-01": 730221.6683855893,
+                    "2022-02": 632858.7792675107,
+                    "2022-03": 535495.8901494322,
+                    "2022-04": 438133.0010313536
+                },
+                "value": "700K",
+                "growth": "(+4, +13% QoQ)"
             }
         }
     },
@@ -84,6 +109,7 @@
         "linkedin": "https://www.linkedin.com/company/fanzone-media-gmbh/",
         "website": "https://www.fanzone.io",
         "employee": 89,
+        "introduction": "The fan engagement platform",
         "kpis": {
             "fte": {
                 "title": "FTE",
@@ -93,7 +119,9 @@
                     "2022-03": 16.8,
                     "2022-04": 16.8,
                     "2022-05": 16.8
-                }
+                },
+                "value": "32",
+                "growth": "(+4, +13% QoQ)"
             },
             "revenue": {
                 "title": "Revenue",
@@ -102,7 +130,9 @@
                     "2022-02": 92450,
                     "2022-03": 31003,
                     "2022-04": 141984
-                }
+                },
+                "value": "34M",
+                "growth": "(+4, +13% QoQ)"
             },
             "liquidity": {
                 "title": "Liquidity",
@@ -111,7 +141,9 @@
                     "2022-02": 2579,
                     "2022-03": 1772086,
                     "2022-04": 1527017
-                }
+                },
+                "value": "39K",
+                "growth": "(+4, +13% QoQ)"
             },
             "ebdita": {
                 "title": "EBITDA",
@@ -121,7 +153,31 @@
                     "2022-03": -275406,
                     "2022-04": -240763,
                     "2022-05": -256799
-                }
+                },
+                "value": "139",
+                "growth": "(+4, +13% QoQ)"
+            },
+            "profitloss": {
+                "title": "Profit/Loss",
+                "data": {
+                    "2022-01": 730221.6683855893,
+                    "2022-02": 632858.7792675107,
+                    "2022-03": 535495.8901494322,
+                    "2022-04": 438133.0010313536
+                },
+                "value": "940K",
+                "growth": "(+4, +13% QoQ)"
+            },
+            "grosscash": {
+                "title": "Gross Cash Burn",
+                "data": {
+                    "2022-01": 730221.6683855893,
+                    "2022-02": 632858.7792675107,
+                    "2022-03": 535495.8901494322,
+                    "2022-04": 438133.0010313536
+                },
+                "value": "310K",
+                "growth": "(+4, +13% QoQ)"
             }
         }
     },

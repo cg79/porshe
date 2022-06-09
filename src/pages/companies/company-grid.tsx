@@ -14,7 +14,7 @@ const CompanyGrid = () => {
       {store.list.map((comp: any) => {
         return (
           <div className="flex-item company" key={comp["id"]}>
-            <img className={styles.image} src={comp["img1"] || comp["img"]}></img>
+            <img className={styles.image} src={comp["bgimg"] || comp["img"]}></img>
 
             <div
               className="title pointer"

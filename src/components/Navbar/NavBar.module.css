@@ -1,6 +1,6 @@
 .container {
     width: 100vw;
-    height: 80px;
+    height: 103px;
     /* position: fixed; */
     /* top: 0px; */
     display: flex;
@@ -28,6 +28,8 @@
 
 .navbar .logo {
     margin-left: 60px;
+    top: 34px;
+    /* margin-bottom: 30px; */
 }
 
 /* .navbar ul.sameline {

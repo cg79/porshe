@@ -1,5 +1,5 @@
 import { OverviewProps } from "../data-types/data-types";
-import styles from './overview-card.module.css';
+import styles from "./overview-card.module.css";
 
 const OverviewCard = (props: any) => {
   const {
@@ -22,42 +22,49 @@ const OverviewCard = (props: any) => {
     onClick();
   };
 
+  const fontProps='18px';
+
+  const renderM4M4Text=(m4:string, m4Text:string)=>{
+    if(m4){
+      return (
+        <><div className="bold" style={{maxWidth:"300px"}}>{m4}</div><div className="ml5" style={{ maxWidth: "300px" }}>{m4Text}</div></>
+      )
+    }
+    return (
+      <div  style={{maxWidth:"300px"}}>{m4Text}</div>
+    )
+  }
+
   return (
-    <div
-      className={styles.linebk}
-      onClick={executeClick}
-    >
-      <div style={{ marginLeft: "15%", marginTop: "20px" }} className="relative">
-        <div className="one font-porsche">{m1}</div>
+    <div className={`font-porsche ${styles.linebk}`} onClick={executeClick}>
+      <div style={{marginLeft:"20px", paddingTop:"20px", fontSize:fontProps}}>
+        <div className="one mt1" >
+          {m1}
+        </div>
         <div
           className=""
           style={{
-            fontWeight: "700",
-            fontSize: "120px",
-            marginLeft:"-20px"
+            fontWeight: "bold",
+            fontSize: "4em",
           }}
         >
           {m2}
         </div>
 
-        <div
-          className="absolute"
-          style={{
-            fontSize: "20px",
-            top:"180px"
-          }}
-        >
-          {m3}
+        <div>{m3}</div>
+
+        <div className="flex" style={{fontSize:fontProps}}>
+          {/* <div className="one bold">{m4}</div> */}
+          {/* <div className="one ml5" style={{maxWidth:"300px"}}>{m4_text}</div> */}
+          {renderM4M4Text(m4, m4_text)}
         </div>
 
-        <div className="flex">
-          <div className="one bold">{m4}</div>
-          <div className="one ml1"style={{marginLeft:"5px"}}>{m4_text}</div>
-        </div>
-
-        <div className="flex">
-          <div className="one bold">{m5}</div>
-          <div className="one" style={{marginLeft:"5px"}}>{m5_text}</div>
+        <div className="flex" style={{fontSize:fontProps}}>
+          {/* <div className="one bold">{m5}</div>
+          <div className="one ml5" >
+            {m5_text}
+          </div> */}
+          {renderM4M4Text(m5, m5_text)}
         </div>
 
         <div className="mt10">&nbsp;</div>

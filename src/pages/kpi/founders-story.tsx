@@ -23,12 +23,12 @@ const FoundersStory = (props: CompanyProps) => {
     }
 
     debugger;
-    //style={{backgroundImage:`url('${company.img1}')`}}
+    //style={{backgroundImage:`url('${company.bgimg}')`}}
 
     return company ? (
         <Layout>
-            <img
-                    src={company.img1}
+            {/* <img
+                    src={company.bgimg}
                     style={{
                         width: '100vw',
                         // height: 'auto',
@@ -37,7 +37,7 @@ const FoundersStory = (props: CompanyProps) => {
                         left: '0',
                         zIndex: '-2',
                     }}
-                ></img>
+                ></img> */}
             <section className={styles.container} 
             >
                 <div className={styles.video}>

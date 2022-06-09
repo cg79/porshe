@@ -135,7 +135,7 @@ export default function RootKPI() {
                         marginLeft: "15px",
                         fontSize: "25px",
                         display: "flex",
-                        alignItems: "flex-end",
+                        alignItems: "baseline",
                         fontWeight: "500",
                         lineHeight: "100%",
                         height: "100%",

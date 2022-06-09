@@ -28,14 +28,14 @@ const CompanyGrid = () => {
                 ></img>
 
                 <div
-                  className="flex flex-center-x font-porsche uppercase"
-                  style={{ marginLeft: "15px", fontSize: "14px" }}
+                  className="flex flex-center-x bold uppercase"
+                  style={{ marginLeft: "15px", fontSize: "20px" }}
                 >
                   {comp["name"]}
                 </div>
 
                 <div className="flex"
-                  style={{ marginLeft: "15px", fontSize: "10px" }}
+                  style={{ marginLeft: "15px", fontSize: "12px" }}
                 >{comp["location"]}</div>
               </div>
             </div>

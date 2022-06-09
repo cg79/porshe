@@ -72,7 +72,7 @@ body {
   z-index: 1;
 }
 .bg-element-3 {
-  position: fixed;
+  position: absolute;
   width: 200%;
   height: 50px;
   left: -30%;

@@ -21,7 +21,6 @@ const createOptions = (title: string) => {
         maintainAspectRatio: true,
         plugins: {
             legend: {
-                // position: 'top' as const,
                 display: false,
             },
             title: {
@@ -37,20 +36,24 @@ const createOptions = (title: string) => {
         },
         scales: {
             x: {
+                grid: {
+                    color: 'transparent',
+                    borderColor: '#fff',
+                },
                 ticks: {
                     color: '#9FF9FF',
                 },
             },
             y: {
+                grid: {
+                    color: 'transparent',
+                    borderColor: '#fff',
+                },
                 ticks: {
                     color: '#9FF9FF',
                     callback: function (value: any, index: any, ticks: any) {
                         return value
                     },
-
-                    // padding: 50,
-
-                    // backdropPadding: 50,
                 },
             },
         },

@@ -30,6 +30,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 //     Legend
 // )
 
+import ChartDataLabels from 'chartjs-plugin-datalabels'
+
 import {
     Chart as ChartJS,
     ArcElement,
@@ -82,7 +84,8 @@ ChartJS.register(
     Legend,
     Title,
     Tooltip,
-    SubTitle
+    SubTitle,
+    ChartDataLabels
 )
 
 function MyApp({

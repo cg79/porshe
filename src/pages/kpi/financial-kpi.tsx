@@ -86,6 +86,9 @@ const mapDataset = (metrics: any, index: number) => {
                     fill: 'origin',
                     // backgroundColor:
                     // 'linear-gradient(180deg, #98EEF4 0%, rgba(152, 238, 244, 0) 145.1%);',
+                    datalabels: {
+                        color: '#fff',
+                    },
                 },
             ],
             value: metrics[titles[index]].value,

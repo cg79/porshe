@@ -107,7 +107,11 @@ function MyApp({
 
                 <div className="bg-element-1"></div>
                 <div className="bg-element-2"></div>
-                <div className="bg-element-3"></div>
+                <div style={{ position: 'relative' }}>
+                    <div style={{ overflow: 'hidden' }}>
+                        <div className="bg-element-3"></div>
+                    </div>
+                </div>
 
                 <div className="demo-container">
                     <RouteGuard>

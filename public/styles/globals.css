@@ -1,87 +1,86 @@
 @font-face {
-  font-family: "Porsche Next";
-  /* src: url("/styles/PorscheNext-Thin.woff2") format("woff2"); */
-  /* src: url("/styles/PorscheNext-Regular.otf") format("opentype");  */
-  src: url("/styles/PorscheNext-Thin.otf") format("opentype");
+    font-family: 'Porsche Next';
+    /* src: url("/styles/PorscheNext-Thin.woff2") format("woff2"); */
+    /* src: url("/styles/PorscheNext-Regular.otf") format("opentype");  */
+    src: url('/styles/PorscheNext-Thin.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "Porsche Regular";
-  /* src: url("/styles/PorscheNext-Regular.woff2") format("woff2"); */
-  src: url("/styles/PorscheNext-Thin.otf") format("opentype"); 
-  
+    font-family: 'Porsche Regular';
+    /* src: url("/styles/PorscheNext-Regular.woff2") format("woff2"); */
+    src: url('/styles/PorscheNext-Thin.otf') format('opentype');
 }
 
 html,
 body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0 auto;
-  color: #fff;
-  background-color: #303e48;
-  background: -webkit-linear-gradient(60deg, #303e48, #000000);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(210deg, #303e48 8%, #000000 80%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background-attachment: fixed;
-  position: relative;
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #303e48;
+    background: -webkit-linear-gradient(60deg, #303e48, #000000);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(210deg, #303e48 8%, #000000 80%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-attachment: fixed;
+    position: relative;
+    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
-.logo{
-  width: 175px;
-  height: 56px;
+.logo {
+    width: 175px;
+    height: 56px;
 }
 
 .demo-container {
-  /* width: 1024px;
+    /* width: 1024px;
   margin: auto;
   padding: 80px 0; */
-  position: relative;
-  z-index: 2;
-  font-family: "Porsche Next";
+    position: relative;
+    z-index: 2;
+    font-family: 'Porsche Next';
 }
 
 .bg-element-1 {
-  position: fixed;
-  width: 200%;
-  height: 300px;
-  left: -75%;
-  top: 0px;
-  background: rgba(110, 130, 143, 0.3);
-  filter: blur(100px);
-  transform: rotate(20deg);
-  z-index: 1;
+    position: fixed;
+    width: 200%;
+    height: 300px;
+    left: -75%;
+    top: 0px;
+    background: rgba(110, 130, 143, 0.3);
+    filter: blur(100px);
+    transform: rotate(20deg);
+    z-index: 1;
 }
 .bg-element-2 {
-  position: fixed;
-  width: 200%;
-  height: 50px;
-  left: -30%;
-  top: 0px;
-  background: rgba(110, 130, 143, 0.6);
-  filter: blur(100px);
-  transform: rotate(20deg);
-  z-index: 1;
+    position: fixed;
+    width: 200%;
+    height: 50px;
+    left: -30%;
+    top: 0px;
+    background: rgba(110, 130, 143, 0.6);
+    filter: blur(100px);
+    transform: rotate(20deg);
+    z-index: 1;
 }
-.bg-element-3 {
-  position: fixed;
-  width: 200%;
-  height: 50px;
-  left: -30%;
-  top: 0px;
-  background: rgba(110, 130, 143, 1);
-  filter: blur(5px);
-  transform: rotate(20deg);
-  z-index: 1;
-}
+/* .bg-element-3 {
+    position: fixed;
+    width: 200%;
+    height: 50px;
+    left: -30%;
+    top: 0px;
+    background: rgba(110, 130, 143, 1);
+    filter: blur(5px);
+    transform: rotate(20deg);
+    z-index: 1;
+} */
 
 /* @media screen and (max-width: 1024px) {
   .demo-container {
@@ -94,31 +93,31 @@ body {
   z-index: 1;
 } */
 
-.capitalize{
-  text-transform: uppercase;
+.capitalize {
+    text-transform: uppercase;
 }
 
 .font-porsche {
-  font-family: "Porsche Next";
-  font-style: normal;
-  font-weight: initial;
+    font-family: 'Porsche Next';
+    font-style: normal;
+    font-weight: initial;
 }
 
 .font-regular {
-  font-family: "Porsche Regular";
-  font-weight: initial;
+    font-family: 'Porsche Regular';
+    font-weight: initial;
 }
 
 .white {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .page-description {
-  font-family: "Porsche Next";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.3rem;
-  line-height: 56px;
+    font-family: 'Porsche Next';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 56px;
 }
 
 /* .page-content {
@@ -126,191 +125,188 @@ body {
 } */
 
 .lbl {
-  width: 100px;
-  display: inline-flex;
+    width: 100px;
+    display: inline-flex;
 }
 
 .mt10 {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .ml5 {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .kpi-title {
-  /* font-family: "Porsche Next"; */
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 22px;
+    /* font-family: "Porsche Next"; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 .ml10 {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .flex-column {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .flex-center-x {
-  justify-content: center;
+    justify-content: center;
 }
 
 .flex-center-y {
-  align-items: center;
+    align-items: center;
 }
 
 .flex-start {
-  align-content: flex-start;
-  margin-left: auto;
+    align-content: flex-start;
+    margin-left: auto;
 }
 
 .flex-end {
-  align-content: flex-end;
-  margin-left: auto;
+    align-content: flex-end;
+    margin-left: auto;
 }
 
 .flex-space-between {
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .presentation {
-  margin-left: 60px;
-  /* margin-right: 60px; */
+    margin-left: 60px;
+    /* margin-right: 60px; */
 }
 
 .margins {
-  margin-left: 60px;
-  margin-right: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 .margins1 {
-  margin-left: 60px;
-  margin-right: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 .error {
-  color: red;
+    color: red;
 }
 
 .warning {
-  color: aqua;
+    color: aqua;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 .company {
-  position: relative;
-  /* border: 1px solid grey; */
+    position: relative;
+    /* border: 1px solid grey; */
 }
 
-
 .company .title {
-  position: absolute;
-  top: 5px;
-  font-family: "Porsche Next";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 22px;
-  color: #ffffff;
+    position: absolute;
+    top: 5px;
+    font-family: 'Porsche Next';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
 }
 
 .pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .bold {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .avatar-container {
-  position: fixed;
-  width: 510px;
-  height: 51px;
-  transform: translate(-50px, -50px);
+    position: fixed;
+    width: 510px;
+    height: 51px;
+    transform: translate(-50px, -50px);
 }
 
 .avatar {
-  overflow: hidden;
-  border-radius: 50%;
-  border: solid 1px rgba(0, 150, 136, 0.3);
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  z-index: 2;
-  position: absolute;
-  cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid 1px rgba(0, 150, 136, 0.3);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
 }
 
 .company-container {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  /* border: 1px solid silver; */
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  /* justify-content: center; */
-  justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* border: 1px solid silver; */
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
 }
 
 .flex-item {
-  /* margin: 10px; */
-  /* flex: 0 1 calc(25% - 1em); */
-  /* width: calc(25% - 1em); */
-  margin-bottom: 2em;
+    /* margin: 10px; */
+    /* flex: 0 1 calc(25% - 1em); */
+    /* width: calc(25% - 1em); */
+    margin-bottom: 2em;
 }
 
 .flex-item .title {
-  padding-left: 5px;
-  padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .nowrap {
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 .wrap {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .revenue {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 86%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 86%;
 }
 
-.uppercase{
-  text-transform: uppercase;
+.uppercase {
+    text-transform: uppercase;
 }
 
 .static {
-  position: static;
+    position: static;
 }
-
-
 
 /* .jVeafb {
   background-color: transparent !important;
@@ -329,9 +325,8 @@ a {
   font-weight: bold;
 } */
 
-
 .rdt_Table {
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
 
 /* .rdt_TableHead{
@@ -340,117 +335,116 @@ a {
   font-weight: bold;
 } */
 
-.rdt_TableHeadRow{
-  background-color: transparent !important;
-  color: #fff !important;
-  font-weight: bold;
-  font-family: "Porsche Next";
+.rdt_TableHeadRow {
+    background-color: transparent !important;
+    color: #fff !important;
+    font-weight: bold;
+    font-family: 'Porsche Next';
 }
 
 .rdt_TableRow {
-  color: #ffffff !important;
-  margin-top: 10px !important;
-  background: linear-gradient(
-    218.17deg,
-    rgba(59, 81, 96, 0.5) 0.82%,
-    rgba(59, 81, 96, 0.245) 95.35%
-  );
-  background-color: transparent !important;
-  margin-top: 10px !important;
+    color: #ffffff !important;
+    margin-top: 10px !important;
+    background: linear-gradient(
+        218.17deg,
+        rgba(59, 81, 96, 0.5) 0.82%,
+        rgba(59, 81, 96, 0.245) 95.35%
+    );
+    background-color: transparent !important;
+    margin-top: 10px !important;
 }
 
 .relative {
-  position: relative;
+    position: relative;
 }
 
 .absolute {
-  position: absolute;
+    position: absolute;
 }
 
-.metric{
-  font-size: 22px;
-  font-weight: 600;
+.metric {
+    font-size: 22px;
+    font-weight: 600;
 }
 
-.MuiTab-root{
-  color: white!important;
+.MuiTab-root {
+    color: white !important;
 }
 
 .Mui-selected {
-  color: black!important;
-  background: white!important;
+    color: black !important;
+    background: white !important;
 }
 
-.b1{
-  border:1px solid red;
+.b1 {
+    border: 1px solid red;
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-@media screen and (min-width: 60em){
-  .card {
-      flex: 0 1 calc(25% - 1em);
-   }
+@media screen and (min-width: 60em) {
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
 }
 
-@media screen and (min-width: 40em){
-  .card {
-    flex: 0 1 calc(50% - 1em);
-  }
+@media screen and (min-width: 40em) {
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
 }
-
 
 /* .rdt_TableHeader{
   font-size: 80px;
 } */
 
-
-.gridcontainer *{
-  box-sizing: border-box;
+.gridcontainer * {
+    box-sizing: border-box;
 }
 
 .gridcolumn {
-  float: left;
-  /* width: 25%; */
-  padding: 0 10px;
-  margin-top: 20px;
+    float: left;
+    /* width: 25%; */
+    padding: 0 10px;
+    margin-top: 20px;
 }
 
 /* Remove extra left and right margins, due to padding */
-.gridrow {margin: 0 -5px;}
+.gridrow {
+    margin: 0 -5px;
+}
 
 /* Clear floats after the columns */
 .gridrow:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .gridcard {
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-  /* padding: 16px; */
-  
-  /* background-color: #f1f1f1; */
-  /* min-height: 500px; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    /* padding: 16px; */
 
-  min-height: 350px;
-  min-width: 350px;
-  border: 1px solid red;
+    /* background-color: #f1f1f1; */
+    /* min-height: 500px; */
+
+    min-height: 350px;
+    min-width: 350px;
+    border: 1px solid red;
 }
-
 
 /* Responsive columns */
 @media screen and (min-width: 1500px) {
-  .gridcolumn {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-    width: 25%;
-  }
+    .gridcolumn {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        width: 25%;
+    }
 }
 
 /* @media screen and (max-width: 600px) {
@@ -463,7 +457,6 @@ a {
 
 /* Style the counter cards */
 
-
 .center {
-  text-align: center;
+    text-align: center;
 }

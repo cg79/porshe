@@ -41,9 +41,20 @@ const CompanyList = observer(() => {
                 return (
                     <div
                         className="flex pointer"
+                        style={{
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}
                         onClick={() => onRowClicked(row)}
                     >
-                        <div>
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                padding: '5x 0',
+                            }}
+                        >
                             <img
                                 style={{ maxWidth: '50px' }}
                                 src={
@@ -52,23 +63,67 @@ const CompanyList = observer(() => {
                                 }
                             />
                         </div>
-                        <div className="ml5 capitalize flex flex-column  flex-center-x">
+                        <div
+                            className={styles.table__cell}
+                            style={{
+                                fontWeight: '700',
+                                fontSize: '16px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                paddingLeft: '15px',
+                            }}
+                        >
                             {row.name}
                         </div>
-                        <div className="ml5">{row.introduction || ''}</div>
                     </div>
                 )
             },
         },
-        // {
-        //   name: "Entrepreneurs",
-        //   selector: (row: any) => row.entrepreneurs,
-        //   sortable: true,
-        // },
+        {
+            name: '',
+            selector: (row: any) => row.location,
+            sortable: true,
+            cell: (row: any) => {
+                if (row.location) {
+                    return (
+                        <div
+                            className={styles.table__cell}
+                            style={{
+                                fontWeight: '400',
+                                fontSize: '14px',
+                            }}
+                        >
+                            {row.introduction}
+                        </div>
+                    )
+                }
+
+                return null
+            },
+        },
+
         {
             name: 'Headquarters',
             selector: (row: any) => row.location,
             sortable: true,
+            cell: (row: any) => {
+                if (row.location) {
+                    return (
+                        <div
+                            className={styles.table__cell}
+                            style={{
+                                fontWeight: '700',
+                                fontSize: '16px',
+                            }}
+                        >
+                            {row.location}
+                        </div>
+                    )
+                }
+
+                return null
+            },
         },
 
         {

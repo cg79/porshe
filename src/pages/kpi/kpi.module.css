@@ -37,8 +37,40 @@
     font-size: 60px;
     padding: '0rem';
     color: 'red';
-    margin-left: '50px';
+    margin-left: 20px;
 }
+
 .backButton:hover {
     color: #8fffe4;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    font-family: 'Porsche Next';
+}
+.headline__logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.headline__logo span {
+    margin-left: 20px;
+    font-weight: 500;
+}
+.headline__tags {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-top: 20px;
+}
+.headline__tags span {
+    margin-left: 20px;
+    padding: 2px 1rem 2px 1rem;
+}
+.headline__tags span:first-child {
+    margin-left: 0px;
 }

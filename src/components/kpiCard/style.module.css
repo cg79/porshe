@@ -29,6 +29,12 @@
     /* width: 25rem; */
 }
 
+@media only screen and (max-width: 600px) {
+    .linebk {
+        width: 30rem;
+    }
+}
+
 .header {
     width: 100%;
     height: 100px;

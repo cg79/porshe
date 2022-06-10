@@ -28,6 +28,20 @@ export default function RootKPI() {
     const [company, setCompany] = useState<any>(null)
     const [tags, setTags] = useState<any[]>([null])
 
+    const [width, setWidth] = useState<number>(1080)
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth)
+    }
+    useEffect(() => {
+        setWidth(window.innerWidth)
+
+        window.addEventListener('resize', handleWindowSizeChange)
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange)
+        }
+    }, [])
+
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue)
     }
@@ -56,21 +70,9 @@ export default function RootKPI() {
     }
 
     const renderTags = (tags: string[]) => {
-        return (
-            <div className="gridcontainer">
-                <div className="gridrow">
-                    {tags.map((tag) => {
-                        return (
-                            <div className="chartcolumn">
-                                <div className="gridcard">
-                                    <Tag name={tag} />
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
-        )
+        return tags.map((tag: string) => {
+            return <Tag name={tag} />
+        })
     }
 
     return (
@@ -94,7 +96,6 @@ export default function RootKPI() {
                         }}
                     ></img>
                 )}
-
                 <div className="margins" style={{ marginTop: '20px' }}>
                     <div
                         className={`font-porsche ${styles.backButton}`}
@@ -118,72 +119,106 @@ export default function RootKPI() {
                             marginTop: '20px',
                         }}
                     >
-                        {company && (
+                        {width > 768 ? (
                             <>
-                                <section
-                                    style={{
-                                        display: 'flex',
-                                        justifyContent: 'space-between',
-                                    }}
-                                >
-                                    <div
-                                        className="flex font-porsche"
-                                        style={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                        }}
-                                    >
+                                {company && (
+                                    <>
+                                        <section
+                                            style={{
+                                                width: '100%',
+                                                display: 'flex',
+                                                justifyContent: 'space-between',
+                                            }}
+                                        >
+                                            <div
+                                                className="flex font-porsche"
+                                                style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                }}
+                                            >
+                                                <img
+                                                    style={{
+                                                        maxWidth: '50px',
+                                                        maxHeight: '50px',
+                                                    }}
+                                                    src={
+                                                        company.logo ||
+                                                        'https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png'
+                                                    }
+                                                />
+                                                <div
+                                                    className="ml5"
+                                                    style={{
+                                                        marginLeft: '15px',
+                                                        fontSize: '25px',
+                                                        display: 'flex',
+                                                        alignItems: 'flex-end',
+                                                        fontWeight: '500',
+                                                        lineHeight: '100%',
+                                                        height: '100%',
+                                                        verticalAlign: 'middle',
+                                                        paddingBottom: '35px',
+                                                    }}
+                                                >
+                                                    {company.name}
+
+                                                    <span
+                                                        style={{
+                                                            fontSize: '25px',
+                                                            fontWeight: '300',
+                                                            // marginLeft: '15px',
+                                                            transform:
+                                                                'scale(0.7)',
+                                                        }}
+                                                    >
+                                                        {company.location}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                style={{
+                                                    display: 'flex',
+                                                    alignItems: 'flex-end',
+                                                }}
+                                            >
+                                                {renderTags(tags)}
+                                            </div>
+                                        </section>
+                                        <div
+                                            className="ml5 mt10 font-porsche"
+                                            style={{ marginTop: '20px' }}
+                                        >
+                                            {company.shortDescription || ''}
+                                        </div>
+                                    </>
+                                )}
+                            </>
+                        ) : (
+                            <>
+                                <section className={styles.headline}>
+                                    <div className={styles.headline__logo}>
                                         <img
                                             style={{
-                                                maxWidth: '50px',
-                                                maxHeight: '50px',
+                                                maxWidth: '60px',
+                                                maxHeight: '60px',
+                                                height: 'auto',
+                                                // padding: '10px',
                                             }}
                                             src={
                                                 company.logo ||
                                                 'https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png'
                                             }
                                         />
-                                        <div
-                                            className="ml5"
-                                            style={{
-                                                marginLeft: '15px',
-                                                fontSize: '25px',
-                                                display: 'flex',
-                                                alignItems: 'baseline',
-                                                fontWeight: '500',
-                                                lineHeight: '100%',
-                                                height: '100%',
-                                                verticalAlign: 'middle',
-                                            }}
-                                        >
-                                            {company.name}
-
-                                            <span
-                                                style={{
-                                                    fontSize: '15px',
-                                                    fontWeight: '300',
-                                                    marginLeft: '15px',
-                                                }}
-                                            >
-                                                {company.location}
-                                            </span>
-                                        </div>
+                                        <span>{company.location}</span>
                                     </div>
-                                    <div
-                                        style={{
-                                            display: 'flex',
-                                            alignItems: 'flex-end',
-                                        }}
-                                    >
-                                        {renderTags(tags)}
+                                    <div className={styles.headline__tags}>
+                                        {tags.map((tag) => {
+                                            return <Tag name={tag} />
+                                        })}
                                     </div>
                                 </section>
-                                <div
-                                    className="ml5 mt10 font-porsche"
-                                    style={{ marginTop: '20px' }}
-                                >
-                                    {company.shortDescription || ''}
-                                </div>
                             </>
                         )}
 

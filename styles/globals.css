@@ -195,6 +195,13 @@ body {
     margin-right: 60px;
 }
 
+@media screen and (max-width: 600px) {
+    .margins {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 .margins1 {
     margin-left: 60px;
     margin-right: 60px;
@@ -421,6 +428,11 @@ a {
     padding: 0 10px;
     margin-top: 20px;
 }
+@media only screen and (max-width: 600px) {
+    .chartcolumn {
+        padding: 0;
+    }
+}
 
 /* Remove extra left and right margins, due to padding */
 .gridrow {
@@ -443,7 +455,6 @@ a {
 
     min-width: 350px;
 }
-
 
 /* .gridchart {
     min-width: 550px;

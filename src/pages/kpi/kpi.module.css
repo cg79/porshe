@@ -1,76 +1,76 @@
 .container {
-    width: 100%;
-    /* background-color: cyan; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  /* background-color: cyan; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .video {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 .playIconContainer {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: grid;
-    place-content: center;
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: grid;
+  place-content: center;
+  z-index: 2;
 }
 .playIcon :hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 .article {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .porscheTab {
-    font-size: 60px;
-    padding: '0rem';
-    color: 'red';
-    margin-left: 20px;
+  font-size: 60px;
+  padding: "0rem";
+  color: "red";
+  /* margin-left: 20px; */
 }
 
 .backButton:hover {
-    color: #8fffe4;
+  color: #8fffe4;
 }
 
 .headline {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    font-family: 'Porsche Next';
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  font-family: "Porsche Next";
 }
 .headline__logo {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
 }
 .headline__logo span {
-    margin-left: 20px;
-    font-weight: 500;
+  margin-left: 20px;
+  font-weight: 500;
 }
 .headline__tags {
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    padding: 20px;
-    margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 20px;
+  margin-top: 20px;
 }
 .headline__tags span {
-    margin-left: 20px;
-    padding: 2px 1rem 2px 1rem;
+  margin-left: 20px;
+  padding: 2px 1rem 2px 1rem;
 }
 .headline__tags span:first-child {
-    margin-left: 0px;
+  margin-left: 0px;
 }

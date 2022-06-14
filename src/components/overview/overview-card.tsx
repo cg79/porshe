@@ -22,29 +22,34 @@ const OverviewCard = (props: any) => {
     onClick();
   };
 
-  const fontProps='18px';
+  const fontProps = "18px";
 
-  const renderM4M4Text=(m4:string, m4Text:string)=>{
-    if(m4){
+  const renderM4M4Text = (m4: string, m4Text: string) => {
+    if (m4) {
       return (
-        <><div className="bold" style={{maxWidth:"300px"}}>{m4}</div><div className="ml5" style={{ maxWidth: "300px" }}>{m4Text}</div></>
-      )
+        <>
+          <div className="bold" style={{ maxWidth: "300px" }}>
+            {m4}
+          </div>
+          <div className="ml5" style={{ maxWidth: "300px" }}>
+            {m4Text}
+          </div>
+        </>
+      );
     }
-    return (
-      <div  style={{maxWidth:"300px"}}>{m4Text}</div>
-    )
-  }
+    return <div style={{ maxWidth: "300px" }}>{m4Text}</div>;
+  };
 
   return (
     <div className={`font-porsche ${styles.linebk}`} onClick={executeClick}>
-      <div style={{marginLeft:"20px", paddingTop:"20px", fontSize:fontProps}}>
-        <div className="one mt1" >
-          {m1}
-        </div>
+      <div
+        style={{ marginLeft: "20px", paddingTop: "20px", fontSize: fontProps }}
+      >
+        <div className="one mt1">{m1}</div>
         <div
           className=""
           style={{
-            fontWeight: "bold",
+            fontWeight: "900",
             fontSize: "4em",
           }}
         >
@@ -53,13 +58,13 @@ const OverviewCard = (props: any) => {
 
         <div>{m3}</div>
 
-        <div className="flex" style={{fontSize:fontProps}}>
+        <div className="flex" style={{ fontSize: fontProps }}>
           {/* <div className="one bold">{m4}</div> */}
           {/* <div className="one ml5" style={{maxWidth:"300px"}}>{m4_text}</div> */}
           {renderM4M4Text(m4, m4_text)}
         </div>
 
-        <div className="flex" style={{fontSize:fontProps}}>
+        <div className="flex" style={{ fontSize: fontProps }}>
           {/* <div className="one bold">{m5}</div>
           <div className="one ml5" >
             {m5_text}

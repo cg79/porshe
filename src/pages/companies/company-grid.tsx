@@ -28,7 +28,6 @@ const CompanyGrid = () => {
                                 style={{
                                     display: 'flex',
                                     alignItems: 'center',
-                                    backgroundColor: 'red',
                                 }}
                             >
                                 <img

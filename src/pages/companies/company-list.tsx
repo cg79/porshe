@@ -56,14 +56,14 @@ const CompanyList = observer(() => {
                             }}
                         >
                             <img
-                                style={{ maxWidth: '50px' }}
+                                style={{ maxWidth: '120px', maxHeight: '40px' }}
                                 src={
                                     row.logo ||
                                     'https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png'
                                 }
                             />
                         </div>
-                        <div
+                        {/* <div
                             className={styles.table__cell}
                             style={{
                                 fontWeight: '700',
@@ -75,7 +75,7 @@ const CompanyList = observer(() => {
                             }}
                         >
                             {row.name}
-                        </div>
+                        </div> */}
                     </div>
                 )
             },

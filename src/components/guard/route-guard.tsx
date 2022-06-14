@@ -29,12 +29,12 @@ function RouteGuard({ children }: any) {
   }, []);
 
   function authCheck(url:string) {
-    setAuthorized(true);
-    return;
+    // setAuthorized(true);
+    // return;
     // redirect to login page if accessing a private page and not logged in
     const publicPaths = ["/signin",'/forgotpassword','/resetpassword','/loginverification','/signup'];
     const path = url.split("?")[0];
-    debugger;
+    // debugger;
     if (!IdentityStore.loggedUser && !publicPaths.includes(path)) {
       setAuthorized(false);
       router.push({

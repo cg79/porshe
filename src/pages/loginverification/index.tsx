@@ -145,7 +145,7 @@ export default function ChangePassword(props: any) {
                             width: '20rem',
                         }}
                     >
-                        Enter the 4 digits code received on your mobile
+                        Enter the code received on your mobile
                     </div>
                     <BoxSpacing />
                 </div>

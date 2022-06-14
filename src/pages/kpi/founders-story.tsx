@@ -22,7 +22,7 @@ const FoundersStory = (props: CompanyProps) => {
         setIsPlaying(false)
     }
 
-    debugger;
+    // debugger;
     //style={{backgroundImage:`url('${company.bgimg}')`}}
 
     return company ? (
@@ -38,8 +38,7 @@ const FoundersStory = (props: CompanyProps) => {
                         zIndex: '-2',
                     }}
                 ></img> */}
-            <section className={styles.container} 
-            >
+            <section className={styles.container}>
                 <div className={styles.video}>
                     <div className={styles.playIconContainer}>
                         {!isPlaying && (
@@ -58,7 +57,8 @@ const FoundersStory = (props: CompanyProps) => {
                     <ReactPlayer
                         url={company.video}
                         playing={isPlaying}
-                        width={'800px'}
+                        width={'70rem'}
+                        height={'45rem'}
                         onEnded={() => setIsPlaying(false)}
                         onPlay={() => setIsPlaying(true)}
                     />

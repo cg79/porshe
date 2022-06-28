@@ -26,9 +26,9 @@ const variants = [
 ]
 
 const transitions = [
-    { type: 'linear' },
+    { type: 'tween', duration: 0.3, ease: 'easeIn' },
     { type: 'tween', duration: 1.5, ease: 'easeIn' },
-    { type: 'tween', duration: 0.1, ease: 'easeIn' },
+    { type: 'tween', duration: 0.2, ease: 'easeIn' },
 ]
 
 const Layout = ({ children, type = 0, variant = 0 }: Props): JSX.Element => (

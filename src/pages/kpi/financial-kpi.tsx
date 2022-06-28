@@ -69,6 +69,10 @@ const formatDate = (date: Date) => {
     return `${monthName} ${isoDate}`
 }
 
+const numberWithCommas = (number: number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
+
 const mapDataset = (metrics: any, index: number) => {
     const titles: string[] = Object.keys(metrics)
     const labels = []
@@ -112,7 +116,11 @@ const mapDataset = (metrics: any, index: number) => {
                         color: '#fff',
                         anchor: 'end',
                         align: 'top',
-                        formatter: Math.round,
+                        formatter: function (number: number) {
+                            return number
+                                .toString()
+                                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                        },
                         font: {
                             weight: 'bold',
                         },

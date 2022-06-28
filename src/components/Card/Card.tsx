@@ -43,7 +43,6 @@ const Card: React.FC<CardProps> = (props) => {
         id,
     } = props
 
-    console.log('image', imageSrc, 'logo', logoSrc)
     return (
         <Link href={`${ROUTES.KPI}?companyId=${id}`} scroll={false}>
             <div

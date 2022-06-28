@@ -86,9 +86,9 @@ export default function RootKPI() {
                     <img
                         src={company.bgimg}
                         style={{
-                            width: '100vw',
+                            width: '100%',
                             height: 'auto',
-                            position: 'absolute',
+                            position: 'fixed',
                             top: '0',
                             left: '0',
                             zIndex: '-2',

@@ -47,12 +47,13 @@ const createOptions = (title: string) => {
             y: {
                 grid: {
                     color: 'transparent',
-                    borderColor: '#fff',
+                    // borderColor: '#fff',
                 },
                 ticks: {
                     color: '#9FF9FF',
                     callback: function (value: any, index: any, ticks: any) {
-                        return value
+                        // return value
+                        return null
                     },
                 },
             },

@@ -28,7 +28,7 @@ export default function RootCompanies() {
 
     return (
         <>
-            <Layout type={1}>
+            <Layout type={2} variant={1}>
                 <div className="margins">
                     <div className="flex">
                         <div style={{ marginTop: '20px' }}>
@@ -45,7 +45,12 @@ export default function RootCompanies() {
                                 Live companies ({store.list.length})
                             </span>
                         </div>
-                        <div className={['flex flex-end', styles.hideonphone].join(' ')}>
+                        <div
+                            className={[
+                                'flex flex-end',
+                                styles.hideonphone,
+                            ].join(' ')}
+                        >
                             <div
                                 className={styles.icon}
                                 style={{ marginTop: '15px' }}

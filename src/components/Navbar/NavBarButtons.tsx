@@ -3,6 +3,7 @@ import { NextRouter } from 'next/router'
 import styles from './NavBar.module.css'
 
 import { ROUTE__INFO } from './NavBar'
+import { SUPPORT_EMAIL } from '../../constants/constants'
 
 export const NAVIGATION_ROUTES: ROUTE__INFO[] = [
     { url: '/overview', name: 'Overview' },
@@ -22,9 +23,15 @@ const NavBarButtons = (buttons: ROUTE__INFO[], router: NextRouter) => {
                 }
             >
                 <div className={styles.menuitem}>
-                    <Link href={button.url} scroll={false}>
-                        {button.name}
-                    </Link>
+                    {button.name === 'Support' ? (
+                        <Link href={`mailto:${SUPPORT_EMAIL}`} scroll={false}>
+                            {button.name}
+                        </Link>
+                    ) : (
+                        <Link href={button.url} scroll={false}>
+                            {button.name}
+                        </Link>
+                    )}
                 </div>
             </li>
         )

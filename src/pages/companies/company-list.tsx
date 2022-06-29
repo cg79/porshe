@@ -144,7 +144,7 @@ const CompanyList = observer(() => {
             },
         },
         {
-            name: 'Revenue',
+            name: 'Total Revenue',
             selector: (row: any) => row.revenue,
             sortable: true,
             cell: (row: any) => {
@@ -204,6 +204,59 @@ const CompanyList = observer(() => {
                         <div className={styles.table__cell}>
                             <span>{row.kpis?.grosscash?.value} &euro;</span>
                             <span>{row.kpis?.grosscash?.growth}</span>
+                        </div>
+                    )
+                }
+
+                return null
+            },
+        },
+        {
+            name: 'Runway',
+            selector: (row: any) => row.kpis?.runway?.value,
+            sortable: true,
+            cell: (row: any) => {
+                if (row.kpis?.runway?.value) {
+                    return (
+                        <div className={styles.table__cell}>
+                            <span>{row.kpis?.runway?.value} &euro;</span>
+                            <span>{row.kpis?.runway?.growth}</span>
+                        </div>
+                    )
+                }
+
+                return null
+            },
+        },
+        {
+            name: 'PIG Convertible Loan',
+            selector: (row: any) => row.kpis?.pig_convertible?.value,
+            sortable: true,
+            cell: (row: any) => {
+                if (row.kpis?.pig_convertible?.value) {
+                    return (
+                        <div className={styles.table__cell}>
+                            <span>
+                                {row.kpis?.pig_convertible?.value} &euro;
+                            </span>
+                            <span>{row.kpis?.pig_convertible?.growth}</span>
+                        </div>
+                    )
+                }
+
+                return null
+            },
+        },
+        {
+            name: 'PIG Ownership Loan',
+            selector: (row: any) => row.kpis?.pig_ownership?.value,
+            sortable: true,
+            cell: (row: any) => {
+                if (row.kpis?.pig_ownership?.value) {
+                    return (
+                        <div className={styles.table__cell}>
+                            <span>{row.kpis?.pig_ownership?.value} &euro;</span>
+                            <span>{row.kpis?.pig_ownership?.growth}</span>
                         </div>
                     )
                 }

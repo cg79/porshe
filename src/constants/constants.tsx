@@ -95,7 +95,7 @@ const VERTICAL_DISTANCE = {
     },
 }
 
-const SUPPORT_EMAIL = 'support@porsche.com'
+const SUPPORT_EMAIL = 'contact@forward31.com'
 
 export {
     ROUTES,

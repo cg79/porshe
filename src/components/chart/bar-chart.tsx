@@ -27,9 +27,9 @@ const createOptions = (title: string, isNegative: boolean) => {
                 display: true,
                 text: title,
                 color: '#fff',
-                position: isNegative ? 'top' : 'top',
+                // position: isNegative ? 'top' : 'top',
                 padding: {
-                    bottom: isNegative ? 30 : 0,
+                    bottom: 30,
                 },
             },
         },

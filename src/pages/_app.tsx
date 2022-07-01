@@ -114,9 +114,9 @@ function MyApp({
                 </div>
 
                 <div className="demo-container">
-                    {/* <RouteGuard> */}
+                    <RouteGuard>
                     <Component {...pageProps} />
-                    {/* </RouteGuard> */}
+                    </RouteGuard>
                 </div>
             </CookiesProvider>
         </AnimatePresence>

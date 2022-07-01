@@ -26,7 +26,7 @@ const variants = [
 ]
 
 const transitions = [
-    { type: 'tween', duration: 0.3, ease: 'easeIn' },
+    { type: 'tween', duration: 0.2, ease: 'easeIn' },
     { type: 'tween', duration: 1.5, ease: 'easeIn' },
     { type: 'tween', duration: 0.2, ease: 'easeIn' },
 ]

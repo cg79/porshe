@@ -15,7 +15,7 @@ import { BarChartProps } from '../data-types/data-types'
 //   },
 // };
 
-const createOptions = (title: string) => {
+const createOptions = (title: string, isNegative: boolean) => {
     return {
         responsive: true,
         maintainAspectRatio: true,
@@ -27,11 +27,16 @@ const createOptions = (title: string) => {
                 display: true,
                 text: title,
                 color: '#fff',
+                position: isNegative ? 'top' : 'top',
+                padding: {
+                    bottom: isNegative ? 30 : 0,
+                },
             },
         },
         layout: {
             padding: {
                 left: 30,
+                // top: isNegative ? 30 : 0,
             },
         },
         scales: {
@@ -65,13 +70,20 @@ const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
 
 const BarChart = (data: any) => {
     const type = data.type
+    const isNegative = data.props.datasets[0].data[0] < 0
 
     return (
         <>
             {type == 'line' ? (
-                <Line options={createOptions(data.title)} data={data.props} />
+                <Line
+                    options={createOptions(data.title, isNegative)}
+                    data={data.props}
+                />
             ) : (
-                <Bar options={createOptions(data.title)} data={data.props} />
+                <Bar
+                    options={createOptions(data.title, isNegative)}
+                    data={data.props}
+                />
             )}
         </>
     )

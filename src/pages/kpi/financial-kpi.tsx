@@ -78,11 +78,16 @@ const mapDataset = (metrics: any, index: number) => {
     const labels = []
     const datasets: any[] = []
     const type = metrics[titles[index]].type
+    const negatives = []
 
     for (const [key, value] of Object.entries(metrics[titles[index]].data)) {
         const newValue: any = value
         const formatedDate = formatDate(new Date(key))
         labels.push(formatedDate)
+        // if(newValue< 0)
+        // {
+        //     negatives.push
+        // }
         datasets.push(newValue.toFixed(0))
     }
 
@@ -102,11 +107,11 @@ const mapDataset = (metrics: any, index: number) => {
                     data: datasets,
                     backgroundColor: bgColors,
                     pointStyle: 'circle',
-                    pointRadius: 8,
-                    pointHoverRadius: 12,
-                    pointBackgroundColor: '#fff',
+                    pointRadius: 5,
+                    pointHoverRadius: 0,
+                    pointBackgroundColor: '#ffffff00',
                     borderColor: type == 'bar' ? 'transparent' : '#fff',
-                    borderWidth: 2,
+                    borderWidth: 0,
                     cubicInterpolationMode: 'monotone',
                     steppedLines: true,
                     fill: 'origin',

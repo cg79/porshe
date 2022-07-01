@@ -12,6 +12,9 @@ type KpiCardProps = {
 }
 
 const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value, type }) => {
+    const rightValueDisplayed: any = chartData.props.datasets[0].data
+        .slice(-1)
+        .pop()
     return (
         <div className={styles.linebk}>
             <section className={styles.header}>
@@ -21,7 +24,9 @@ const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value, type }) => {
                 </div>
                 <div className={styles.header__right}>
                     <div className={styles.right__value}>
-                        {chartData.props.datasets[0].data.slice(-1).pop()}
+                        {rightValueDisplayed
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                     </div>
                     <div className={styles.right__date}> / {`JUNE 2022`}</div>
                 </div>

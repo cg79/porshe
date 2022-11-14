@@ -66,12 +66,13 @@ export default function RootKPI() {
     }, [])
 
     const navigateToCompanies = () => {
-        Router.push(ROUTES.COMPANIES)
+        Router.back()
+        // was Router.push(ROUTES.COMPANIES)
     }
 
     const renderTags = (tags: string[]) => {
         return tags.map((tag: string) => {
-            return <Tag name={tag} />
+            return <Tag name={tag} key={tag} />
         })
     }
 
@@ -244,26 +245,26 @@ export default function RootKPI() {
                                     },
                                 }}
                             >
+                                <Tab label="Founders Story" {...a11yProps(0)} />
                                 <Tab
                                     label="Financial KPI’s"
-                                    {...a11yProps(0)}
+                                    {...a11yProps(1)}
                                 />
-                                <Tab label="Founders Story" {...a11yProps(1)} />
                             </Tabs>
                         </Box>
                         <TabPanel value={value} index={0}>
-                            <FinancialKpi
-                                data={{
-                                    company,
-                                }}
-                            ></FinancialKpi>
-                        </TabPanel>
-                        <TabPanel value={value} index={1}>
                             <FoundersStory
                                 data={{
                                     company,
                                 }}
                             ></FoundersStory>
+                        </TabPanel>
+                        <TabPanel value={value} index={1}>
+                            <FinancialKpi
+                                data={{
+                                    company,
+                                }}
+                            ></FinancialKpi>
                         </TabPanel>
                     </Box>
                 </div>

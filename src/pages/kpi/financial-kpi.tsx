@@ -1,24 +1,64 @@
 import React from 'react'
 // import BarChart from '../../components/chart/bar-chart'
-import { BarChartProps } from '../../components/data-types/data-types'
+import { DivierProps } from '../../components/data-types/data-types'
 const company_list = require('../../data/companies.json')
 import KpiCard from '../../components/kpiCard'
-
+import styles from "./kpi.module.css";
 import Layout from '../../components/layout'
+
+const Divider = (props: DivierProps) => {
+    const { children } = props;
+
+    return (
+      <div className={styles.dcontainer}>
+        <div className={styles.dborder} />
+        <span className={styles.dcontent}>
+          Custom KPIs
+        </span>
+        <div className={styles.dborder} />
+      </div>
+    );
+  };
 
 const FinancialKpi = (props: any) => {
     const company = props?.data?.company || null
     // change the 0 to the selected company
-    const metricsChosen = company?.kpis
+
+    const metricsChosen = company?.kpis;
+
+    // sort by
+    //  1) Liquidity
+    //  2) Revenue Actual
+    //  3) EBITDA
+    const metricsSorted: any[] = [];
+    if (company?.kpis?.Liquidity) { metricsSorted.push([ "Liquidity", company?.kpis?.Liquidity ]); }
+    if (company?.kpis?.REV) { metricsSorted.push([ "REV", company?.kpis?.REV ]); }
+    if (company?.kpis?.EBITDA) { metricsSorted.push([ "EBITDA", company?.kpis?.EBITDA ]); }
+
+    if (metricsChosen) {
+        Object.entries(metricsChosen).map(([key, value]) => {
+            let found = false;
+            metricsSorted.map(([sk, sv]) => {
+                if (sk == key) {
+                    found = true
+                }
+            })
+            if (!found) {
+                metricsSorted.push([key, value])
+            }
+        });
+    }
 
     const renderCharts = () => {
-        const barChartsData = Object.entries(metricsChosen).map(
+        const barChartsData = metricsSorted.map(
             ([key, value], index) => {
-                return mapDataset(metricsChosen, index)
+                return mapDataset(metricsSorted, index)
             }
         )
 
-        return barChartsData.map((chart): any => {
+        const baseData = barChartsData.slice(0, 3);
+
+        let allData = baseData.map((chart): any => {
             return (
                 <div className="chartcolumn">
                     <div className="gridchart">
@@ -27,11 +67,37 @@ const FinancialKpi = (props: any) => {
                             value={chart.props.value}
                             chartData={chart}
                             type={chart.type}
+                            leftdate={chart.props.labels[0]}
+                            rightdate={chart.props.labels[chart.props.labels.length-1]}
                         />
                     </div>
                 </div>
             )
         })
+
+        if (barChartsData.length > 3) {
+            allData.push((
+                <Divider>Custom KPIs</Divider>
+            ))
+            allData.push(barChartsData.slice(3).map((chart): any => {
+                return (
+                    <div className="chartcolumn">
+                        <div className="gridchart">
+                            <KpiCard
+                                title={chart.props.title}
+                                value={chart.props.value}
+                                chartData={chart}
+                                type={chart.type}
+                                leftdate={chart.props.labels[0]}
+                                rightdate={chart.props.labels[chart.props.labels.length-1]}
+                            />
+                        </div>
+                    </div>
+                )
+            }))
+        }
+
+        return allData
     }
 
     return metricsChosen ? (
@@ -64,7 +130,7 @@ const formatDate = (date: Date) => {
         'DEC',
     ]
     let monthName = months[date.getMonth()]
-    const isoDate = date.toISOString().substring(5, 7)
+    const isoDate = date.toISOString().substring(2, 4)
 
     return `${monthName} ${isoDate}`
 }
@@ -74,15 +140,16 @@ const numberWithCommas = (number: number) => {
 }
 
 const mapDataset = (metrics: any, index: number) => {
-    const titles: string[] = Object.keys(metrics)
     const labels = []
     const datasets: any[] = []
-    const type = metrics[titles[index]].type
+    const type = metrics[index][1].type
     const negatives = []
 
-    for (const [key, value] of Object.entries(metrics[titles[index]].data)) {
-        const newValue: any = value
-        const formatedDate = formatDate(new Date(key))
+    const sortedEntries = Object.entries(metrics[index][1].data).sort((a, b) => a[0].localeCompare(b[0]));
+
+    for (const [key, value] of sortedEntries) {
+        const newValue: any = value;
+        const formatedDate = formatDate(new Date(key));
         labels.push(formatedDate)
         // if(newValue< 0)
         // {
@@ -103,7 +170,7 @@ const mapDataset = (metrics: any, index: number) => {
             labels: labels,
             datasets: [
                 {
-                    label: titles[index],
+                    label: metrics[index][0],
                     data: datasets,
                     backgroundColor: bgColors,
                     pointStyle: 'circle',
@@ -121,19 +188,15 @@ const mapDataset = (metrics: any, index: number) => {
                         color: '#fff',
                         anchor: 'end',
                         align: 'top',
-                        formatter: function (number: number) {
-                            return number
-                                .toString()
-                                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                        },
+                        formatter: numberWithCommas,
                         font: {
-                            weight: 'bold',
+                            weight: "bold"
                         },
                     },
                 },
             ],
-            value: metrics[titles[index]].value,
-            title: metrics[titles[index]].title,
+            value: metrics[index][1].value,
+            title: metrics[index][1].title,
         },
         options: {
             layout: {

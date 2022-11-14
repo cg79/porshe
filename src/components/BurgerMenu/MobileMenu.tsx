@@ -73,7 +73,7 @@ export default function MobileMenu() {
                 }}
             />
             <List>
-                {['Overview', 'Companies', 'Support'].map((text, index) => (
+                {['Home', 'Portfolio', 'Companies', 'Support'].map((text, index) => (
                     <ListItem
                         key={text}
                         disablePadding

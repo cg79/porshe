@@ -74,3 +74,15 @@
 .headline__tags span:first-child {
   margin-left: 0px;
 }
+.dcontainer{
+  display: flex;
+  align-items: center;
+  clear: both;
+}
+.dborder{
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+.dcontent {
+  padding: 0 10px 0 10px;
+}

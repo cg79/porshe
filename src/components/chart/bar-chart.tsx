@@ -1,3 +1,4 @@
+import { OptionUnstyled } from '@mui/base'
 import React from 'react'
 import { Bar, Line } from 'react-chartjs-2'
 import { BarChartProps } from '../data-types/data-types'
@@ -16,7 +17,7 @@ import { BarChartProps } from '../data-types/data-types'
 // };
 
 const createOptions = (title: string, isNegative: boolean) => {
-    return {
+    let options: any = {
         responsive: true,
         maintainAspectRatio: true,
         plugins: {
@@ -56,14 +57,21 @@ const createOptions = (title: string, isNegative: boolean) => {
                 },
                 ticks: {
                     color: '#9FF9FF',
+                    beginAtZero: false,
                     callback: function (value: any, index: any, ticks: any) {
                         // return value
-                        return null
+                        return null;
                     },
                 },
             },
         },
     }
+    if (isNegative) {
+        options.scales.y.max = 0;
+    } else {
+        options.scales.y.min = 0;
+    }
+    return options;
 }
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']

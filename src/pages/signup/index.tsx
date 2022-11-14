@@ -218,7 +218,7 @@ export default function SignIn(props: any) {
                             variant="contained"
                             onClick={triggerConfirmEmail}
                         >
-                            Confirmemail
+                            Confirm e-mail
                         </Button>
 
                         <div className="flex flex-center mt10">

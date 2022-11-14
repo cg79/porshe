@@ -16,6 +16,9 @@ export type AvatarProps = {
     picture: string
 }
 
+export interface DivierProps {
+    children?: React.ReactNode
+}
 export interface TabPanelProps {
     children?: React.ReactNode
     index: number

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import {
-  ROUTES,
-  TEXT_STYLE,
-  VERTICAL_DISTANCE,
+    ROUTES,
+    TEXT_STYLE,
+    VERTICAL_DISTANCE,
 } from "../../constants/constants";
 // import Navbar from "../../components/Navbar";
 // import ErrorMessage from "../../components/error/error";
@@ -28,7 +28,11 @@ export default function SignIn(props: any) {
 
     try {
       const routerValue = useRouter() as any;
-      const newRoute = routerValue.returnUrl || ROUTES.OVERVIEW;
+      let baseUrl = routerValue.query.returnUrl
+      if (routerValue.query.returnUrl && routerValue.query.returnUrl.indexOf("?") > 0) {
+        baseUrl = routerValue.query.returnUrl.substring(0, routerValue.query.returnUrl.indexOf("?"))
+      }
+      const newRoute = Object.values(ROUTES).indexOf(baseUrl) >= 0 ? routerValue.query.returnUrl : ROUTES.OVERVIEW;
       Router.push(newRoute);
     } catch {}
   }

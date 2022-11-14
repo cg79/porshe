@@ -81,14 +81,14 @@ export default function ChangePassword(props: any) {
 
         const userFromSignIn = IdentityStore.tempUser
         Auth.confirmSignIn(userFromSignIn, code, 'SMS_MFA')
-            // Auth.confirmSignIn(userFromSignIn, code, 'CUSTOM_CHALLENGE')
+        // Auth.confirmSignIn(userFromSignIn, code, 'CUSTOM_CHALLENGE')
             .then((user) => {
                 console.log(user)
                 debugger
             })
             .then((data) => {
                 console.log(data)
-                setErrorMessage('user logged in')
+                // setErrorMessage('user logged in')
 
                 Auth.currentUserInfo().then((userInfo) => {
                     debugger

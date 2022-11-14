@@ -1,5 +1,6 @@
 const ROUTES = {
     COMPANY_CREATE: '/companies/company-create',
+    PORTFOLIO: '/portfolio',
     COMPANIES: '/companies',
     SIGN_IN: '/signin',
     OVERVIEW: '/overview',

@@ -13,14 +13,7 @@ type KpiCardProps = {
   rightdate?: string;
 };
 
-const KpiCard: React.FC<KpiCardProps> = ({
-  title,
-  chartData,
-  value,
-  type,
-  leftdate = "",
-  rightdate = "",
-}) => {
+const KpiCard: React.FC<KpiCardProps> = ({ title, chartData, value, type, leftdate = "", rightdate = "" }) => {
   const rightValueDisplayed: any = chartData.props.datasets[0].data
     .slice(-1)
     .pop();
@@ -34,18 +27,22 @@ const KpiCard: React.FC<KpiCardProps> = ({
         <div className={styles.header__right}>
           <div className={styles.right__value}>
             {rightValueDisplayed
-              .toString()
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           </div>
           <div className={styles.right__date}> / {rightdate}</div>
         </div>
       </section>
       {/* <div className={styles.chartContainer}> */}
       {/* <div className={styles.padder}></div> */}
-      <BarChart props={chartData.props} title={title} type={type}></BarChart>
+      <BarChart
+        props={chartData.props}
+        title={title}
+        type={type}
+      ></BarChart>
       {/* </div> */}
     </div>
-  );
+  )
 };
 
 export default KpiCard;

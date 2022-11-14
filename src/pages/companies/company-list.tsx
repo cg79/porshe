@@ -1,287 +1,529 @@
-import { observer } from 'mobx-react-lite'
-import store from '../../store/company/CompaniesStore'
-import { useEffect, useState } from 'react'
-import Router from 'next/router'
-import { ROUTES } from '../../constants/constants'
-import DataTable from 'react-data-table-component'
-import styles from './style.module.css'
+import { useEffect, useState } from "react";
+import Router from "next/router";
+import { ROUTES } from "../../constants/constants";
+import DataTable from "react-data-table-component";
+import styles from "./style.module.css";
+import { MobileCards } from "./company-card";
+import companies from "../../data/companies.json";
+import { FilterMobile } from "./filter-mobile";
 
-const CompanyList = observer(() => {
-    const [rows, setRows] = useState([])
-    // let rows: GridRowsProp = [];
+const thousandsFormatWithCommas = (number: number) => {
+  return number
+    ? Math.round(number / 1000)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " k"
+    : "";
+};
 
-    useEffect(() => {
-        setRows([...store.list])
-    }, [])
+const millionsFormatWithCommas = (number: number) => {
+  return number
+    ? (Math.round(number / 1000 / 10) / 100)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " m"
+    : "";
+};
 
-    const columns = [
-        // {
-        //   name: "Logo",
-        //   // selector: (row: any) => row.name,
-        //   // sortable: true,
-        //   cell: (row: any) => {
-        //     return (
-        //       <div>
-        //         <img
-        //           style={{ maxWidth: "50px" }}
-        //           src={
-        //             row.logo ||
-        //             "https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png"
-        //           }
-        //         />
-        //       </div>
-        //     );
-        //   },
-        // },
-        {
-            name: 'Company',
-            selector: (row: any) => row.name,
-            sortable: true,
-            cell: (row: any) => {
-                return (
-                    <div
-                        className="flex pointer"
-                        style={{
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                        }}
-                        onClick={() => onRowClicked(row)}
-                    >
-                        <div
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '5x 0',
-                            }}
-                        >
-                            <img
-                                style={{ maxWidth: '120px', maxHeight: '40px' }}
-                                src={
-                                    row.logo ||
-                                    'https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png'
-                                }
-                            />
-                        </div>
-                        {/* <div
-                            className={styles.table__cell}
-                            style={{
-                                fontWeight: '700',
-                                fontSize: '16px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                paddingLeft: '15px',
-                            }}
-                        >
-                            {row.name}
-                        </div> */}
-                    </div>
-                )
-            },
-        },
-        {
-            name: '',
-            selector: (row: any) => row.location,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.location) {
-                    return (
-                        <div
-                            className={styles.table__cell}
-                            style={{
-                                fontWeight: '400',
-                                fontSize: '14px',
-                            }}
-                        >
-                            {row.introduction}
-                        </div>
-                    )
+const dynamicFormatWithCommas = (number: number) => {
+  if (number > 1000000) {
+    return millionsFormatWithCommas(number);
+  } else if (number > 1000) {
+    return thousandsFormatWithCommas(number);
+  } else if (number > 0) {
+    return number + " ";
+  }
+  return "";
+};
+
+const CompanyList: any = ({ rows }: {rows:any}) => {
+  const columns = [
+    {
+      name: "Company",
+      selector: (row: any) => row.name?.toLowerCase(),
+      sortable: true,
+      cell: (row: any) => {
+        const clasValue = "flex pointer";
+        return (
+          <div
+            className={clasValue}
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            onClick={() => onRowClicked(row)}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "5x 0",
+              }}
+              className="company-info"
+            >
+              <img
+                style={{ maxWidth: "120px", maxHeight: "40px" }}
+                src={
+                  row.logo ||
+                  "https://img.cppng.com/download/2020-06/32193-8-pepsi-logo-transparent-background.png"
                 }
+              />
+            </div>
+          </div>
+        );
+      },
+    },
+    {
+      name: "Headquarters",
+      selector: (row: any) => row.location,
+      sortable: true,
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div className="exited-text">EXITED</div>;
+        }
+        if (row.location) {
+          return (
+            <div
+              className={styles.table__cell}
+              style={{
+                fontWeight: "700",
+                fontSize: "16px",
+              }}
+            >
+              {row.location}
+            </div>
+          );
+        }
 
-                return null
-            },
-        },
+        return null;
+      },
+    },
+    {
+      name: "FTE",
+      selector: (row: any) => row.kpis?.FTE?.value,
+      sortable: true,
+      width: "auto",
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
 
-        {
-            name: 'Headquarters',
-            selector: (row: any) => row.location,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.location) {
-                    return (
-                        <div
-                            className={styles.table__cell}
-                            style={{
-                                fontWeight: '700',
-                                fontSize: '16px',
-                            }}
-                        >
-                            {row.location}
-                        </div>
-                    )
-                }
+        if (row.kpis?.FTE?.value) {
+          return (
+            <div className={styles.table__cell}>
+              <span>{row.kpis?.FTE?.value}</span>
+              <span>{row.kpis?.FTE?.growth}</span>
+            </div>
+          );
+        }
 
-                return null
-            },
-        },
+        return null;
+      },
+    },
+    {
+      name: "Revenue",
+      selector: (row: any) => row.kpis?.REV?.value,
+      sortable: true,
+      cell: (row: any) => {
+        if (row.exited) {
+          return (
+            <div className="exited-reason">Reason for exit, {row.reason}</div>
+          );
+        }
+        if (row.kpis?.REV?.value) {
+          return (
+            <div className={styles.table__cell}>
+              <span>
+                {dynamicFormatWithCommas(row.kpis?.REV?.value)}
+                {row.kpis?.REV?.currency}
+              </span>
+              <span>{row.kpis?.REV?.growth}</span>
+            </div>
+          );
+        }
 
-        {
-            name: 'FTE',
-            selector: (row: any) => row.kpis?.fte?.value,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.kpis?.fte?.value) {
-                    return (
-                        <div className={styles.table__cell}>
-                            <span>{row.kpis?.fte?.value}</span>
-                            <span>{row.kpis?.fte?.growth}</span>
-                        </div>
-                    )
-                }
+        return null;
+      },
+    },
+    {
+      name: "Liquidity",
+      selector: (row: any) => row.kpis?.Liquidity?.value,
+      sortable: true,
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
+        if (row.kpis?.Liquidity?.value) {
+          return (
+            <div className={styles.table__cell}>
+              <span>
+                {dynamicFormatWithCommas(row.kpis?.Liquidity?.value)}
+                {row.kpis?.Liquidity?.currency}
+              </span>
+              <span>{row.kpis?.Liquidity?.growth}</span>
+            </div>
+          );
+        }
 
-                return null
-            },
-        },
-        {
-            name: 'Total Revenue',
-            selector: (row: any) => row.revenue,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.kpis?.revenue?.value) {
-                    return (
-                        <div className={styles.table__cell}>
-                            <span>{row.kpis?.revenue?.value} &euro;</span>
-                            <span>{row.kpis?.revenue?.growth}</span>
-                        </div>
-                    )
-                }
+        return null;
+      },
+    },
+    {
+      name: "Profit/Loss",
+      selector: (row: any) => row.kpis?.profitloss?.value,
+      sortable: true,
+      width: "auto",
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
+        if (row.kpis?.profitloss?.value) {
+          return (
+            <div className={styles.table__cell}>
+              <span>
+                {thousandsFormatWithCommas(row.kpis?.profitloss?.value)}{" "}
+                {row.kpis?.profitloss?.currency}
+              </span>
+              <span>{row.kpis?.profitloss?.growth}</span>
+            </div>
+          );
+        }
 
-                return null
-            },
-        },
-        {
-            name: 'Liquidity',
-            selector: (row: any) => row.kpis?.liquidity?.value,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.kpis?.liquidity?.value) {
-                    return (
-                        <div className={styles.table__cell}>
-                            <span>{row.kpis?.liquidity?.value} &euro;</span>
-                            <span>{row.kpis?.liquidity?.growth}</span>
-                        </div>
-                    )
-                }
+        return null;
+      },
+    },
+    {
+      name: "Gross Cash Burn",
+      selector: (row: any) => row.kpis?.grosscash?.value,
+      sortable: true,
+      width: "auto",
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
+        if (row.kpis?.grosscash?.value) {
+          return (
+            <div className={styles.table__cell}>
+              <span>
+                {thousandsFormatWithCommas(row.kpis?.grosscash?.value)}{" "}
+                {row.kpis?.grosscash?.currency}
+              </span>
+              <span>{row.kpis?.grosscash?.growth}</span>
+            </div>
+          );
+        }
 
-                return null
-            },
-        },
-        {
-            name: 'Profit/Loss',
-            selector: (row: any) => row.kpis?.profitloss?.value,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.kpis?.profitloss?.value) {
-                    return (
-                        <div className={styles.table__cell}>
-                            <span>{row.kpis?.profitloss?.value} &euro;</span>
-                            <span>{row.kpis?.profitloss?.growth}</span>
-                        </div>
-                    )
-                }
+        return null;
+      },
+    },
+    {
+      name: "Runway",
+      selector: (row: any) => row.Runway,
+      sortable: true,
+      width: "auto",
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
+        if (row.Runway) {
+          return (
+            <div className={styles.table__cell}>
+              <span>{row.Runway} </span>
+              <span>months</span>
+            </div>
+          );
+        }
 
-                return null
-            },
-        },
-        {
-            name: 'Gross Cash Burn',
-            selector: (row: any) => row.kpis?.grosscash?.value,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.kpis?.grosscash?.value) {
-                    return (
-                        <div className={styles.table__cell}>
-                            <span>{row.kpis?.grosscash?.value} &euro;</span>
-                            <span>{row.kpis?.grosscash?.growth}</span>
-                        </div>
-                    )
-                }
+        return null;
+      },
+    },
+    {
+      name: "Convertible Loan",
+      selector: (row: any) => row.Loan,
+      sortable: true,
+      width: "auto",
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
+        if (row.Loan) {
+          return (
+            <div className={styles.table__cell}>
+              <span>{millionsFormatWithCommas(row.Loan)}EUR</span>
+              <span></span>
+            </div>
+          );
+        }
 
-                return null
-            },
-        },
-        {
-            name: 'Runway',
-            selector: (row: any) => row.kpis?.runway?.value,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.kpis?.runway?.value) {
-                    return (
-                        <div className={styles.table__cell}>
-                            <span>{row.kpis?.runway?.value} &euro;</span>
-                            <span>{row.kpis?.runway?.growth}</span>
-                        </div>
-                    )
-                }
+        return null;
+      },
+    },
+    {
+      name: "Ownership",
+      selector: (row: any) => row.Ownership,
+      sortable: true,
+      width: "auto",
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
+        if (row.Ownership) {
+          return (
+            <div className={styles.table__cell}>
+              <span>{row.Ownership}</span>
+              <span></span>
+            </div>
+          );
+        }
 
-                return null
-            },
-        },
-        {
-            name: 'PIG Convertible Loan',
-            selector: (row: any) => row.kpis?.pig_convertible?.value,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.kpis?.pig_convertible?.value) {
-                    return (
-                        <div className={styles.table__cell}>
-                            <span>
-                                {row.kpis?.pig_convertible?.value} &euro;
-                            </span>
-                            <span>{row.kpis?.pig_convertible?.growth}</span>
-                        </div>
-                    )
-                }
+        return null;
+      },
+    },
+  ];
 
-                return null
-            },
-        },
-        {
-            name: 'PIG Ownership Loan',
-            selector: (row: any) => row.kpis?.pig_ownership?.value,
-            sortable: true,
-            cell: (row: any) => {
-                if (row.kpis?.pig_ownership?.value) {
-                    return (
-                        <div className={styles.table__cell}>
-                            <span>{row.kpis?.pig_ownership?.value} &euro;</span>
-                            <span>{row.kpis?.pig_ownership?.growth}</span>
-                        </div>
-                    )
-                }
+  const redirectToCompanyDetails = (companyId: number) => {
+    debugger;
+    const route = `${ROUTES.KPI}?companyId=${companyId}`;
+    Router.push(route);
+  };
 
-                return null
-            },
-        },
-    ]
+  const onRowClicked = (row: any) => {
+    debugger;
+    redirectToCompanyDetails(row.id);
+  };
 
-    const redirectToCompanyDetails = (companyId: number) => {
-        debugger
-        const route = `${ROUTES.KPI}?companyId=${companyId}`
-        Router.push(route)
-    }
+  const tabletColumns = [
+    {
+      name: "Company",
+      selector: (row: any) => row.name?.toLowerCase(),
+      sortable: true,
+      cell: (row: any) => {
+        return (
+          <div
+            className="flex pointer"
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            onClick={() => onRowClicked(row)}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                // justifyContent: "center",
+                padding: "5x 0",
+              }}
+            >
+              <div className="company-info company-info-w">
+                <h3>{row.name.toUpperCase()}</h3>
+                <p>{row.description}</p>
+              </div>
+            </div>
+          </div>
+        );
+      },
+      width: "40%",
+    },
+    {
+      name: "Headquarters",
+      selector: (row: any) => row.location,
+      sortable: true,
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div className="exited-text">EXITED</div>;
+        }
+        if (row.location) {
+          return (
+            <div
+              className={styles.table__cell}
+              style={{
+                fontWeight: "700",
+                fontSize: "16px",
+              }}
+            >
+              {row.location}
+            </div>
+          );
+        }
 
-    const onRowClicked = (row: any) => {
-        debugger
-        redirectToCompanyDetails(row.id)
-    }
+        return null;
+      },
+    },
+    {
+      name: "FTE",
+      selector: (row: any) => row.kpis?.FTE?.value,
+      sortable: true,
+      width: "auto",
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
+        if (row.kpis?.FTE?.value) {
+          return (
+            <div className={styles.table__cell}>
+              <span>{row.kpis?.FTE?.value}</span>
+              <span>{row.kpis?.FTE?.growth}</span>
+            </div>
+          );
+        }
 
-    return (
-        <div style={{ marginTop: '20px' }}>
-            <DataTable columns={columns} data={rows} fixedHeader />
+        return null;
+      },
+    },
+    {
+      name: "Revenue",
+      selector: (row: any) => row.kpis?.REV?.value,
+      sortable: true,
+      cell: (row: any) => {
+        if (row.exited) {
+          return (
+            <div className="exited-reason">
+              Reason for exit, acquired by another company
+            </div>
+          );
+        }
+        if (row.kpis?.REV?.value) {
+          return (
+            <div className={styles.table__cell}>
+              <span>
+                {dynamicFormatWithCommas(row.kpis?.REV?.value)}
+                {row.kpis?.REV?.currency}
+              </span>
+              <span>{row.kpis?.REV?.growth}</span>
+            </div>
+          );
+        }
+
+        return null;
+      },
+    },
+    {
+      name: "Liquidity",
+      selector: (row: any) => row.kpis?.Liquidity?.value,
+      sortable: true,
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
+        if (row.kpis?.Liquidity?.value) {
+          return (
+            <div className={styles.table__cell}>
+              <span>
+                {dynamicFormatWithCommas(row.kpis?.Liquidity?.value)}
+                {row.kpis?.Liquidity?.currency}
+              </span>
+              <span>{row.kpis?.Liquidity?.growth}</span>
+            </div>
+          );
+        }
+
+        return null;
+      },
+    },
+    {
+      name: "Runway",
+      selector: (row: any) => row.Runway,
+      sortable: true,
+      width: "auto",
+      cell: (row: any) => {
+        if (row.exited) {
+          return <div></div>;
+        }
+        if (row.Runway) {
+          return (
+            <div className={styles.table__cell}>
+              <span>{row.Runway} </span>
+              <span>months</span>
+            </div>
+          );
+        }
+
+        return null;
+      },
+    },
+  ];
+
+  const [sorted, setSorted] =  useState([]);
+
+  const f_sort = (dataArg: any[], colName: string, ascending = true) => {
+    dataArg.sort(function (res01, res02) {
+      var arg01 = res01[colName.toLowerCase()];
+      var arg02 = res02[colName.toLowerCase()];
+      if (arg01 < arg02) {
+        return ascending ? -1 : 1;
+      }
+      if (arg01 > arg02) {
+        return ascending ? 1 : -1;
+      }
+      return 0;
+    });
+        console.log(dataArg);
+        setSorted(dataArg);
+        console.log(sorted);
+
+    return dataArg;
+  };
+
+  const onSort: any = (propertyName: string, ascending = true) => {
+    f_sort(rows, propertyName, ascending);
+  };
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  });
+
+  const conditionalRowStyles = [
+    {
+      when: (row: any) => {
+        return row.exited;
+      },
+      classNames: ["exited"],
+    },
+  ];
+
+  const updateWidth = () => {
+    setWidth(window.innerWidth);
+  };
+
+  if (width <= 600) {
+    for (const el of companies) {
+      return (
+        <div>
+          <div style={{ marginTop: "20px" }}>
+            <FilterMobile onSort={onSort}/>
+            <MobileCards sorted={sorted}/>
+          </div>
         </div>
-    )
-})
+      );
+    }
+  }
 
-export default CompanyList
+  if (width <= 1024) {
+    return (
+      <div style={{ marginTop: "20px" }}>
+        <DataTable
+          columns={tabletColumns}
+          data={rows}
+          fixedHeader
+          conditionalRowStyles={conditionalRowStyles}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ marginTop: "20px" }}>
+      <DataTable
+        columns={columns}
+        data={rows}
+        fixedHeader
+        conditionalRowStyles={conditionalRowStyles}
+      />
+    </div>
+  );
+};
+
+export default CompanyList;

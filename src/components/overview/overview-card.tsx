@@ -1,4 +1,6 @@
-import { OverviewProps } from "../data-types/data-types";
+import Router from "next/router";
+import React from "react";
+import { ROUTES } from "../../constants/constants";
 import styles from "./overview-card.module.css";
 
 const OverviewCard = (props: any) => {
@@ -13,15 +15,10 @@ const OverviewCard = (props: any) => {
     onClick,
   } = props.props;
 
-  const executeClick = () => {
-    // debugger;
-    if (!onClick) {
-      return;
-    }
-
-    onClick();
+  const redirectToCompanies = () => {
+    debugger;
+    Router.push(ROUTES.COMPANIES);
   };
-
   const fontProps = "18px";
 
   const renderM4M4Text = (m4: string, m4Text: string) => {
@@ -41,34 +38,47 @@ const OverviewCard = (props: any) => {
   };
 
   return (
-    <div className={`font-porsche ${styles.linebk}`} onClick={executeClick}>
+    <div
+      className={`font-porsche ${styles.linebk}`}
+      onClick={redirectToCompanies}
+    >
       <div
         style={{ marginLeft: "20px", paddingTop: "20px", fontSize: fontProps }}
       >
-        <div className="one mt1">{m1}</div>
         <div
-          className=""
+          className="one mt1 m1"
           style={{
-            fontWeight: "900",
-            fontSize: "4em",
+            fontSize: "1.1em",
           }}
         >
-          {m2}
+          {m1}
+        </div>
+        <div className="m2m3">
+          <div
+            style={{
+              fontWeight: "700",
+              fontSize: "4em",
+            }}
+          >
+            {m2}
+          </div>
+
+          <div
+            style={{
+              fontWeight: "700",
+              paddingTop: "60px",
+              paddingLeft: "5px",
+            }}
+          >
+            {m3}
+          </div>
         </div>
 
-        <div>{m3}</div>
-
         <div className="flex" style={{ fontSize: fontProps }}>
-          {/* <div className="one bold">{m4}</div> */}
-          {/* <div className="one ml5" style={{maxWidth:"300px"}}>{m4_text}</div> */}
           {renderM4M4Text(m4, m4_text)}
         </div>
 
         <div className="flex" style={{ fontSize: fontProps }}>
-          {/* <div className="one bold">{m5}</div>
-          <div className="one ml5" >
-            {m5_text}
-          </div> */}
           {renderM4M4Text(m5, m5_text)}
         </div>
 

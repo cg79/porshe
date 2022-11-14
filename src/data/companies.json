@@ -1,507 +1,1739 @@
 [
-    {
-        "id": 1,
-        "name": "The Embassies",
-        "shortname": "embassies",
-        "fullname": "The Embassies of Good Living AG",
-        "location": "Zurich, CH",
-        "logo": "/logos/the_embassies.png",
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg",
-        "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125.jpg 1350w",
-
-        "founders": [
-            {
-                "name": "Henning Weiss",
-                "story": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences.",
-                "image": "/founders/video1.png"
-            },
-            {
-                "name": "Jan Garde",
-                "story": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-                "image": ""
-            },
-            {
-                "name": "James B. Graves",
-                "story": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. ",
-                "image": ""
-            }
-        ],
-        "video": "/founders/video2.mp4",
-        "shortDescription": "The platform for next-level fan experiences. Engage with your favourite athletes like never before, by owning them as your personal NFTs.",
-        "description": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.",
-        "tags": {
-            "0": "nft",
-            "1": "marketplace",
-            "2": "collectibles"
+  {
+    "id": 1,
+    "name": "The House of Beautiful Business",
+    "exited": true,
+    "reason": "acquired by another company",
+    "shortname": "hobb",
+    "fullname": "The Business Romantic Society Verwaltungs GmbH",
+    "location": "Berlin, DE",
+    "description": "The House of Beautiful Business is the space for Thought Leadership",
+    "logo": "/logos/house_of_beautiful_business.png",
+    "shortDescription": "The House of Beautiful Business is the space for Thought Leadership.",
+    "introduction": "The House of Beautiful Business is the space for Thought Leadership",
+    "tags": {
+      "0": "thoughtleadership"
+    },
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
+    "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
+    "founders": [
+      {
+        "name": "Tim Leberecht"
+      },
+      {
+        "name": "Till Grusche"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/company/house-of-beautiful-business/",
+    "website": "https://houseofbeautifulbusiness.com/",
+    "employee": 13,
+    "kpis": {
+      "Liquidity": {
+        "title": "Liquidity (€)",
+        "data": {
+          "2021": 1750000,
+          "2022-08": 272000,
+          "2022-07": 439000,
+          "2022-06": 482000,
+          "2022-05": 547000,
+          "2022-04": 695000,
+          "2022-03": 215000,
+          "2022-02": 310000
         },
-        "status": "live",
-        "linkedin": "https://www.linkedin.com/company/theembassies/",
-        "website": "https://www.embassies.com/",
-        "employee": 89,
-        "introduction": "The in-car entertainment solution",
-        "kpis": {
-            "fte": {
-                "title": "Full time employee (FTE)",
-                "data": {
-                    "2022-01": 5,
-                    "2022-02": 5,
-                    "2022-03": 5,
-                    "2022-04": 6,
-                    "2022-05": 6
-                },
-                "value": 42,
-                "growth": "(+4, +13% QoQ)"
-            },
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 1,
-                    "2022-02": 3,
-                    "2022-03": 2,
-                    "2022-04": 64
-                },
-                "value": "51M",
-                "growth": "(+4, +13% QoQ)",
-                "type": "line"
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": "830K",
-                "growth": "(+4, +13% QoQ)"
-            },
-            "profitloss": {
-                "title": "Profit/Loss",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": "300K",
-                "growth": "(+4, +13% QoQ)"
-            },
-            "grosscash": {
-                "title": "Gross Cash Burn",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": "700K",
-                "growth": "(+4, +13% QoQ)"
-            }
-        }
-    },
-    {
-        "id": 2,
-        "name": "Fanzone",
-        "shortname": "fanzone",
-        "fullname": "Fanzone Media GmbH",
-        "location": "Berlin, DE",
-        "logo": "/logos/fanzone.png",
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg",
-        "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214.jpg 1350w",
-        "founders": [
-            { "name": "Claudio Weck" },
-            { "name": "Dirk Weyel" },
-            { "name": "Björn Hesse" }
-        ],
-        "linkedin": "https://www.linkedin.com/company/fanzone-media-gmbh/",
-        "website": "https://www.fanzone.io",
-        "employee": 89,
-        "introduction": "The fan engagement platform",
-        "kpis": {
-            "fte": {
-                "title": "FTE",
-                "data": {
-                    "2022-01": 18.8,
-                    "2022-02": 18.8,
-                    "2022-03": 16.8,
-                    "2022-04": 16.8,
-                    "2022-05": 16.8
-                },
-                "value": "32",
-                "growth": "(+4, +13% QoQ)",
-                "type": "bar"
-            },
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 38630,
-                    "2022-02": 92450,
-                    "2022-03": 31003,
-                    "2022-04": 141984
-                },
-                "value": "34M",
-                "growth": "(+4, +13% QoQ)",
-                "type": "bar"
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 257357,
-                    "2022-02": 2579,
-                    "2022-03": 1772086,
-                    "2022-04": 950017
-                },
-                "value": "39K",
-                "growth": "(+4, +13% QoQ)",
-                "type": "line"
-            },
-            "ebdita": {
-                "title": "EBITDA",
-                "data": {
-                    "2022-01": -386486,
-                    "2022-02": -230635,
-                    "2022-03": -275406,
-                    "2022-04": -240763,
-                    "2022-05": -256799
-                },
-                "value": "139",
-                "growth": "(+4, +13% QoQ)",
-                "type": "bar"
-            },
-            "profitloss": {
-                "title": "Profit/Loss",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 321433.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": "940K",
-                "growth": "(+4, +13% QoQ)",
-                "type": "line"
-            },
-            "grosscash": {
-                "title": "Gross Cash Burn",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 2312.0010313536
-                },
-                "value": "310K",
-                "growth": "(+4, +13% QoQ)",
-                "type": "line"
-            }
-        }
-    },
-    {
-        "id": 3,
-        "name": "House of Beautiful Business",
-        "shortname": "hobb",
-        "fullname": "The Business Romantic Society Verwaltungs GmbH",
-        "location": "Berlin, DE",
-        "description": "House of Beautiful Business House of Beautiful Businessportunitys you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.",
-        "logo": "/logos/house_of_beautiful_business.png",
-        "shortDescription": "The platform for next-level fan experiences. Engage with your favourite athletes like never before, by owning them as your personal NFTs.",
-        "tags": {
-            "0": "metaverse",
-            "1": "dogs"
+        "value": 272000,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 13,
+          "2022-07": 15,
+          "2022-06": 15,
+          "2022-05": 17,
+          "2022-04": 18,
+          "2022-03": 17,
+          "2022-02": 16
         },
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg",
-        "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-01-HoBB-0048.jpg 1350w",
-        "founders": [{ "name": "Tim Leberecht" }, { "name": "Till Grusche" }],
-        "linkedin": "https://www.linkedin.com/company/house-of-beautiful-business/",
-        "website": "https://houseofbeautifulbusiness.com/",
-        "employee": 139,
-        "kpis": {
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 1,
-                    "2022-02": 3,
-                    "2022-03": 2,
-                    "2022-04": 64
-                },
-                "value": 231
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": 126
-            }
-        }
+        "value": 13,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "REV": {
+        "title": "Revenue Actual (€)",
+        "data": {
+          "2022-08": 66000,
+          "2022-07": 58000,
+          "2022-06": 59000,
+          "2022-05": 60000,
+          "2022-04": 100000,
+          "2022-03": 75000,
+          "2022-02": 58000,
+          "2022-01": 47000
+        },
+        "value": 66000,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "EBITDA": {
+        "title": "EBITDA (€)",
+        "data": {
+          "2022-08": -78000,
+          "2022-07": -74000,
+          "2022-06": -91000,
+          "2022-05": -134000,
+          "2022-04": -55000,
+          "2022-03": -124000,
+          "2022-02": -68000
+        },
+        "value": -78000,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Residents": {
+        "title": "Individual Residents (#)",
+        "data": {
+          "2022-08": 20,
+          "2022-07": 41,
+          "2022-06": 99,
+          "2022-05": 100,
+          "2022-04": 64,
+          "2022-03": 71,
+          "2022-02": 43,
+          "2022-01": 52
+        },
+        "value": 20,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Subscriptions": {
+        "title": "Free Subscriptions (#)",
+        "data": {
+          "2022-08": 21774,
+          "2022-07": 21325,
+          "2022-06": 20619,
+          "2022-05": 18200,
+          "2022-04": 15200,
+          "2022-03": 11257,
+          "2022-02": 7857
+        },
+        "value": 21774,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Sales Pipeline": {
+        "title": "Weighted Sales Pipeline Value (€)",
+        "data": {
+          "2022-08": 204000,
+          "2022-07": 133000,
+          "2022-06": 330000,
+          "2022-05": 416000,
+          "2022-04": 388000,
+          "2022-03": 315000,
+          "2022-02": 45000
+        },
+        "value": 204000,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      }
     },
-    {
-        "id": 4,
-        "name": "RYDES",
-        "shortname": "rydes",
-        "fullname": "RYDES GmbH",
-        "location": "Berlin, DE",
-        "logo": "/logos/rydes.png",
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-06-Rydes-0260-225x300.jpg",
-        "founders": [{ "name": "René Braun" }, { "name": "Martin Miodownik" }],
-        "linkedin": "https://www.linkedin.com/company/rydes-app/",
-        "website": "https://www.rydes.com/",
-        "employee": 12,
-        "kpis": {
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 1,
-                    "2022-02": 3,
-                    "2022-03": 2,
-                    "2022-04": 64
-                },
-                "value": 124
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": 35
-            }
-        }
+    "Runway": "12+",
+    "Loan": "3000000",
+    "Ownership": "5% Owned (Target: 20%)"
+  },
+  {
+    "id": 2,
+    "name": "aware",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "aware",
+    "fullname": "aware THE PLATFORM GmbH",
+    "location": "Berlin, DE",
+    "logo": "/logos/aware_.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg",
+    "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144.jpg 1350w",
+    "shortDescription": "The platform to give companies guidance how to become sustainable",
+    "description": "The platform to give companies guidance how to become sustainable.",
+    "introduction": "The platform to give companies guidance how to become sustainable",
+    "founders": [
+      {
+        "name": "Lena Schrum"
+      },
+      {
+        "name": "Kim N. Fischer"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/company/tobeaware/",
+    "website": "https://aware-theplatform.com/",
+    "employee": 10,
+    "kpis": {
+      "REV": {
+        "title": "Revenue Actual (€)",
+        "data": {
+          "2021": 769200,
+          "2022-08": 15000,
+          "2022-07": 15000,
+          "2022-06": 31000,
+          "2022-05": 265000,
+          "2022-04": 53500,
+          "2022-03": 33000,
+          "2022-02": 2500
+        },
+        "value": 15000,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Liquidity": {
+        "title": "Liquidity (€)",
+        "data": {
+          "2022-08": 1101264,
+          "2022-07": 1120113,
+          "2022-06": 713533,
+          "2022-05": 593993,
+          "2022-04": 596166,
+          "2022-03": 705000,
+          "2022-02": 804000
+        },
+        "value": 1101264,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 10,
+          "2022-07": 11,
+          "2022-06": 10,
+          "2022-05": 10,
+          "2022-04": 11,
+          "2022-03": 11,
+          "2022-02": 11
+        },
+        "value": 10,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "EBITDA": {
+        "title": "EBITDA (€)",
+        "data": {
+          "2022-06": -23451,
+          "2022-05": -91289,
+          "2022-04": -52543,
+          "2022-03": -67634,
+          "2022-02": -88044
+        },
+        "value": -23451,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Corporate Clients": {
+        "title": "Total Corp. Clients (#)",
+        "data": {
+          "2022-08": 9,
+          "2022-07": 9,
+          "2022-06": 9,
+          "2022-05": 8,
+          "2022-04": 7,
+          "2022-03": 6,
+          "2022-02": 4
+        },
+        "value": 9,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Cash Burn": {
+        "title": "Gross Cash Burn (€)",
+        "data": {
+          "2022-08": -96775,
+          "2022-07": -224124,
+          "2022-06": -178803,
+          "2022-05": -99379,
+          "2022-04": -113375,
+          "2022-03": -110174,
+          "2022-02": -112995
+        },
+        "value": -96775,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Academcy Courses": {
+        "title": "Booked Courses (#)",
+        "data": {
+          "2022-07": 150,
+          "2022-06": 150,
+          "2022-05": 0,
+          "2022-04": 0,
+          "2022-03": 0,
+          "2022-02": 0
+        },
+        "value": 150,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      }
     },
-    {
-        "id": 5,
-        "name": "Zync",
-        "shortname": "zync",
-        "fullname": "Zync Inc.",
-        "location": "San Francisco, USA",
-        "logo": "/logos/zync.png",
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg",
-        "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417.jpg 1350w",
-        "founder": [{ "name": "RJ" }],
-        "linkedin": "https://www.linkedin.com/company/zyncinc/",
-        "website": "https://www.zync.com/",
-        "employee": 89,
-        "kpis": {
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 1,
-                    "2022-02": 3,
-                    "2022-03": 2,
-                    "2022-04": 64
-                },
-                "value": 81
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": 978
-            }
-        }
+    "Runway": "9",
+    "Loan": "2500000",
+    "Ownership": "5% Owned \n(Target: 17%)"
+  },
+  {
+    "id": 3,
+    "name": "The Embassies",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "embassies",
+    "fullname": "The Embassies of Good Living AG",
+    "location": "Zurich, CH",
+    "logo": "/logos/the_embassies.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg",
+    "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-768x1024.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-04-Embassies-0125.jpg 1350w",
+    "founders": [
+      {
+        "name": "Henning Weiss",
+        "story": "The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences. Collect your favorite athletes and trade them with countless other fans to complete your collection.The ultimate NFT platform for all sports fans: FANZONE gives you the opportunity to digitally own your stars and get access to exclusive content/experiences.",
+        "image": "/founders/video1.png"
+      },
+      {
+        "name": "Jan Garde",
+        "story": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "image": ""
+      },
+      {
+        "name": "James B. Graves",
+        "story": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. ",
+        "image": ""
+      }
+    ],
+    "video": "https://preview.forward31.com/wp-content/uploads/2021/10/f31_the_embassies_of_good_living_1080p_final-1080-compressed.mp4",
+    "shortDescription": "The Soho House for wealthy silver agers",
+    "description": "The Soho House for wealthy silver agers.",
+    "introduction": "The Soho House for wealthy silver agers",
+    "tags": {
+      "0": "silveragers",
+      "1": "living"
     },
-    {
-        "id": 888,
-        "name": "aware",
-        "shortname": "aware",
-        "fullname": "aware THE PLATFORM GmbH",
-        "location": "Berlin, DE",
-        "logo": "/logos/aware_.png",
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg",
-        "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-03-Aware-0144.jpg 1350w",
-        "founders": [{ "name": "Lena Schrum" }, { "name": "Kim N. Fischer" }],
-        "linkedin": "https://www.linkedin.com/company/tobeaware/",
-        "website": "https://aware-theplatform.com/",
-        "employee": 120,
-        "kpis": {
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 1,
-                    "2022-02": 3,
-                    "2022-03": 2,
-                    "2022-04": 64
-                },
-                "value": 241
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": 153
-            }
-        }
+    "status": "live",
+    "linkedin": "https://www.linkedin.com/company/theembassies/",
+    "website": "https://www.embassies.com/",
+    "employee": 6,
+    "kpis": {
+      "Liquidity": {
+        "title": "Liquidity (CHF)",
+        "data": {
+          "2022-08": 983369,
+          "2022-07": 1100000,
+          "2022-06": 528000,
+          "2022-05": 643063,
+          "2022-04": 851000,
+          "2022-03": 1006000,
+          "2022-02": 116000
+        },
+        "value": 983369,
+        "growth": "",
+        "type": "line",
+        "currency": "CHF"
+      },
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 6,
+          "2022-07": 6,
+          "2022-06": 6,
+          "2022-05": 6,
+          "2022-04": 6,
+          "2022-03": 6,
+          "2022-02": 6
+        },
+        "value": 6,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Property Funnel": {
+        "title": "Property Locations in Funnel (#)",
+        "data": {
+          "2022-08": 248,
+          "2022-07": 245,
+          "2022-06": 237,
+          "2022-05": 228,
+          "2022-04": 224,
+          "2022-03": 216,
+          "2022-02": 191
+        },
+        "value": 248,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Property DD": {
+        "title": "Properties in Due Diligence (#)",
+        "data": {
+          "2022-08": 7,
+          "2022-07": 12,
+          "2022-06": 6,
+          "2022-05": 6,
+          "2022-04": 8,
+          "2022-03": 8,
+          "2022-02": 8
+        },
+        "value": 7,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Members": {
+        "title": "Registered Ambassadors",
+        "data": {
+          "2022-08": 1298,
+          "2022-07": 1273,
+          "2022-06": 1240,
+          "2022-05": 1231,
+          "2022-04": 1201,
+          "2022-03": 1188,
+          "2022-02": 1167
+        },
+        "value": 1298,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      }
     },
-    {
-        "id": 6,
-        "name": "My Inner Health Club",
-        "shortname": "mihc",
-        "fullname": "My INNER HEALTH Club GmbH",
-        "location": "Berlin, DE",
-        "logo": "/logos/my_inner_health_club.png",
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg",
-        "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517.jpg 1350w",
-        "founders": [
-            { "name": "Yasmin Poloczek" },
-            { "name": "Ann-Kathrin Grebner" }
-        ],
-        "linkedin": "https://www.linkedin.com/company/my-inner-health-club/",
-        "website": "https://myinnerhealthclub.com/",
-        "employee": 134,
-        "kpis": {
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 1,
-                    "2022-02": 3,
-                    "2022-03": 2,
-                    "2022-04": 64
-                },
-                "value": 612
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": 321
-            }
-        }
+    "Runway": "10",
+    "Loan": "3500000",
+    "Ownership": "5% Owned (Target: 15%)"
+  },
+  {
+    "id": 4,
+    "name": "FanZone",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "fanzone",
+    "fullname": "Fanzone Media GmbH",
+    "location": "Berlin, DE",
+    "logo": "/logos/fanzone.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg",
+    "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-05-Fanzone-0214.jpg 1350w",
+    "founders": [
+      {
+        "name": "Claudio Weck"
+      },
+      {
+        "name": "Dirk Weyel"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/company/fanzone-media-gmbh/",
+    "website": "https://www.fanzone.io",
+    "employee": 18,
+    "shortDescription": "The digital trading card platform for fan engagement",
+    "description": "The digital trading card platform for fan engagement.",
+    "introduction": "The digital trading card platform for fan engagement",
+    "kpis": {
+      "REV": {
+        "title": "Revenue Actual (€)",
+        "data": {
+          "2021": 402000,
+          "2022-08": 13000,
+          "2022-07": 40000,
+          "2022-06": 12429,
+          "2022-05": 22800,
+          "2022-04": 34569,
+          "2022-03": 31003,
+          "2022-02": 92450,
+          "2022-01": 38630
+        },
+        "value": 13000,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Liquidity": {
+        "title": "Liquidity (€)",
+        "data": {
+          "2022-08": 260000,
+          "2022-07": 650000,
+          "2022-06": 1044293,
+          "2022-05": 914248,
+          "2022-04": 81680,
+          "2022-03": 21590,
+          "2022-02": 177581
+        },
+        "value": 260000,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "EBITDA": {
+        "title": "EBITDA (€)",
+        "data": {
+          "2022-08": -170000,
+          "2022-07": -296000,
+          "2022-06": -285000,
+          "2022-05": -212209,
+          "2022-04": -189844,
+          "2022-03": -180452,
+          "2022-02": -165618
+        },
+        "value": -170000,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 18,
+          "2022-07": 18,
+          "2022-06": 21,
+          "2022-05": 21,
+          "2022-04": 20,
+          "2022-03": 20,
+          "2022-02": 20
+        },
+        "value": 18,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "MAU": {
+        "title": "Monthly Active Users",
+        "data": {
+          "2022-08": 2200,
+          "2022-07": 1200,
+          "2022-06": 1700,
+          "2022-05": 2700,
+          "2022-04": 4600,
+          "2022-03": 10000,
+          "2022-02": 12000
+        },
+        "value": 2200,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "GTV": {
+        "title": "Gross Trans. Vol. Marketplace (FZT)",
+        "data": {
+          "2022-08": 412200,
+          "2022-07": 837700,
+          "2022-06": 470000,
+          "2022-05": 922800,
+          "2022-04": 1532900,
+          "2022-03": 11,
+          "2022-02": 11
+        },
+        "value": 412200,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      },
+      "CLV": {
+        "title": "Customer Lifetime Value (€)",
+        "data": {
+          "2022-08": 69,
+          "2022-07": 430,
+          "2022-06": 109,
+          "2022-05": 423,
+          "2022-04": 418,
+          "2022-03": 350,
+          "2022-02": 330
+        },
+        "value": 69,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "CAC": {
+        "title": "Customer Acquisition Cost (€)",
+        "data": {
+          "2022-08": 69,
+          "2022-07": 215,
+          "2022-06": 134,
+          "2022-05": 191,
+          "2022-04": 170,
+          "2022-03": 170,
+          "2022-02": 180
+        },
+        "value": 69,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      }
     },
-    {
-        "id": 8,
-        "name": "Dreamvest",
-        "shortname": "dreamvest",
-        "fullname": "Dream Machine Innovations, Inc.",
-        "location": "California, US",
-        "logo": "/logos/dreamvest.png",
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
-        "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467.jpg 1350w",
-        "founder": [{ "name": "Vincent Ma" }],
-        "linkedin": "",
-        "website": "",
-        "employee": 42,
-        "kpis": {
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 1,
-                    "2022-02": 3,
-                    "2022-03": 2,
-                    "2022-04": 64
-                },
-                "value": 128
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": 481
-            }
-        }
+    "Runway": "9",
+    "Loan": "3157000",
+    "Ownership": "5% Owned \n(Target: 20%)"
+  },
+  {
+    "id": 5,
+    "name": "RYDES",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "rydes",
+    "fullname": "RYDES GmbH",
+    "location": "Berlin, DE",
+    "logo": "/logos/rydes.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-06-Rydes-0260-225x300.jpg",
+    "description": "The corporate mobility budget solution",
+    "shortDescription": "The corporate mobility budget solution.",
+    "introduction": "The corporate mobility budget solution",
+    "founders": [
+      {
+        "name": "René Braun"
+      },
+      {
+        "name": "Martin Miodownik"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/company/rydes-app/",
+    "website": "https://www.rydes.com/",
+    "employee": 9,
+    "kpis": {
+      "REV": {
+        "title": "Net Revenue (€)",
+        "data": {
+          "2022-07": 10811,
+          "2022-06": 9653,
+          "2022-05": 9203,
+          "2022-04": 6613,
+          "2022-03": 5709,
+          "2022-02": 4922,
+          "2022-01": 0
+        },
+        "value": 10811,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Liquidity": {
+        "title": "Liquidity (€)",
+        "data": {
+          "2022-07": 487805,
+          "2022-06": 581317,
+          "2022-05": 671970,
+          "2022-04": 761805,
+          "2022-03": 861102,
+          "2022-02": 964620
+        },
+        "value": 487805,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "EBITDA": {
+        "title": "EBITDA (€)",
+        "data": {
+          "2022-07": -66859,
+          "2022-06": -69469,
+          "2022-05": -83986,
+          "2022-04": -114109,
+          "2022-03": -72627,
+          "2022-02": -106980
+        },
+        "value": -66859,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-07": 9,
+          "2022-06": 9,
+          "2022-05": 9,
+          "2022-04": 9,
+          "2022-03": 9,
+          "2022-02": 9
+        },
+        "value": 9,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "GMV": {
+        "title": "Gross Merchandise Volume (€)",
+        "data": {
+          "2022-07": 130996,
+          "2022-06": 122548,
+          "2022-05": 117331,
+          "2022-04": 95297,
+          "2022-03": 81308,
+          "2022-02": 73669
+        },
+        "value": 130996,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Cash Burn": {
+        "title": "Net Cash Burn (€)",
+        "data": {
+          "2022-07": 93512,
+          "2022-06": -90653,
+          "2022-05": -89835,
+          "2022-04": -99297,
+          "2022-03": -103518,
+          "2022-02": 594126
+        },
+        "value": 93512,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Corporate Clients": {
+        "title": "B2B Customers (#)",
+        "data": {
+          "2022-07": 70,
+          "2022-06": 66,
+          "2022-05": 64,
+          "2022-04": 61
+        },
+        "value": 70,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "MAU": {
+        "title": "Monthly Active Users (#)",
+        "data": {
+          "2022-07": 2552,
+          "2022-06": 2354,
+          "2022-05": 2464,
+          "2022-04": 2139
+        },
+        "value": 2552,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Members": {
+        "title": "Total Members (#)",
+        "data": {
+          "2022-07": 3868,
+          "2022-06": 3643,
+          "2022-05": 3533,
+          "2022-04": 3102
+        },
+        "value": 3868,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Avg Spent": {
+        "title": "Avg. Spend / MAU (€)",
+        "data": {
+          "2022-06": 52,
+          "2022-05": 47,
+          "2022-04": 44
+        },
+        "value": 52,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      }
     },
-    {
-        "id": 9,
-        "name": "Denizen",
-        "shortname": "denizen",
-        "fullname": "Simplify Places GmbH",
-        "location": "Berlin, DE",
-        "logo": "/logos/denizen.png",
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg",
-        "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447.jpg 1350w",
-        "CEO": [{ "name": "David Turnbull" }],
-        "Co-Founding Team": [
-            { "name": "Michael End" },
-            { "name": "David Gregor" },
-            { "name": "Darja Gogunova" }
-        ],
-        "linkedin": "https://www.linkedin.com/company/thisisdenizen/",
-        "website": "https://www.thisisdenizen.com/",
-        "employee": 421,
-        "kpis": {
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 1,
-                    "2022-02": 3,
-                    "2022-03": 2,
-                    "2022-04": 64
-                },
-                "value": 321
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": 612
-            }
-        }
+    "Runway": "5",
+    "Loan": "1000000",
+    "Ownership": "14% Owned (Target: 13%)"
+  },
+  {
+    "id": 6,
+    "name": "Zync",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "zync",
+    "fullname": "Zync Inc.",
+    "location": "San Francisco, USA",
+    "logo": "/logos/zync.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg",
+    "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-07-Zync-0417.jpg 1350w",
+    "shortDescription": "The platform for in-car entertainment",
+    "description": "The platform for in-car entertainment.",
+    "introduction": "The platform for in-car entertainment",
+    "founders": [
+      {
+        "name": "RJ"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/company/zyncinc/",
+    "website": "https://www.zync.com/",
+    "employee": 6,
+    "kpis": {
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 6,
+          "2022-07": 6,
+          "2022-06": 6,
+          "2022-05": 6,
+          "2022-04": 6,
+          "2022-03": 6,
+          "2022-02": 6
+        },
+        "value": 6,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "REV": {
+        "title": "Revenue Actual ($)",
+        "data": {
+          "2022-08": 0
+        },
+        "value": 0,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      }
     },
-    {
-        "id": 10,
-        "name": "Stellar",
-        "shortname": "stellar",
-        "fullname": "Stellar Telecommunications SAS",
-        "location": "Meudon, FRA",
-        "logo": "/logos/stellar.png",
-        "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
-        "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg",
-        "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
-        "founder": [{ "name": "Damien Garot" }],
-        "linkedin": "https://www.linkedin.com/company/stellartc/",
-        "website": "https://stellar.tc/",
-        "employee": 24,
-        "kpis": {
-            "revenue": {
-                "title": "Revenue",
-                "data": {
-                    "2022-01": 1,
-                    "2022-02": 3,
-                    "2022-03": 2,
-                    "2022-04": 64
-                },
-                "value": 52
-            },
-            "liquidity": {
-                "title": "Liquidity",
-                "data": {
-                    "2022-01": 730221.6683855893,
-                    "2022-02": 632858.7792675107,
-                    "2022-03": 535495.8901494322,
-                    "2022-04": 438133.0010313536
-                },
-                "value": 43
-            }
-        }
+    "Runway": 0,
+    "Loan": "2500000",
+    "Ownership": "5% Owned \n(Target: 13%)"
+  },
+  {
+    "id": 7,
+    "name": "Stellar",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "stellar",
+    "fullname": "Stellar Telecommunications SAS",
+    "location": "Paris, FRA",
+    "logo": "/logos/stellar.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+    "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
+    "shortDescription": "The sustainable Deep Tech satellite constellation",
+    "description": "The sustainable Deep Tech satellite constellation",
+    "introduction": "The sustainable Deep Tech satellite constellation",
+    "founders": [
+      {
+        "name": "Damien Garot"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/company/stellartc/",
+    "website": "https://stellar.tc/",
+    "employee": 6,
+    "kpis": {
+      "REV": {
+        "title": "Revenue Actual (€)",
+        "data": {
+          "2021": 250000,
+          "2022-08": 0,
+          "2022-07": 0,
+          "2022-06": 0,
+          "2022-05": 0,
+          "2022-04": 0,
+          "2022-03": 0,
+          "2022-02": 0,
+          "2022-01": 0
+        },
+        "value": 0,
+        "growth": "",
+        "type": "bar",
+        "currency": "EUR"
+      },
+      "Liquidity": {
+        "title": "Liquidity (€)",
+        "data": {
+          "2022-08": 1066000,
+          "2022-07": 1868000,
+          "2022-06": 1972594,
+          "2022-05": 2090000,
+          "2022-04": 2378000,
+          "2022-03": 1018000,
+          "2022-02": 1047000
+        },
+        "value": 1066000,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 6,
+          "2022-07": 6,
+          "2022-06": 6,
+          "2022-05": 6,
+          "2022-04": 6,
+          "2022-03": 5,
+          "2022-02": 4
+        },
+        "value": 6,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Pitches": {
+        "title": "Conducted of Investor Pitches (#)",
+        "data": {
+          "2022-08": 10,
+          "2022-07": 7,
+          "2022-06": 4,
+          "2022-05": 13,
+          "2022-04": 17,
+          "2022-03": 7,
+          "2022-02": 0
+        },
+        "value": 10,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      }
+    },
+    "Runway": "10",
+    "Loan": "4000000",
+    "Ownership": 0
+  },
+  {
+    "id": 8,
+    "name": "My Inner Health Club",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "mihc",
+    "fullname": "My INNER HEALTH Club GmbH",
+    "location": "Berlin, DE",
+    "logo": "/logos/my_inner_health_club.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg",
+    "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-13-myinnerhealthclub-0517.jpg 1350w",
+    "shortDescription": "The wellbeing program for companies",
+    "description": "The wellbeing program for companies",
+    "introduction": "The wellbeing program for companies",
+    "founders": [
+      {
+        "name": "Yasmin Poloczek"
+      },
+      {
+        "name": "Ann-Kathrin Grebner"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/company/my-inner-health-club/",
+    "website": "https://myinnerhealthclub.com/",
+    "employee": 8,
+    "kpis": {
+      "REV": {
+        "title": "Revenue Actual (€)",
+        "data": {
+          "2022-07": 331,
+          "2022-06": 3397,
+          "2022-05": 428,
+          "2022-04": 120,
+          "2022-03": 50,
+          "2022-02": 234,
+          "2022-01": 0
+        },
+        "value": 331,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Liquidity": {
+        "title": "Liquidity (€)",
+        "data": {
+          "2022-07": 376373,
+          "2022-06": 471505,
+          "2022-05": 580281,
+          "2022-04": 681814,
+          "2022-03": 767610,
+          "2022-02": 849634
+        },
+        "value": 376373,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "EBITDA": {
+        "title": "EBITDA (€)",
+        "data": {
+          "2022-07": -71416,
+          "2022-06": -97940,
+          "2022-05": -115745,
+          "2022-04": -61872,
+          "2022-03": -83040,
+          "2022-02": -47697
+        },
+        "value": -71416,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 8,
+          "2022-07": 7,
+          "2022-06": 8,
+          "2022-05": 7,
+          "2022-04": 5,
+          "2022-03": 3,
+          "2022-02": 2
+        },
+        "value": 8,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Members": {
+        "title": "Digital Enrollments (#)",
+        "data": {
+          "2022-06": 18,
+          "2022-05": 24,
+          "2022-04": 139,
+          "2022-03": 145,
+          "2022-02": 53
+        },
+        "value": 18,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "REV B2B2C": {
+        "title": "Gross Revenue B2B2C (€)",
+        "data": {
+          "2022-07": 0,
+          "2022-06": 3196,
+          "2022-05": 0,
+          "2022-04": 0,
+          "2022-03": 0,
+          "2022-02": 0
+        },
+        "value": 0,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "REV B2C": {
+        "title": "Gross Revenue B2C (€)",
+        "data": {
+          "2022-07": 331,
+          "2022-06": 343,
+          "2022-05": 509,
+          "2022-04": 142,
+          "2022-03": 60,
+          "2022-02": 278
+        },
+        "value": 331,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "CAC": {
+        "title": "Customer Acquisition Cost (€)",
+        "data": {
+          "2022-06": 0,
+          "2022-05": 0,
+          "2022-04": 63,
+          "2022-03": 439,
+          "2022-02": 0
+        },
+        "value": 0,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Cash Burn": {
+        "title": "Gross Cash Burn (€)",
+        "data": {
+          "2022-06": 93020,
+          "2022-05": 101525,
+          "2022-04": 85796,
+          "2022-03": 82024,
+          "2022-02": 34142
+        },
+        "value": 93020,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      }
+    },
+    "Runway": 0,
+    "Loan": "2400000",
+    "Ownership": "5% Owned (Target: 19%)"
+  },
+  {
+    "id": 9,
+    "name": "Achievers' Circle",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "ac",
+    "fullname": "Beijing Achievers Management Consulting Co., Ltd",
+    "location": "Beijing, CHN",
+    "logo": "/logos/ac.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+    "bgimg": "/founders/AC_Founders.jpeg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
+    "shortDescription": "The community of Chinese High-Networth Individuals to achieve more in life",
+    "description": "The community of Chinese High-Networth Individuals to achieve more in life.",
+    "introduction": "The community of Chinese High-Networth Individuals to achieve more in life",
+    "founders": [
+      {
+        "name": "Melody Li"
+      },
+      {
+        "name": "Claire Du"
+      }
+    ],
+    "linkedin": "",
+    "website": "http://acvcircle.com/",
+    "employee": 8,
+    "kpis": {
+      "REV": {
+        "title": "Revenue Actual (CNY)",
+        "data": {
+          "2022-08": 173436,
+          "2022-07": 87668,
+          "2022-06": 30434,
+          "2022-05": 68248,
+          "2022-04": 48588.08,
+          "2022-03": 23791,
+          "2022-02": 2160,
+          "2022-01": 0
+        },
+        "value": 173436,
+        "growth": "",
+        "type": "line",
+        "currency": "CNY"
+      },
+      "Liquidity": {
+        "title": "Liquidity (CNY)",
+        "data": {
+          "2022-08": 3311233,
+          "2022-07": 3512120,
+          "2022-06": 6974324,
+          "2022-05": 7530580,
+          "2022-04": 7286173,
+          "2022-03": 7694212,
+          "2022-02": 126
+        },
+        "value": 3311233,
+        "growth": "",
+        "type": "line",
+        "currency": "CNY"
+      },
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 8,
+          "2022-07": 8,
+          "2022-06": 7,
+          "2022-05": 6,
+          "2022-04": 6,
+          "2022-03": 5,
+          "2022-02": 5
+        },
+        "value": 8,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Cash Burn": {
+        "title": "Gross Cash Burn (CNY)",
+        "data": {
+          "2022-08": 285675,
+          "2022-07": -3518502,
+          "2022-06": -613235,
+          "2022-05": -154310,
+          "2022-04": -274162,
+          "2022-03": -733772,
+          "2022-02": -117455
+        },
+        "value": 285675,
+        "growth": "",
+        "type": "line",
+        "currency": "CNY"
+      },
+      "Circle Members": {
+        "title": "Circle Members (#)",
+        "data": {
+          "2022-08": 3,
+          "2022-07": 1,
+          "2022-06": 0,
+          "2022-05": 0,
+          "2022-04": 0,
+          "2022-03": 0,
+          "2022-02": 0
+        },
+        "value": 3,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Club Members": {
+        "title": "Club Members (#)",
+        "data": {
+          "2022-08": 50,
+          "2022-07": 49,
+          "2022-06": 48,
+          "2022-05": 37,
+          "2022-04": 10,
+          "2022-03": 0,
+          "2022-02": 0
+        },
+        "value": 50,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Small Events": {
+        "title": "Small Events & Experiences (#)",
+        "data": {
+          "2022-08": 16,
+          "2022-07": 9,
+          "2022-06": 21,
+          "2022-05": 35,
+          "2022-04": 16,
+          "2022-03": 15,
+          "2022-02": 7
+        },
+        "value": 16,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      },
+      "Medium Events": {
+        "title": "Medium Events & Experiences (#)",
+        "data": {
+          "2022-08": 4,
+          "2022-07": 7,
+          "2022-06": 2,
+          "2022-05": 0,
+          "2022-04": 2,
+          "2022-03": 1,
+          "2022-02": 1
+        },
+        "value": 4,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      },
+      "Large Events": {
+        "title": "Large Events & Experiences (#)",
+        "data": {
+          "2022-08": 0,
+          "2022-07": 0,
+          "2022-06": 0,
+          "2022-05": 0,
+          "2022-04": 0,
+          "2022-03": 0,
+          "2022-02": 0
+        },
+        "value": 0,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      },
+      "Partners FMB": {
+        "title": "Food & Beverage Partners (#)",
+        "data": {
+          "2022-08": 255,
+          "2022-07": 231,
+          "2022-06": 157,
+          "2022-05": 133,
+          "2022-04": 113,
+          "2022-03": 80,
+          "2022-02": 50
+        },
+        "value": 255,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Partners Hotel": {
+        "title": "Hotel Partners (#)",
+        "data": {
+          "2022-08": 41,
+          "2022-07": 30,
+          "2022-06": 21,
+          "2022-05": 17,
+          "2022-04": 17,
+          "2022-03": 15,
+          "2022-02": 12
+        },
+        "value": 41,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Partners Other": {
+        "title": "Other Partners (#)",
+        "data": {
+          "2022-08": 48,
+          "2022-07": 45,
+          "2022-06": 28,
+          "2022-05": 12,
+          "2022-04": 10,
+          "2022-03": 5,
+          "2022-02": 3
+        },
+        "value": 48,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      }
+    },
+    "Runway": "12+",
+    "Loan": "3378000",
+    "Ownership": "5% Owned (Target: 16%)"
+  },
+  {
+    "id": 10,
+    "name": "denizen",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "denizen",
+    "fullname": "Simplify Places GmbH",
+    "location": "Berlin, DE",
+    "logo": "/logos/denizen.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg",
+    "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-11-Denizen-0447.jpg 1350w",
+    "shortDescription": "The airbnb for commercial real estate",
+    "description": "The airbnb for commercial real estate.",
+    "introduction": "The airbnb for commercial real estate",
+    "founders": [
+      {
+        "name": "David Turnbull"
+      },
+      {
+        "name": "Michael End"
+      },
+      {
+        "name": "David Gregor"
+      },
+      {
+        "name": "Darja Gogunova"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/company/thisisdenizen/",
+    "website": "https://www.thisisdenizen.com/",
+    "employee": 8,
+    "kpis": {
+      "REV": {
+        "title": "Revenue Actual (€)",
+        "data": {
+          "2022-08": 25859,
+          "2022-07": 21285,
+          "2022-06": 21695,
+          "2022-05": 21645,
+          "2022-04": 13699,
+          "2022-03": 13894,
+          "2022-02": 9356,
+          "2022-01": 8431
+        },
+        "value": 25859,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Liquidity": {
+        "title": "Liquidity (€)",
+        "data": {
+          "2022-08": 120842,
+          "2022-07": 214513,
+          "2022-06": 321743,
+          "2022-05": 417647,
+          "2022-04": 552521,
+          "2022-03": 26324,
+          "2022-02": 74365
+        },
+        "value": 120842,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 8,
+          "2022-07": 8,
+          "2022-06": 9,
+          "2022-05": 8,
+          "2022-04": 8,
+          "2022-03": 9,
+          "2022-02": 6
+        },
+        "value": 8,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "App Downloads": {
+        "title": "App Downloads (#)",
+        "data": {
+          "2022-08": 14373,
+          "2022-07": 13113,
+          "2022-06": 10322,
+          "2022-05": 8008,
+          "2022-04": 7676,
+          "2022-03": 7456,
+          "2022-02": 7201
+        },
+        "value": 14373,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      },
+      "App Sign-Ups": {
+        "title": "App Sign-Ups (#)",
+        "data": {
+          "2022-08": 1454,
+          "2022-07": 1223,
+          "2022-06": 1015,
+          "2022-05": 951,
+          "2022-04": 862,
+          "2022-03": 696,
+          "2022-02": 596
+        },
+        "value": 1454,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      },
+      "Space Capacity": {
+        "title": "Total Space Capacity (Seats, #)",
+        "data": {
+          "2022-08": 515,
+          "2022-07": 480,
+          "2022-06": 372,
+          "2022-05": 273,
+          "2022-04": 259,
+          "2022-03": 230,
+          "2022-02": 217
+        },
+        "value": 515,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      },
+      "Space Bookings": {
+        "title": "Space Bookings (#)",
+        "data": {
+          "2022-08": 70,
+          "2022-07": 57,
+          "2022-06": 25,
+          "2022-05": 22,
+          "2022-04": 19,
+          "2022-03": 18,
+          "2022-02": 5
+        },
+        "value": 70,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      },
+      "Members": {
+        "title": "Paying Members (#)",
+        "data": {
+          "2022-08": 464,
+          "2022-07": 302,
+          "2022-06": 236,
+          "2022-05": 187,
+          "2022-04": 164,
+          "2022-03": 106,
+          "2022-02": 68
+        },
+        "value": 464,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Subscription Churn": {
+        "title": "Member Subscription Churn (#)",
+        "data": {
+          "2022-08": 15,
+          "2022-07": 15,
+          "2022-06": 14,
+          "2022-05": 21,
+          "2022-04": 20,
+          "2022-03": 9,
+          "2022-02": 5
+        },
+        "value": 15,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      },
+      "Cash Burn": {
+        "title": "Net Cash Burn (€)",
+        "data": {
+          "2022-08": 93671,
+          "2022-07": 107230,
+          "2022-06": 95904,
+          "2022-05": 134873,
+          "2022-04": 113803,
+          "2022-03": 48041,
+          "2022-02": 49153
+        },
+        "value": 93671,
+        "growth": "",
+        "type": "line",
+        "currency": "EUR"
+      },
+      "Rev Contribution": {
+        "title": "Rev Contr. Of Top 25% Members (%)",
+        "data": {
+          "2022-08": 0,
+          "2022-07": 0,
+          "2022-06": 0,
+          "2022-05": 0,
+          "2022-04": 0,
+          "2022-03": 0,
+          "2022-02": 0
+        },
+        "value": 0,
+        "growth": "",
+        "type": "line",
+        "currency": ""
+      }
+    },
+    "Runway": "7",
+    "Loan": "1968000",
+    "Ownership": "5% Owned (Target: 17%)"
+  },
+  {
+    "id": 11,
+    "name": "daato",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "daato",
+    "fullname": "Daato Technologies GmbH",
+    "location": "Berlin, DE",
+    "logo": "/logos/daato.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+    "bgimg": "/static/company-placeholder.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
+    "shortDescription": "The ESG transparency platform for supply chains",
+    "description": "The ESG transparency platform for supply chains.",
+    "introduction": "The ESG transparency platform for supply chains",
+    "founders": [
+      {
+        "name": "Satya Kamal Raparthi"
+      },
+      {
+        "name": "Thilo Hitz"
+      }
+    ],
+    "linkedin": "",
+    "website": "",
+    "employee": 3,
+    "kpis": {
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 3,
+          "2022-07": 3,
+          "2022-06": 2,
+          "2022-05": 2,
+          "2022-04": 2,
+          "2022-03": 2,
+          "2022-02": 2
+        },
+        "value": 3,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      }
+    },
+    "Runway": "7",
+    "Loan": "2200000",
+    "Ownership": "5% Owned \n(Target: 20%)"
+  },
+  {
+    "id": 12,
+    "name": "onGRID",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "ongrid",
+    "fullname": "onGRID Sports Technology GmbH",
+    "location": "Berlin, DE",
+    "logo": "/logos/onGrid.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+    "bgimg": "/static/company-placeholder.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
+    "shortDescription": "The digital platform for race teams and organizers",
+    "description": "The digital platform for race teams and organizers.",
+    "introduction": "The digital platform for race teams and organizers",
+    "founders": [
+      {
+        "name": "Norman Simon"
+      }
+    ],
+    "linkedin": "",
+    "website": "https://ongr.id/",
+    "employee": 1,
+    "kpis": {
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 1,
+          "2022-07": 1,
+          "2022-06": 1,
+          "2022-05": 2,
+          "2022-04": 2,
+          "2022-03": 2,
+          "2022-02": 2
+        },
+        "value": 1,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      }
+    },
+    "Runway": "7",
+    "Loan": "2000000",
+    "Ownership": "7% Owned \n(Target: 20%)"
+  },
+  {
+    "id": 13,
+    "name": "Impact Labs",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "impact",
+    "fullname": "Impact Labs",
+    "location": "Berlin, DE",
+    "logo": "/logos/impact_labs.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+    "bgimg": "/static/company-placeholder.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
+    "shortDescription": "The trading platform for carbon assets",
+    "description": "The trading platform for carbon assets.",
+    "introduction": "The trading platform for carbon assets",
+    "founders": [
+      {
+        "name": "Anton Güthe"
+      },
+      {
+        "name": "Daniel Vetterknd"
+      }
+    ],
+    "linkedin": "",
+    "website": "",
+    "employee": 5,
+    "kpis": {
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 5,
+          "2022-07": 5,
+          "2022-06": 5,
+          "2022-05": 5,
+          "2022-04": 5,
+          "2022-03": 2,
+          "2022-02": 2
+        },
+        "value": 5,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      }
+    },
+    "Runway": "8",
+    "Loan": "2300000",
+    "Ownership": "7% Owned \n(Target: 16%)"
+  },
+  {
+    "id": 14,
+    "name": "Dreamvest",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "dreamvest",
+    "fullname": "Dream Machine Innovations, Inc.",
+    "location": "New York, US",
+    "logo": "/logos/dreamvest.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+    "bgimg": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-12-Dreams-0467.jpg 1350w",
+    "shortDescription": "The fintech to achieve your dreams",
+    "description": "The fintech to achieve your dreams.",
+    "introduction": "The fintech to achieve your dreams",
+    "founders": [
+      {
+        "name": "Vincent Ma"
+      }
+    ],
+    "linkedin": "",
+    "website": "",
+    "employee": 2,
+    "kpis": {
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 2,
+          "2022-07": 1,
+          "2022-06": 1,
+          "2022-05": 1,
+          "2022-04": 1,
+          "2022-03": 1,
+          "2022-02": 1
+        },
+        "value": 2,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      }
+    },
+    "Runway": 0,
+    "Loan": "2500000",
+    "Ownership": "5% Owned \n(Target: 15%)"
+  },
+  {
+    "id": 15,
+    "name": "Beyond the C",
+    "exited": false,
+    "reason": "acquired by another company",
+    "shortname": "beyond",
+    "fullname": "Beyond the C",
+    "location": "Berlin, DE",
+    "logo": "/logos/beyond_the_c.png",
+    "img": "http://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg",
+    "bgimg": "/static/company-placeholder.jpg",
+    "srcset": "https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-225x300.jpg 225w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-768x1024.jpg 768w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331-1152x1536.jpg 1152w, https://preview.forward31.com/wp-content/uploads/2021/10/Forward-31-08-Stellar-0331.jpg 1350w",
+    "shortDescription": "The platform for female leaders",
+    "description": "The platform for female leaders.",
+    "introduction": "The platform for female leaders",
+    "founders": [
+      {
+        "name": "Vera Futorjanski"
+      }
+    ],
+    "linkedin": "",
+    "website": "",
+    "employee": 1,
+    "kpis": {
+      "FTE": {
+        "title": "Employees (#)",
+        "data": {
+          "2022-08": 1,
+          "2022-07": 1,
+          "2022-06": 1,
+          "2022-05": 1,
+          "2022-04": 1,
+          "2022-03": 1,
+          "2022-02": 1
+        },
+        "value": 1,
+        "growth": "",
+        "type": "bar",
+        "currency": ""
+      }
     }
+  }
 ]

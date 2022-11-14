@@ -27,7 +27,11 @@ export type ROUTE__INFO = {
   name: string;
 };
 
-const NavBar: NextPage = (props: any) => {
+interface NavBarProps {
+  children?: React.ReactNode;
+}
+
+const NavBar: NextPage<NavBarProps> = (props: NavBarProps) => {
   const [width, setWidth] = useState<number>(1080);
   const [isDropDownOpen, setDropDownOpen] = useState(false);
   const ddContainerRef = useRef<HTMLDivElement>(null);
@@ -145,19 +149,20 @@ const NavBar: NextPage = (props: any) => {
   );
 };
 
+// TODO not sure when this is needed
 NavBar.getInitialProps = async ({ req, res }) => {
   const data = parseCookies(req);
 
   if (res) {
     if (Object.keys(data).length === 0 && data.constructor === Object) {
+      console.log("really?")
       res.writeHead(301, { Location: "/" });
       res.end();
     }
   }
 
-  return {
-    data: data && data,
-  };
+  let p: NavBarProps = { };
+  return p;
 };
 
 export default NavBar;

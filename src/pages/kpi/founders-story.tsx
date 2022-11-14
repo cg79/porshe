@@ -64,7 +64,7 @@ const FoundersStory = (props: CompanyProps) => {
                     />
                 </div>
                 <Box sx={{ height: 50 }} />
-                <article className={styles.article}>
+                <p className={styles.article}>
                     <Container
                         maxWidth={'md'}
                         sx={{
@@ -93,7 +93,7 @@ const FoundersStory = (props: CompanyProps) => {
                             )
                         })}
                     </Container>
-                </article>
+                </p>
             </section>
         </Layout>
     ) : null

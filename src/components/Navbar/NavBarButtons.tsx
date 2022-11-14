@@ -6,7 +6,8 @@ import { ROUTE__INFO } from './NavBar'
 import { SUPPORT_EMAIL } from '../../constants/constants'
 
 export const NAVIGATION_ROUTES: ROUTE__INFO[] = [
-    { url: '/overview', name: 'Overview' },
+    { url: '/overview', name: 'Home' },
+    { url: '/portfolio', name: 'Portfolio' },
     { url: '/companies', name: 'Companies' },
     { url: '/support', name: 'Support' },
 ]

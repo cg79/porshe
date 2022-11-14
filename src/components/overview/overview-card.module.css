@@ -5,7 +5,9 @@
         rgba(59, 81, 96, 0.5) 0.82%,
         rgba(59, 81, 96, 0.245) 95.35%
     );
-    min-height: 350px;
+    min-height: 280px; 
+    min-width: 300px;
+    
     /* max-width: 150px; */
     /* width: 25rem; */
 }

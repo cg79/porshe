@@ -443,31 +443,6 @@ const CompanyList: any = ({ rows }: {rows:any}) => {
     },
   ];
 
-  const [sorted, setSorted] =  useState([]);
-
-  const f_sort = (dataArg: any[], colName: string, ascending = true) => {
-    dataArg.sort(function (res01, res02) {
-      var arg01 = res01[colName.toLowerCase()];
-      var arg02 = res02[colName.toLowerCase()];
-      if (arg01 < arg02) {
-        return ascending ? -1 : 1;
-      }
-      if (arg01 > arg02) {
-        return ascending ? 1 : -1;
-      }
-      return 0;
-    });
-        console.log(dataArg);
-        setSorted(dataArg);
-        console.log(sorted);
-
-    return dataArg;
-  };
-
-  const onSort: any = (propertyName: string, ascending = true) => {
-    f_sort(rows, propertyName, ascending);
-  };
-
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -489,16 +464,16 @@ const CompanyList: any = ({ rows }: {rows:any}) => {
   };
 
   if (width <= 600) {
-    for (const el of companies) {
+    // for (const el of companies) {
       return (
         <div>
           <div style={{ marginTop: "20px" }}>
-            <FilterMobile onSort={onSort}/>
-            <MobileCards sorted={sorted}/>
+            {/* <FilterMobile companyList={rows}/> */}
+            <MobileCards companyList={rows}/>
           </div>
         </div>
       );
-    }
+    // }
   }
 
   if (width <= 1024) {

@@ -32,14 +32,16 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
   const [selectedProperty, setSelectedProperty] = useState('fullname');
   const [sortOrder, setSortOrder] = useState(true);
 
-  const MAPPINGS: any = {
-    company: 'fullname',
-    Headquarters: 'location',
-    FTE: 'FTE.value',
-    revenue: 'REV.value',
-    runway: 'Runway',
+  console.log('adasdasd', companyList.length);
 
-  }
+  // const MAPPINGS: any = {
+  //   company: 'fullname',
+  //   headquarters: 'location',
+  //   FTE: 'kpis.FTE.value',
+  //   revenue: 'kpis.REV.value',
+  //   liquidity: 'kpis.Liquidity.value',
+  //   runway: 'Runway',
+  // }
 
   const readObjectValueByPath = (source: any, path: string) => {
     const paths = path.split(".");
@@ -50,7 +52,7 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
 
     for (let i = 0; i < paths.length; i++) {
       const p = paths[i];
-      ref = ref[p];
+      ref = ref[p] || {};
     }
 
     return ref;
@@ -79,7 +81,8 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
 
   const handleChangeSortProperty = (e: any) => {
     debugger;
-    const sortBy = MAPPINGS[e.target.value];
+    //const sortBy = MAPPINGS[e.target.value];
+    const sortBy = e.target.value;
 
     setSelectedProperty(e.target.value);
     console.log(setSelectedProperty);
@@ -101,8 +104,8 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
           <select onChange={(e) => handleChangeSortProperty(e)}>
             <option value="name">company</option>
             <option value="location">headquarters</option>
-            <option value="FTE.value">FTE</option>
-            <option value="REV.value">revenue</option>
+            <option value="kpis.FTE.value">FTE</option>
+            <option value="kpis.REV.value">revenue</option>
             <option value="kpis.Liquidity.value">liquidity</option>
             <option value="Runway">runway</option>
           </select>
@@ -116,6 +119,7 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
         </div>
       </div>
 
+      {sortedList.length}
       {sortedList.map((el) => {
         return (
           <div className="portfolio-mobile-card">

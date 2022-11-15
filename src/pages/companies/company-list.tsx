@@ -4,8 +4,8 @@ import { ROUTES } from "../../constants/constants";
 import DataTable from "react-data-table-component";
 import styles from "./style.module.css";
 import { MobileCards } from "./company-card";
-import companies from "../../data/companies.json";
-import { FilterMobile } from "./filter-mobile";
+// import companies from "../../data/companies.json";
+// import { FilterMobile } from "./filter-mobile";
 
 const thousandsFormatWithCommas = (number: number) => {
   return number
@@ -443,7 +443,11 @@ const CompanyList: any = ({ rows }: {rows:any}) => {
     },
   ];
 
-  const [width, setWidth] = useState(window.innerWidth);
+  const getWindowWidth = () =>{
+    // console.log('window.innerWidth',window.innerWidth)
+    return window.innerWidth;
+  }
+  const [width, setWidth] = useState(getWindowWidth());
 
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
@@ -463,17 +467,16 @@ const CompanyList: any = ({ rows }: {rows:any}) => {
     setWidth(window.innerWidth);
   };
 
-  if (width <= 600) {
-    // for (const el of companies) {
+  if (width <= 600 && rows.length) {
       return (
         <div>
           <div style={{ marginTop: "20px" }}>
             {/* <FilterMobile companyList={rows}/> */}
+            <span>mobile cards {rows.length}</span>
             <MobileCards companyList={rows}/>
           </div>
         </div>
       );
-    // }
   }
 
   if (width <= 1024) {

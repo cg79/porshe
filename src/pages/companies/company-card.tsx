@@ -61,7 +61,15 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
   const f_sort = (dataArg: any[], propName: string, ascending = true) => {
     dataArg.sort(function (res01, res02) {
       var arg01 = readObjectValueByPath(res01,propName);// res01[colName.toLowerCase()];
-      var arg02 = readObjectValueByPath(res02,propName);//res02[colName.toLowerCase()];
+      var arg02 =  readObjectValueByPath(res02,propName);//res02[colName.toLowerCase()];
+
+      if(isNaN(arg01)) {
+        arg01 = arg01.toLowerCase();
+      }
+      if(isNaN(arg02)) {
+        arg02 = arg02.toLowerCase();
+      }
+
       if (arg01 < arg02) {
         return ascending ? -1 : 1;
       }
@@ -70,7 +78,7 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
       }
       return 0;
     });
-    console.log(dataArg);
+    // console.log(dataArg);
     setSortedList([...dataArg]);
     // console.log(sorted);
 
@@ -80,7 +88,6 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
   
 
   const handleChangeSortProperty = (e: any) => {
-    debugger;
     //const sortBy = MAPPINGS[e.target.value];
     const sortBy = e.target.value;
 
@@ -90,7 +97,7 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
   };
 
   const handleChangeSortOrder = (e: any) => {
-    debugger;
+    // debugger;
     setSortOrder(e.target.value === 'ASC'? false: true);
     // console.log(setSelectedProperty);
     f_sort(sortedList, selectedProperty, sortOrder);
@@ -119,7 +126,6 @@ export const MobileCards: any = ({ companyList }: { companyList: any[] }) => {
         </div>
       </div>
 
-      {sortedList.length}
       {sortedList.map((el) => {
         return (
           <div className="portfolio-mobile-card">

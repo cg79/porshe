@@ -472,7 +472,6 @@ const CompanyList: any = ({ rows }: {rows:any}) => {
         <div>
           <div style={{ marginTop: "20px" }}>
             {/* <FilterMobile companyList={rows}/> */}
-            <span>mobile cards {rows.length}</span>
             <MobileCards companyList={rows}/>
           </div>
         </div>

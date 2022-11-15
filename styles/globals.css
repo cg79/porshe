@@ -749,3 +749,18 @@ a {
 /* canvas {
     width: 500px !important;
 } */
+
+.swiper {
+
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel-icon {
+  width: 200px;
+  height: 400px;
+  padding-bottom: 60px;
+}
